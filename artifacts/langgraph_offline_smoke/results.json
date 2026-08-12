@@ -1,0 +1,1668 @@
+{
+  "summary": {
+    "total": 30,
+    "passed": 30,
+    "pass_rate": 1.0
+  },
+  "results": [
+    {
+      "task_id": "train-planning-01",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0
+      }
+    },
+    {
+      "task_id": "train-planning-02",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0
+      }
+    },
+    {
+      "task_id": "train-planning-03",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.0
+      }
+    },
+    {
+      "task_id": "train-planning-04",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "train-planning-05",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "max_buffer_kib": 2.0
+      }
+    },
+    {
+      "task_id": "train-planning-06",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "timeout",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_timeout_once"
+      }
+    },
+    {
+      "task_id": "train-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "max_ebn0_db"
+        ],
+        "question": "请补充以下必要参数：max_ebn0_db"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "max_ebn0_db"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001
+      }
+    },
+    {
+      "task_id": "train-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "rytov_variance"
+        ],
+        "question": "请补充以下必要参数：rytov_variance"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "rytov_variance"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.0
+      }
+    },
+    {
+      "task_id": "train-planning-09",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "plan_turbulence_aware_link",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.0,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "train-planning-10",
+      "status": "tool_error",
+      "answer": null,
+      "error": "threshold catalog unavailable after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 2,
+          "retry": true
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_unavailable"
+      }
+    },
+    {
+      "task_id": "dev-planning-01",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.1
+      }
+    },
+    {
+      "task_id": "dev-planning-02",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.1
+      }
+    },
+    {
+      "task_id": "dev-planning-03",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.1
+      }
+    },
+    {
+      "task_id": "dev-planning-04",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.1,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "dev-planning-05",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "max_buffer_kib": 2.1
+      }
+    },
+    {
+      "task_id": "dev-planning-06",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "timeout",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_timeout_once"
+      }
+    },
+    {
+      "task_id": "dev-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "max_ebn0_db"
+        ],
+        "question": "请补充以下必要参数：max_ebn0_db"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "max_ebn0_db"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001
+      }
+    },
+    {
+      "task_id": "dev-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "rytov_variance"
+        ],
+        "question": "请补充以下必要参数：rytov_variance"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "rytov_variance"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.1
+      }
+    },
+    {
+      "task_id": "dev-planning-09",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "plan_turbulence_aware_link",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.1,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "dev-planning-10",
+      "status": "tool_error",
+      "answer": null,
+      "error": "threshold catalog unavailable after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 2,
+          "retry": true
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_unavailable"
+      }
+    },
+    {
+      "task_id": "test-planning-01",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.2
+      }
+    },
+    {
+      "task_id": "test-planning-02",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.2
+      }
+    },
+    {
+      "task_id": "test-planning-03",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.2
+      }
+    },
+    {
+      "task_id": "test-planning-04",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.2,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "test-planning-05",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "max_buffer_kib": 2.2
+      }
+    },
+    {
+      "task_id": "test-planning-06",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "timeout",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "injected_fault": "threshold_catalog_timeout_once"
+      }
+    },
+    {
+      "task_id": "test-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "max_ebn0_db"
+        ],
+        "question": "请补充以下必要参数：max_ebn0_db"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "max_ebn0_db"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001
+      }
+    },
+    {
+      "task_id": "test-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "rytov_variance"
+        ],
+        "question": "请补充以下必要参数：rytov_variance"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "rytov_variance"
+          ]
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.2
+      }
+    },
+    {
+      "task_id": "test-planning-09",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "plan_turbulence_aware_link",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.2,
+        "allowed_codes": [
+          "RS"
+        ]
+      }
+    },
+    {
+      "task_id": "test-planning-10",
+      "status": "tool_error",
+      "answer": null,
+      "error": "threshold catalog unavailable after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 1
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "unavailable",
+          "attempt": 2,
+          "retry": true
+        }
+      ],
+      "passed": true,
+      "parsed_operation": "plan_turbulence_aware_link",
+      "parsed_inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "injected_fault": "threshold_catalog_unavailable"
+      }
+    }
+  ]
+}

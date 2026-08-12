@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "experiment": "langgraph_offline_rule_smoke",
+  "not_an_agent_model_baseline": true,
+  "generated_at_utc": "2026-08-12T01:37:15.736734+00:00",
+  "development_dataset_sha256": "cf9cfbfed67868ae891c89b67b97f486b7c5b109652aca93ba03d5d65d8c7e19",
+  "lock_sha256": "be95385ea1d2f4c735ac4b49e6c60a9d1875216c59392233b47ff99fc188dd60",
+  "source_git_sha": "4e5bf09b995b49b4e8ad6793fcdfc782f89e7bc2",
+  "langgraph": "1.2.11",
+  "langchain_core": "1.5.4",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "development_tasks": 30,
+  "challenge_tasks_run": 0,
+  "network_calls": 0,
+  "model_calls": 0
+}
