@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source": "fso_thesis_simple/results/10_turbulence_sensitivity_summary.csv",
+  "thresholds": [
+    {"configuration_id":"LDPC-L64-D128","code":"LDPC","turbulence":"Moderate","coherence_bits":64,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":21.624292913748626,"target_bracketed":true},
+    {"configuration_id":"LDPC-L64-D128","code":"LDPC","turbulence":"Strong","coherence_bits":64,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":26.632942488563554,"target_bracketed":true},
+    {"configuration_id":"LDPC-L64-D128","code":"LDPC","turbulence":"Weak","coherence_bits":64,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":16.649640172468015,"target_bracketed":true},
+    {"configuration_id":"LDPC-L256-D128","code":"LDPC","turbulence":"Moderate","coherence_bits":256,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":22.874303178833777,"target_bracketed":true},
+    {"configuration_id":"LDPC-L256-D128","code":"LDPC","turbulence":"Strong","coherence_bits":256,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":29.16095283421094,"target_bracketed":true},
+    {"configuration_id":"LDPC-L256-D128","code":"LDPC","turbulence":"Weak","coherence_bits":256,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":17.881984793706003,"target_bracketed":true},
+    {"configuration_id":"RS-L64-D8","code":"RS","turbulence":"Moderate","coherence_bits":64,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":24.048063564266393,"target_bracketed":true},
+    {"configuration_id":"RS-L64-D8","code":"RS","turbulence":"Strong","coherence_bits":64,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":null,"target_bracketed":false,"pessimistic_bound_db":28.750172772294174},
+    {"configuration_id":"RS-L64-D8","code":"RS","turbulence":"Weak","coherence_bits":64,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":null,"target_bracketed":false,"pessimistic_bound_db":17.11322509031656},
+    {"configuration_id":"RS-L256-D32","code":"RS","turbulence":"Moderate","coherence_bits":256,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":24.29922185728044,"target_bracketed":true},
+    {"configuration_id":"RS-L256-D32","code":"RS","turbulence":"Strong","coherence_bits":256,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":null,"target_bracketed":false,"pessimistic_bound_db":28.742131382171472},
+    {"configuration_id":"RS-L256-D32","code":"RS","turbulence":"Weak","coherence_bits":256,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":null,"target_bracketed":false,"pessimistic_bound_db":17.075819874799073}
+  ]
+}
+
