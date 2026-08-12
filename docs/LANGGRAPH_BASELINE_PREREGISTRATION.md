@@ -36,3 +36,12 @@ Challenge v1 运行数为0。
 Schema 的哈希由 `scripts/freeze_langgraph_model_contract.py` 保存；故障 profile 仅配置工具环境，
 不会进入 Planner 上下文，目录 observation 只暴露摘要。Challenge 运行器还会要求当前冻结
 契约哈希与 development manifest 完全一致；模型提供方和快照仍待配置。
+
+development 运行结束后先执行：
+
+```powershell
+python scripts/assess_langgraph_model_development.py
+```
+
+只有数据/契约哈希、30条规划任务覆盖、汇总、逐调用遥测和凭据排除检查全部通过，才允许
+人工确认最终配置。该检查只证明制品完整，不代表模型效果达标，也不读取 Challenge。

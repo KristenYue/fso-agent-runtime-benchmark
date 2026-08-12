@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from fso_benchmark.baseline import matches_expected  # noqa: E402
 from fso_benchmark.contracts import TaskResult  # noqa: E402
+from fso_benchmark.development_gate import assess_development_artifacts  # noqa: E402
 from fso_benchmark.langgraph_agent import run_agent  # noqa: E402
 from fso_benchmark.model_planner import OpenAICompatiblePlanner  # noqa: E402
 
@@ -47,6 +48,10 @@ def require_final_configuration() -> tuple[str, str, str, dict]:
         raise SystemExit("frozen model contract is missing")
     if development.get("contract_sha256") != sha256(contract_path):
         raise SystemExit("frozen model contract differs from development manifest")
+    try:
+        assess_development_artifacts(ROOT)
+    except (ValueError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"development artifact validation failed: {exc}") from exc
     ledger_path = ROOT / "artifacts" / "langgraph_model_challenge" / "run_ledger.json"
     if ledger_path.exists():
         raise SystemExit("frozen challenge has already been reserved or executed")
