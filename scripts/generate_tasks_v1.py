@@ -33,6 +33,8 @@ def expected_for(task_id: str, level: str, operation: str, inputs: dict[str, Any
     if result.status == "success" and result.answer is not None:
         if operation == "select_configuration":
             expected["configuration_id"] = result.answer["configuration_id"]
+        elif operation == "plan_turbulence_aware_link":
+            expected["configuration_id"] = result.answer["selection"]["configuration_id"]
         else:
             expected["answer"] = result.answer
     return expected
@@ -181,4 +183,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

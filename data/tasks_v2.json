@@ -2408,32 +2408,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.2,
-            "turbulence": "Weak",
-            "alpha": 11.65104537862684,
-            "beta": 10.122365306725285
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 16.649640172468015,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Weak",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2452,32 +2427,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 21.624292913748626,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 4,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2496,32 +2446,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2543,32 +2468,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2588,32 +2488,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2633,32 +2508,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2751,32 +2601,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.2,
-            "turbulence": "Weak",
-            "alpha": 11.65104537862684,
-            "beta": 10.122365306725285
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 16.649640172468015,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Weak",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2795,32 +2620,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 21.624292913748626,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 4,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2839,32 +2639,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2886,32 +2661,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2931,32 +2681,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -2976,32 +2701,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3094,32 +2794,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.2,
-            "turbulence": "Weak",
-            "alpha": 11.65104537862684,
-            "beta": 10.122365306725285
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 16.649640172468015,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Weak",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3138,32 +2813,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 21.624292913748626,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 4,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3182,32 +2832,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3229,32 +2854,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3274,32 +2874,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 0.75,
-            "turbulence": "Moderate",
-            "alpha": 4.868481548020511,
-            "beta": 3.1648679882817663
-          },
-          "selection": {
-            "configuration_id": "RS-L64-D8",
-            "code": "RS",
-            "coherence_bits": 64,
-            "interleaver_depth": 8,
-            "target_ber": 0.001,
-            "required_ebn0_db": 24.048063564266393,
-            "code_rate": 0.8745098039215686,
-            "buffer_kib": 1.9921875,
-            "additional_latency_us": 14.28,
-            "turbulence": "Moderate",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.1434977578475336,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 1,
-            "unavailable_threshold_count": 0
-          }
-        }
+        "configuration_id": "RS-L64-D8"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"
@@ -3319,32 +2894,7 @@
       },
       "expected": {
         "status": "success",
-        "answer": {
-          "turbulence": {
-            "rytov_variance": 2.0,
-            "turbulence": "Strong",
-            "alpha": 3.9928853118961882,
-            "beta": 1.7018254584528547
-          },
-          "selection": {
-            "configuration_id": "LDPC-L64-D128",
-            "code": "LDPC",
-            "coherence_bits": 64,
-            "interleaver_depth": 128,
-            "target_ber": 0.001,
-            "required_ebn0_db": 26.632942488563554,
-            "code_rate": 0.876953125,
-            "buffer_kib": 8.0,
-            "additional_latency_us": 65.024,
-            "turbulence": "Strong",
-            "target_bracketed": true,
-            "bandwidth_overhead": 0.14031180400890864,
-            "objective": "min_bandwidth_overhead",
-            "optimality_gap": 0.0,
-            "verified_feasible_count": 2,
-            "unavailable_threshold_count": 2
-          }
-        }
+        "configuration_id": "LDPC-L64-D128"
       },
       "must_reject": false,
       "passing_condition": "status_and_answer_contract_match"

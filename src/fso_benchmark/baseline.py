@@ -12,7 +12,22 @@ from .tools import (
     resolve_turbulence_regime,
     select_configuration,
     select_robust_configuration,
+    validate_turbulence_catalog,
 )
+
+
+def _semantically_corrupted_thresholds(
+    thresholds: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    corrupted = [dict(row) for row in thresholds]
+    for row in corrupted:
+        if (
+            row["configuration_id"] == "LDPC-L64-D128"
+            and row["turbulence"] == "Strong"
+        ):
+            row["required_ebn0_db"] = 10.0
+            break
+    return corrupted
 
 
 def execute_direct(task: TaskSpec) -> TaskResult:
@@ -42,6 +57,28 @@ def execute_direct(task: TaskSpec) -> TaskResult:
                         "tool": "validate_required_inputs",
                         "status": "needs_clarification",
                         "missing_fields": missing_fields,
+                    }
+                )
+                return TaskResult(
+                    task.task_id,
+                    "needs_clarification",
+                    answer,
+                    None,
+                    tuple(trace),
+                )
+            allowed = set(task.inputs.get("allowed_codes") or {"RS", "LDPC"})
+            forbidden = set(task.inputs.get("forbidden_codes") or [])
+            conflicting_codes = sorted(allowed & forbidden)
+            if conflicting_codes:
+                answer = {
+                    "conflicting_codes": conflicting_codes,
+                    "question": "编码约束相互冲突，请确认允许或禁止的优先级。",
+                }
+                trace.append(
+                    {
+                        "tool": "validate_constraints",
+                        "status": "needs_clarification",
+                        "conflicting_codes": conflicting_codes,
                     }
                 )
                 return TaskResult(
@@ -97,11 +134,79 @@ def execute_direct(task: TaskSpec) -> TaskResult:
                     "threshold catalog unavailable after retry budget",
                     tuple(trace),
                 )
+            elif fault_mode in {
+                "threshold_catalog_semantic_corruption_once",
+                "threshold_catalog_semantic_corruption_persistent",
+            }:
+                clean_thresholds = load_turbulence_catalog()
+                thresholds = _semantically_corrupted_thresholds(clean_thresholds)
+                trace.append(
+                    {
+                        "tool": "load_turbulence_catalog",
+                        "status": "success",
+                        "attempt": 1,
+                        "rows": len(thresholds),
+                    }
+                )
+                try:
+                    validate_turbulence_catalog(thresholds)
+                except ValueError as exc:
+                    trace.append(
+                        {
+                            "tool": "validate_turbulence_catalog",
+                            "status": "semantic_error",
+                            "attempt": 1,
+                            "error": str(exc),
+                        }
+                    )
+                if fault_mode == "threshold_catalog_semantic_corruption_persistent":
+                    trace.extend(
+                        [
+                            {
+                                "tool": "load_turbulence_catalog",
+                                "status": "success",
+                                "attempt": 2,
+                                "retry": True,
+                                "rows": len(thresholds),
+                            },
+                            {
+                                "tool": "validate_turbulence_catalog",
+                                "status": "semantic_error",
+                                "attempt": 2,
+                            },
+                        ]
+                    )
+                    return TaskResult(
+                        task.task_id,
+                        "tool_error",
+                        None,
+                        "semantic catalog corruption persisted after retry budget",
+                        tuple(trace),
+                    )
+                thresholds = clean_thresholds
+                trace.append(
+                    {
+                        "tool": "load_turbulence_catalog",
+                        "status": "success",
+                        "attempt": 2,
+                        "retry": True,
+                        "recovery": "clean_frozen_catalog",
+                        "rows": len(thresholds),
+                    }
+                )
             elif fault_mode is None:
                 thresholds = load_turbulence_catalog()
                 trace.append({"tool": "load_turbulence_catalog", "status": "success", "rows": len(thresholds)})
             else:
                 raise ValueError("unsupported injected_fault")
+            validation = validate_turbulence_catalog(thresholds)
+            trace.append(
+                {
+                    "tool": "validate_turbulence_catalog",
+                    "status": "success",
+                    **validation,
+                }
+            )
             catalog = load_catalog()
             trace.append({"tool": "load_catalog", "status": "success", "rows": len(catalog)})
             optimizer_inputs = {
@@ -138,7 +243,12 @@ def matches_expected(result: TaskResult, expected: dict[str, Any]) -> bool:
     if result.status != expected["status"]:
         return False
     if "configuration_id" in expected:
-        return bool(result.answer) and result.answer.get("configuration_id") == expected["configuration_id"]
+        if not result.answer:
+            return False
+        actual = result.answer.get("configuration_id")
+        if actual is None and isinstance(result.answer.get("selection"), dict):
+            actual = result.answer["selection"].get("configuration_id")
+        return actual == expected["configuration_id"]
     if "answer" in expected:
         return result.answer == expected["answer"]
     return True

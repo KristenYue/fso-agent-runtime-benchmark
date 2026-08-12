@@ -3,7 +3,11 @@ import pytest
 from fso_benchmark.baseline import execute_direct
 from fso_benchmark.catalog import load_catalog, load_turbulence_catalog
 from fso_benchmark.contracts import TaskSpec
-from fso_benchmark.tools import resolve_turbulence_regime, select_robust_configuration
+from fso_benchmark.tools import (
+    resolve_turbulence_regime,
+    select_robust_configuration,
+    validate_turbulence_catalog,
+)
 
 
 def test_resolve_turbulence_regime_only_accepts_validated_points() -> None:
@@ -53,6 +57,7 @@ def test_multistep_executor_records_five_successful_steps() -> None:
         "characterize_turbulence",
         "resolve_turbulence_regime",
         "load_turbulence_catalog",
+        "validate_turbulence_catalog",
         "load_catalog",
         "select_robust_configuration",
     ]
@@ -118,3 +123,48 @@ def test_multistep_executor_stops_after_retry_budget() -> None:
     result = execute_direct(task)
     assert result.status == "tool_error"
     assert len([step for step in result.trace if step.get("retry")]) == 1
+
+
+def test_catalog_validator_detects_schema_valid_semantic_corruption() -> None:
+    rows = [dict(row) for row in load_turbulence_catalog()]
+    for row in rows:
+        if row["configuration_id"] == "LDPC-L64-D128" and row["turbulence"] == "Strong":
+            row["required_ebn0_db"] = 10.0
+    with pytest.raises(ValueError, match="semantic turbulence ordering"):
+        validate_turbulence_catalog(rows)
+
+
+def test_multistep_executor_recovers_from_semantic_corruption_once() -> None:
+    task = TaskSpec(
+        "semantic-recovery",
+        "L3",
+        "plan_turbulence_aware_link",
+        {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0,
+            "injected_fault": "threshold_catalog_semantic_corruption_once",
+        },
+    )
+    result = execute_direct(task)
+    assert result.status == "success"
+    assert any(step["status"] == "semantic_error" for step in result.trace)
+    assert any(step.get("recovery") == "clean_frozen_catalog" for step in result.trace)
+
+
+def test_conflicting_code_constraints_require_clarification() -> None:
+    task = TaskSpec(
+        "conflict",
+        "L3",
+        "plan_turbulence_aware_link",
+        {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0,
+            "allowed_codes": ["RS"],
+            "forbidden_codes": ["RS"],
+        },
+    )
+    result = execute_direct(task)
+    assert result.status == "needs_clarification"
+    assert result.answer["conflicting_codes"] == ["RS"]

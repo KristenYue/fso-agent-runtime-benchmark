@@ -57,6 +57,39 @@ def resolve_turbulence_regime(rytov_variance: Any) -> dict[str, Any]:
     raise ValueError("rytov_variance must be one of the validated values: 0.2, 0.75, 2.0")
 
 
+def validate_turbulence_catalog(
+    thresholds: Iterable[dict[str, Any]],
+) -> dict[str, int]:
+    """Detect schema-valid threshold values that violate domain ordering."""
+    rows = list(thresholds)
+    seen: set[tuple[str, str]] = set()
+    by_configuration: dict[str, dict[str, float]] = {}
+    for row in rows:
+        key = (row["configuration_id"], row["turbulence"])
+        if key in seen:
+            raise ValueError(f"duplicate turbulence threshold: {key}")
+        seen.add(key)
+        if row["target_bracketed"]:
+            required = _finite_number(row["required_ebn0_db"], "required_ebn0_db")
+            if required <= 0:
+                raise ValueError("required_ebn0_db must be positive")
+            by_configuration.setdefault(row["configuration_id"], {})[
+                row["turbulence"]
+            ] = required
+        elif row["required_ebn0_db"] is not None:
+            raise ValueError("unbracketed threshold must not contain required_ebn0_db")
+
+    checked_orderings = 0
+    for configuration_id, values in by_configuration.items():
+        if {"Weak", "Moderate", "Strong"} <= values.keys():
+            checked_orderings += 1
+            if not values["Weak"] <= values["Moderate"] <= values["Strong"]:
+                raise ValueError(
+                    f"semantic turbulence ordering violated for {configuration_id}"
+                )
+    return {"validated_rows": len(rows), "checked_orderings": checked_orderings}
+
+
 def select_configuration(
     configurations: Iterable[dict[str, Any]],
     *,
@@ -119,6 +152,7 @@ def select_robust_configuration(
     target_ber: Any,
     max_ebn0_db: Any,
     allowed_codes: Any = None,
+    forbidden_codes: Any = None,
     max_buffer_kib: Any = None,
     objective: str = "min_bandwidth_overhead",
 ) -> dict[str, Any]:
@@ -140,6 +174,17 @@ def select_robust_configuration(
         codes = set(allowed_codes)
         if not codes <= {"RS", "LDPC"} or len(codes) != len(allowed_codes):
             raise ValueError("allowed_codes must contain unique RS/LDPC values")
+    if forbidden_codes is None:
+        forbidden: set[str] = set()
+    elif not isinstance(forbidden_codes, list):
+        raise ValueError("forbidden_codes must be a list")
+    else:
+        forbidden = set(forbidden_codes)
+        if not forbidden <= {"RS", "LDPC"} or len(forbidden) != len(forbidden_codes):
+            raise ValueError("forbidden_codes must contain unique RS/LDPC values")
+    codes -= forbidden
+    if not codes:
+        raise LookupError("no code remains after applying forbidden_codes")
     buffer_limit = (
         math.inf
         if max_buffer_kib is None

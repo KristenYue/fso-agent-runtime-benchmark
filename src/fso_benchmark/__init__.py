@@ -7,6 +7,7 @@ from .tools import (
     resolve_turbulence_regime,
     select_configuration,
     select_robust_configuration,
+    validate_turbulence_catalog,
 )
 
 __all__ = [
@@ -16,4 +17,5 @@ __all__ = [
     "resolve_turbulence_regime",
     "select_configuration",
     "select_robust_configuration",
+    "validate_turbulence_catalog",
 ]

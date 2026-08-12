@@ -26,3 +26,19 @@ def test_unknown_operation_is_rejected() -> None:
     result = execute_direct(TaskSpec("bad-op", "L3", "delete_everything", {}))
     assert result.status == "invalid_input"
 
+
+def test_multistep_matching_checks_nested_configuration_id() -> None:
+    case = {
+        "task_id": "nested-choice",
+        "level": "L2",
+        "operation": "plan_turbulence_aware_link",
+        "inputs": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.0,
+        },
+        "expected": {"status": "success", "configuration_id": "wrong-choice"},
+    }
+    report = run_direct_baseline([case])
+    assert report["results"][0]["status"] == "success"
+    assert report["results"][0]["passed"] is False
