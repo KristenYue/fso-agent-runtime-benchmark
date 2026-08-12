@@ -28,8 +28,11 @@ python scripts/run_planning_baselines_v2.py
 不是 Agent 的实验成绩。后续 LangGraph 与自研 Runtime 必须在同一冻结任务集、相同工具
 Schema 和相同评分器上比较。
 
-当前规则基线覆盖受控生成模板；若达到 100%，只能证明模板可以被规则完整解析，
-不能证明 Agent 有额外价值。项目在加入真正多步约束和失败恢复任务前不会冻结最终测试集。
+development 规则基线覆盖受控生成模板；其100%结果只能证明模板可以被规则完整解析，
+不能证明 Agent 有额外价值。
+
+当前已冻结24条 Challenge v1：Oracle 24/24，规则基线4/24。后续 LangGraph 和自研
+Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战集继续调参。
 
 ## 确定性工具
 

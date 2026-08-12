@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "experiment": "challenge_v1",
+  "generated_at_utc": "2026-08-12T01:32:08.908385+00:00",
+  "dataset_sha256": "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086",
+  "source_git_sha": "1a32e491396dee9ab4eec1f699055e169b1030d2",
+  "frozen_rule_parser_source_commit": "1b7b97d",
+  "challenge_tasks": 24,
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "network_calls": 0,
+  "model_calls": 0
+}

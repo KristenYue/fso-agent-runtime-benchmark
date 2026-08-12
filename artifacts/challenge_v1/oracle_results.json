@@ -1,0 +1,1208 @@
+{
+  "summary": {
+    "total": 24,
+    "passed": 24,
+    "exact_match_rate": 1.0,
+    "successful_tasks": 12,
+    "rejected_tasks": 12,
+    "mean_tool_calls": 4.666666666666667
+  },
+  "results": [
+    {
+      "task_id": "challenge-01",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "cross_sentence"
+    },
+    {
+      "task_id": "challenge-02",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "cross_sentence"
+    },
+    {
+      "task_id": "challenge-03",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "cross_sentence"
+    },
+    {
+      "task_id": "challenge-04",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "cross_sentence"
+    },
+    {
+      "task_id": "challenge-05",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "implicit_units"
+    },
+    {
+      "task_id": "challenge-06",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "implicit_units"
+    },
+    {
+      "task_id": "challenge-07",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "implicit_units"
+    },
+    {
+      "task_id": "challenge-08",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "implicit_units"
+    },
+    {
+      "task_id": "challenge-09",
+      "status": "needs_clarification",
+      "answer": {
+        "conflicting_codes": [
+          "RS"
+        ],
+        "question": "编码约束相互冲突，请确认允许或禁止的优先级。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_constraints",
+          "status": "needs_clarification",
+          "conflicting_codes": [
+            "RS"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "constraint_conflict"
+    },
+    {
+      "task_id": "challenge-10",
+      "status": "needs_clarification",
+      "answer": {
+        "conflicting_codes": [
+          "LDPC"
+        ],
+        "question": "编码约束相互冲突，请确认允许或禁止的优先级。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_constraints",
+          "status": "needs_clarification",
+          "conflicting_codes": [
+            "LDPC"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "constraint_conflict"
+    },
+    {
+      "task_id": "challenge-11",
+      "status": "needs_clarification",
+      "answer": {
+        "conflicting_codes": [
+          "RS"
+        ],
+        "question": "编码约束相互冲突，请确认允许或禁止的优先级。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_constraints",
+          "status": "needs_clarification",
+          "conflicting_codes": [
+            "RS"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "constraint_conflict"
+    },
+    {
+      "task_id": "challenge-12",
+      "status": "needs_clarification",
+      "answer": {
+        "conflicting_codes": [
+          "LDPC"
+        ],
+        "question": "编码约束相互冲突，请确认允许或禁止的优先级。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_constraints",
+          "status": "needs_clarification",
+          "conflicting_codes": [
+            "LDPC"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "constraint_conflict"
+    },
+    {
+      "task_id": "challenge-13",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "recovery": "clean_frozen_catalog",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_recovery"
+    },
+    {
+      "task_id": "challenge-14",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.75,
+          "turbulence": "Moderate",
+          "alpha": 4.868481548020511,
+          "beta": 3.1648679882817663
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "recovery": "clean_frozen_catalog",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_recovery"
+    },
+    {
+      "task_id": "challenge-15",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 0.2,
+          "turbulence": "Weak",
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "recovery": "clean_frozen_catalog",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_recovery"
+    },
+    {
+      "task_id": "challenge-16",
+      "status": "success",
+      "answer": {
+        "turbulence": {
+          "rytov_variance": 2.0,
+          "turbulence": "Strong",
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        },
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "recovery": "clean_frozen_catalog",
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_robust_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_recovery"
+    },
+    {
+      "task_id": "challenge-17",
+      "status": "tool_error",
+      "answer": null,
+      "error": "semantic catalog corruption persisted after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 2
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_persistent"
+    },
+    {
+      "task_id": "challenge-18",
+      "status": "tool_error",
+      "answer": null,
+      "error": "semantic catalog corruption persisted after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 2
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_persistent"
+    },
+    {
+      "task_id": "challenge-19",
+      "status": "tool_error",
+      "answer": null,
+      "error": "semantic catalog corruption persisted after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 2
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_persistent"
+    },
+    {
+      "task_id": "challenge-20",
+      "status": "tool_error",
+      "answer": null,
+      "error": "semantic catalog corruption persisted after retry budget",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        },
+        {
+          "tool": "resolve_turbulence_regime",
+          "status": "success"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 1,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 1,
+          "error": "semantic turbulence ordering violated for LDPC-L64-D128"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "status": "success",
+          "attempt": 2,
+          "retry": true,
+          "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "semantic_error",
+          "attempt": 2
+        }
+      ],
+      "passed": true,
+      "challenge_family": "semantic_persistent"
+    },
+    {
+      "task_id": "challenge-21",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "rytov_variance"
+        ],
+        "question": "请补充以下必要参数：rytov_variance"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "rytov_variance"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "missing_indirect"
+    },
+    {
+      "task_id": "challenge-22",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "max_ebn0_db"
+        ],
+        "question": "请补充以下必要参数：max_ebn0_db"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "max_ebn0_db"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "missing_indirect"
+    },
+    {
+      "task_id": "challenge-23",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "target_ber"
+        ],
+        "question": "请补充以下必要参数：target_ber"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "target_ber"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "missing_indirect"
+    },
+    {
+      "task_id": "challenge-24",
+      "status": "needs_clarification",
+      "answer": {
+        "missing_fields": [
+          "rytov_variance",
+          "target_ber",
+          "max_ebn0_db"
+        ],
+        "question": "请补充以下必要参数：rytov_variance、target_ber、max_ebn0_db"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "validate_required_inputs",
+          "status": "needs_clarification",
+          "missing_fields": [
+            "rytov_variance",
+            "target_ber",
+            "max_ebn0_db"
+          ]
+        }
+      ],
+      "passed": true,
+      "challenge_family": "missing_indirect"
+    }
+  ],
+  "by_challenge_family": {
+    "constraint_conflict": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    },
+    "cross_sentence": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    },
+    "implicit_units": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    },
+    "missing_indirect": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    },
+    "semantic_persistent": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    },
+    "semantic_recovery": {
+      "total": 4,
+      "task_passed": 4,
+      "task_pass_rate": 1.0
+    }
+  }
+}
