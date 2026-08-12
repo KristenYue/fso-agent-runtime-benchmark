@@ -20,6 +20,10 @@
 6. 测试集只运行最终配置；调试和选择使用 development 数据；
 7. 保留全部失败轨迹，不因结果较差更换指标或删除任务。
 
+正式运行由 `scripts/run_langgraph_model_challenge_once.py` 执行。它要求 development
+manifest、完全相同的模型/端点、显式批准值和空运行账本；开始调用前写入 `running`
+账本，即使中途失败也不得重新选择配置或静默重跑。
+
 ## 进入 LangGraph 的门禁
 
 - Oracle 24/24：已满足；

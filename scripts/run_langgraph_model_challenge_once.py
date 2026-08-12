@@ -1,0 +1,130 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from fso_benchmark.baseline import matches_expected  # noqa: E402
+from fso_benchmark.contracts import TaskResult  # noqa: E402
+from fso_benchmark.langgraph_agent import run_agent  # noqa: E402
+from fso_benchmark.model_planner import OpenAICompatiblePlanner  # noqa: E402
+
+
+FROZEN_CHALLENGE_SHA256 = "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
+APPROVAL_VALUE = "challenge-v1-final-once"
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def require_final_configuration() -> tuple[str, str, str, dict]:
+    base_url = os.environ.get("FSO_MODEL_BASE_URL", "")
+    api_key = os.environ.get("FSO_MODEL_API_KEY", "")
+    model = os.environ.get("FSO_MODEL_ID", "")
+    if not all((base_url, api_key, model)):
+        raise SystemExit("model configuration is incomplete")
+    if os.environ.get("FSO_FROZEN_CHALLENGE_APPROVAL") != APPROVAL_VALUE:
+        raise SystemExit("frozen challenge approval is missing")
+    development_manifest_path = (
+        ROOT / "artifacts" / "langgraph_model_development" / "manifest.json"
+    )
+    if not development_manifest_path.exists():
+        raise SystemExit("development model manifest is required before frozen challenge")
+    development = json.loads(development_manifest_path.read_text(encoding="utf-8"))
+    if development.get("model_id") != model or development.get("base_url") != base_url:
+        raise SystemExit("model configuration differs from development manifest")
+    ledger_path = ROOT / "artifacts" / "langgraph_model_challenge" / "run_ledger.json"
+    if ledger_path.exists():
+        raise SystemExit("frozen challenge has already been reserved or executed")
+    challenge_path = ROOT / "data" / "challenge_v1.json"
+    if sha256(challenge_path) != FROZEN_CHALLENGE_SHA256:
+        raise SystemExit("frozen challenge hash mismatch")
+    return base_url, api_key, model, development
+
+
+def main() -> None:
+    base_url, api_key, model, development = require_final_configuration()
+    output_dir = ROOT / "artifacts" / "langgraph_model_challenge"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    ledger_path = output_dir / "run_ledger.json"
+    ledger = {
+        "schema_version": "1.0",
+        "challenge": "challenge-v1",
+        "reserved_at_utc": datetime.now(timezone.utc).isoformat(),
+        "status": "running",
+        "model_id": model,
+        "base_url": base_url,
+        "credentials_recorded": False,
+    }
+    ledger_path.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    challenge_path = ROOT / "data" / "challenge_v1.json"
+    cases = json.loads(challenge_path.read_text(encoding="utf-8"))["tasks"]
+    planner = OpenAICompatiblePlanner(
+        base_url=base_url,
+        api_key=api_key,
+        model=model,
+        prompt_path=ROOT / "prompts" / "planner_v1.md",
+        schema_path=ROOT / "schemas" / "planner_action_v1.json",
+        temperature=0.0,
+        timeout_seconds=30.0,
+        retry_budget=1,
+    )
+    records = []
+    for case in cases:
+        started = time.perf_counter()
+        result = run_agent(case["request"], planner, max_tool_calls=8)
+        task_result = TaskResult(
+            task_id=case["task_id"],
+            status=result["status"],
+            answer=result["answer"],
+            error=result["error"],
+            trace=tuple(result["trace"]),
+        )
+        records.append(
+            {
+                "task_id": case["task_id"],
+                **result,
+                "passed": matches_expected(task_result, case["expected"]),
+                "elapsed_ms": (time.perf_counter() - started) * 1000.0,
+            }
+        )
+    total = len(records)
+    usage = planner.usage_summary()
+    report = {
+        "summary": {
+            "total": total,
+            "passed": sum(row["passed"] for row in records),
+            "pass_rate": sum(row["passed"] for row in records) / total,
+            **usage,
+        },
+        "results": records,
+    }
+    (output_dir / "results.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    ledger.update(
+        {
+            "status": "complete",
+            "completed_at_utc": datetime.now(timezone.utc).isoformat(),
+            "development_manifest_sha256": hashlib.sha256(
+                json.dumps(development, sort_keys=True).encode("utf-8")
+            ).hexdigest(),
+            "result_sha256": sha256(output_dir / "results.json"),
+        }
+    )
+    ledger_path.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()
