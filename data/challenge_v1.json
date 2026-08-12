@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "challenge-v1-frozen",
+  "generator": "scripts/build_challenge_v1.py",
+  "frozen_rule_parser_source_commit": "1b7b97d",
+  "tasks": [
+    {
+      "task_id": "challenge-01",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-cross_sentence-01",
+      "challenge_family": "cross_sentence",
+      "request": "先按中等湍流考虑链路。Rytov 取0.75。误码率必须压到1e-3，系统最多提供25分贝的Eb/N0。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-02",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-cross_sentence-02",
+      "challenge_family": "cross_sentence",
+      "request": "我要规划强湍流链路。sigma的平方是2。BER不能高于0.001。功率预算是27 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-03",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-cross_sentence-03",
+      "challenge_family": "cross_sentence",
+      "request": "弱湍流场景，方差0.2。目标误码率千分之一，Eb/N0封顶20 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-04",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-cross_sentence-04",
+      "challenge_family": "cross_sentence",
+      "request": "链路要在中等湍流下工作；湍流指标0.75。请满足BER千分之一和25 dB上限，同时缓存不得超过2 KiB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0,
+        "max_buffer_kib": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-05",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-implicit_units-05",
+      "challenge_family": "implicit_units",
+      "request": "做弱湍流链路规划：Rytov方差0.2，BER上限千分之一，功率只有二十点一分贝。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-06",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-implicit_units-06",
+      "challenge_family": "implicit_units",
+      "request": "强湍流，sigma_R平方等于2；误码率上限10的负三次方；可用信噪比二十七点一分贝。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-07",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-implicit_units-07",
+      "challenge_family": "implicit_units",
+      "request": "中等湍流链路：方差四分之三，BER千分之一，功率预算二十五点一分贝。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-08",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-implicit_units-08",
+      "challenge_family": "implicit_units",
+      "request": "请选链路。Rytov=0.75，BER=0.1%，Eb/N0最多25.2 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.2
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-09",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-constraint_conflict-09",
+      "challenge_family": "constraint_conflict",
+      "request": "规划链路：Rytov方差为0.75，目标BER为0.001，发射Eb/N0上限为30 dB。只允许RS，但安全策略同时禁止RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "allowed_codes": [
+          "RS"
+        ],
+        "forbidden_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-10",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-constraint_conflict-10",
+      "challenge_family": "constraint_conflict",
+      "request": "强湍流链路，方差2，BER不超过1e-3，功率30 dB。限定LDPC，后文又要求不要使用LDPC。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "forbidden_codes": [
+          "LDPC"
+        ]
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-11",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-constraint_conflict-11",
+      "challenge_family": "constraint_conflict",
+      "request": "弱湍流方案：sigma_R^2=0.2，BER≤0.001，预算20 dB。只考虑RS；合规条款排除RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0,
+        "allowed_codes": [
+          "RS"
+        ],
+        "forbidden_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-12",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-constraint_conflict-12",
+      "challenge_family": "constraint_conflict",
+      "request": "中等湍流，0.75；目标BER千分之一；预算30 dB。编码限定为LDPC，不过设备清单明确禁用LDPC。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "forbidden_codes": [
+          "LDPC"
+        ]
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-13",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_recovery-13",
+      "challenge_family": "semantic_recovery",
+      "request": "Rytov方差为2，目标BER为0.001，发射Eb/N0上限为30 dB。阈值目录首个响应数值自洽性错误，检测后改用冻结副本。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_once"
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128",
+        "required_trace_statuses": [
+          "semantic_error"
+        ],
+        "requires_recovery": true
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-14",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_recovery-14",
+      "challenge_family": "semantic_recovery",
+      "request": "规划中等湍流链路，方差0.75，BER上限1e-3，功率30 dB。若目录把强湍流门限写得更低，识别后重载可信目录。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_once"
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128",
+        "required_trace_statuses": [
+          "semantic_error"
+        ],
+        "requires_recovery": true
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-15",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_recovery-15",
+      "challenge_family": "semantic_recovery",
+      "request": "弱湍流0.2，BER≤0.001，功率20 dB。目录第一次返回违反湍流单调性的值，请校验并恢复。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_once"
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128",
+        "required_trace_statuses": [
+          "semantic_error"
+        ],
+        "requires_recovery": true
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-16",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_recovery-16",
+      "challenge_family": "semantic_recovery",
+      "request": "强湍流链路，Rytov=2，目标千分之一，预算30.1 dB。语义校验首次失败后允许读取冻结版本。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_semantic_corruption_once"
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128",
+        "required_trace_statuses": [
+          "semantic_error"
+        ],
+        "requires_recovery": true
+      },
+      "must_reject": false,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-17",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_persistent-17",
+      "challenge_family": "semantic_persistent",
+      "request": "Rytov方差2，BER上限0.001，功率30 dB。目录连续两次都违反湍流门限排序，停止并报工具错误。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_persistent"
+      },
+      "expected": {
+        "status": "tool_error",
+        "required_trace_statuses": [
+          "semantic_error"
+        ]
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-18",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_persistent-18",
+      "challenge_family": "semantic_persistent",
+      "request": "中等湍流0.75，目标1e-3，预算30 dB。两次目录响应都语义错误，不准继续优化。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_persistent"
+      },
+      "expected": {
+        "status": "tool_error",
+        "required_trace_statuses": [
+          "semantic_error"
+        ]
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-19",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_persistent-19",
+      "challenge_family": "semantic_persistent",
+      "request": "弱湍流0.2，BER千分之一，功率20 dB。阈值服务持续返回强弱顺序颠倒的数据。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0,
+        "injected_fault": "threshold_catalog_semantic_corruption_persistent"
+      },
+      "expected": {
+        "status": "tool_error",
+        "required_trace_statuses": [
+          "semantic_error"
+        ]
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-20",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-semantic_persistent-20",
+      "challenge_family": "semantic_persistent",
+      "request": "规划强湍流链路：方差2，目标BER=0.001，上限30.1 dB；语义污染重试后仍存在。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_semantic_corruption_persistent"
+      },
+      "expected": {
+        "status": "tool_error",
+        "required_trace_statuses": [
+          "semantic_error"
+        ]
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-21",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-missing_indirect-21",
+      "challenge_family": "missing_indirect",
+      "request": "需要一套湍流感知链路，目标BER为0.001，功率预算25 dB，但我还没拿到湍流测量值。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-22",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-missing_indirect-22",
+      "challenge_family": "missing_indirect",
+      "request": "已知强湍流方差2，BER要到千分之一；功率上限尚未确定，请先说明缺什么。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-23",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-missing_indirect-23",
+      "challenge_family": "missing_indirect",
+      "request": "Rytov方差0.75、功率25 dB，业务方还没有给目标误码率。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "max_ebn0_db": 25.0
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    },
+    {
+      "task_id": "challenge-24",
+      "split": "test",
+      "level": "L3",
+      "template_id": "challenge-missing_indirect-24",
+      "challenge_family": "missing_indirect",
+      "request": "请做链路规划，但Rytov、目标BER和功率预算都待确认。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {},
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "strict_status_choice_and_required_trace_contract"
+    }
+  ]
+}

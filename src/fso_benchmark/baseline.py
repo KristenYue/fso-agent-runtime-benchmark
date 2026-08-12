@@ -248,9 +248,18 @@ def matches_expected(result: TaskResult, expected: dict[str, Any]) -> bool:
         actual = result.answer.get("configuration_id")
         if actual is None and isinstance(result.answer.get("selection"), dict):
             actual = result.answer["selection"].get("configuration_id")
-        return actual == expected["configuration_id"]
+        if actual != expected["configuration_id"]:
+            return False
     if "answer" in expected:
-        return result.answer == expected["answer"]
+        if result.answer != expected["answer"]:
+            return False
+    if "required_trace_statuses" in expected:
+        statuses = {step["status"] for step in result.trace}
+        if not set(expected["required_trace_statuses"]) <= statuses:
+            return False
+    if expected.get("requires_recovery"):
+        if not any(step.get("recovery") for step in result.trace):
+            return False
     return True
 
 
