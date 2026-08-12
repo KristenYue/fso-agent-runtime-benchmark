@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "contract": "langgraph_model_baseline_v1",
-  "frozen_at_utc": "2026-08-12T14:45:42.207089+00:00",
-  "source_git_sha": "1b9e0ae1b0f1713c17bd1f06b3653b3998e7a851",
+  "frozen_at_utc": "2026-08-12T14:46:32.478525+00:00",
+  "source_git_sha": "e5dd8885837451d13ec1f571b5cee8d5359d3564",
   "prompt": {
     "id": "planner_v1",
     "sha256": "56e9a3835f8e82a85f1735289afb053ff9518d15dc3cb3576d57a78243c973ad"
