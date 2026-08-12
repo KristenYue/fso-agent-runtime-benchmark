@@ -96,6 +96,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -161,6 +167,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -230,6 +242,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -295,6 +313,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -365,6 +389,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -440,6 +470,12 @@
           "attempt": 2,
           "retry": true,
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -545,6 +581,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -657,6 +699,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -722,6 +770,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -791,6 +845,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -856,6 +916,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -926,6 +992,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1001,6 +1073,12 @@
           "attempt": 2,
           "retry": true,
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1106,6 +1184,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1218,6 +1302,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -1283,6 +1373,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1352,6 +1448,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -1417,6 +1519,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1487,6 +1595,12 @@
           "tool": "load_turbulence_catalog",
           "status": "success",
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1562,6 +1676,12 @@
           "attempt": 2,
           "retry": true,
           "rows": 12
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
         },
         {
           "tool": "load_catalog",
@@ -1669,6 +1789,12 @@
           "rows": 12
         },
         {
+          "tool": "validate_turbulence_catalog",
+          "status": "success",
+          "validated_rows": 12,
+          "checked_orderings": 2
+        },
+        {
           "tool": "load_catalog",
           "status": "success",
           "rows": 16
@@ -1742,7 +1868,7 @@
     "constraint_violations": 0,
     "constraint_violation_rate": 0.0,
     "mean_optimality_gap": 0.0,
-    "mean_tool_calls": 4.2,
+    "mean_tool_calls": 4.9,
     "retry_cases": 3,
     "recovered_retry_cases": 3,
     "retry_recovery_rate": 1.0,

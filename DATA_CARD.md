@@ -38,7 +38,7 @@ development v1 数据 SHA-256 为
 规则解析基线在这批受控模板上达到 100%，说明当前语言变化仍不足以构成 Agent 任务。
 
 development v2 数据 SHA-256 为
-`8d3965aa00023edb3297b7e10fa88923b012d297be6f4cd33cca3e3d440642d4`。
+`cf9cfbfed67868ae891c89b67b97f486b7c5b109652aca93ba03d5d65d8c7e19`。
 这里仍不是冻结测试集；最终版本必须加入非生成模板改写和语义工具故障。
 
 ## 地面真值与局限
