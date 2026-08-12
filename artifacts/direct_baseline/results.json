@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "exact_match_rate": 1.0,
+    "successful_tasks": 5,
+    "rejected_tasks": 4,
+    "mean_tool_calls": 1.6666666666666667
+  },
+  "results": [
+    {
+      "task_id": "L1-turbulence-moderate",
+      "status": "success",
+      "answer": {
+        "alpha": 4.393859025392147,
+        "beta": 2.5636319795036955
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L1-ber-10db",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 10.0,
+        "ber": 0.0007827011290012744
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L2-l64-low-latency",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D32",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 23.09177818738692,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L2-l256-rs-buffer",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D32",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.29922185728044,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 7.96875,
+        "additional_latency_us": 63.24
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L2-l64-tight-buffer",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D8",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 26.145259323504707,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L3-missing-rytov",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "characterize_turbulence() missing 1 required positional argument: 'rytov_variance'",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L3-unsupported-target",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "catalog currently supports target_ber=0.001 only",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L3-no-feasible-rs",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no configuration satisfies all constraints",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "task_id": "L3-conflicting-codes",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "allowed_codes must contain unique RS/LDPC values",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "passed": true
+    }
+  ]
+}
