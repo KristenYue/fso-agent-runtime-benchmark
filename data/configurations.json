@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "source": "fso_thesis_simple/results/08_rs_ldpc_final_summary.csv",
+  "configurations": [
+    {"configuration_id":"LDPC-L64-D1","code":"LDPC","coherence_bits":64,"interleaver_depth":1,"target_ber":0.001,"required_ebn0_db":31.633877224082486,"code_rate":0.876953125,"buffer_kib":0.0625,"additional_latency_us":0.0},
+    {"configuration_id":"LDPC-L64-D8","code":"LDPC","coherence_bits":64,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":26.145259323504707,"code_rate":0.876953125,"buffer_kib":0.5,"additional_latency_us":3.584},
+    {"configuration_id":"LDPC-L64-D32","code":"LDPC","coherence_bits":64,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":23.09177818738692,"code_rate":0.876953125,"buffer_kib":2.0,"additional_latency_us":15.872},
+    {"configuration_id":"LDPC-L64-D128","code":"LDPC","coherence_bits":64,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":21.624292913748626,"code_rate":0.876953125,"buffer_kib":8.0,"additional_latency_us":65.024},
+    {"configuration_id":"RS-L64-D1","code":"RS","coherence_bits":64,"interleaver_depth":1,"target_ber":0.001,"required_ebn0_db":27.19216191644233,"code_rate":0.8745098039215686,"buffer_kib":0.2490234375,"additional_latency_us":0.0},
+    {"configuration_id":"RS-L64-D8","code":"RS","coherence_bits":64,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":24.048063564266393,"code_rate":0.8745098039215686,"buffer_kib":1.9921875,"additional_latency_us":14.28},
+    {"configuration_id":"RS-L64-D32","code":"RS","coherence_bits":64,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":24.304720171149263,"code_rate":0.8745098039215686,"buffer_kib":7.96875,"additional_latency_us":63.24},
+    {"configuration_id":"RS-L64-D128","code":"RS","coherence_bits":64,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":24.177192716032575,"code_rate":0.8745098039215686,"buffer_kib":31.875,"additional_latency_us":259.08},
+    {"configuration_id":"LDPC-L256-D1","code":"LDPC","coherence_bits":256,"interleaver_depth":1,"target_ber":0.001,"required_ebn0_db":33.1839267219115,"code_rate":0.876953125,"buffer_kib":0.0625,"additional_latency_us":0.0},
+    {"configuration_id":"LDPC-L256-D8","code":"LDPC","coherence_bits":256,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":29.22937776308353,"code_rate":0.876953125,"buffer_kib":0.5,"additional_latency_us":3.584},
+    {"configuration_id":"LDPC-L256-D32","code":"LDPC","coherence_bits":256,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":27.425284957414167,"code_rate":0.876953125,"buffer_kib":2.0,"additional_latency_us":15.872},
+    {"configuration_id":"LDPC-L256-D128","code":"LDPC","coherence_bits":256,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":22.874303178833777,"code_rate":0.876953125,"buffer_kib":8.0,"additional_latency_us":65.024},
+    {"configuration_id":"RS-L256-D1","code":"RS","coherence_bits":256,"interleaver_depth":1,"target_ber":0.001,"required_ebn0_db":33.21453835442006,"code_rate":0.8745098039215686,"buffer_kib":0.2490234375,"additional_latency_us":0.0},
+    {"configuration_id":"RS-L256-D8","code":"RS","coherence_bits":256,"interleaver_depth":8,"target_ber":0.001,"required_ebn0_db":25.820385608145106,"code_rate":0.8745098039215686,"buffer_kib":1.9921875,"additional_latency_us":14.28},
+    {"configuration_id":"RS-L256-D32","code":"RS","coherence_bits":256,"interleaver_depth":32,"target_ber":0.001,"required_ebn0_db":24.29922185728044,"code_rate":0.8745098039215686,"buffer_kib":7.96875,"additional_latency_us":63.24},
+    {"configuration_id":"RS-L256-D128","code":"RS","coherence_bits":256,"interleaver_depth":128,"target_ber":0.001,"required_ebn0_db":24.2096545831511,"code_rate":0.8745098039215686,"buffer_kib":31.875,"additional_latency_us":259.08}
+  ]
+}
+

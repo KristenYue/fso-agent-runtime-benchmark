@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "split": "development_seed",
+  "tasks": [
+    {"task_id":"L1-turbulence-moderate","level":"L1","operation":"characterize_turbulence","inputs":{"rytov_variance":1.0},"expected":{"status":"success","answer":{"alpha":4.393859025392147,"beta":2.5636319795036955}}},
+    {"task_id":"L1-ber-10db","level":"L1","operation":"calculate_ook_ber","inputs":{"ebn0_db":10.0},"expected":{"status":"success","answer":{"ebn0_db":10.0,"ber":0.0007827011290012744}}},
+    {"task_id":"L2-l64-low-latency","level":"L2","operation":"select_configuration","inputs":{"target_ber":0.001,"coherence_bits":64,"max_latency_us":20.0},"expected":{"status":"success","configuration_id":"LDPC-L64-D32"}},
+    {"task_id":"L2-l256-rs-buffer","level":"L2","operation":"select_configuration","inputs":{"target_ber":0.001,"coherence_bits":256,"allowed_codes":["RS"],"max_buffer_kib":8.0},"expected":{"status":"success","configuration_id":"RS-L256-D32"}},
+    {"task_id":"L2-l64-tight-buffer","level":"L2","operation":"select_configuration","inputs":{"target_ber":0.001,"coherence_bits":64,"max_buffer_kib":0.6},"expected":{"status":"success","configuration_id":"LDPC-L64-D8"}},
+    {"task_id":"L3-missing-rytov","level":"L3","operation":"characterize_turbulence","inputs":{},"expected":{"status":"invalid_input"}},
+    {"task_id":"L3-unsupported-target","level":"L3","operation":"select_configuration","inputs":{"target_ber":0.000001,"coherence_bits":64},"expected":{"status":"invalid_input"}},
+    {"task_id":"L3-no-feasible-rs","level":"L3","operation":"select_configuration","inputs":{"target_ber":0.001,"coherence_bits":64,"allowed_codes":["RS"],"max_buffer_kib":0.1},"expected":{"status":"no_feasible_solution"}},
+    {"task_id":"L3-conflicting-codes","level":"L3","operation":"select_configuration","inputs":{"target_ber":0.001,"coherence_bits":64,"allowed_codes":["RS","RS"]},"expected":{"status":"invalid_input"}}
+  ]
+}
