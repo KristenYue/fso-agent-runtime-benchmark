@@ -53,10 +53,13 @@ def execute_direct(task: TaskSpec) -> TaskResult:
         else:
             raise ValueError(f"unknown operation: {task.operation}")
         return TaskResult(task.task_id, "success", answer, None, tuple(trace))
+    except KeyError as exc:
+        trace.append({"tool": task.operation, "status": "invalid_input"})
+        return TaskResult(task.task_id, "invalid_input", None, str(exc), tuple(trace))
     except LookupError as exc:
         trace.append({"tool": task.operation, "status": "no_feasible_solution"})
         return TaskResult(task.task_id, "no_feasible_solution", None, str(exc), tuple(trace))
-    except (KeyError, TypeError, ValueError) as exc:
+    except (TypeError, ValueError) as exc:
         trace.append({"tool": task.operation, "status": "invalid_input"})
         return TaskResult(task.task_id, "invalid_input", None, str(exc), tuple(trace))
 
