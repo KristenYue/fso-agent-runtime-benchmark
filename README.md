@@ -34,3 +34,4 @@ Schema 和相同评分器上比较。
 `results/08_rs_ldpc_final_summary.csv`。本仓库仅保存构建任务所需的冻结子集和来源说明，
 不复制论文图片、大型中间结果或随机仿真流程。
 
+具体的只读来源哈希和仓库隔离规则见 `docs/SOURCE_PROVENANCE.md`。
