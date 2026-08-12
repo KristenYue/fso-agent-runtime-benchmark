@@ -30,3 +30,7 @@ LangGraph 图执行骨架可以在无模型、无网络模式下验证 State 和
 当前离线环境固定为 LangGraph 1.2.11、langchain-core 1.5.4；完整依赖见
 `requirements-agents.lock`。离线 StateGraph 只在30条 development 规划任务上运行，
 Challenge v1 运行数为0。
+
+模型无关循环已固定为 Planner→Tool→Planner，最多8次工具调用。工具白名单、阈值目录
+语义验证和“成功必须引用优化器输出”由运行时执行，不依赖 Prompt 自律。Prompt 与动作
+Schema 的哈希由 `scripts/freeze_langgraph_model_contract.py` 保存；模型提供方和快照仍待配置。

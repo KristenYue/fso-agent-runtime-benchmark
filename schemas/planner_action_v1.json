@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fso-planner-action-v1",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {
+          "enum": [
+            "characterize_turbulence",
+            "resolve_turbulence_regime",
+            "load_turbulence_catalog",
+            "validate_turbulence_catalog",
+            "load_catalog",
+            "select_robust_configuration"
+          ]
+        },
+        "arguments": {"type": "object"}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "status", "message"],
+      "properties": {
+        "kind": {"const": "finish"},
+        "status": {
+          "enum": [
+            "success",
+            "needs_clarification",
+            "invalid_input",
+            "no_feasible_solution",
+            "tool_error"
+          ]
+        },
+        "message": {"type": "string"}
+      }
+    }
+  ]
+}
