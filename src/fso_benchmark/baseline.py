@@ -34,7 +34,7 @@ def execute_direct(task: TaskSpec) -> TaskResult:
         return TaskResult(task.task_id, "invalid_input", None, str(exc), tuple(trace))
 
 
-def _matches_expected(result: TaskResult, expected: dict[str, Any]) -> bool:
+def matches_expected(result: TaskResult, expected: dict[str, Any]) -> bool:
     if result.status != expected["status"]:
         return False
     if "configuration_id" in expected:
@@ -49,7 +49,7 @@ def run_direct_baseline(cases: list[dict[str, Any]]) -> dict[str, Any]:
     for case in cases:
         task = TaskSpec.from_dict(case)
         result = execute_direct(task)
-        passed = _matches_expected(result, case["expected"])
+        passed = matches_expected(result, case["expected"])
         record = result.to_dict()
         record["passed"] = passed
         records.append(record)
@@ -68,4 +68,3 @@ def run_direct_baseline(cases: list[dict[str, Any]]) -> dict[str, Any]:
         },
         "results": records,
     }
-
