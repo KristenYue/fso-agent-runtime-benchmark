@@ -42,6 +42,11 @@ def require_final_configuration() -> tuple[str, str, str, dict]:
     development = json.loads(development_manifest_path.read_text(encoding="utf-8"))
     if development.get("model_id") != model or development.get("base_url") != base_url:
         raise SystemExit("model configuration differs from development manifest")
+    contract_path = ROOT / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
+    if not contract_path.exists():
+        raise SystemExit("frozen model contract is missing")
+    if development.get("contract_sha256") != sha256(contract_path):
+        raise SystemExit("frozen model contract differs from development manifest")
     ledger_path = ROOT / "artifacts" / "langgraph_model_challenge" / "run_ledger.json"
     if ledger_path.exists():
         raise SystemExit("frozen challenge has already been reserved or executed")
@@ -82,7 +87,12 @@ def main() -> None:
     records = []
     for case in cases:
         started = time.perf_counter()
-        result = run_agent(case["request"], planner, max_tool_calls=8)
+        result = run_agent(
+            case["request"],
+            planner,
+            max_tool_calls=8,
+            fault_profile=case["inputs"].get("injected_fault"),
+        )
         task_result = TaskResult(
             task_id=case["task_id"],
             status=result["status"],

@@ -99,3 +99,94 @@ def test_planner_can_request_clarification_without_tool_call() -> None:
 def test_local_action_validation_rejects_extra_fields(action) -> None:
     with pytest.raises(ValueError, match="fields must be exactly"):
         validate_planner_action(action)
+
+
+def test_fault_profile_is_hidden_but_timeout_reaches_tool_trace() -> None:
+    planner = ScriptedPlanner(
+        [
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"finish","status":"tool_error","message":"test stop"},
+        ]
+    )
+    result = run_agent(
+        "catalog may time out",
+        planner,
+        fault_profile="threshold_catalog_timeout_once",
+    )
+    assert [step["status"] for step in result["trace"]] == ["error", "success"]
+    assert "fault_profile" not in str(result["trace"])
+
+
+def test_semantic_corruption_requires_validation_and_can_recover() -> None:
+    planner = ScriptedPlanner(
+        [
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"finish","status":"tool_error","message":"test stop"},
+        ]
+    )
+    result = run_agent(
+        "catalog may be corrupted",
+        planner,
+        fault_profile="threshold_catalog_semantic_corruption_once",
+    )
+    assert [step["status"] for step in result["trace"]] == [
+        "success",
+        "semantic_error",
+        "success",
+        "success",
+    ]
+
+
+def test_persistent_semantic_corruption_remains_detectable() -> None:
+    planner = ScriptedPlanner(
+        [
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"finish","status":"tool_error","message":"persistent corruption"},
+        ]
+    )
+    result = run_agent(
+        "catalog remains corrupted",
+        planner,
+        fault_profile="threshold_catalog_semantic_corruption_persistent",
+    )
+    assert sum(step["status"] == "semantic_error" for step in result["trace"]) == 2
+
+
+def test_finish_is_allowed_after_exact_tool_budget() -> None:
+    actions = successful_actions()
+    planner = ScriptedPlanner(actions)
+    result = run_agent("exact budget", planner, max_tool_calls=6)
+    assert result["status"] == "success"
+    assert len(result["trace"]) == 6
+
+
+def test_semantic_recovery_trace_has_explicit_recovery_marker() -> None:
+    planner = ScriptedPlanner(
+        [
+            {"kind":"tool","tool":"characterize_turbulence","arguments":{"rytov_variance":2.0}},
+            {"kind":"tool","tool":"resolve_turbulence_regime","arguments":{"rytov_variance":2.0}},
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+            {"kind":"tool","tool":"load_catalog","arguments":{}},
+            {"kind":"tool","tool":"select_robust_configuration","arguments":{"turbulence":"Strong","target_ber":0.001,"max_ebn0_db":30.0}},
+            {"kind":"finish","status":"success","message":""},
+        ]
+    )
+    result = run_agent(
+        "semantic recovery",
+        planner,
+        max_tool_calls=8,
+        fault_profile="threshold_catalog_semantic_corruption_once",
+    )
+    assert result["status"] == "success"
+    assert any(step.get("recovery") == "clean_frozen_catalog" for step in result["trace"])
+    assert any(step["status"] == "semantic_error" for step in result["trace"])

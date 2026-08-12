@@ -9,6 +9,7 @@ from typing import Any, Literal, Protocol, TypedDict
 from langgraph.graph import END, START, StateGraph
 
 from .catalog import load_catalog, load_turbulence_catalog
+from .faults import corrupt_threshold_ordering, validate_fault_profile
 from .tools import (
     characterize_turbulence,
     resolve_turbulence_regime,
@@ -75,6 +76,8 @@ class AgentState(TypedDict, total=False):
     observations: list[dict[str, Any]]
     context: dict[str, Any]
     result: dict[str, Any]
+    fault_profile: str | None
+    fault_attempts: dict[str, int]
 
 
 def validate_planner_action(raw: Any) -> dict[str, Any]:
@@ -116,11 +119,6 @@ def _failure(status: str, error: str, observations: list[dict[str, Any]]) -> dic
 def planner_node(state: AgentState) -> dict[str, Any]:
     observations = list(state.get("observations", []))
     tool_calls = state.get("tool_calls", 0)
-    if tool_calls >= state.get("max_tool_calls", 8):
-        return {
-            "action": {"kind": "terminal"},
-            "result": _failure("tool_error", "tool-call budget exhausted", observations),
-        }
     try:
         raw = state["planner"].decide(
             request=state["request"],
@@ -132,6 +130,12 @@ def planner_node(state: AgentState) -> dict[str, Any]:
         return {
             "action": {"kind": "terminal"},
             "result": _failure("tool_error", f"invalid planner action: {exc}", observations),
+        }
+
+    if action["kind"] == "tool" and tool_calls >= state.get("max_tool_calls", 8):
+        return {
+            "action": {"kind": "terminal"},
+            "result": _failure("tool_error", "tool-call budget exhausted", observations),
         }
 
     if action["kind"] == "finish":
@@ -178,7 +182,19 @@ def _execute_tool(
     elif tool == "load_turbulence_catalog":
         if arguments:
             raise ValueError("load_turbulence_catalog takes no arguments")
+        attempt = context.get("threshold_catalog_attempts", 0) + 1
+        context["threshold_catalog_attempts"] = attempt
+        updated["threshold_catalog_attempts"] = attempt
+        profile = context.get("fault_profile")
+        if profile == "threshold_catalog_timeout_once" and attempt == 1:
+            raise ValueError("simulated threshold catalog timeout")
+        if profile == "threshold_catalog_unavailable":
+            raise ValueError("simulated threshold catalog unavailable")
         output = load_turbulence_catalog()
+        if profile == "threshold_catalog_semantic_corruption_once" and attempt == 1:
+            output = corrupt_threshold_ordering(output)
+        elif profile == "threshold_catalog_semantic_corruption_persistent":
+            output = corrupt_threshold_ordering(output)
         updated["thresholds"] = output
     elif tool == "validate_turbulence_catalog":
         if arguments:
@@ -234,11 +250,23 @@ def tool_node(state: AgentState) -> dict[str, Any]:
             "status": "success",
             "output": compact_tool_output(action["tool"], output),
         }
+        if (
+            action["tool"] == "load_turbulence_catalog"
+            and context.get("fault_profile")
+            == "threshold_catalog_semantic_corruption_once"
+            and context.get("threshold_catalog_attempts") == 2
+        ):
+            observation["recovery"] = "clean_frozen_catalog"
     except (KeyError, LookupError, TypeError, ValueError) as exc:
+        status = (
+            "semantic_error"
+            if action["tool"] == "validate_turbulence_catalog"
+            else "error"
+        )
         observation = {
             "tool": action["tool"],
             "arguments": action["arguments"],
-            "status": "error",
+            "status": status,
             "error": str(exc),
         }
     observations.append(observation)
@@ -270,9 +298,11 @@ def run_agent(
     planner: Planner,
     *,
     max_tool_calls: int = 8,
+    fault_profile: str | None = None,
 ) -> dict[str, Any]:
     if max_tool_calls <= 0:
         raise ValueError("max_tool_calls must be positive")
+    validate_fault_profile(fault_profile)
     state = build_agent_graph().invoke(
         {
             "request": request,
@@ -280,7 +310,10 @@ def run_agent(
             "max_tool_calls": max_tool_calls,
             "tool_calls": 0,
             "observations": [],
-            "context": {},
+            "context": {
+                "fault_profile": fault_profile,
+                "threshold_catalog_attempts": 0,
+            },
         },
         {"recursion_limit": 2 * max_tool_calls + 4},
     )

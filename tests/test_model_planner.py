@@ -5,6 +5,7 @@ import httpx
 import pytest
 
 from fso_benchmark.model_planner import OpenAICompatiblePlanner, calculate_token_cost
+from fso_benchmark.langgraph_agent import run_agent
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -134,3 +135,39 @@ def test_telemetry_records_are_copies_and_contain_no_key() -> None:
     records[0]["attempts"] = 999
     assert instance.telemetry[0]["attempts"] == 1
     assert "test-secret-key" not in json.dumps(records)
+
+
+def test_model_adapter_runs_semantic_recovery_without_seeing_fault_profile() -> None:
+    actions = [
+        {"kind":"tool","tool":"characterize_turbulence","arguments":{"rytov_variance":2.0}},
+        {"kind":"tool","tool":"resolve_turbulence_regime","arguments":{"rytov_variance":2.0}},
+        {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+        {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+        {"kind":"tool","tool":"load_turbulence_catalog","arguments":{}},
+        {"kind":"tool","tool":"validate_turbulence_catalog","arguments":{}},
+        {"kind":"tool","tool":"load_catalog","arguments":{}},
+        {"kind":"tool","tool":"select_robust_configuration","arguments":{"turbulence":"Strong","target_ber":0.001,"max_ebn0_db":30.0}},
+        {"kind":"finish","status":"success","message":""},
+    ]
+    payloads = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        payload = json.loads(request.content)
+        payloads.append(payload)
+        action = actions[len(payloads) - 1]
+        return httpx.Response(200, json=response_body(json.dumps(action)))
+
+    instance = planner(handler)
+    result = run_agent(
+        "recover from a semantic catalog error",
+        instance,
+        max_tool_calls=8,
+        fault_profile="threshold_catalog_semantic_corruption_once",
+    )
+    assert result["status"] == "success"
+    assert len(payloads) == 9
+    serialized_payloads = json.dumps(payloads, ensure_ascii=False)
+    assert "fault_profile" not in serialized_payloads
+    assert "threshold_catalog_semantic_corruption_once" not in serialized_payloads
+    assert "semantic_error" in serialized_payloads
+    assert "clean_frozen_catalog" in serialized_payloads

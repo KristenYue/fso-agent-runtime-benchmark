@@ -99,7 +99,12 @@ def main() -> None:
     latencies = []
     for case in cases:
         started = time.perf_counter()
-        result = run_agent(case["request"], planner, max_tool_calls=8)
+        result = run_agent(
+            case["request"],
+            planner,
+            max_tool_calls=8,
+            fault_profile=case["inputs"].get("injected_fault"),
+        )
         elapsed_ms = (time.perf_counter() - started) * 1000.0
         latencies.append(elapsed_ms)
         task_result = TaskResult(
