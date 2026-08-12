@@ -1,0 +1,3751 @@
+{
+  "summary": {
+    "total": 120,
+    "parse_exact": 120,
+    "parse_exact_rate": 1.0,
+    "task_passed": 120,
+    "task_pass_rate": 1.0
+  },
+  "by_split_level": {
+    "dev/L1": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "dev/L2": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "dev/L3": {
+      "total": 8,
+      "parse_exact": 8,
+      "parse_exact_rate": 1.0,
+      "task_passed": 8,
+      "task_pass_rate": 1.0
+    },
+    "test/L1": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "test/L2": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "test/L3": {
+      "total": 8,
+      "parse_exact": 8,
+      "parse_exact_rate": 1.0,
+      "task_passed": 8,
+      "task_pass_rate": 1.0
+    },
+    "train/L1": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "train/L2": {
+      "total": 16,
+      "parse_exact": 16,
+      "parse_exact_rate": 1.0,
+      "task_passed": 16,
+      "task_pass_rate": 1.0
+    },
+    "train/L3": {
+      "total": 8,
+      "parse_exact": 8,
+      "parse_exact_rate": 1.0,
+      "task_passed": 8,
+      "task_pass_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "task_id": "train-l1-001",
+      "status": "success",
+      "answer": {
+        "alpha": 21.589015327960873,
+        "beta": 19.820779995261304
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-002",
+      "status": "success",
+      "answer": {
+        "alpha": 11.65104537862684,
+        "beta": 10.122365306725285
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.2
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-003",
+      "status": "success",
+      "answer": {
+        "alpha": 8.431712566725615,
+        "beta": 6.922053219204812
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-004",
+      "status": "success",
+      "answer": {
+        "alpha": 6.875471276505911,
+        "beta": 5.338382291809284
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.4
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-005",
+      "status": "success",
+      "answer": {
+        "alpha": 5.977635328959128,
+        "beta": 4.398043506280881
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-006",
+      "status": "success",
+      "answer": {
+        "alpha": 5.405422590293787,
+        "beta": 3.7776233292692014
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.6
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-007",
+      "status": "success",
+      "answer": {
+        "alpha": 5.017131196214909,
+        "beta": 3.3389768372193216
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.7
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-008",
+      "status": "success",
+      "answer": {
+        "alpha": 4.742379672821846,
+        "beta": 3.013273812815489
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.8
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-009",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -5.0,
+        "ber": 0.2869417437260485
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -5.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-010",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -2.0,
+        "ber": 0.21350218550400613
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-011",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 0.0,
+        "ber": 0.15865525393145707
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 0.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-012",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 2.0,
+        "ber": 0.10402863708538863
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-013",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 4.0,
+        "ber": 0.05649530174936167
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 4.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-014",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 6.0,
+        "ber": 0.023007138877866033
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 6.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-015",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 8.0,
+        "ber": 0.006004386400163567
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 8.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l1-016",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 10.0,
+        "ber": 0.0007827011290012744
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 10.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-017",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-018",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D8",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 26.145259323504707,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-019",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D32",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 23.09177818738692,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-020",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-021",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-022",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-023",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-024",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-025",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D1",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.1839267219115,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.0625,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-026",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D8",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 29.22937776308353,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-027",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D32",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.425284957414167,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-028",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-029",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D1",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.21453835442006,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-030",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D8",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 25.820385608145106,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-031",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D32",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.29922185728044,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 7.96875,
+        "additional_latency_us": 63.24
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l2-032",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-033",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": -0.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-034",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-turbulence-formal",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 10.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-035",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -21.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-036",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-ber-formal",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 101.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-037",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "catalog currently supports target_ber=0.001 only",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.0001,
+        "coherence_bits": 64
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-038",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "coherence_bits must be 64 or 256",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 65
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-039",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no configuration satisfies all constraints",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "train-l3-040",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "resource limits must be non-negative",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -1.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-001",
+      "status": "success",
+      "answer": {
+        "alpha": 4.542334271956677,
+        "beta": 2.762415960420313
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 0.9
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-002",
+      "status": "success",
+      "answer": {
+        "alpha": 4.393859025392147,
+        "beta": 2.5636319795036955
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-003",
+      "status": "success",
+      "answer": {
+        "alpha": 4.282338309406557,
+        "beta": 2.402488583487418
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-004",
+      "status": "success",
+      "answer": {
+        "alpha": 4.198101797579072,
+        "beta": 2.2694028858316977
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.2
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-005",
+      "status": "success",
+      "answer": {
+        "alpha": 4.134506868781396,
+        "beta": 2.1577682966355236
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-006",
+      "status": "success",
+      "answer": {
+        "alpha": 4.086847129819735,
+        "beta": 2.062885882776421
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.4
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-007",
+      "status": "success",
+      "answer": {
+        "alpha": 4.051700128019761,
+        "beta": 1.9813245972863363
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-008",
+      "status": "success",
+      "answer": {
+        "alpha": 4.026521312058279,
+        "beta": 1.9105223344570113
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.6
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-009",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -4.0,
+        "ber": 0.264034207638018
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -4.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-010",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -1.0,
+        "ber": 0.1863972813913738
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -1.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-011",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 1.0,
+        "ber": 0.13092729675552447
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 1.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-012",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 3.0,
+        "ber": 0.07889587198172442
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 3.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-013",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 5.0,
+        "ber": 0.03767898814746341
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 5.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-014",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 7.0,
+        "ber": 0.012587033122144622
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 7.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-015",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 9.0,
+        "ber": 0.002413310419633864
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 9.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l1-016",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 11.0,
+        "ber": 0.0001939854720578607
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 11.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-017",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.11
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-018",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D8",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 26.145259323504707,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-019",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D32",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 23.09177818738692,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-020",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-021",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.31
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-022",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-023",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-024",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-025",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D1",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.1839267219115,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.0625,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.11
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-026",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D8",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 29.22937776308353,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-027",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D32",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.425284957414167,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.11
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-028",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.11
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-029",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D1",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.21453835442006,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.31
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-030",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D8",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 25.820385608145106,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-031",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D32",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.29922185728044,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 7.96875,
+        "additional_latency_us": 63.24
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l2-032",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.01
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-033",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": -0.2
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-034",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-turbulence-symbol",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 10.2
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-035",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -22.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-036",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-ber-equation",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 102.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-037",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "catalog currently supports target_ber=0.001 only",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 1e-05,
+        "coherence_bits": 64
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-038",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "coherence_bits must be 64 or 256",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 66
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-039",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no configuration satisfies all constraints",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "dev-l3-040",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "resource limits must be non-negative",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-001",
+      "status": "success",
+      "answer": {
+        "alpha": 4.009382372959913,
+        "beta": 1.8485283962584433
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.7
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-002",
+      "status": "success",
+      "answer": {
+        "alpha": 3.998797527064097,
+        "beta": 1.79383221872556
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.8
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-003",
+      "status": "success",
+      "answer": {
+        "alpha": 3.993605156612434,
+        "beta": 1.7452464755803934
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 1.9
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-004",
+      "status": "success",
+      "answer": {
+        "alpha": 3.9928853118961882,
+        "beta": 1.7018254584528547
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 2.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-005",
+      "status": "success",
+      "answer": {
+        "alpha": 3.995901039928529,
+        "beta": 1.662806927949789
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 2.1
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-006",
+      "status": "success",
+      "answer": {
+        "alpha": 4.002055902704989,
+        "beta": 1.627569934878687
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 2.2
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-007",
+      "status": "success",
+      "answer": {
+        "alpha": 4.01086271868257,
+        "beta": 1.5956037279310338
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 2.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-008",
+      "status": "success",
+      "answer": {
+        "alpha": 4.021920226109088,
+        "beta": 1.5664844975305554
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 2.4
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-009",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -3.0,
+        "ber": 0.23948946302589857
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -3.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-010",
+      "status": "success",
+      "answer": {
+        "ebn0_db": -0.5,
+        "ber": 0.17256927028429592
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -0.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-011",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 1.5,
+        "ber": 0.11731780139111983
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 1.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-012",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 3.5,
+        "ber": 0.0672961279547928
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 3.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-013",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 5.5,
+        "ber": 0.02980622853861985
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 5.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-014",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 7.5,
+        "ber": 0.008861051096347864
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 7.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-015",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 9.5,
+        "ber": 0.001416119072179128
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 9.5
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l1-016",
+      "status": "success",
+      "answer": {
+        "ebn0_db": 12.0,
+        "ber": 3.430262386641539e-05
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 12.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-017",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.12000000000000001
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-018",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D8",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 26.145259323504707,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-019",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D32",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 23.09177818738692,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-020",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-021",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D1",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.19216191644233,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.32
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-022",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-023",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L64-D8",
+        "code": "RS",
+        "coherence_bits": 64,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.048063564266393,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-024",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L64-D128",
+        "code": "LDPC",
+        "coherence_bits": 64,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 21.624292913748626,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-025",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D1",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.1839267219115,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.0625,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.12000000000000001
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-026",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D8",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 29.22937776308353,
+        "code_rate": 0.876953125,
+        "buffer_kib": 0.5,
+        "additional_latency_us": 3.584
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-027",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D32",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 27.425284957414167,
+        "code_rate": 0.876953125,
+        "buffer_kib": 2.0,
+        "additional_latency_us": 15.872
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.12
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-028",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.12
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-029",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D1",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 1,
+        "target_ber": 0.001,
+        "required_ebn0_db": 33.21453835442006,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 0.2490234375,
+        "additional_latency_us": 0.0
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.32
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-030",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D8",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 8,
+        "target_ber": 0.001,
+        "required_ebn0_db": 25.820385608145106,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 1.9921875,
+        "additional_latency_us": 14.28
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-031",
+      "status": "success",
+      "answer": {
+        "configuration_id": "RS-L256-D32",
+        "code": "RS",
+        "coherence_bits": 256,
+        "interleaver_depth": 32,
+        "target_ber": 0.001,
+        "required_ebn0_db": 24.29922185728044,
+        "code_rate": 0.8745098039215686,
+        "buffer_kib": 7.96875,
+        "additional_latency_us": 63.24
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l2-032",
+      "status": "success",
+      "answer": {
+        "configuration_id": "LDPC-L256-D128",
+        "code": "LDPC",
+        "coherence_bits": 256,
+        "interleaver_depth": 128,
+        "target_ber": 0.001,
+        "required_ebn0_db": 22.874303178833777,
+        "code_rate": 0.876953125,
+        "buffer_kib": 8.0,
+        "additional_latency_us": 65.024
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "success"
+        }
+      ],
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.02
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-033",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": -0.30000000000000004
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-034",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "rytov_variance must be in (0, 10]",
+      "trace": [
+        {
+          "tool": "characterize_turbulence",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-turbulence-colloquial",
+      "parsed_operation": "characterize_turbulence",
+      "parsed_inputs": {
+        "rytov_variance": 10.3
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-035",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": -23.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-036",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "ebn0_db must be in [-20, 100]",
+      "trace": [
+        {
+          "tool": "calculate_ook_ber",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-ber-colloquial",
+      "parsed_operation": "calculate_ook_ber",
+      "parsed_inputs": {
+        "ebn0_db": 103.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-037",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "catalog currently supports target_ber=0.001 only",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 1e-06,
+        "coherence_bits": 64
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-038",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "coherence_bits must be 64 or 256",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 67
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-039",
+      "status": "no_feasible_solution",
+      "answer": null,
+      "error": "no configuration satisfies all constraints",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "no_feasible_solution"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.03
+      },
+      "parse_exact": true,
+      "task_passed": true
+    },
+    {
+      "task_id": "test-l3-040",
+      "status": "invalid_input",
+      "answer": null,
+      "error": "resource limits must be non-negative",
+      "trace": [
+        {
+          "tool": "load_catalog",
+          "status": "success",
+          "rows": 16
+        },
+        {
+          "tool": "select_configuration",
+          "status": "invalid_input"
+        }
+      ],
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "parsed_operation": "select_configuration",
+      "parsed_inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -3.0
+      },
+      "parse_exact": true,
+      "task_passed": true
+    }
+  ]
+}

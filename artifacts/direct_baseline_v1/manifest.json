@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "baseline": "direct_oracle",
+  "generated_at_utc": "2026-08-12T01:12:30.580413+00:00",
+  "dataset_sha256": "bdd8a3a234151cde9356333ad8a4cb0367c28ebb70647f347b708204f2fa0295",
+  "git_sha": "9233f6520bcc741adacfe57095ccbc0074aa97a4",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "network_calls": 0,
+  "model_calls": 0
+}
