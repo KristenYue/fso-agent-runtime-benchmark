@@ -13,14 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from fso_benchmark.baseline import run_direct_baseline  # noqa: E402
+from fso_benchmark.dataset import load_dataset  # noqa: E402
 
 
 def main() -> None:
-    task_path = ROOT / "data" / "tasks_seed.json"
+    task_path = ROOT / "data" / "tasks_v1.json"
     task_bytes = task_path.read_bytes()
-    payload = json.loads(task_bytes)
+    payload = load_dataset(task_path)
     report = run_direct_baseline(payload["tasks"])
-    output_dir = ROOT / "artifacts" / "direct_baseline"
+    output_dir = ROOT / "artifacts" / "direct_baseline_v1"
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "results.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n",
@@ -37,7 +38,7 @@ def main() -> None:
         "schema_version": "1.0",
         "baseline": "direct_oracle",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "task_sha256": hashlib.sha256(task_bytes).hexdigest(),
+        "dataset_sha256": hashlib.sha256(task_bytes).hexdigest(),
         "git_sha": git_sha,
         "python": platform.python_version(),
         "platform": platform.platform(),
@@ -55,4 +56,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

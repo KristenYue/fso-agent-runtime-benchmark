@@ -21,7 +21,8 @@ python scripts/run_direct_baseline.py
 python scripts/run_rule_baseline.py
 ```
 
-基线会写入 `artifacts/direct_baseline/`。100% 结果只代表确定性 Oracle 和任务契约一致，
+完整数据集基线会写入 `artifacts/direct_baseline_v1/` 和 `artifacts/rule_baseline/`。
+历史 9 条种子结果保留在 `artifacts/direct_baseline/`。100% 结果只代表确定性 Oracle 和任务契约一致，
 不是 Agent 的实验成绩。后续 LangGraph 与自研 Runtime 必须在同一冻结任务集、相同工具
 Schema 和相同评分器上比较。
 
