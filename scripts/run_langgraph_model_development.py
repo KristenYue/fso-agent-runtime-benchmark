@@ -16,7 +16,10 @@ sys.path.insert(0, str(ROOT / "src"))
 from fso_benchmark.baseline import matches_expected  # noqa: E402
 from fso_benchmark.contracts import TaskResult  # noqa: E402
 from fso_benchmark.langgraph_agent import run_agent  # noqa: E402
-from fso_benchmark.model_planner import OpenAICompatiblePlanner  # noqa: E402
+from fso_benchmark.model_planner import (  # noqa: E402
+    OpenAICompatiblePlanner,
+    calculate_token_cost,
+)
 
 
 def percentile(values: list[float], fraction: float) -> float:
@@ -43,8 +46,37 @@ def require_environment() -> tuple[str, str, str]:
     return values
 
 
+def price_configuration() -> dict | None:
+    names = (
+        "FSO_MODEL_INPUT_PRICE_PER_MILLION",
+        "FSO_MODEL_OUTPUT_PRICE_PER_MILLION",
+        "FSO_MODEL_PRICE_DATE",
+        "FSO_MODEL_PRICE_CURRENCY",
+    )
+    values = {name: os.environ.get(name, "") for name in names}
+    if not any(values.values()):
+        return None
+    missing = [name for name, value in values.items() if not value]
+    if missing:
+        raise SystemExit("incomplete price configuration: " + ", ".join(missing))
+    try:
+        input_price = float(values[names[0]])
+        output_price = float(values[names[1]])
+    except ValueError as exc:
+        raise SystemExit("model prices must be numeric") from exc
+    if input_price < 0 or output_price < 0:
+        raise SystemExit("model prices must be non-negative")
+    return {
+        "input_price_per_million": input_price,
+        "output_price_per_million": output_price,
+        "price_date": values[names[2]],
+        "currency": values[names[3]],
+    }
+
+
 def main() -> None:
     base_url, api_key, model = require_environment()
+    pricing = price_configuration()
     dataset_path = ROOT / "data" / "tasks_v2.json"
     dataset_bytes = dataset_path.read_bytes()
     payload = json.loads(dataset_bytes)
@@ -88,6 +120,14 @@ def main() -> None:
 
     usage = planner.usage_summary()
     total = len(records)
+    cost = None
+    if pricing is not None and usage["usage_complete"]:
+        cost = calculate_token_cost(
+            prompt_tokens=usage["prompt_tokens"],
+            completion_tokens=usage["completion_tokens"],
+            input_price_per_million=pricing["input_price_per_million"],
+            output_price_per_million=pricing["output_price_per_million"],
+        )
     summary = {
         "total": total,
         "passed": sum(row["passed"] for row in records),
@@ -99,13 +139,26 @@ def main() -> None:
         "prompt_tokens": usage["prompt_tokens"],
         "completion_tokens": usage["completion_tokens"],
         "total_tokens": usage["total_tokens"],
-        "cost": None,
-        "cost_note": "Provider price and price date must be supplied before cost is reported.",
+        "usage_complete": usage["usage_complete"],
+        "cost": cost,
+        "cost_note": (
+            "Computed from supplied price metadata."
+            if cost is not None
+            else "Cost omitted until complete provider usage and dated price metadata are supplied."
+        ),
     }
     output_dir = ROOT / "artifacts" / "langgraph_model_development"
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "results.json").write_text(
-        json.dumps({"summary": summary, "results": records}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(
+            {
+                "summary": summary,
+                "model_telemetry": planner.telemetry_records(),
+                "results": records,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
         encoding="utf-8",
     )
     contract_path = ROOT / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
@@ -120,6 +173,7 @@ def main() -> None:
         "challenge_tasks_run": 0,
         "credentials_recorded": False,
         "configuration_selection_only": True,
+        "pricing": pricing,
     }
     (output_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"

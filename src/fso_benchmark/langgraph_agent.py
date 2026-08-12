@@ -82,6 +82,8 @@ def validate_planner_action(raw: Any) -> dict[str, Any]:
         raise ValueError("planner action must be an object")
     kind = raw.get("kind")
     if kind == "tool":
+        if set(raw) != {"kind", "tool", "arguments"}:
+            raise ValueError("tool action fields must be exactly kind/tool/arguments")
         tool = raw.get("tool")
         if tool not in ALLOWED_TOOLS:
             raise ValueError(f"tool is not allowed: {tool}")
@@ -90,6 +92,8 @@ def validate_planner_action(raw: Any) -> dict[str, Any]:
             raise ValueError("tool arguments must be an object")
         return {"kind": "tool", "tool": tool, "arguments": arguments}
     if kind == "finish":
+        if set(raw) != {"kind", "status", "message"}:
+            raise ValueError("finish action fields must be exactly kind/status/message")
         status = raw.get("status")
         if status not in FINAL_STATUSES:
             raise ValueError("invalid final status")
@@ -200,6 +204,24 @@ def _execute_tool(
     return output, updated
 
 
+def compact_tool_output(tool: str, output: Any) -> Any:
+    """Keep full data in runtime context while bounding planner-visible observations."""
+    if tool == "load_turbulence_catalog":
+        return {
+            "catalog": "turbulence_thresholds",
+            "rows": len(output),
+            "target_ber_values": sorted({row["target_ber"] for row in output}),
+        }
+    if tool == "load_catalog":
+        return {
+            "catalog": "configurations",
+            "rows": len(output),
+            "codes": sorted({row["code"] for row in output}),
+            "coherence_bits": sorted({row["coherence_bits"] for row in output}),
+        }
+    return output
+
+
 def tool_node(state: AgentState) -> dict[str, Any]:
     action = state["action"]
     observations = list(state.get("observations", []))
@@ -210,7 +232,7 @@ def tool_node(state: AgentState) -> dict[str, Any]:
             "tool": action["tool"],
             "arguments": action["arguments"],
             "status": "success",
-            "output": output,
+            "output": compact_tool_output(action["tool"], output),
         }
     except (KeyError, LookupError, TypeError, ValueError) as exc:
         observation = {

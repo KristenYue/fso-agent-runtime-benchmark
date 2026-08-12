@@ -107,6 +107,7 @@ def main() -> None:
             "pass_rate": sum(row["passed"] for row in records) / total,
             **usage,
         },
+        "model_telemetry": planner.telemetry_records(),
         "results": records,
     }
     (output_dir / "results.json").write_text(

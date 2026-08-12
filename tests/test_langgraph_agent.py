@@ -1,4 +1,6 @@
-from fso_benchmark.langgraph_agent import ScriptedPlanner, run_agent
+import pytest
+
+from fso_benchmark.langgraph_agent import ScriptedPlanner, run_agent, validate_planner_action
 
 
 def successful_actions():
@@ -25,6 +27,13 @@ def test_scripted_planner_runs_real_tool_loop() -> None:
         "load_catalog",
         "select_robust_configuration",
     ]
+    assert result["trace"][2]["output"] == {
+        "catalog": "turbulence_thresholds",
+        "rows": 12,
+        "target_ber_values": [0.001],
+    }
+    assert result["trace"][4]["output"]["rows"] == 16
+    assert "LDPC-L64-D128" not in str(result["trace"][4]["output"])
 
 
 def test_unlisted_tool_is_blocked_before_execution() -> None:
@@ -78,3 +87,15 @@ def test_planner_can_request_clarification_without_tool_call() -> None:
     assert result["status"] == "needs_clarification"
     assert result["answer"]["message"] == "请提供功率上限"
     assert result["trace"] == []
+
+
+@pytest.mark.parametrize(
+    "action",
+    [
+        {"kind":"tool","tool":"load_catalog","arguments":{},"reasoning":"hidden"},
+        {"kind":"finish","status":"success","message":"","answer":42},
+    ],
+)
+def test_local_action_validation_rejects_extra_fields(action) -> None:
+    with pytest.raises(ValueError, match="fields must be exactly"):
+        validate_planner_action(action)

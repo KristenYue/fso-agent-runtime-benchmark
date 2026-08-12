@@ -4,7 +4,7 @@ from pathlib import Path
 import httpx
 import pytest
 
-from fso_benchmark.model_planner import OpenAICompatiblePlanner
+from fso_benchmark.model_planner import OpenAICompatiblePlanner, calculate_token_cost
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,6 +51,7 @@ def test_structured_planner_returns_validated_action_and_usage() -> None:
     action = instance.decide(request="plan", observations=(), step=0)
     assert action == {"kind":"tool","tool":"load_catalog","arguments":{}}
     assert instance.usage_summary()["total_tokens"] == 20
+    assert instance.usage_summary()["usage_complete"] is True
     assert instance.telemetry[0]["provider_request_id"] == "req-1"
 
 
@@ -108,3 +109,28 @@ def test_invalid_tool_from_model_is_blocked() -> None:
     instance = planner(handler)
     with pytest.raises(ValueError, match="not allowed"):
         instance.decide(request="unsafe", observations=(), step=0)
+
+
+def test_cost_uses_dated_external_prices_without_rounding() -> None:
+    cost = calculate_token_cost(
+        prompt_tokens=1_000_000,
+        completion_tokens=500_000,
+        input_price_per_million=2.0,
+        output_price_per_million=8.0,
+    )
+    assert cost == 6.0
+
+
+def test_telemetry_records_are_copies_and_contain_no_key() -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200,
+            json=response_body('{"kind":"finish","status":"needs_clarification","message":"x"}'),
+        )
+
+    instance = planner(handler)
+    instance.decide(request="plan", observations=(), step=0)
+    records = instance.telemetry_records()
+    records[0]["attempts"] = 999
+    assert instance.telemetry[0]["attempts"] == 1
+    assert "test-secret-key" not in json.dumps(records)

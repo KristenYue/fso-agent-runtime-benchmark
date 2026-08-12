@@ -170,7 +170,7 @@ class OpenAICompatiblePlanner:
         return validate_planner_action(action)
 
     def usage_summary(self) -> dict[str, Any]:
-        return {
+        summary = {
             "calls": len(self.telemetry),
             "attempts": sum(row["attempts"] for row in self.telemetry),
             "prompt_tokens": sum(row["prompt_tokens"] or 0 for row in self.telemetry),
@@ -178,3 +178,37 @@ class OpenAICompatiblePlanner:
             "total_tokens": sum(row["total_tokens"] or 0 for row in self.telemetry),
             "elapsed_ms": sum(row["elapsed_ms"] for row in self.telemetry),
         }
+        summary["usage_complete"] = all(
+            row["prompt_tokens"] is not None
+            and row["completion_tokens"] is not None
+            and row["total_tokens"] is not None
+            for row in self.telemetry
+        )
+        return summary
+
+    def telemetry_records(self) -> list[dict[str, Any]]:
+        """Return the intentionally secret-free provider call ledger."""
+        return [dict(row) for row in self.telemetry]
+
+
+def calculate_token_cost(
+    *,
+    prompt_tokens: int,
+    completion_tokens: int,
+    input_price_per_million: float,
+    output_price_per_million: float,
+) -> float:
+    values = (
+        prompt_tokens,
+        completion_tokens,
+        input_price_per_million,
+        output_price_per_million,
+    )
+    if any(isinstance(value, bool) or not isinstance(value, (int, float)) for value in values):
+        raise ValueError("token counts and prices must be numeric")
+    if any(value < 0 for value in values):
+        raise ValueError("token counts and prices must be non-negative")
+    return (
+        prompt_tokens * input_price_per_million
+        + completion_tokens * output_price_per_million
+    ) / 1_000_000.0
