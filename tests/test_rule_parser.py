@@ -20,11 +20,10 @@ def test_rule_parser_does_not_read_hidden_inputs() -> None:
 def test_rule_baseline_reports_parse_and_task_metrics_separately() -> None:
     report = run_rule_baseline(generate()["tasks"])
     assert report["summary"]["total"] == 120
-    assert 0.0 <= report["summary"]["parse_exact_rate"] <= 1.0
-    assert 0.0 <= report["summary"]["task_pass_rate"] <= 1.0
+    assert report["summary"]["parse_exact_rate"] == 1.0
+    assert report["summary"]["task_pass_rate"] == 1.0
     assert set(report["by_split_level"]) == {
         "dev/L1", "dev/L2", "dev/L3",
         "test/L1", "test/L2", "test/L3",
         "train/L1", "train/L2", "train/L3",
     }
-

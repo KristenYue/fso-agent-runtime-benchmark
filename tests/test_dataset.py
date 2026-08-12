@@ -1,6 +1,12 @@
+import json
+from pathlib import Path
+
 from scripts.generate_tasks_v1 import generate
 
 from fso_benchmark.dataset import canonical_semantic_key, validate_dataset
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_generated_dataset_has_120_unique_tasks() -> None:
@@ -32,3 +38,7 @@ def test_template_ids_are_isolated_by_split() -> None:
     assert templates["train"].isdisjoint(templates["test"])
     assert templates["dev"].isdisjoint(templates["test"])
 
+
+def test_checked_in_dataset_matches_generator() -> None:
+    checked_in = json.loads((ROOT / "data" / "tasks_v1.json").read_text(encoding="utf-8"))
+    assert checked_in == generate()
