@@ -7,7 +7,13 @@ from typing import Any, Literal
 
 
 TaskLevel = Literal["L1", "L2", "L3"]
-ResultStatus = Literal["success", "invalid_input", "no_feasible_solution"]
+ResultStatus = Literal[
+    "success",
+    "needs_clarification",
+    "invalid_input",
+    "no_feasible_solution",
+    "tool_error",
+]
 
 
 @dataclass(frozen=True)
@@ -51,4 +57,3 @@ class TaskResult:
             "error": self.error,
             "trace": list(self.trace),
         }
-

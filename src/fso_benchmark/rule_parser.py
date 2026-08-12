@@ -24,7 +24,70 @@ def parse_request(case: dict[str, Any]) -> TaskSpec:
     text = case["request"]
     inputs: dict[str, Any] = {}
 
-    if re.search(r"Rytov|sigma_R\^2|湍流方差", text, flags=re.IGNORECASE):
+    turbulence_request = bool(
+        re.search(r"Rytov|sigma_R\^2|湍流方差", text, flags=re.IGNORECASE)
+    )
+    planning_request = bool(
+        re.search(r"目标BER|BER\s*[≤=]|误码率", text, flags=re.IGNORECASE)
+    ) and bool(
+        turbulence_request
+        or re.search(r"湍流感知链路|链路规划|选链路方案", text, flags=re.IGNORECASE)
+    )
+
+    if planning_request:
+        operation = "plan_turbulence_aware_link"
+        rytov = _search(
+            [
+                rf"Rytov方差(?:为|=)?\s*({NUMBER})",
+                rf"sigma_R\^2\s*=\s*({NUMBER})",
+                rf"湍流方差(?:取|为)?\s*({NUMBER})",
+            ],
+            text,
+        )
+        target = _search(
+            [
+                rf"目标BER(?:为|=)?\s*({NUMBER})",
+                rf"BER\s*[≤=]\s*({NUMBER})",
+                rf"误码率(?:不能超过|上限)\s*({NUMBER})",
+            ],
+            text,
+        )
+        power = _search(
+            [
+                rf"发射Eb/N0上限(?:为)?\s*({NUMBER})\s*dB",
+                rf"功率预算\s*({NUMBER})\s*dB",
+                rf"最多能给\s*({NUMBER})\s*dB",
+            ],
+            text,
+        )
+        if rytov is not None:
+            inputs["rytov_variance"] = rytov
+        if target is not None:
+            inputs["target_ber"] = target
+        if power is not None:
+            inputs["max_ebn0_db"] = power
+
+        rs_only = bool(re.search(r"只允许RS|编码限定为RS|只考虑RS", text, flags=re.IGNORECASE))
+        ldpc_only = bool(re.search(r"只允许LDPC|编码限定为LDPC|只考虑LDPC", text, flags=re.IGNORECASE))
+        if rs_only:
+            inputs["allowed_codes"] = ["RS"]
+        elif ldpc_only:
+            inputs["allowed_codes"] = ["LDPC"]
+        buffer_limit = _search(
+            [
+                rf"最大缓存为\s*({NUMBER})\s*KiB",
+                rf"缓存上限\s*({NUMBER})\s*KiB",
+                rf"缓存最多\s*({NUMBER})\s*KiB",
+            ],
+            text,
+        )
+        if buffer_limit is not None:
+            inputs["max_buffer_kib"] = buffer_limit
+        if re.search(r"首次目录读取超时后重试一次|目录第一次超时就重试|目录若首调超时请重试", text):
+            inputs["injected_fault"] = "threshold_catalog_timeout_once"
+        elif re.search(r"目录持续不可用|目录两次都不可用|目录服务一直故障", text):
+            inputs["injected_fault"] = "threshold_catalog_unavailable"
+    elif turbulence_request:
         operation = "characterize_turbulence"
         value = _search(
             [
@@ -105,4 +168,3 @@ def parse_request(case: dict[str, Any]) -> TaskSpec:
         operation=operation,
         inputs=inputs,
     )
-

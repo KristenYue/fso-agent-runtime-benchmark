@@ -25,6 +25,7 @@ def run_rule_baseline(cases: list[dict[str, Any]]) -> dict[str, Any]:
             "parsed_operation": parsed.operation,
             "parsed_inputs": parsed.inputs,
             "parse_exact": parse_exact,
+            "passed": task_passed,
             "task_passed": task_passed,
         }
         records.append(record)
@@ -45,4 +46,3 @@ def run_rule_baseline(cases: list[dict[str, Any]]) -> dict[str, Any]:
         for (split, level), rows in sorted(grouped.items())
     }
     return {"summary": metrics(records), "by_split_level": by_split_level, "results": records}
-

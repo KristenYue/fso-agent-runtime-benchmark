@@ -1,0 +1,3427 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "tasks-v2-development",
+  "generator": "scripts/generate_tasks_v2.py",
+  "tasks": [
+    {
+      "task_id": "train-l1-001",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.1 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 21.589015327960873,
+          "beta": 19.820779995261304
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-002",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.2 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 11.65104537862684,
+          "beta": 10.122365306725285
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-003",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.3 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.3
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 8.431712566725615,
+          "beta": 6.922053219204812
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-004",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.4 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.4
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 6.875471276505911,
+          "beta": 5.338382291809284
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-005",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.5 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 5.977635328959128,
+          "beta": 4.398043506280881
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-006",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.6 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.6
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 5.405422590293787,
+          "beta": 3.7776233292692014
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-007",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.7 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.7
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 5.017131196214909,
+          "beta": 3.3389768372193216
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-008",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 0.8 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.8
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.742379672821846,
+          "beta": 3.013273812815489
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-009",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 -5.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -5.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -5.0,
+          "ber": 0.2869417437260485
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-010",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 -2.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -2.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -2.0,
+          "ber": 0.21350218550400613
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-011",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 0.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 0.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 0.0,
+          "ber": 0.15865525393145707
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-012",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 2.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 2.0,
+          "ber": 0.10402863708538863
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-013",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 4.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 4.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 4.0,
+          "ber": 0.05649530174936167
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-014",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 6.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 6.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 6.0,
+          "ber": 0.023007138877866033
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-015",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 8.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 8.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 8.0,
+          "ber": 0.006004386400163567
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l1-016",
+      "split": "train",
+      "level": "L1",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 10.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 10.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 10.0,
+          "ber": 0.0007827011290012744
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-017",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，最大额外时延为 0.1 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-018",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许LDPC编码，最大额外时延为 4.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-019",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许LDPC编码，最大额外时延为 16.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-020",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许LDPC编码，最大额外时延为 66.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-021",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许RS编码，最大缓存为 0.3 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.3
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-022",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许RS编码，最大缓存为 2.0 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-023",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许RS编码，最大额外时延为 64.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-024",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，最大缓存为 8.0 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-025",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，最大额外时延为 0.1 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-026",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许LDPC编码，最大额外时延为 4.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-027",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许LDPC编码，最大缓存为 2.1 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-028",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许LDPC编码，最大缓存为 8.1 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.1
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-029",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许RS编码，最大缓存为 0.3 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.3
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-030",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许RS编码，最大缓存为 2.0 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-031",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，只允许RS编码，最大缓存为 8.0 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l2-032",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，最大缓存为 32.0 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.0
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-033",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 -0.1 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": -0.1
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-034",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-turbulence-formal",
+      "request": "请计算Rytov方差为 10.1 时的Gamma-Gamma参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 10.1
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-035",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 -21.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -21.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-036",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-ber-formal",
+      "request": "请计算Eb/N0为 101.0 dB时的OOK理论BER。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 101.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-037",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.0001，相干长度 64 bit，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.0001,
+        "coherence_bits": 64
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-038",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 65 bit，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 65
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-039",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 64 bit，只允许RS编码，最大缓存为 0.01 KiB，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.01
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-l3-040",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-config-formal",
+      "request": "目标BER为 0.001，相干长度 256 bit，最大额外时延为 -1.0 us，请选择配置。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -1.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-001",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=0.9，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 0.9
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.542334271956677,
+          "beta": 2.762415960420313
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-002",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.0，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.393859025392147,
+          "beta": 2.5636319795036955
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-003",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.1，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.282338309406557,
+          "beta": 2.402488583487418
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-004",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.2，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.198101797579072,
+          "beta": 2.2694028858316977
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-005",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.3，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.3
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.134506868781396,
+          "beta": 2.1577682966355236
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-006",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.4，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.4
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.086847129819735,
+          "beta": 2.062885882776421
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-007",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.5，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.051700128019761,
+          "beta": 1.9813245972863363
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-008",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=1.6，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.6
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.026521312058279,
+          "beta": 1.9105223344570113
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-009",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=-4.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -4.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -4.0,
+          "ber": 0.264034207638018
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-010",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=-1.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -1.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -1.0,
+          "ber": 0.1863972813913738
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-011",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=1.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 1.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 1.0,
+          "ber": 0.13092729675552447
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-012",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=3.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 3.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 3.0,
+          "ber": 0.07889587198172442
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-013",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=5.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 5.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 5.0,
+          "ber": 0.03767898814746341
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-014",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=7.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 7.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 7.0,
+          "ber": 0.012587033122144622
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-015",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=9.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 9.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 9.0,
+          "ber": 0.002413310419633864
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l1-016",
+      "split": "dev",
+      "level": "L1",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=11.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 11.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 11.0,
+          "ber": 0.0001939854720578607
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-017",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；额外时延上限 0.11 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.11
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-018",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为LDPC；额外时延上限 4.01 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-019",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为LDPC；额外时延上限 16.01 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-020",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为LDPC；额外时延上限 66.01 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-021",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为RS；缓存上限 0.31 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.31
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-022",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为RS；缓存上限 2.01 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-023",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为RS；额外时延上限 64.01 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-024",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；缓存上限 8.01 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-025",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；额外时延上限 0.11 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.11
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-026",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为LDPC；额外时延上限 4.01 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-027",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为LDPC；缓存上限 2.11 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.11
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-028",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为LDPC；缓存上限 8.11 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.11
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-029",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为RS；缓存上限 0.31 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.31
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-030",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为RS；缓存上限 2.01 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-031",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；编码限定为RS；缓存上限 8.01 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l2-032",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；缓存上限 32.01 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.01
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-033",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=-0.2，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": -0.2
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-034",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-turbulence-symbol",
+      "request": "给定 sigma_R^2=10.2，返回湍流alpha和beta。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 10.2
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-035",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=-22.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -22.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-036",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-ber-equation",
+      "request": "OOK链路 Eb/N0=102.0 dB，理论BER是多少？",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 102.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-037",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤1e-05；Lc=64 bit；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 1e-05,
+        "coherence_bits": 64
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-038",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=66 bit；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 66
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-039",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=64 bit；编码限定为RS；缓存上限 0.02 KiB；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.02
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-l3-040",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-config-compact",
+      "request": "链路要求 BER≤0.001；Lc=256 bit；额外时延上限 -2.0 us；选出方案。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -2.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-001",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 1.7，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.7
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.009382372959913,
+          "beta": 1.8485283962584433
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-002",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 1.8，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.8
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 3.998797527064097,
+          "beta": 1.79383221872556
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-003",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 1.9，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 1.9
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 3.993605156612434,
+          "beta": 1.7452464755803934
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-004",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 2.0，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 3.9928853118961882,
+          "beta": 1.7018254584528547
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-005",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 2.1，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 2.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 3.995901039928529,
+          "beta": 1.662806927949789
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-006",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 2.2，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 2.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.002055902704989,
+          "beta": 1.627569934878687
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-007",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 2.3，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 2.3
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.01086271868257,
+          "beta": 1.5956037279310338
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-008",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 2.4，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 2.4
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "alpha": 4.021920226109088,
+          "beta": 1.5664844975305554
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-009",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 -3.0 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -3.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -3.0,
+          "ber": 0.23948946302589857
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-010",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 -0.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -0.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": -0.5,
+          "ber": 0.17256927028429592
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-011",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 1.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 1.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 1.5,
+          "ber": 0.11731780139111983
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-012",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 3.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 3.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 3.5,
+          "ber": 0.0672961279547928
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-013",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 5.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 5.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 5.5,
+          "ber": 0.02980622853861985
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-014",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 7.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 7.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 7.5,
+          "ber": 0.008861051096347864
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-015",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 9.5 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 9.5
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 9.5,
+          "ber": 0.001416119072179128
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l1-016",
+      "split": "test",
+      "level": "L1",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 12.0 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 12.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "ebn0_db": 12.0,
+          "ber": 3.430262386641539e-05
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-017",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；额外时延最多 0.12000000000000001 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_latency_us": 0.12000000000000001
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-018",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑LDPC；额外时延最多 4.02 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-019",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑LDPC；额外时延最多 16.02 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 16.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-020",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑LDPC；额外时延最多 66.02 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 66.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-021",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑RS；缓存最多 0.32 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.32
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-022",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑RS；缓存最多 2.02 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-023",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑RS；额外时延最多 64.02 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_latency_us": 64.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L64-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-024",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；缓存最多 8.02 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "max_buffer_kib": 8.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L64-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-025",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；额外时延最多 0.12000000000000001 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": 0.12000000000000001
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-026",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑LDPC；额外时延最多 4.02 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_latency_us": 4.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-027",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑LDPC；缓存最多 2.12 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 2.12
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-028",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑LDPC；缓存最多 8.12 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "LDPC"
+        ],
+        "max_buffer_kib": 8.12
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-029",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑RS；缓存最多 0.32 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.32
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D1"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-030",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑RS；缓存最多 2.02 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 2.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D8"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-031",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；只考虑RS；缓存最多 8.02 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 8.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "RS-L256-D32"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l2-032",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；缓存最多 32.02 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_buffer_kib": 32.02
+      },
+      "expected": {
+        "status": "success",
+        "configuration_id": "LDPC-L256-D128"
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-033",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 -0.30000000000000004，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": -0.30000000000000004
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-034",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-turbulence-colloquial",
+      "request": "湍流方差取 10.3，求 Gamma-Gamma 的两个形状参数。",
+      "operation": "characterize_turbulence",
+      "inputs": {
+        "rytov_variance": 10.3
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-035",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 -23.0 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": -23.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-036",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-ber-colloquial",
+      "request": "信噪比为 103.0 dB，求 OOK 的理论误码率。",
+      "operation": "calculate_ook_ber",
+      "inputs": {
+        "ebn0_db": 103.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-037",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 1e-06；信道相干块 64 比特。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 1e-06,
+        "coherence_bits": 64
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-038",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 67 比特。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 67
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-039",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 64 比特；只考虑RS；缓存最多 0.03 KiB。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 64,
+        "allowed_codes": [
+          "RS"
+        ],
+        "max_buffer_kib": 0.03
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-l3-040",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-config-colloquial",
+      "request": "帮我选编码：误码率上限 0.001；信道相干块 256 比特；额外时延最多 -3.0 us。",
+      "operation": "select_configuration",
+      "inputs": {
+        "target_ber": 0.001,
+        "coherence_bits": 256,
+        "max_latency_us": -3.0
+      },
+      "expected": {
+        "status": "invalid_input"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-01",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.2，目标BER为 0.001，发射Eb/N0上限为 20.0 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak",
+            "alpha": 11.65104537862684,
+            "beta": 10.122365306725285
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-02",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.75，目标BER为 0.001，发射Eb/N0上限为 25.0 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-03",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 2.0，目标BER为 0.001，发射Eb/N0上限为 27.0 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-04",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.75，目标BER为 0.001，发射Eb/N0上限为 25.0 dB，只允许RS编码。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.0,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-05",
+      "split": "train",
+      "level": "L2",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.75，目标BER为 0.001，发射Eb/N0上限为 30.0 dB，最大缓存为 2.0 KiB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "max_buffer_kib": 2.0
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-06",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 2.0，目标BER为 0.001，发射Eb/N0上限为 30.0 dB，首次目录读取超时后重试一次。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_timeout_once"
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-07",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.2，目标BER为 0.001。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-08",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，目标BER为 0.001，发射Eb/N0上限为 22.0 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.0
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-09",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 2.0，目标BER为 0.001，发射Eb/N0上限为 40.0 dB，只允许RS编码。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.0,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "train-planning-10",
+      "split": "train",
+      "level": "L3",
+      "template_id": "train-planning-formal",
+      "request": "请完成湍流感知链路规划，Rytov方差为 0.2，目标BER为 0.001，发射Eb/N0上限为 30.0 dB，目录持续不可用。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.0,
+        "injected_fault": "threshold_catalog_unavailable"
+      },
+      "expected": {
+        "status": "tool_error"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-01",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.2；BER≤0.001；功率预算 20.1 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak",
+            "alpha": 11.65104537862684,
+            "beta": 10.122365306725285
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-02",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.75；BER≤0.001；功率预算 25.1 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-03",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=2.0；BER≤0.001；功率预算 27.1 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-04",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.75；BER≤0.001；功率预算 25.1 dB；编码限定为RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.1,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-05",
+      "split": "dev",
+      "level": "L2",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.75；BER≤0.001；功率预算 30.1 dB；缓存上限 2.1 KiB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "max_buffer_kib": 2.1
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-06",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=2.0；BER≤0.001；功率预算 30.1 dB；目录第一次超时就重试。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_timeout_once"
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-07",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.75；BER≤0.001。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-08",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；BER≤0.001；功率预算 22.1 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.1
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-09",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=2.0；BER≤0.001；功率预算 40.1 dB；编码限定为RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.1,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "dev-planning-10",
+      "split": "dev",
+      "level": "L3",
+      "template_id": "dev-planning-compact",
+      "request": "链路规划；sigma_R^2=0.75；BER≤0.001；功率预算 30.1 dB；目录两次都不可用。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.1,
+        "injected_fault": "threshold_catalog_unavailable"
+      },
+      "expected": {
+        "status": "tool_error"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-01",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 0.2；误码率不能超过 0.001；最多能给 20.2 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.2,
+        "target_ber": 0.001,
+        "max_ebn0_db": 20.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak",
+            "alpha": 11.65104537862684,
+            "beta": 10.122365306725285
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-02",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 0.75；误码率不能超过 0.001；最多能给 25.2 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-03",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 2.0；误码率不能超过 0.001；最多能给 27.2 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 27.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-04",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 0.75；误码率不能超过 0.001；最多能给 25.2 dB；只考虑RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 25.2,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-05",
+      "split": "test",
+      "level": "L2",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 0.75；误码率不能超过 0.001；最多能给 30.2 dB；缓存最多 2.2 KiB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 0.75,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "max_buffer_kib": 2.2
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate",
+            "alpha": 4.868481548020511,
+            "beta": 3.1648679882817663
+          },
+          "selection": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-06",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 2.0；误码率不能超过 0.001；最多能给 30.2 dB；目录若首调超时请重试。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "injected_fault": "threshold_catalog_timeout_once"
+      },
+      "expected": {
+        "status": "success",
+        "answer": {
+          "turbulence": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong",
+            "alpha": 3.9928853118961882,
+            "beta": 1.7018254584528547
+          },
+          "selection": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      },
+      "must_reject": false,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-07",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 2.0；误码率不能超过 0.001。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-08",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；误码率不能超过 0.001；最多能给 22.2 dB。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "target_ber": 0.001,
+        "max_ebn0_db": 22.2
+      },
+      "expected": {
+        "status": "needs_clarification"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-09",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 2.0；误码率不能超过 0.001；最多能给 40.2 dB；只考虑RS。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 40.2,
+        "allowed_codes": [
+          "RS"
+        ]
+      },
+      "expected": {
+        "status": "no_feasible_solution"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    },
+    {
+      "task_id": "test-planning-10",
+      "split": "test",
+      "level": "L3",
+      "template_id": "test-planning-colloquial",
+      "request": "帮我选链路方案；湍流方差取 2.0；误码率不能超过 0.001；最多能给 30.2 dB；目录服务一直故障。",
+      "operation": "plan_turbulence_aware_link",
+      "inputs": {
+        "rytov_variance": 2.0,
+        "target_ber": 0.001,
+        "max_ebn0_db": 30.2,
+        "injected_fault": "threshold_catalog_unavailable"
+      },
+      "expected": {
+        "status": "tool_error"
+      },
+      "must_reject": true,
+      "passing_condition": "status_and_answer_contract_match"
+    }
+  ]
+}

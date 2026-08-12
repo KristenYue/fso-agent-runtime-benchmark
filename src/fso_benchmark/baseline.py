@@ -30,15 +30,85 @@ def execute_direct(task: TaskSpec) -> TaskResult:
             answer = select_configuration(catalog, **task.inputs)
             trace.append({"tool": "select_configuration", "status": "success"})
         elif task.operation == "plan_turbulence_aware_link":
+            required_fields = ("rytov_variance", "target_ber", "max_ebn0_db")
+            missing_fields = [field for field in required_fields if field not in task.inputs]
+            if missing_fields:
+                answer = {
+                    "missing_fields": missing_fields,
+                    "question": "请补充以下必要参数：" + "、".join(missing_fields),
+                }
+                trace.append(
+                    {
+                        "tool": "validate_required_inputs",
+                        "status": "needs_clarification",
+                        "missing_fields": missing_fields,
+                    }
+                )
+                return TaskResult(
+                    task.task_id,
+                    "needs_clarification",
+                    answer,
+                    None,
+                    tuple(trace),
+                )
             turbulence_parameters = characterize_turbulence(task.inputs["rytov_variance"])
             trace.append({"tool": "characterize_turbulence", "status": "success"})
             regime = resolve_turbulence_regime(task.inputs["rytov_variance"])
             trace.append({"tool": "resolve_turbulence_regime", "status": "success"})
-            thresholds = load_turbulence_catalog()
-            trace.append({"tool": "load_turbulence_catalog", "status": "success", "rows": len(thresholds)})
+            fault_mode = task.inputs.get("injected_fault")
+            if fault_mode == "threshold_catalog_timeout_once":
+                trace.append(
+                    {
+                        "tool": "load_turbulence_catalog",
+                        "status": "timeout",
+                        "attempt": 1,
+                    }
+                )
+                thresholds = load_turbulence_catalog()
+                trace.append(
+                    {
+                        "tool": "load_turbulence_catalog",
+                        "status": "success",
+                        "attempt": 2,
+                        "retry": True,
+                        "rows": len(thresholds),
+                    }
+                )
+            elif fault_mode == "threshold_catalog_unavailable":
+                trace.extend(
+                    [
+                        {
+                            "tool": "load_turbulence_catalog",
+                            "status": "unavailable",
+                            "attempt": 1,
+                        },
+                        {
+                            "tool": "load_turbulence_catalog",
+                            "status": "unavailable",
+                            "attempt": 2,
+                            "retry": True,
+                        },
+                    ]
+                )
+                return TaskResult(
+                    task.task_id,
+                    "tool_error",
+                    None,
+                    "threshold catalog unavailable after retry budget",
+                    tuple(trace),
+                )
+            elif fault_mode is None:
+                thresholds = load_turbulence_catalog()
+                trace.append({"tool": "load_turbulence_catalog", "status": "success", "rows": len(thresholds)})
+            else:
+                raise ValueError("unsupported injected_fault")
             catalog = load_catalog()
             trace.append({"tool": "load_catalog", "status": "success", "rows": len(catalog)})
-            optimizer_inputs = {key: value for key, value in task.inputs.items() if key != "rytov_variance"}
+            optimizer_inputs = {
+                key: value
+                for key, value in task.inputs.items()
+                if key not in {"rytov_variance", "injected_fault"}
+            }
             selection = select_robust_configuration(
                 thresholds,
                 catalog,

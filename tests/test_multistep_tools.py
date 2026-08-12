@@ -78,5 +78,43 @@ def test_multistep_executor_reports_missing_required_field() -> None:
         {"target_ber": 0.001, "max_ebn0_db": 30.0},
     )
     result = execute_direct(task)
-    assert result.status == "invalid_input"
-    assert "rytov_variance" in result.error
+    assert result.status == "needs_clarification"
+    assert result.answer["missing_fields"] == ["rytov_variance"]
+
+
+def test_multistep_executor_recovers_from_one_timeout() -> None:
+    task = TaskSpec(
+        "multi-retry",
+        "L3",
+        "plan_turbulence_aware_link",
+        {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0,
+            "injected_fault": "threshold_catalog_timeout_once",
+        },
+    )
+    result = execute_direct(task)
+    assert result.status == "success"
+    threshold_steps = [
+        step for step in result.trace if step["tool"] == "load_turbulence_catalog"
+    ]
+    assert [step["status"] for step in threshold_steps] == ["timeout", "success"]
+    assert threshold_steps[-1]["retry"] is True
+
+
+def test_multistep_executor_stops_after_retry_budget() -> None:
+    task = TaskSpec(
+        "multi-unavailable",
+        "L3",
+        "plan_turbulence_aware_link",
+        {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0,
+            "injected_fault": "threshold_catalog_unavailable",
+        },
+    )
+    result = execute_direct(task)
+    assert result.status == "tool_error"
+    assert len([step for step in result.trace if step.get("retry")]) == 1
