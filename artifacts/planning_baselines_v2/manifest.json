@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "experiment": "planning_baselines_v2",
+  "generated_at_utc": "2026-08-12T01:23:13.734376+00:00",
+  "dataset_sha256": "8d3965aa00023edb3297b7e10fa88923b012d297be6f4cd33cca3e3d440642d4",
+  "source_git_sha": "be758b0f3c6f6cc95432bc3b9fd6ed5289043854",
+  "planning_tasks": 30,
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "network_calls": 0,
+  "model_calls": 0
+}

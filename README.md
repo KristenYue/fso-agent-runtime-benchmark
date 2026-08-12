@@ -6,7 +6,7 @@
 当前已完成 P1 的非 Agent 基线，并开始多步约束环境：
 
 - 五个无网络、无随机性的核心领域工具；
-- 版本化任务契约和 120 条 L1/L2/L3 development 任务；
+- 版本化任务契约和 150 条 L1/L2/L3 development 任务，其中30条为五步规划；
 - 直接函数/确定性优化器 Oracle 基线；
 - 仅读取自然语言请求的规则参数解析基线；
 - 参数校验、失败结果、调用轨迹和自动化测试。
@@ -19,6 +19,8 @@ python -m pytest
 python scripts/generate_tasks_v1.py
 python scripts/run_direct_baseline.py
 python scripts/run_rule_baseline.py
+python scripts/generate_tasks_v2.py
+python scripts/run_planning_baselines_v2.py
 ```
 
 完整数据集基线会写入 `artifacts/direct_baseline_v1/` 和 `artifacts/rule_baseline/`。
