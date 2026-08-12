@@ -37,6 +37,14 @@ Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战�
 LangGraph 离线图骨架已在 development 数据上验证。正式模型基线尚未运行，因为当前独立
 环境没有模型 API Key；离线图结果明确标记为 `not_an_agent_model_baseline`。
 
+正式 development 模型运行器只接受 `FSO_MODEL_BASE_URL`、`FSO_MODEL_API_KEY` 和
+`FSO_MODEL_ID` 环境变量，缺少任一项即退出；它固定读取 `tasks_v2.json`，不会读取
+Challenge v1。命令：
+
+```powershell
+python scripts/run_langgraph_model_development.py
+```
+
 ## 确定性工具
 
 1. `characterize_turbulence`：由 Rytov 方差计算 Gamma-Gamma 参数；

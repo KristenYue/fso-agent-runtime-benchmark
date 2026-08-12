@@ -8,7 +8,7 @@
 - 建立包含 L1/L2/L3 的 9 条开发种子任务；
 - 保存直接函数/优化器 Oracle 的原始结果和 manifest；
 - 第一阶段验证：13 项代码测试通过，9/9 种子任务契约匹配，`pip check` 通过；
-- 当前验证：50 项代码测试通过；
+- 当前验证：56 项代码测试通过；
 - 已生成 150 条 development 任务；前120条保持 train/dev/test 模板与语义键隔离，
   新增30条五步规划任务；
 - 已实现只读自然语言请求的规则解析基线及分层评分。
@@ -26,6 +26,8 @@
   规则解析器，未调用模型、未运行 Challenge，不计作 Agent 基线。
 - 已实现 provider-neutral Planner→Tool 循环：工具白名单、目录验证前置条件、8次工具
   预算和“必须有优化器输出才能成功”均由运行时强制；Prompt/Schema 与运行时白名单同步测试。
+- 已实现 OpenAI-compatible 结构化 Planner 和仅限 development 的运行器；支持一次429/5xx/
+  timeout重试、稳定幂等键、Token/延迟遥测和错误脱敏。缺模型配置时 fail-closed。
 
 ## 当前结论
 

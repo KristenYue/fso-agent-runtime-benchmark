@@ -1,0 +1,10 @@
+{
+  "ready": false,
+  "credentials": {
+    "FSO_MODEL_BASE_URL": false,
+    "FSO_MODEL_API_KEY": false,
+    "FSO_MODEL_ID": false
+  },
+  "secrets_read_or_written": false,
+  "challenge_executed": false
+}
