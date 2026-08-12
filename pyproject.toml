@@ -11,6 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+agents = ["langgraph>=1.0,<2.0"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

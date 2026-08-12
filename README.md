@@ -34,6 +34,9 @@ development 规则基线覆盖受控生成模板；其100%结果只能证明模�
 当前已冻结24条 Challenge v1：Oracle 24/24，规则基线4/24。后续 LangGraph 和自研
 Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战集继续调参。
 
+LangGraph 离线图骨架已在 development 数据上验证。正式模型基线尚未运行，因为当前独立
+环境没有模型 API Key；离线图结果明确标记为 `not_an_agent_model_baseline`。
+
 ## 确定性工具
 
 1. `characterize_turbulence`：由 Rytov 方差计算 Gamma-Gamma 参数；
