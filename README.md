@@ -55,8 +55,12 @@ python scripts/bind_langgraph_model_contract.py `
 Challenge v1：
 
 ```powershell
+python scripts/probe_langgraph_model_compatibility.py
 python scripts/run_langgraph_model_development.py
 ```
+
+兼容性探测只调用模型一次，并要求模型在缺少三个必填参数时返回
+`needs_clarification`；探测通过后才运行30条 development。
 
 ## 确定性工具
 
