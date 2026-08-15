@@ -28,12 +28,17 @@
     "threshold_validation_required": true
   },
   "model": {
-    "provider": "unconfigured",
-    "base_url": "unconfigured",
-    "snapshot_id": "unconfigured",
-    "response_format_type": "unconfigured",
-    "enable_thinking": "unconfigured",
+    "provider": "AlibabaCloud-ModelStudio-Beijing",
+    "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "snapshot_id": "qwen3.7-plus-2026-05-26",
+    "response_format_type": "json_object",
+    "enable_thinking": false,
     "local_action_schema_validation": true
   },
-  "status": "model_credentials_required"
+  "status": "model_bound_credentials_required",
+  "model_binding": {
+    "bound_at_utc": "2026-08-15T20:13:44.081976+00:00",
+    "source_git_sha": "95ae89b7371ffb3b4efe85059c854312fed4550d",
+    "credentials_recorded": false
+  }
 }
