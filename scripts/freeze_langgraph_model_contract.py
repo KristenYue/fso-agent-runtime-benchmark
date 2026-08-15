@@ -50,6 +50,7 @@ def main() -> None:
         },
         "model": {
             "provider": "unconfigured",
+            "base_url": "unconfigured",
             "snapshot_id": "unconfigured",
         },
         "status": "model_credentials_required",

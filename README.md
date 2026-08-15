@@ -37,9 +37,20 @@ Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战�
 LangGraph 离线图骨架已在 development 数据上验证。正式模型基线尚未运行，因为当前独立
 环境没有模型 API Key；离线图结果明确标记为 `not_an_agent_model_baseline`。
 
-正式 development 模型运行器只接受 `FSO_MODEL_BASE_URL`、`FSO_MODEL_API_KEY` 和
-`FSO_MODEL_ID` 环境变量，缺少任一项即退出；它固定读取 `tasks_v2.json`，不会读取
-Challenge v1。命令：
+正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
+`FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`
+必须是本次实验选择的固定快照 ID，不能在运行中换成其他模型。先用不含密钥的三个身份字段
+绑定冻结契约：
+
+```powershell
+python scripts/bind_langgraph_model_contract.py `
+  --provider <provider> `
+  --base-url <openai-compatible-base-url> `
+  --snapshot-id <immutable-model-snapshot>
+```
+
+提交绑定后的契约，再运行 development。运行器固定读取 `tasks_v2.json`，不会读取
+Challenge v1：
 
 ```powershell
 python scripts/run_langgraph_model_development.py

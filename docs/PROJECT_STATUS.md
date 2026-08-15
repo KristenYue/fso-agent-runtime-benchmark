@@ -8,7 +8,7 @@
 - 建立包含 L1/L2/L3 的 9 条开发种子任务；
 - 保存直接函数/优化器 Oracle 的原始结果和 manifest；
 - 第一阶段验证：13 项代码测试通过，9/9 种子任务契约匹配，`pip check` 通过；
-- 当前验证：74 项代码测试通过；
+- 当前验证：79 项代码测试通过；
 - 已生成 150 条 development 任务；前120条保持 train/dev/test 模板与语义键隔离，
   新增30条五步规划任务；
 - 已实现只读自然语言请求的规则解析基线及分层评分。
@@ -38,6 +38,8 @@
   并拒绝凭据字段；未通过验收不能创建冻结 Challenge 账本。
 - 已完成 LangGraph 1.2.11 的 StateGraph→Pregel 执行与 checkpoint 源码切片；精确依赖、
   五个关键源码哈希和设计取舍已固化，可自动复验。该工作不等于启动自研 Runtime。
+- 已增加模型身份绑定门禁：真实调用前必须冻结 provider、base URL 和不可变 snapshot ID；
+  development/Challenge 环境必须与契约一致，API Key 永不进入契约或结果。
 
 ## 当前结论
 

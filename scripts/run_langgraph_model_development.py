@@ -20,6 +20,7 @@ from fso_benchmark.model_planner import (  # noqa: E402
     OpenAICompatiblePlanner,
     calculate_token_cost,
 )
+from fso_benchmark.model_contract import require_bound_model_contract  # noqa: E402
 
 
 def percentile(values: list[float], fraction: float) -> float:
@@ -28,8 +29,9 @@ def percentile(values: list[float], fraction: float) -> float:
     return ordered[index]
 
 
-def require_environment() -> tuple[str, str, str]:
+def require_environment() -> tuple[str, str, str, str]:
     values = (
+        os.environ.get("FSO_MODEL_PROVIDER", ""),
         os.environ.get("FSO_MODEL_BASE_URL", ""),
         os.environ.get("FSO_MODEL_API_KEY", ""),
         os.environ.get("FSO_MODEL_ID", ""),
@@ -37,7 +39,13 @@ def require_environment() -> tuple[str, str, str]:
     missing = [
         name
         for name, value in zip(
-            ("FSO_MODEL_BASE_URL", "FSO_MODEL_API_KEY", "FSO_MODEL_ID"), values
+            (
+                "FSO_MODEL_PROVIDER",
+                "FSO_MODEL_BASE_URL",
+                "FSO_MODEL_API_KEY",
+                "FSO_MODEL_ID",
+            ),
+            values,
         )
         if not value
     ]
@@ -75,7 +83,16 @@ def price_configuration() -> dict | None:
 
 
 def main() -> None:
-    base_url, api_key, model = require_environment()
+    provider, base_url, api_key, model = require_environment()
+    try:
+        contract = require_bound_model_contract(
+            ROOT, provider=provider, base_url=base_url, snapshot_id=model
+        )
+    except (ValueError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"model contract validation failed: {exc}") from exc
+    provider = contract["model"]["provider"]
+    base_url = contract["model"]["base_url"]
+    model = contract["model"]["snapshot_id"]
     pricing = price_configuration()
     dataset_path = ROOT / "data" / "tasks_v2.json"
     dataset_bytes = dataset_path.read_bytes()
@@ -173,6 +190,7 @@ def main() -> None:
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "development_dataset_sha256": hashlib.sha256(dataset_bytes).hexdigest(),
         "model_id": model,
+        "model_provider": provider,
         "base_url": base_url,
         "contract_sha256": hashlib.sha256(contract_path.read_bytes()).hexdigest(),
         "challenge_tasks_run": 0,

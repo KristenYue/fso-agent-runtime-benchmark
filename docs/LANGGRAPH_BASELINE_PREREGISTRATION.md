@@ -35,7 +35,10 @@ Challenge v1 运行数为0。
 语义验证和“成功必须引用优化器输出”由运行时执行，不依赖 Prompt 自律。Prompt 与动作
 Schema 的哈希由 `scripts/freeze_langgraph_model_contract.py` 保存；故障 profile 仅配置工具环境，
 不会进入 Planner 上下文，目录 observation 只暴露摘要。Challenge 运行器还会要求当前冻结
-契约哈希与 development manifest 完全一致；模型提供方和快照仍待配置。
+契约哈希与 development manifest 完全一致；模型提供方和快照仍待配置。真实调用前必须先用
+`scripts/bind_langgraph_model_contract.py` 将 provider、OpenAI-compatible base URL 和不可变
+snapshot ID 写入契约；API Key 不写入任何文件。绑定后的身份不得通过同一脚本改写，且
+development 已存在时禁止绑定或重绑。
 
 development 运行结束后先执行：
 

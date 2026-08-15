@@ -26,6 +26,7 @@ def test_frozen_runner_fails_closed_without_approval() -> None:
     env = dict(os.environ)
     env.update(
         {
+            "FSO_MODEL_PROVIDER": "test-provider",
             "FSO_MODEL_BASE_URL": "https://provider.invalid/v1",
             "FSO_MODEL_API_KEY": "test-only-secret",
             "FSO_MODEL_ID": "fixed-model",
@@ -57,6 +58,7 @@ def test_frozen_runner_rejects_contract_changed_after_development(
     (development_dir / "manifest.json").write_text(
         json.dumps(
             {
+                "model_provider": "test-provider",
                 "model_id": "fixed-model",
                 "base_url": "https://provider.invalid/v1",
                 "contract_sha256": "stale-contract-hash",
@@ -64,8 +66,21 @@ def test_frozen_runner_rejects_contract_changed_after_development(
         ),
         encoding="utf-8",
     )
-    (contract_dir / "contract.json").write_text("{}\n", encoding="utf-8")
+    (contract_dir / "contract.json").write_text(
+        json.dumps(
+            {
+                "status": "model_bound_credentials_required",
+                "model": {
+                    "provider": "test-provider",
+                    "base_url": "https://provider.invalid/v1",
+                    "snapshot_id": "fixed-model",
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
     monkeypatch.setattr(runner, "ROOT", tmp_path)
+    monkeypatch.setenv("FSO_MODEL_PROVIDER", "test-provider")
     monkeypatch.setenv("FSO_MODEL_BASE_URL", "https://provider.invalid/v1")
     monkeypatch.setenv("FSO_MODEL_API_KEY", "test-only-secret")
     monkeypatch.setenv("FSO_MODEL_ID", "fixed-model")

@@ -9,7 +9,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_development_runner_refuses_missing_credentials_without_artifact(tmp_path) -> None:
     env = dict(os.environ)
-    for name in ("FSO_MODEL_BASE_URL", "FSO_MODEL_API_KEY", "FSO_MODEL_ID"):
+    for name in (
+        "FSO_MODEL_PROVIDER",
+        "FSO_MODEL_BASE_URL",
+        "FSO_MODEL_API_KEY",
+        "FSO_MODEL_ID",
+    ):
         env.pop(name, None)
     result = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "run_langgraph_model_development.py")],

@@ -17,6 +17,7 @@ from fso_benchmark.contracts import TaskResult  # noqa: E402
 from fso_benchmark.development_gate import assess_development_artifacts  # noqa: E402
 from fso_benchmark.langgraph_agent import run_agent  # noqa: E402
 from fso_benchmark.model_planner import OpenAICompatiblePlanner  # noqa: E402
+from fso_benchmark.model_contract import require_bound_model_contract  # noqa: E402
 
 
 FROZEN_CHALLENGE_SHA256 = "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
@@ -27,21 +28,35 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def require_final_configuration() -> tuple[str, str, str, dict]:
+def require_final_configuration() -> tuple[str, str, str, str, dict]:
+    provider = os.environ.get("FSO_MODEL_PROVIDER", "")
     base_url = os.environ.get("FSO_MODEL_BASE_URL", "")
     api_key = os.environ.get("FSO_MODEL_API_KEY", "")
     model = os.environ.get("FSO_MODEL_ID", "")
-    if not all((base_url, api_key, model)):
+    if not all((provider, base_url, api_key, model)):
         raise SystemExit("model configuration is incomplete")
     if os.environ.get("FSO_FROZEN_CHALLENGE_APPROVAL") != APPROVAL_VALUE:
         raise SystemExit("frozen challenge approval is missing")
+    try:
+        contract = require_bound_model_contract(
+            ROOT, provider=provider, base_url=base_url, snapshot_id=model
+        )
+    except (ValueError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"model contract validation failed: {exc}") from exc
+    provider = contract["model"]["provider"]
+    base_url = contract["model"]["base_url"]
+    model = contract["model"]["snapshot_id"]
     development_manifest_path = (
         ROOT / "artifacts" / "langgraph_model_development" / "manifest.json"
     )
     if not development_manifest_path.exists():
         raise SystemExit("development model manifest is required before frozen challenge")
     development = json.loads(development_manifest_path.read_text(encoding="utf-8"))
-    if development.get("model_id") != model or development.get("base_url") != base_url:
+    if (
+        development.get("model_provider") != provider
+        or development.get("model_id") != model
+        or development.get("base_url") != base_url
+    ):
         raise SystemExit("model configuration differs from development manifest")
     contract_path = ROOT / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
     if not contract_path.exists():
@@ -58,11 +73,11 @@ def require_final_configuration() -> tuple[str, str, str, dict]:
     challenge_path = ROOT / "data" / "challenge_v1.json"
     if sha256(challenge_path) != FROZEN_CHALLENGE_SHA256:
         raise SystemExit("frozen challenge hash mismatch")
-    return base_url, api_key, model, development
+    return provider, base_url, api_key, model, development
 
 
 def main() -> None:
-    base_url, api_key, model, development = require_final_configuration()
+    provider, base_url, api_key, model, development = require_final_configuration()
     output_dir = ROOT / "artifacts" / "langgraph_model_challenge"
     output_dir.mkdir(parents=True, exist_ok=True)
     ledger_path = output_dir / "run_ledger.json"
@@ -72,6 +87,7 @@ def main() -> None:
         "reserved_at_utc": datetime.now(timezone.utc).isoformat(),
         "status": "running",
         "model_id": model,
+        "model_provider": provider,
         "base_url": base_url,
         "credentials_recorded": False,
     }
