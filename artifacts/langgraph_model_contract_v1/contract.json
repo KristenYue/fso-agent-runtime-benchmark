@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "contract": "langgraph_model_baseline_v1",
-  "frozen_at_utc": "2026-08-15T19:51:41.795461+00:00",
-  "source_git_sha": "6d3c2bf0dc05d8dec9044592d32eeb92ff776bb9",
+  "frozen_at_utc": "2026-08-15T20:05:54.868454+00:00",
+  "source_git_sha": "e88e362b26184ac2185fdfcaca40118f835501ac",
   "prompt": {
     "id": "planner_v1",
     "sha256": "56e9a3835f8e82a85f1735289afb053ff9518d15dc3cb3576d57a78243c973ad"
@@ -29,7 +29,10 @@
   "model": {
     "provider": "unconfigured",
     "base_url": "unconfigured",
-    "snapshot_id": "unconfigured"
+    "snapshot_id": "unconfigured",
+    "response_format_type": "unconfigured",
+    "enable_thinking": "unconfigured",
+    "local_action_schema_validation": true
   },
   "status": "model_credentials_required"
 }
