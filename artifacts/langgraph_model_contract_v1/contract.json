@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
   "contract": "langgraph_model_baseline_v1",
-  "frozen_at_utc": "2026-08-15T20:13:43.689524+00:00",
-  "source_git_sha": "032b933d223c865c9bf0adf22f44b389e7fa6b70",
+  "frozen_at_utc": "2026-08-15T20:44:30.467189+00:00",
+  "source_git_sha": "96d99a1aa450ba7b09b96a9dd39a11e2844ba466",
   "prompt": {
     "id": "planner_v1",
-    "sha256": "56e9a3835f8e82a85f1735289afb053ff9518d15dc3cb3576d57a78243c973ad"
+    "sha256": "61cbaa15baf4462684115ec9eb18acec46ea94fcc0e9eb43d1ef4ddcf1317d25"
   },
   "action_schema": {
     "id": "fso-planner-action-v1",
-    "sha256": "842d3aa83b7a62a0a07a4ce8d22932ab40103de772208d7090c9706af77fb4e6"
+    "sha256": "6584d26cfc50aa7780db2a2dd1f6b7037b03c808cd04722e94f274574dcd701f"
   },
   "dependencies": {
     "langgraph": "1.2.11",
@@ -28,17 +28,12 @@
     "threshold_validation_required": true
   },
   "model": {
-    "provider": "AlibabaCloud-ModelStudio-Beijing",
-    "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-    "snapshot_id": "qwen3.7-plus-2026-05-26",
-    "response_format_type": "json_object",
-    "enable_thinking": false,
+    "provider": "unconfigured",
+    "base_url": "unconfigured",
+    "snapshot_id": "unconfigured",
+    "response_format_type": "unconfigured",
+    "enable_thinking": "unconfigured",
     "local_action_schema_validation": true
   },
-  "status": "model_bound_credentials_required",
-  "model_binding": {
-    "bound_at_utc": "2026-08-15T20:13:44.081976+00:00",
-    "source_git_sha": "95ae89b7371ffb3b4efe85059c854312fed4550d",
-    "credentials_recorded": false
-  }
+  "status": "model_credentials_required"
 }
