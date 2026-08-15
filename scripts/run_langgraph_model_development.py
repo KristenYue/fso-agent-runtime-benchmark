@@ -83,12 +83,35 @@ def price_configuration() -> dict | None:
     }
 
 
+def require_successful_compatibility_probe(root: Path, contract: dict) -> dict:
+    contract_path = root / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
+    probe_path = root / "artifacts" / "langgraph_model_probe" / "probe.json"
+    if not probe_path.exists():
+        raise ValueError("successful compatibility probe for current contract is missing")
+    probe = json.loads(probe_path.read_text(encoding="utf-8"))
+    expected_hash = hashlib.sha256(contract_path.read_bytes()).hexdigest()
+    model = contract["model"]
+    if probe.get("passed") is not True or probe.get("error") is not None:
+        raise ValueError("compatibility probe did not pass")
+    if probe.get("contract_sha256") != expected_hash:
+        raise ValueError("compatibility probe differs from current contract")
+    for key in ("provider", "base_url", "snapshot_id"):
+        if probe.get(key) != model.get(key):
+            raise ValueError(f"compatibility probe {key} differs from current contract")
+    if probe.get("credentials_recorded") is not False:
+        raise ValueError("compatibility probe credentials boundary is invalid")
+    if probe.get("challenge_tasks_run") != 0:
+        raise ValueError("compatibility probe unexpectedly ran Challenge tasks")
+    return probe
+
+
 def main() -> None:
     provider, base_url, api_key, model = require_environment()
     try:
         contract = require_bound_model_contract(
             ROOT, provider=provider, base_url=base_url, snapshot_id=model
         )
+        require_successful_compatibility_probe(ROOT, contract)
     except (ValueError, json.JSONDecodeError) as exc:
         raise SystemExit(f"model contract validation failed: {exc}") from exc
     provider = contract["model"]["provider"]

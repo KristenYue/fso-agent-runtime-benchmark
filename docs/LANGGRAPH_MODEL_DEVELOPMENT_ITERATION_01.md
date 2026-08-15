@@ -8,7 +8,8 @@
 - 模式：`json_object`，关闭 thinking，本地动作校验；
 - 数据：`tasks_v2.json` 中全部 30 条五步规划 development 任务；
 - Challenge 调用：0；
-- 原始制品：`artifacts/langgraph_model_development_runs/iteration_01/`；
+- 原始制品、当时的模型契约与兼容性探测：
+  `artifacts/langgraph_model_development_runs/iteration_01/`；
 - 凭据记录：否。
 
 ## 结果

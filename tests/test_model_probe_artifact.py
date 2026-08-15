@@ -4,11 +4,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROBE_PATH = ROOT / "artifacts" / "langgraph_model_probe" / "probe.json"
-CONTRACT_PATH = ROOT / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
+ITERATION_PATH = ROOT / "artifacts" / "langgraph_model_development_runs" / "iteration_01"
+PROBE_PATH = ITERATION_PATH / "probe.json"
+CONTRACT_PATH = ITERATION_PATH / "model_contract.json"
 
 
-def test_successful_probe_is_bound_to_current_contract_and_contains_no_credentials() -> None:
+def test_archived_successful_probe_is_bound_to_its_contract_and_contains_no_credentials() -> None:
     probe = json.loads(PROBE_PATH.read_text(encoding="utf-8"))
     contract = json.loads(CONTRACT_PATH.read_text(encoding="utf-8"))
 
