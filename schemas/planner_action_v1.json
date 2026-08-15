@@ -8,17 +8,90 @@
       "required": ["kind", "tool", "arguments"],
       "properties": {
         "kind": {"const": "tool"},
-        "tool": {
-          "enum": [
-            "characterize_turbulence",
-            "resolve_turbulence_regime",
-            "load_turbulence_catalog",
-            "validate_turbulence_catalog",
-            "load_catalog",
-            "select_robust_configuration"
-          ]
-        },
-        "arguments": {"type": "object"}
+        "tool": {"const": "characterize_turbulence"},
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rytov_variance"],
+          "properties": {"rytov_variance": {"type": "number"}}
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {"const": "resolve_turbulence_regime"},
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rytov_variance"],
+          "properties": {"rytov_variance": {"type": "number"}}
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {"const": "load_turbulence_catalog"},
+        "arguments": {"type": "object", "additionalProperties": false, "maxProperties": 0}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {"const": "validate_turbulence_catalog"},
+        "arguments": {"type": "object", "additionalProperties": false, "maxProperties": 0}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {"const": "load_catalog"},
+        "arguments": {"type": "object", "additionalProperties": false, "maxProperties": 0}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tool", "arguments"],
+      "properties": {
+        "kind": {"const": "tool"},
+        "tool": {"const": "select_robust_configuration"},
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["turbulence", "target_ber", "max_ebn0_db"],
+          "properties": {
+            "turbulence": {"enum": ["Weak", "Moderate", "Strong"]},
+            "target_ber": {"type": "number"},
+            "max_ebn0_db": {"type": "number"},
+            "allowed_codes": {
+              "type": "array",
+              "items": {"enum": ["RS", "LDPC"]},
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "forbidden_codes": {
+              "type": "array",
+              "items": {"enum": ["RS", "LDPC"]},
+              "uniqueItems": true
+            },
+            "max_buffer_kib": {"type": "number"},
+            "objective": {"const": "min_bandwidth_overhead"}
+          }
+        }
       }
     },
     {

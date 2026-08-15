@@ -26,6 +26,17 @@ ALLOWED_TOOLS = {
     "load_catalog",
     "select_robust_configuration",
 }
+TOOL_ARGUMENT_CONTRACTS = {
+    "characterize_turbulence": ({"rytov_variance"}, set()),
+    "resolve_turbulence_regime": ({"rytov_variance"}, set()),
+    "load_turbulence_catalog": (set(), set()),
+    "validate_turbulence_catalog": (set(), set()),
+    "load_catalog": (set(), set()),
+    "select_robust_configuration": (
+        {"turbulence", "target_ber", "max_ebn0_db"},
+        {"allowed_codes", "forbidden_codes", "max_buffer_kib", "objective"},
+    ),
+}
 FINAL_STATUSES = {
     "success",
     "needs_clarification",
@@ -97,6 +108,17 @@ def validate_planner_action(raw: Any) -> dict[str, Any]:
         arguments = raw.get("arguments", {})
         if not isinstance(arguments, dict):
             raise ValueError("tool arguments must be an object")
+        required, optional = TOOL_ARGUMENT_CONTRACTS[tool]
+        missing = required - set(arguments)
+        unexpected = set(arguments) - required - optional
+        if missing:
+            raise ValueError(
+                f"{tool} missing required arguments: {', '.join(sorted(missing))}"
+            )
+        if unexpected:
+            raise ValueError(
+                f"{tool} has unexpected arguments: {', '.join(sorted(unexpected))}"
+            )
         return {"kind": "tool", "tool": tool, "arguments": arguments}
     if kind == "finish":
         if set(raw) != {"kind", "status", "message"}:

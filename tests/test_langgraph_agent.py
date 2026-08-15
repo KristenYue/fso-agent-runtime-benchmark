@@ -121,6 +121,30 @@ def test_local_action_validation_rejects_extra_fields(action) -> None:
         validate_planner_action(action)
 
 
+@pytest.mark.parametrize(
+    ("action", "message"),
+    [
+        (
+            {"kind":"tool","tool":"load_catalog","arguments":{"catalog":"configuration"}},
+            "unexpected arguments: catalog",
+        ),
+        (
+            {
+                "kind":"tool",
+                "tool":"select_robust_configuration",
+                "arguments":{"rytov_variance":0.75,"target_ber":0.001,"max_eb_n0_db":25.0},
+            },
+            "missing required arguments: max_ebn0_db, turbulence",
+        ),
+    ],
+)
+def test_local_action_validation_enforces_exact_tool_argument_names(
+    action, message
+) -> None:
+    with pytest.raises(ValueError, match=message):
+        validate_planner_action(action)
+
+
 def test_fault_profile_is_hidden_but_timeout_reaches_tool_trace() -> None:
     planner = ScriptedPlanner(
         [
