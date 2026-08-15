@@ -28,6 +28,16 @@ def probe_passed(action: dict) -> bool:
     )
 
 
+def execute_probe(planner) -> tuple[dict | None, dict | None, bool]:
+    action = None
+    error = None
+    try:
+        action = planner.decide(request=PROBE_REQUEST, observations=(), step=0)
+    except ValueError as exc:
+        error = {"type": type(exc).__name__, "message": str(exc)}
+    return action, error, action is not None and probe_passed(action)
+
+
 def main() -> None:
     provider = os.environ.get("FSO_MODEL_PROVIDER", "")
     base_url = os.environ.get("FSO_MODEL_BASE_URL", "")
@@ -54,8 +64,7 @@ def main() -> None:
         response_format_type=identity["response_format_type"],
         enable_thinking=identity["enable_thinking"],
     )
-    action = planner.decide(request=PROBE_REQUEST, observations=(), step=0)
-    passed = probe_passed(action)
+    action, error, passed = execute_probe(planner)
     contract_path = ROOT / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
     report = {
         "schema_version": "1.0",
@@ -71,6 +80,7 @@ def main() -> None:
         "credentials_recorded": False,
         "expected": {"kind": "finish", "status": "needs_clarification"},
         "action": action,
+        "error": error,
         "passed": passed,
         "model_telemetry": planner.telemetry_records(),
     }
@@ -83,6 +93,8 @@ def main() -> None:
     temporary.replace(output)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     if not passed:
+        if error is not None:
+            raise SystemExit("model compatibility probe failed local validation")
         raise SystemExit("model compatibility probe returned a valid but incorrect action")
 
 

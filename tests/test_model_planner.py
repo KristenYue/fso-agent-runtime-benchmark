@@ -62,6 +62,10 @@ def test_json_object_mode_disables_thinking_and_keeps_local_validation() -> None
         assert payload["response_format"] == {"type": "json_object"}
         assert payload["enable_thinking"] is False
         assert "json_schema" not in json.dumps(payload["response_format"])
+        system_content = payload["messages"][0]["content"]
+        assert "The exact action JSON Schema follows" in system_content
+        assert '"additionalProperties":false' in system_content
+        assert '"kind":{"const":"finish"}' in system_content
         return httpx.Response(
             200,
             json=response_body(

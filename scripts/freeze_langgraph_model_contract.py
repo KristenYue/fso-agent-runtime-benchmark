@@ -45,6 +45,7 @@ def main() -> None:
             "challenge_runs_allowed": 1,
             "fault_profile_visible_to_planner": False,
             "catalog_observation_mode": "summary",
+            "json_object_schema_in_prompt": True,
             "success_requires_optimizer_output": True,
             "threshold_validation_required": True,
         },

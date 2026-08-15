@@ -13,6 +13,7 @@ OpenAI `json_schema` 请求格式。
 - snapshot：`qwen3.7-plus-2026-05-26`；
 - endpoint：用户专用北京 Workspace 的 `/compatible-mode/v1`；
 - provider response format：`json_object`；
+- `json_object` 模式把冻结 Schema 正文注入 system message，不只引用本地文件路径；
 - thinking：显式关闭；
 - temperature：0；
 - 无论 provider 是否承诺格式，所有动作仍经过本地 Schema、字段集合和工具白名单校验。

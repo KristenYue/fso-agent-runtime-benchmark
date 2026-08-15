@@ -57,6 +57,19 @@ class OpenAICompatiblePlanner:
         self.client = client or httpx.Client(timeout=timeout_seconds)
         self.telemetry: list[dict[str, Any]] = []
 
+    def _effective_system_prompt(self) -> str:
+        if self.response_format_type != "json_object":
+            return self.system_prompt
+        schema = json.dumps(
+            self.action_schema, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+        )
+        return (
+            self.system_prompt
+            + "\n\nThe exact action JSON Schema follows. Return one JSON object that "
+            "validates against it; do not add wrapper keys or prose:\n"
+            + schema
+        )
+
     def _idempotency_key(self, request: str, step: int) -> str:
         material = f"{self.model}\0{step}\0{request}".encode("utf-8")
         return "fso-" + hashlib.sha256(material).hexdigest()[:32]
@@ -89,7 +102,7 @@ class OpenAICompatiblePlanner:
             "model": self.model,
             "temperature": self.temperature,
             "messages": [
-                {"role": "system", "content": self.system_prompt},
+                {"role": "system", "content": self._effective_system_prompt()},
                 {
                     "role": "user",
                     "content": json.dumps(state_message, ensure_ascii=False, separators=(",", ":")),
