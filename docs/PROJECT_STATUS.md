@@ -49,6 +49,9 @@
 - 2026-08-16 首次真实探测已通过鉴权和 provider JSON 解析，但因 `json_object` Prompt 只
   引用本地 Schema 路径、未包含 Schema 正文而被本地动作校验拒绝；该次不计为通过，也未
   生成结果制品。现已修复为注入冻结 Schema；重新探测已通过，且后续失败也会保存脱敏报告。
+- 第一次模型 development 已完成并通过制品验收：9/30，成本 CNY 0.350592，Challenge 为0次。
+  6条缺参澄清和3条持续故障停止全部正确，但成功规划为0、18条过早停止；原始结果已归档为
+  `iteration_01`。根因是 Prompt/Schema 未提供精确工具参数契约，下一轮只修正该接口描述。
 
 ## 当前结论
 
@@ -58,6 +61,6 @@ P1 的第一道门禁已经通过，但 FSO Agent 项目尚未完成。当前 10
 
 ## 后续顺序
 
-1. 在 development 数据上建立 LangGraph 完整基线，冻结 Prompt、模型和运行策略；
+1. 根据第一次 development 证据修正工具接口描述，重新冻结同一模型并完成第二次 development；
 2. 只用最终配置运行一次 Challenge v1，保存全部轨迹；
 3. LangGraph 基线完成后才进入自研 Runtime。

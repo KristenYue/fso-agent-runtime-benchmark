@@ -1,0 +1,4930 @@
+{
+  "summary": {
+    "total": 30,
+    "passed": 9,
+    "pass_rate": 0.3,
+    "p50_task_latency_ms": 12778.87865001685,
+    "p95_task_latency_ms": 17457.182799989823,
+    "model_calls": 209,
+    "provider_attempts": 209,
+    "prompt_tokens": 136648,
+    "completion_tokens": 9662,
+    "total_tokens": 146310,
+    "usage_complete": true,
+    "cost": 0.350592,
+    "cost_note": "Computed from supplied price metadata."
+  },
+  "planning_metrics": {
+    "total": 30,
+    "task_pass_rate": 0.3,
+    "successful_plans": 0,
+    "constraint_violations": 0,
+    "constraint_violation_rate": 0.0,
+    "mean_optimality_gap": null,
+    "mean_tool_calls": 5.966666666666667,
+    "retry_cases": 3,
+    "recovered_retry_cases": 0,
+    "retry_recovery_rate": 0.0,
+    "semantic_recovery_cases": 0,
+    "recovered_semantic_cases": 0,
+    "semantic_recovery_rate": null,
+    "persistent_fault_cases": 0,
+    "correct_persistent_stops": 0,
+    "persistent_fault_stop_accuracy": null,
+    "expected_clarifications": 6,
+    "correct_clarifications": 6,
+    "clarification_accuracy": 1.0,
+    "premature_stops": 18,
+    "duplicate_successful_steps": 0
+  },
+  "failure_analysis": {
+    "failed_tasks": 21,
+    "category_counts": {
+      "passed": 9,
+      "premature_stop": 10,
+      "tool_budget_exhausted": 8,
+      "wrong_status": 3
+    }
+  },
+  "model_telemetry": [
+    {
+      "call_index": 1,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1885.0511999917217,
+      "status_code": 200,
+      "provider_request_id": "60ab6dcd-7c7f-9203-97c5-30ad83de433f",
+      "prompt_tokens": 527,
+      "completion_tokens": 29,
+      "total_tokens": 556,
+      "idempotency_key": "fso-bf25f74964b77cf2a9f38858c55adf3f"
+    },
+    {
+      "call_index": 2,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1944.3778999848291,
+      "status_code": 200,
+      "provider_request_id": "1e0a64ee-f95c-9912-b7a6-491f3ef8827a",
+      "prompt_tokens": 569,
+      "completion_tokens": 44,
+      "total_tokens": 613,
+      "idempotency_key": "fso-65d47792916bc5e6dbd469d4912490c5"
+    },
+    {
+      "call_index": 3,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1622.6397999562323,
+      "status_code": 200,
+      "provider_request_id": "a777fd81-eeeb-9396-89e8-ed3e46177da5",
+      "prompt_tokens": 603,
+      "completion_tokens": 29,
+      "total_tokens": 632,
+      "idempotency_key": "fso-cc32dc3c344846285fbd2262d24cf90d"
+    },
+    {
+      "call_index": 4,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1634.38290002523,
+      "status_code": 200,
+      "provider_request_id": "c23e1013-9528-977e-97b0-1e5cb6ee3053",
+      "prompt_tokens": 633,
+      "completion_tokens": 37,
+      "total_tokens": 670,
+      "idempotency_key": "fso-a9872b438570ab3d6944bdd0a9ad71fd"
+    },
+    {
+      "call_index": 5,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1377.108299988322,
+      "status_code": 200,
+      "provider_request_id": "b6cf0f9c-defc-9c5d-bbc7-d25c5586767a",
+      "prompt_tokens": 657,
+      "completion_tokens": 26,
+      "total_tokens": 683,
+      "idempotency_key": "fso-fa1b30b104c80b43a974e4ac69f2897f"
+    },
+    {
+      "call_index": 6,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2098.8190000061877,
+      "status_code": 200,
+      "provider_request_id": "3544b22f-6544-91de-8f52-21bc9e81294e",
+      "prompt_tokens": 701,
+      "completion_tokens": 72,
+      "total_tokens": 773,
+      "idempotency_key": "fso-2275ba571a69c758c8dc549171415ca9"
+    },
+    {
+      "call_index": 7,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2131.0460999957286,
+      "status_code": 200,
+      "provider_request_id": "30837150-960b-9b41-92ea-a715dbbf7e59",
+      "prompt_tokens": 763,
+      "completion_tokens": 71,
+      "total_tokens": 834,
+      "idempotency_key": "fso-81b294b1efc1e98f6c33b2abd4f45fba"
+    },
+    {
+      "call_index": 8,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 1915.796399989631,
+      "status_code": 200,
+      "provider_request_id": "6746f9c9-8bcf-9cd5-b421-0edd3fb46cc5",
+      "prompt_tokens": 823,
+      "completion_tokens": 72,
+      "total_tokens": 895,
+      "idempotency_key": "fso-805acd4f1b3a161e48d263e54d5a02c8"
+    },
+    {
+      "call_index": 9,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 1941.29189994419,
+      "status_code": 200,
+      "provider_request_id": "1e38ad6e-380e-9a77-b89d-3e3359bacdc4",
+      "prompt_tokens": 885,
+      "completion_tokens": 72,
+      "total_tokens": 957,
+      "idempotency_key": "fso-38ce947cd0554e6325fcfb6978c8122b"
+    },
+    {
+      "call_index": 10,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1492.5683999899775,
+      "status_code": 200,
+      "provider_request_id": "6ab3567b-df85-91fc-a2d6-5275fdb3de59",
+      "prompt_tokens": 528,
+      "completion_tokens": 29,
+      "total_tokens": 557,
+      "idempotency_key": "fso-2a88d969c80967d55c3dbfc03d580307"
+    },
+    {
+      "call_index": 11,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2004.2320999782532,
+      "status_code": 200,
+      "provider_request_id": "e8e70eea-b90d-9a0b-9b5b-7368c6f01cb9",
+      "prompt_tokens": 570,
+      "completion_tokens": 57,
+      "total_tokens": 627,
+      "idempotency_key": "fso-f7fc54b3c92480245a3bad5fdff756ba"
+    },
+    {
+      "call_index": 12,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1596.132199978456,
+      "status_code": 200,
+      "provider_request_id": "7d9b1db6-d327-9cd0-b925-ee9da4eb0c97",
+      "prompt_tokens": 614,
+      "completion_tokens": 29,
+      "total_tokens": 643,
+      "idempotency_key": "fso-b0b9e8dc8a803ed6672a0953450f34fe"
+    },
+    {
+      "call_index": 13,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1686.7582999984734,
+      "status_code": 200,
+      "provider_request_id": "416508d3-e254-9792-aab4-687b58aa4de2",
+      "prompt_tokens": 644,
+      "completion_tokens": 38,
+      "total_tokens": 682,
+      "idempotency_key": "fso-2beda94b22fb514776a9f962eaea0b82"
+    },
+    {
+      "call_index": 14,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1352.6752999750897,
+      "status_code": 200,
+      "provider_request_id": "af54c070-3f10-99fb-b574-04b17c7a46d8",
+      "prompt_tokens": 669,
+      "completion_tokens": 26,
+      "total_tokens": 695,
+      "idempotency_key": "fso-f781f00d807cdc9e9d80b58f8acb7f8d"
+    },
+    {
+      "call_index": 15,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2501.0981999803334,
+      "status_code": 200,
+      "provider_request_id": "a578f794-d51a-97ab-ae2a-833a55d59416",
+      "prompt_tokens": 713,
+      "completion_tokens": 73,
+      "total_tokens": 786,
+      "idempotency_key": "fso-f5865b8ccf92037ac169e3f668fe399d"
+    },
+    {
+      "call_index": 16,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1782.6879000058398,
+      "status_code": 200,
+      "provider_request_id": "f4be2267-938e-9fa8-ab41-7a4f8e2f42cd",
+      "prompt_tokens": 776,
+      "completion_tokens": 60,
+      "total_tokens": 836,
+      "idempotency_key": "fso-28a6f131b44e91aa4e96c6fa3c5c81ba"
+    },
+    {
+      "call_index": 17,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 1386.445299955085,
+      "status_code": 200,
+      "provider_request_id": "1345067d-072f-9e5d-be57-5e1a6828b5bc",
+      "prompt_tokens": 833,
+      "completion_tokens": 44,
+      "total_tokens": 877,
+      "idempotency_key": "fso-8119862599fd6610fe739950198bd655"
+    },
+    {
+      "call_index": 18,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 2319.218299991917,
+      "status_code": 200,
+      "provider_request_id": "4224fa24-9349-916b-a658-b0017dcd967c",
+      "prompt_tokens": 886,
+      "completion_tokens": 72,
+      "total_tokens": 958,
+      "idempotency_key": "fso-5a43c2a9b086f55df3b265c77c88eb08"
+    },
+    {
+      "call_index": 19,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1658.7523000198416,
+      "status_code": 200,
+      "provider_request_id": "d588979e-590e-9528-b174-6c5d53da2018",
+      "prompt_tokens": 527,
+      "completion_tokens": 29,
+      "total_tokens": 556,
+      "idempotency_key": "fso-92ad81929d0851fba0cf58bc74d9dc42"
+    },
+    {
+      "call_index": 20,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1908.5299000144005,
+      "status_code": 200,
+      "provider_request_id": "b25696b4-6c78-9862-afe6-01ecfec29222",
+      "prompt_tokens": 569,
+      "completion_tokens": 56,
+      "total_tokens": 625,
+      "idempotency_key": "fso-678745c0321b584bf4d2a5b4186aedd5"
+    },
+    {
+      "call_index": 21,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1620.384700014256,
+      "status_code": 200,
+      "provider_request_id": "5fb9caaf-27bf-9275-acb3-1761ee006b7c",
+      "prompt_tokens": 612,
+      "completion_tokens": 29,
+      "total_tokens": 641,
+      "idempotency_key": "fso-3304d524f6f0369016ff6dc9d372f411"
+    },
+    {
+      "call_index": 22,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1753.4517000312917,
+      "status_code": 200,
+      "provider_request_id": "dfbe0c46-1bc0-9d26-a9e8-a7982cdd1f2c",
+      "prompt_tokens": 642,
+      "completion_tokens": 37,
+      "total_tokens": 679,
+      "idempotency_key": "fso-98766cf32fce39504138999892ca1dd6"
+    },
+    {
+      "call_index": 23,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1566.3130999892019,
+      "status_code": 200,
+      "provider_request_id": "1ebeb963-6442-9c7a-9a49-0ee2fdac70b5",
+      "prompt_tokens": 666,
+      "completion_tokens": 26,
+      "total_tokens": 692,
+      "idempotency_key": "fso-a8148181402a99c3e3375532c7699125"
+    },
+    {
+      "call_index": 24,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2339.373000024352,
+      "status_code": 200,
+      "provider_request_id": "686e2386-ded6-9bfd-85b5-3dbb0e2b40ce",
+      "prompt_tokens": 710,
+      "completion_tokens": 72,
+      "total_tokens": 782,
+      "idempotency_key": "fso-98ce844402ea4f8174b74312479e0455"
+    },
+    {
+      "call_index": 25,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1892.925699998159,
+      "status_code": 200,
+      "provider_request_id": "adaa425a-69ce-9fd6-b0cf-13774f30b3e6",
+      "prompt_tokens": 772,
+      "completion_tokens": 52,
+      "total_tokens": 824,
+      "idempotency_key": "fso-39a28979e0edfe4c5c9406bcf8f09ac9"
+    },
+    {
+      "call_index": 26,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 2015.6609000405297,
+      "status_code": 200,
+      "provider_request_id": "585b3a7a-4e41-944c-95ec-367d88ad3846",
+      "prompt_tokens": 533,
+      "completion_tokens": 29,
+      "total_tokens": 562,
+      "idempotency_key": "fso-c560bdd3c67c1ec817aee6b19155a437"
+    },
+    {
+      "call_index": 27,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2068.758599983994,
+      "status_code": 200,
+      "provider_request_id": "c2a79f5d-ae66-99ee-8039-c4be03914b04",
+      "prompt_tokens": 575,
+      "completion_tokens": 57,
+      "total_tokens": 632,
+      "idempotency_key": "fso-16394e93d5bb2cea31d7bd8504138125"
+    },
+    {
+      "call_index": 28,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 2856.343600025866,
+      "status_code": 200,
+      "provider_request_id": "22a59077-f789-9a98-8bfc-2fb60f42c62e",
+      "prompt_tokens": 619,
+      "completion_tokens": 29,
+      "total_tokens": 648,
+      "idempotency_key": "fso-fcadcaf2af407ca50ded5bf112346c0f"
+    },
+    {
+      "call_index": 29,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1729.6756000141613,
+      "status_code": 200,
+      "provider_request_id": "27abfef6-b271-9ff4-9200-3000106e0050",
+      "prompt_tokens": 649,
+      "completion_tokens": 38,
+      "total_tokens": 687,
+      "idempotency_key": "fso-2fa168aaa94917b0dc811fb441e55c5a"
+    },
+    {
+      "call_index": 30,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1397.7139000198804,
+      "status_code": 200,
+      "provider_request_id": "7fe2f8c9-d305-9229-b7c4-f3fc6e10b9b5",
+      "prompt_tokens": 674,
+      "completion_tokens": 26,
+      "total_tokens": 700,
+      "idempotency_key": "fso-72d36369b0659213ad0e4d98f38c4290"
+    },
+    {
+      "call_index": 31,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2609.8593000206165,
+      "status_code": 200,
+      "provider_request_id": "d4fbcb18-7e3c-92dc-9be6-20c448363d9e",
+      "prompt_tokens": 718,
+      "completion_tokens": 89,
+      "total_tokens": 807,
+      "idempotency_key": "fso-74c01f61c1bc97163f3408d66330985c"
+    },
+    {
+      "call_index": 32,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2158.9635999989696,
+      "status_code": 200,
+      "provider_request_id": "4eb115e6-cafe-9c9b-a610-73de08c23e58",
+      "prompt_tokens": 787,
+      "completion_tokens": 52,
+      "total_tokens": 839,
+      "idempotency_key": "fso-0c8b352102905d3e31922e62e4902593"
+    },
+    {
+      "call_index": 33,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1402.0282999845222,
+      "status_code": 200,
+      "provider_request_id": "a62fd489-7df4-96a1-9d05-41f4630169d0",
+      "prompt_tokens": 538,
+      "completion_tokens": 29,
+      "total_tokens": 567,
+      "idempotency_key": "fso-5b18ebfbddb28657c8fe55a1946d359d"
+    },
+    {
+      "call_index": 34,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1854.3342999764718,
+      "status_code": 200,
+      "provider_request_id": "26d6cd13-829f-96fa-9375-52312d6bfc28",
+      "prompt_tokens": 580,
+      "completion_tokens": 57,
+      "total_tokens": 637,
+      "idempotency_key": "fso-6b2fe4c73578235d9770c2da356eab98"
+    },
+    {
+      "call_index": 35,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1530.046600033529,
+      "status_code": 200,
+      "provider_request_id": "ed4bc6e2-3f05-9b5f-9704-c87351ef71f1",
+      "prompt_tokens": 624,
+      "completion_tokens": 29,
+      "total_tokens": 653,
+      "idempotency_key": "fso-d4c769529b19808c35bbce689cd843a8"
+    },
+    {
+      "call_index": 36,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1869.0192999783903,
+      "status_code": 200,
+      "provider_request_id": "a96c9423-5d26-9b3a-a689-0c5d8e1e8187",
+      "prompt_tokens": 654,
+      "completion_tokens": 38,
+      "total_tokens": 692,
+      "idempotency_key": "fso-d876a1e69d47c2c0cc953e8b267ae6a1"
+    },
+    {
+      "call_index": 37,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1824.0423000534065,
+      "status_code": 200,
+      "provider_request_id": "065bddd2-6ce2-91f4-a8ed-2c128a70103d",
+      "prompt_tokens": 679,
+      "completion_tokens": 26,
+      "total_tokens": 705,
+      "idempotency_key": "fso-a4ffa05eba4d66d4cc8f54f8a6bdb882"
+    },
+    {
+      "call_index": 38,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2479.6490000444464,
+      "status_code": 200,
+      "provider_request_id": "439e6267-9e48-9206-8efb-eb56729a11ee",
+      "prompt_tokens": 723,
+      "completion_tokens": 86,
+      "total_tokens": 809,
+      "idempotency_key": "fso-4d73de6d29e08a08aa2847d5340ddded"
+    },
+    {
+      "call_index": 39,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1955.561199982185,
+      "status_code": 200,
+      "provider_request_id": "4fb52080-2c88-988e-b245-03976939acce",
+      "prompt_tokens": 795,
+      "completion_tokens": 48,
+      "total_tokens": 843,
+      "idempotency_key": "fso-fb35bcfd378427efbdd76c95c622e6bf"
+    },
+    {
+      "call_index": 40,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1633.7160000111908,
+      "status_code": 200,
+      "provider_request_id": "c381566a-f4e7-9dd5-a25f-3544b72dec23",
+      "prompt_tokens": 535,
+      "completion_tokens": 29,
+      "total_tokens": 564,
+      "idempotency_key": "fso-2fd538399b27ba6797563087c045cf84"
+    },
+    {
+      "call_index": 41,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1444.2869999911636,
+      "status_code": 200,
+      "provider_request_id": "e340443a-e269-92e5-92f6-e6ca61bac7ca",
+      "prompt_tokens": 559,
+      "completion_tokens": 29,
+      "total_tokens": 588,
+      "idempotency_key": "fso-3bea6a45ad5c10f77c31316d76117c67"
+    },
+    {
+      "call_index": 42,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1804.4998000259511,
+      "status_code": 200,
+      "provider_request_id": "b626dcdf-c6f3-9e89-9562-7b049454decb",
+      "prompt_tokens": 601,
+      "completion_tokens": 44,
+      "total_tokens": 645,
+      "idempotency_key": "fso-0f4d746883616776e8ea9b2f17cf7173"
+    },
+    {
+      "call_index": 43,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1630.175500002224,
+      "status_code": 200,
+      "provider_request_id": "d4e901e5-a93e-9a20-8459-e2230b65663d",
+      "prompt_tokens": 635,
+      "completion_tokens": 29,
+      "total_tokens": 664,
+      "idempotency_key": "fso-63c8257d30b1766ec62d8b2f043f86d9"
+    },
+    {
+      "call_index": 44,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1785.6927000102587,
+      "status_code": 200,
+      "provider_request_id": "31887d3a-271b-9331-b81a-c68e879ba98a",
+      "prompt_tokens": 665,
+      "completion_tokens": 38,
+      "total_tokens": 703,
+      "idempotency_key": "fso-0956ad5729e9a3c7372bd45963a1a2d3"
+    },
+    {
+      "call_index": 45,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1537.4000000301749,
+      "status_code": 200,
+      "provider_request_id": "ef9c6601-5e75-99cb-b7a7-5bfb1679bbf1",
+      "prompt_tokens": 690,
+      "completion_tokens": 26,
+      "total_tokens": 716,
+      "idempotency_key": "fso-045c23473066623abf239fc05f967caa"
+    },
+    {
+      "call_index": 46,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2242.280700011179,
+      "status_code": 200,
+      "provider_request_id": "938fdd65-25b7-95fe-9dc2-2708ae417f25",
+      "prompt_tokens": 734,
+      "completion_tokens": 72,
+      "total_tokens": 806,
+      "idempotency_key": "fso-5cc0ccaee144eed09c5e3b9e79178868"
+    },
+    {
+      "call_index": 47,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2378.8086000131443,
+      "status_code": 200,
+      "provider_request_id": "b62a34f2-f8b3-9a4e-b21d-737b4378e85f",
+      "prompt_tokens": 796,
+      "completion_tokens": 71,
+      "total_tokens": 867,
+      "idempotency_key": "fso-dbd9347f8f32adf73fa7bbcf4a9b4913"
+    },
+    {
+      "call_index": 48,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 2247.002899996005,
+      "status_code": 200,
+      "provider_request_id": "afdcc24d-3f0c-93e1-b560-5b81e000e877",
+      "prompt_tokens": 856,
+      "completion_tokens": 72,
+      "total_tokens": 928,
+      "idempotency_key": "fso-0b4afd7cce8a68b0dfd1bb012179e84c"
+    },
+    {
+      "call_index": 49,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1671.8952000373974,
+      "status_code": 200,
+      "provider_request_id": "7a78aa4d-2d46-9ff8-9cb4-319f8946f7d5",
+      "prompt_tokens": 514,
+      "completion_tokens": 29,
+      "total_tokens": 543,
+      "idempotency_key": "fso-86ee9d3b93a08f973c1059f205df0581"
+    },
+    {
+      "call_index": 50,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1877.842000045348,
+      "status_code": 200,
+      "provider_request_id": "8e265ccd-0849-92ee-a70c-ddb22f6c9708",
+      "prompt_tokens": 556,
+      "completion_tokens": 56,
+      "total_tokens": 612,
+      "idempotency_key": "fso-a72c568b1f3175a90f645902e2d5fc00"
+    },
+    {
+      "call_index": 51,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1488.6990999802947,
+      "status_code": 200,
+      "provider_request_id": "1d0738ef-41ec-97eb-ad5a-2f5622a41d41",
+      "prompt_tokens": 599,
+      "completion_tokens": 29,
+      "total_tokens": 628,
+      "idempotency_key": "fso-6038828d994c691c937e8822c849f9d0"
+    },
+    {
+      "call_index": 52,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1669.3246999639086,
+      "status_code": 200,
+      "provider_request_id": "38ce1d2c-c3df-9b0e-8c24-2c7e3a7f0944",
+      "prompt_tokens": 629,
+      "completion_tokens": 38,
+      "total_tokens": 667,
+      "idempotency_key": "fso-78d76bdeeb7b6925d8a22ad3e6b48590"
+    },
+    {
+      "call_index": 53,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1476.549300015904,
+      "status_code": 200,
+      "provider_request_id": "4a47fc74-e2df-9e90-b4a1-7281bdf086b2",
+      "prompt_tokens": 654,
+      "completion_tokens": 26,
+      "total_tokens": 680,
+      "idempotency_key": "fso-5959b485ce071bdd0646869e0bc7bc37"
+    },
+    {
+      "call_index": 54,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1982.133799989242,
+      "status_code": 200,
+      "provider_request_id": "27ba5837-9cad-9940-82c5-0f67cc251cea",
+      "prompt_tokens": 698,
+      "completion_tokens": 56,
+      "total_tokens": 754,
+      "idempotency_key": "fso-4936e8949966968c5c9e292d8e568c82"
+    },
+    {
+      "call_index": 55,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1710.5922999908216,
+      "status_code": 200,
+      "provider_request_id": "30c622f7-245c-9a4f-9edb-c6068e11f858",
+      "prompt_tokens": 748,
+      "completion_tokens": 50,
+      "total_tokens": 798,
+      "idempotency_key": "fso-b381905c9f708ae7a8c8f001e4ed79b4"
+    },
+    {
+      "call_index": 56,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1504.543700022623,
+      "status_code": 200,
+      "provider_request_id": "1c898615-5f4f-9513-b85c-4d12ebc87754",
+      "prompt_tokens": 517,
+      "completion_tokens": 29,
+      "total_tokens": 546,
+      "idempotency_key": "fso-3456e475450c805b3e92d8ac8ceadd5d"
+    },
+    {
+      "call_index": 57,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1823.180000006687,
+      "status_code": 200,
+      "provider_request_id": "6001ef88-1a8c-9bb5-b58a-56e9e14edf7c",
+      "prompt_tokens": 559,
+      "completion_tokens": 44,
+      "total_tokens": 603,
+      "idempotency_key": "fso-9b8a1a6dee8fc13bd08f7291ce1bc017"
+    },
+    {
+      "call_index": 58,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1566.639499971643,
+      "status_code": 200,
+      "provider_request_id": "25e26f77-6ccf-95b6-bd26-1369bedf6521",
+      "prompt_tokens": 593,
+      "completion_tokens": 29,
+      "total_tokens": 622,
+      "idempotency_key": "fso-d456f31edf4e77900ba2d4b9fe39a0dd"
+    },
+    {
+      "call_index": 59,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1295.7697000238113,
+      "status_code": 200,
+      "provider_request_id": "693c06be-5987-9292-9ce4-fe1403aea0a9",
+      "prompt_tokens": 623,
+      "completion_tokens": 38,
+      "total_tokens": 661,
+      "idempotency_key": "fso-4d88b20845cbdd6e778c717a1e2699a5"
+    },
+    {
+      "call_index": 60,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1585.455299995374,
+      "status_code": 200,
+      "provider_request_id": "0fcbcff4-e24d-94b8-8b06-b1dfdbac5105",
+      "prompt_tokens": 648,
+      "completion_tokens": 26,
+      "total_tokens": 674,
+      "idempotency_key": "fso-58e7c8e98ff3cc59623c427526b9eef4"
+    },
+    {
+      "call_index": 61,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2152.623800036963,
+      "status_code": 200,
+      "provider_request_id": "81f4b143-e9a5-9c21-b4f0-0172e3ff1a80",
+      "prompt_tokens": 692,
+      "completion_tokens": 65,
+      "total_tokens": 757,
+      "idempotency_key": "fso-a6f00f4616be9d6143bf049ea3dfb6f4"
+    },
+    {
+      "call_index": 62,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1670.958700007759,
+      "status_code": 200,
+      "provider_request_id": "98e650fe-3b1f-980f-9020-373f1be408dc",
+      "prompt_tokens": 532,
+      "completion_tokens": 29,
+      "total_tokens": 561,
+      "idempotency_key": "fso-805a9a04a0e411bbae850b8d00a6a610"
+    },
+    {
+      "call_index": 63,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1953.469000000041,
+      "status_code": 200,
+      "provider_request_id": "e717eece-0d96-9a6b-bcec-6e016f37923a",
+      "prompt_tokens": 574,
+      "completion_tokens": 56,
+      "total_tokens": 630,
+      "idempotency_key": "fso-f2d5e6fe78c69eda4592bda52883e4bb"
+    },
+    {
+      "call_index": 64,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1181.0239999904297,
+      "status_code": 200,
+      "provider_request_id": "5f12273b-4480-91ac-97fb-c090f2234b29",
+      "prompt_tokens": 617,
+      "completion_tokens": 29,
+      "total_tokens": 646,
+      "idempotency_key": "fso-42142329f35071733b552ecbd943da0c"
+    },
+    {
+      "call_index": 65,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1340.2866999967955,
+      "status_code": 200,
+      "provider_request_id": "d804dcad-5dca-9851-9d1d-0c57e4d374bc",
+      "prompt_tokens": 647,
+      "completion_tokens": 38,
+      "total_tokens": 685,
+      "idempotency_key": "fso-8361514f60c0541d2d2128dd1277b287"
+    },
+    {
+      "call_index": 66,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1363.123800023459,
+      "status_code": 200,
+      "provider_request_id": "d02bb816-59d8-9ec1-aac9-80001994e4e7",
+      "prompt_tokens": 672,
+      "completion_tokens": 26,
+      "total_tokens": 698,
+      "idempotency_key": "fso-83e4eb84f222d427b5ec1de28e1cb850"
+    },
+    {
+      "call_index": 67,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2445.13820001157,
+      "status_code": 200,
+      "provider_request_id": "7404166f-e19e-9851-be55-27bb26c0975f",
+      "prompt_tokens": 716,
+      "completion_tokens": 90,
+      "total_tokens": 806,
+      "idempotency_key": "fso-1f30efecb0c91496d666729b030c87da"
+    },
+    {
+      "call_index": 68,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1717.1648000366986,
+      "status_code": 200,
+      "provider_request_id": "7415e69d-2c8b-9895-ab1e-6d5a303a42c6",
+      "prompt_tokens": 786,
+      "completion_tokens": 48,
+      "total_tokens": 834,
+      "idempotency_key": "fso-b3b64e065657f68f37d26029e073f0d6"
+    },
+    {
+      "call_index": 69,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1869.4167000357993,
+      "status_code": 200,
+      "provider_request_id": "154edf27-21d5-96b8-b09e-a480a8f46560",
+      "prompt_tokens": 532,
+      "completion_tokens": 47,
+      "total_tokens": 579,
+      "idempotency_key": "fso-5b6247a9d680f3d74004e8d24296a912"
+    },
+    {
+      "call_index": 70,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1780.671100015752,
+      "status_code": 200,
+      "provider_request_id": "d2556e00-6ae8-92f4-9239-40813103a749",
+      "prompt_tokens": 514,
+      "completion_tokens": 29,
+      "total_tokens": 543,
+      "idempotency_key": "fso-d71d9896cc41d16b67f55593fda90d5d"
+    },
+    {
+      "call_index": 71,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1600.9385000215843,
+      "status_code": 200,
+      "provider_request_id": "a072b792-5e6c-9791-9c7b-c884ebfe8106",
+      "prompt_tokens": 556,
+      "completion_tokens": 56,
+      "total_tokens": 612,
+      "idempotency_key": "fso-1425ac3490442ee59b576fe2cbf32c6a"
+    },
+    {
+      "call_index": 72,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1547.6684999885038,
+      "status_code": 200,
+      "provider_request_id": "80983e5b-695c-9c25-8193-0caf0cb1e307",
+      "prompt_tokens": 599,
+      "completion_tokens": 29,
+      "total_tokens": 628,
+      "idempotency_key": "fso-af16aaa5040ce6fab223d8a77c34e3f9"
+    },
+    {
+      "call_index": 73,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1890.811000019312,
+      "status_code": 200,
+      "provider_request_id": "daa4073d-3d49-97af-8002-5170eb0b79a9",
+      "prompt_tokens": 629,
+      "completion_tokens": 26,
+      "total_tokens": 655,
+      "idempotency_key": "fso-3858dd57fa87f1530ed0b0caddd84890"
+    },
+    {
+      "call_index": 74,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2279.1844999883324,
+      "status_code": 200,
+      "provider_request_id": "c45baa75-78d4-97f1-970e-d44cbb0af72f",
+      "prompt_tokens": 674,
+      "completion_tokens": 72,
+      "total_tokens": 746,
+      "idempotency_key": "fso-80b0ac9fb8493fad04ccb856a5dfdb29"
+    },
+    {
+      "call_index": 75,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2328.6746999947354,
+      "status_code": 200,
+      "provider_request_id": "02646d55-41b5-9088-a866-cf481b3425e4",
+      "prompt_tokens": 736,
+      "completion_tokens": 71,
+      "total_tokens": 807,
+      "idempotency_key": "fso-c60d7ba8997d68c923c51a09e0bbe53a"
+    },
+    {
+      "call_index": 76,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2358.6515999631956,
+      "status_code": 200,
+      "provider_request_id": "da8f7717-f5fa-9bab-b220-8ae1b95459d2",
+      "prompt_tokens": 796,
+      "completion_tokens": 72,
+      "total_tokens": 868,
+      "idempotency_key": "fso-4a33c7a78501d9635560ad1a0cc54dcf"
+    },
+    {
+      "call_index": 77,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 1888.4411999606527,
+      "status_code": 200,
+      "provider_request_id": "0e913e04-8959-90b9-8060-c7831ef4dc1d",
+      "prompt_tokens": 858,
+      "completion_tokens": 60,
+      "total_tokens": 918,
+      "idempotency_key": "fso-0bb5d56b589ca4dfca979bb014281fd3"
+    },
+    {
+      "call_index": 78,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 1768.521599995438,
+      "status_code": 200,
+      "provider_request_id": "4e23d742-bac9-9367-ac45-aa8ae2bde4d2",
+      "prompt_tokens": 915,
+      "completion_tokens": 60,
+      "total_tokens": 975,
+      "idempotency_key": "fso-0d9af68b157218170cd1cd3e53cb9d22"
+    },
+    {
+      "call_index": 79,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1544.2159000085667,
+      "status_code": 200,
+      "provider_request_id": "74206dae-36a9-9e6e-b48b-845c4904a91b",
+      "prompt_tokens": 515,
+      "completion_tokens": 29,
+      "total_tokens": 544,
+      "idempotency_key": "fso-b2eaf8e809cf1565d7f246c7f6e8f342"
+    },
+    {
+      "call_index": 80,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2094.131899997592,
+      "status_code": 200,
+      "provider_request_id": "d53a41eb-1372-9326-a80f-594a3219c8fc",
+      "prompt_tokens": 557,
+      "completion_tokens": 69,
+      "total_tokens": 626,
+      "idempotency_key": "fso-394b04f6d88153cd6c66217767e1693e"
+    },
+    {
+      "call_index": 81,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1667.6325000007637,
+      "status_code": 200,
+      "provider_request_id": "4fc2f8af-e7db-9d86-8020-b03a5923892d",
+      "prompt_tokens": 609,
+      "completion_tokens": 29,
+      "total_tokens": 638,
+      "idempotency_key": "fso-03023c7e9b42d529b61f681358076d7e"
+    },
+    {
+      "call_index": 82,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1737.9431999870576,
+      "status_code": 200,
+      "provider_request_id": "63ad738a-9257-96a4-848e-7b58d84583a5",
+      "prompt_tokens": 639,
+      "completion_tokens": 38,
+      "total_tokens": 677,
+      "idempotency_key": "fso-0f7daedc95c1e6239b61f688c9fcd31e"
+    },
+    {
+      "call_index": 83,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1477.0607999525964,
+      "status_code": 200,
+      "provider_request_id": "1f317189-9e81-9ecd-a76c-ca1494dfb0d5",
+      "prompt_tokens": 664,
+      "completion_tokens": 26,
+      "total_tokens": 690,
+      "idempotency_key": "fso-90f8a637dd002b9c043e94e10d95e6b0"
+    },
+    {
+      "call_index": 84,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2332.29140000185,
+      "status_code": 200,
+      "provider_request_id": "0a1485e3-608b-96b9-9bf0-f55dcbae872f",
+      "prompt_tokens": 708,
+      "completion_tokens": 73,
+      "total_tokens": 781,
+      "idempotency_key": "fso-5497cb79b0aa85a1d481d5b394b5d6e0"
+    },
+    {
+      "call_index": 85,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2040.1555999997072,
+      "status_code": 200,
+      "provider_request_id": "9091a938-6840-9a2e-9f0b-05101a6031ba",
+      "prompt_tokens": 771,
+      "completion_tokens": 53,
+      "total_tokens": 824,
+      "idempotency_key": "fso-4ad9a5ceced9bc4743491425afc40a17"
+    },
+    {
+      "call_index": 86,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1739.5049999468029,
+      "status_code": 200,
+      "provider_request_id": "209128fe-0ffa-9733-b209-4fdf6789975e",
+      "prompt_tokens": 514,
+      "completion_tokens": 29,
+      "total_tokens": 543,
+      "idempotency_key": "fso-509805c7df1832b0fc0c8d23bfdc7919"
+    },
+    {
+      "call_index": 87,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2030.772700032685,
+      "status_code": 200,
+      "provider_request_id": "83e06209-7f58-97a0-99e2-efbbc66851ba",
+      "prompt_tokens": 556,
+      "completion_tokens": 56,
+      "total_tokens": 612,
+      "idempotency_key": "fso-8ad8258d2ff22bd800b21f43f3a47c27"
+    },
+    {
+      "call_index": 88,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1584.240399999544,
+      "status_code": 200,
+      "provider_request_id": "2ab80f52-ea41-9b13-92aa-151f3d9ccd20",
+      "prompt_tokens": 599,
+      "completion_tokens": 29,
+      "total_tokens": 628,
+      "idempotency_key": "fso-c8b1bac36f3b61cd27c93e6a6fb7e213"
+    },
+    {
+      "call_index": 89,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1879.683599981945,
+      "status_code": 200,
+      "provider_request_id": "be70f166-8ae9-9cd5-a76f-bbd989a05ff7",
+      "prompt_tokens": 629,
+      "completion_tokens": 38,
+      "total_tokens": 667,
+      "idempotency_key": "fso-df225490acf1c1fc2d73060141e43bf2"
+    },
+    {
+      "call_index": 90,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1296.434399962891,
+      "status_code": 200,
+      "provider_request_id": "85c29baa-9f52-9126-832f-f970c88292c8",
+      "prompt_tokens": 654,
+      "completion_tokens": 26,
+      "total_tokens": 680,
+      "idempotency_key": "fso-de1f59b152af44d48ad32b1e48113423"
+    },
+    {
+      "call_index": 91,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2322.1508000278845,
+      "status_code": 200,
+      "provider_request_id": "27d7bcf8-8e2a-97da-94a0-a71706045faf",
+      "prompt_tokens": 698,
+      "completion_tokens": 72,
+      "total_tokens": 770,
+      "idempotency_key": "fso-e4d68f9fdad654d05cc3f9ef7214aa7a"
+    },
+    {
+      "call_index": 92,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1945.060600002762,
+      "status_code": 200,
+      "provider_request_id": "595cc04d-3b1d-97ed-aa4f-c6bcbebd374c",
+      "prompt_tokens": 760,
+      "completion_tokens": 53,
+      "total_tokens": 813,
+      "idempotency_key": "fso-6c61a8e43421b893488d2670570976db"
+    },
+    {
+      "call_index": 93,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1563.750900037121,
+      "status_code": 200,
+      "provider_request_id": "5e15f5fa-9068-93bf-a75b-33d96c78f510",
+      "prompt_tokens": 520,
+      "completion_tokens": 29,
+      "total_tokens": 549,
+      "idempotency_key": "fso-c3cde9983e80c813f36406b4bdf6b1fe"
+    },
+    {
+      "call_index": 94,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1887.7993000205606,
+      "status_code": 200,
+      "provider_request_id": "d41227b6-6f81-957b-9e17-ecda414572fc",
+      "prompt_tokens": 562,
+      "completion_tokens": 57,
+      "total_tokens": 619,
+      "idempotency_key": "fso-a1aff1814a66a7e1637aff2fe50f6c7e"
+    },
+    {
+      "call_index": 95,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1488.612600020133,
+      "status_code": 200,
+      "provider_request_id": "aeb5d1a3-d5af-90a4-a6ce-a2299695679d",
+      "prompt_tokens": 606,
+      "completion_tokens": 29,
+      "total_tokens": 635,
+      "idempotency_key": "fso-e19cabcae0fc995e7f44f3b085f300bd"
+    },
+    {
+      "call_index": 96,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1485.3772000060417,
+      "status_code": 200,
+      "provider_request_id": "0c68b821-bc18-9349-b1eb-576922527163",
+      "prompt_tokens": 636,
+      "completion_tokens": 26,
+      "total_tokens": 662,
+      "idempotency_key": "fso-cf15ef3258981261bdd4203ece1b4ce7"
+    },
+    {
+      "call_index": 97,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2635.649200004991,
+      "status_code": 200,
+      "provider_request_id": "23c1cf27-c32d-91f6-9e2f-2aaace542895",
+      "prompt_tokens": 681,
+      "completion_tokens": 91,
+      "total_tokens": 772,
+      "idempotency_key": "fso-d953d8568e234f99d1812ea1fc13a56b"
+    },
+    {
+      "call_index": 98,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2528.9357000146993,
+      "status_code": 200,
+      "provider_request_id": "532b1005-9e6c-9249-b7d3-3e3873dd247f",
+      "prompt_tokens": 752,
+      "completion_tokens": 78,
+      "total_tokens": 830,
+      "idempotency_key": "fso-f98b2810f3f048327d3966598b1f8dac"
+    },
+    {
+      "call_index": 99,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1799.316699965857,
+      "status_code": 200,
+      "provider_request_id": "f21e6b80-f0b3-9d03-83a8-f9e093f0d4e9",
+      "prompt_tokens": 817,
+      "completion_tokens": 62,
+      "total_tokens": 879,
+      "idempotency_key": "fso-d0bf20777676c82d73e30da55c69815a"
+    },
+    {
+      "call_index": 100,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2414.8788999882527,
+      "status_code": 200,
+      "provider_request_id": "8eab1e9e-b5ae-9af1-afd4-a65c2418f46c",
+      "prompt_tokens": 868,
+      "completion_tokens": 84,
+      "total_tokens": 952,
+      "idempotency_key": "fso-6c917284e90d8b54f1fcde87ebee1fa8"
+    },
+    {
+      "call_index": 101,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1350.030199973844,
+      "status_code": 200,
+      "provider_request_id": "db440193-db75-911b-ae60-6cc45d59b265",
+      "prompt_tokens": 524,
+      "completion_tokens": 29,
+      "total_tokens": 553,
+      "idempotency_key": "fso-e3795512654a06e7fae70e88bd0963bd"
+    },
+    {
+      "call_index": 102,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1848.850600013975,
+      "status_code": 200,
+      "provider_request_id": "3ee870bb-dcfc-9a4b-8716-d13a42908c16",
+      "prompt_tokens": 566,
+      "completion_tokens": 69,
+      "total_tokens": 635,
+      "idempotency_key": "fso-2b75c15a8ec20589610b42a246e36137"
+    },
+    {
+      "call_index": 103,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1652.8810000163503,
+      "status_code": 200,
+      "provider_request_id": "3af1f6a5-48cd-934c-a5bf-3044518c8b86",
+      "prompt_tokens": 618,
+      "completion_tokens": 29,
+      "total_tokens": 647,
+      "idempotency_key": "fso-37582d6a9c9eed1b6ae6643640c1851d"
+    },
+    {
+      "call_index": 104,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1702.2580000339076,
+      "status_code": 200,
+      "provider_request_id": "3f8072c4-4659-90bc-b2c6-4a16c2af8276",
+      "prompt_tokens": 648,
+      "completion_tokens": 38,
+      "total_tokens": 686,
+      "idempotency_key": "fso-358783f390827d1b78b4330df35add60"
+    },
+    {
+      "call_index": 105,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2216.4360000169836,
+      "status_code": 200,
+      "provider_request_id": "a8977f51-0d8b-9165-85de-840f448df0b9",
+      "prompt_tokens": 673,
+      "completion_tokens": 26,
+      "total_tokens": 699,
+      "idempotency_key": "fso-471d99dc70e7011e874e3aefd2ffc79e"
+    },
+    {
+      "call_index": 106,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2501.2470999499783,
+      "status_code": 200,
+      "provider_request_id": "d316e7e1-3574-9e00-93db-11e59a065f1c",
+      "prompt_tokens": 717,
+      "completion_tokens": 86,
+      "total_tokens": 803,
+      "idempotency_key": "fso-7613b0dfa294fd159c9c5f7dafc15c98"
+    },
+    {
+      "call_index": 107,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1765.1474000304006,
+      "status_code": 200,
+      "provider_request_id": "cd07139b-ef73-9c06-84d1-08e5281a2993",
+      "prompt_tokens": 789,
+      "completion_tokens": 48,
+      "total_tokens": 837,
+      "idempotency_key": "fso-452347d5c6790d73d7b68a46037312dc"
+    },
+    {
+      "call_index": 108,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1450.2551999757998,
+      "status_code": 200,
+      "provider_request_id": "1eb66a79-4a60-9f19-951b-07f70ca161b9",
+      "prompt_tokens": 520,
+      "completion_tokens": 29,
+      "total_tokens": 549,
+      "idempotency_key": "fso-f220a862a5498ace28b8cd708cdd4e8f"
+    },
+    {
+      "call_index": 109,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1439.0512999962084,
+      "status_code": 200,
+      "provider_request_id": "c8b3dc70-3c6d-9b58-9fb8-fcde433c9e9b",
+      "prompt_tokens": 544,
+      "completion_tokens": 29,
+      "total_tokens": 573,
+      "idempotency_key": "fso-e6ab417afdeaddd6f7a9a3dea8e76645"
+    },
+    {
+      "call_index": 110,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1700.2106999862008,
+      "status_code": 200,
+      "provider_request_id": "1ef4a11d-eca5-90aa-ae11-f642cc5ec214",
+      "prompt_tokens": 586,
+      "completion_tokens": 44,
+      "total_tokens": 630,
+      "idempotency_key": "fso-17424ff2e1a619905d46e7820193d25f"
+    },
+    {
+      "call_index": 111,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1222.4857000401244,
+      "status_code": 200,
+      "provider_request_id": "9fb96580-6546-9c3d-bf01-b7d389f08510",
+      "prompt_tokens": 620,
+      "completion_tokens": 29,
+      "total_tokens": 649,
+      "idempotency_key": "fso-0812d1ac51d8cf4804b4d1d282004907"
+    },
+    {
+      "call_index": 112,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1370.4030000371858,
+      "status_code": 200,
+      "provider_request_id": "fa776695-7b84-97a8-9f95-ac0ae14de070",
+      "prompt_tokens": 650,
+      "completion_tokens": 26,
+      "total_tokens": 676,
+      "idempotency_key": "fso-87dac9e69be6578be72c84e1e63e2cda"
+    },
+    {
+      "call_index": 113,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2193.414000037592,
+      "status_code": 200,
+      "provider_request_id": "bf3fcda0-ff34-9d80-b4d5-4bf86160b02f",
+      "prompt_tokens": 695,
+      "completion_tokens": 72,
+      "total_tokens": 767,
+      "idempotency_key": "fso-fd32f7b3eb470c4e92d673578a736414"
+    },
+    {
+      "call_index": 114,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2272.11169997463,
+      "status_code": 200,
+      "provider_request_id": "91efca0a-84c5-9a63-a59b-4d6a117d4c1b",
+      "prompt_tokens": 757,
+      "completion_tokens": 71,
+      "total_tokens": 828,
+      "idempotency_key": "fso-35b9b65b5419a6653a0529df40570e82"
+    },
+    {
+      "call_index": 115,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2284.3164000078104,
+      "status_code": 200,
+      "provider_request_id": "6a3575bc-ea5b-996a-b882-d9ca9cef7337",
+      "prompt_tokens": 817,
+      "completion_tokens": 72,
+      "total_tokens": 889,
+      "idempotency_key": "fso-1768374b42a3c3a02a998e64559e4b3e"
+    },
+    {
+      "call_index": 116,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 2125.9898000280373,
+      "status_code": 200,
+      "provider_request_id": "179e843a-0ce2-9012-90d5-3ace7e49029c",
+      "prompt_tokens": 879,
+      "completion_tokens": 60,
+      "total_tokens": 939,
+      "idempotency_key": "fso-87850e2220851fb025e314a62373d11e"
+    },
+    {
+      "call_index": 117,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1628.2911999733187,
+      "status_code": 200,
+      "provider_request_id": "094d86df-21f8-915b-b05b-07c81b2b493a",
+      "prompt_tokens": 506,
+      "completion_tokens": 29,
+      "total_tokens": 535,
+      "idempotency_key": "fso-b6e7436ae4a497954b5b688aa88d25d6"
+    },
+    {
+      "call_index": 118,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2158.5880999919027,
+      "status_code": 200,
+      "provider_request_id": "714ce344-ce72-9567-8b3c-933ee830032d",
+      "prompt_tokens": 548,
+      "completion_tokens": 57,
+      "total_tokens": 605,
+      "idempotency_key": "fso-b7c9e1a72895aeb7bad41342b264fb6c"
+    },
+    {
+      "call_index": 119,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1582.5890999985859,
+      "status_code": 200,
+      "provider_request_id": "1a68a2aa-1984-92cc-95d5-b76275dc0ad4",
+      "prompt_tokens": 592,
+      "completion_tokens": 29,
+      "total_tokens": 621,
+      "idempotency_key": "fso-a385c680e3a4686ce5328c91a8b95cf1"
+    },
+    {
+      "call_index": 120,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1792.6531999837607,
+      "status_code": 200,
+      "provider_request_id": "c1c34e45-b584-9582-b396-a32a846ca16f",
+      "prompt_tokens": 622,
+      "completion_tokens": 26,
+      "total_tokens": 648,
+      "idempotency_key": "fso-be43da9fbcf0e1ee3f4efc6b5d77c04c"
+    },
+    {
+      "call_index": 121,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1809.3269999953918,
+      "status_code": 200,
+      "provider_request_id": "2f36c8fa-8e33-9a8c-a8f2-6a6bd7dc50b8",
+      "prompt_tokens": 667,
+      "completion_tokens": 57,
+      "total_tokens": 724,
+      "idempotency_key": "fso-6a6b4805efbf07e4d243e8059f095a8b"
+    },
+    {
+      "call_index": 122,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1669.889000011608,
+      "status_code": 200,
+      "provider_request_id": "c13d5301-a055-9283-8c7b-79070201d906",
+      "prompt_tokens": 718,
+      "completion_tokens": 44,
+      "total_tokens": 762,
+      "idempotency_key": "fso-2d18d0c69f34bade8744c6b41678ea07"
+    },
+    {
+      "call_index": 123,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1707.7896000118926,
+      "status_code": 200,
+      "provider_request_id": "c496bef1-c94b-9290-a1c6-eaac37404877",
+      "prompt_tokens": 771,
+      "completion_tokens": 42,
+      "total_tokens": 813,
+      "idempotency_key": "fso-8bf0cfc1ed86c9ac89198e172f9b5527"
+    },
+    {
+      "call_index": 124,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1494.6310999803245,
+      "status_code": 200,
+      "provider_request_id": "a432db30-fbd8-9728-8275-3409f394e984",
+      "prompt_tokens": 505,
+      "completion_tokens": 29,
+      "total_tokens": 534,
+      "idempotency_key": "fso-cda8c7e4e077fc0f533ef9876d7d0320"
+    },
+    {
+      "call_index": 125,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1811.4615999511443,
+      "status_code": 200,
+      "provider_request_id": "28780eef-3f20-9f3c-a280-7a09a618a4b8",
+      "prompt_tokens": 547,
+      "completion_tokens": 44,
+      "total_tokens": 591,
+      "idempotency_key": "fso-428d3564484aa21646aa724a31379db0"
+    },
+    {
+      "call_index": 126,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1666.403499955777,
+      "status_code": 200,
+      "provider_request_id": "e9bca102-2fc2-917a-9025-a175584e3979",
+      "prompt_tokens": 582,
+      "completion_tokens": 29,
+      "total_tokens": 611,
+      "idempotency_key": "fso-8075c47634eea7496f61630a17d1d203"
+    },
+    {
+      "call_index": 127,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 2059.1633999720216,
+      "status_code": 200,
+      "provider_request_id": "fa13ca48-cb48-94c4-a0dd-1903677c2f74",
+      "prompt_tokens": 612,
+      "completion_tokens": 38,
+      "total_tokens": 650,
+      "idempotency_key": "fso-15b7bf5a35abf1043b0edbfc3487cc41"
+    },
+    {
+      "call_index": 128,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1537.2962999972515,
+      "status_code": 200,
+      "provider_request_id": "2dc790ef-3ce1-9a1e-a4d9-9c7f8028beed",
+      "prompt_tokens": 637,
+      "completion_tokens": 26,
+      "total_tokens": 663,
+      "idempotency_key": "fso-899522e84ce686772f01650a9eb477c8"
+    },
+    {
+      "call_index": 129,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1727.0945000345819,
+      "status_code": 200,
+      "provider_request_id": "1eeeb4fc-0ab3-9a73-877a-71d28ce157e2",
+      "prompt_tokens": 681,
+      "completion_tokens": 52,
+      "total_tokens": 733,
+      "idempotency_key": "fso-1fb72eafbd629eca474a2b6a9681e12b"
+    },
+    {
+      "call_index": 130,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1490.016600000672,
+      "status_code": 200,
+      "provider_request_id": "74483636-b14a-91cf-8d0a-3ce38de5e8af",
+      "prompt_tokens": 519,
+      "completion_tokens": 29,
+      "total_tokens": 548,
+      "idempotency_key": "fso-70627ef56a30421cffcb08f1635ceeb6"
+    },
+    {
+      "call_index": 131,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1642.5329999765381,
+      "status_code": 200,
+      "provider_request_id": "da3e2141-dd3e-96c2-9fee-9be7d6058a68",
+      "prompt_tokens": 561,
+      "completion_tokens": 56,
+      "total_tokens": 617,
+      "idempotency_key": "fso-449564df953a92ad9e05f5e571158468"
+    },
+    {
+      "call_index": 132,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1439.2269999952987,
+      "status_code": 200,
+      "provider_request_id": "07df30dd-fea3-9d87-ac60-31218ceb030a",
+      "prompt_tokens": 604,
+      "completion_tokens": 29,
+      "total_tokens": 633,
+      "idempotency_key": "fso-8afc3f1f4f5f9e952df4b91f7f712c9a"
+    },
+    {
+      "call_index": 133,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1826.3777999673039,
+      "status_code": 200,
+      "provider_request_id": "a0a492cf-7b6d-9286-8be1-22f32e6741d6",
+      "prompt_tokens": 634,
+      "completion_tokens": 38,
+      "total_tokens": 672,
+      "idempotency_key": "fso-b7bda14f6fed6e802650bbef76c4921e"
+    },
+    {
+      "call_index": 134,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1613.7985000386834,
+      "status_code": 200,
+      "provider_request_id": "a98a0345-86c1-9e82-a224-345aef5c72cb",
+      "prompt_tokens": 659,
+      "completion_tokens": 26,
+      "total_tokens": 685,
+      "idempotency_key": "fso-4c94956f19676592784ccbc1f2f8848e"
+    },
+    {
+      "call_index": 135,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2733.0646999762394,
+      "status_code": 200,
+      "provider_request_id": "70262803-4511-90a0-8a00-437406cffef3",
+      "prompt_tokens": 703,
+      "completion_tokens": 90,
+      "total_tokens": 793,
+      "idempotency_key": "fso-98ae0fe383d02eb204c20c56caf56614"
+    },
+    {
+      "call_index": 136,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2296.1666000192054,
+      "status_code": 200,
+      "provider_request_id": "98f2339f-2111-989c-8c37-4e59e15ca198",
+      "prompt_tokens": 773,
+      "completion_tokens": 78,
+      "total_tokens": 851,
+      "idempotency_key": "fso-d181a4644e5a3a9272a090419063c365"
+    },
+    {
+      "call_index": 137,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2143.2322000036947,
+      "status_code": 200,
+      "provider_request_id": "8102de8d-0d7c-9b4a-917a-5be8a028c8fe",
+      "prompt_tokens": 838,
+      "completion_tokens": 62,
+      "total_tokens": 900,
+      "idempotency_key": "fso-9ae11fac2bc06824eee0a58ae764e885"
+    },
+    {
+      "call_index": 138,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 2469.02499999851,
+      "status_code": 200,
+      "provider_request_id": "8a625fde-531b-9d4f-b757-b6f5fb55fbeb",
+      "prompt_tokens": 889,
+      "completion_tokens": 83,
+      "total_tokens": 972,
+      "idempotency_key": "fso-5d53984f6da72b0babe217faa5227c81"
+    },
+    {
+      "call_index": 139,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1534.9745000130497,
+      "status_code": 200,
+      "provider_request_id": "c5ba3729-8454-9674-b02d-006a2d568a54",
+      "prompt_tokens": 521,
+      "completion_tokens": 29,
+      "total_tokens": 550,
+      "idempotency_key": "fso-4f98f6b5caf95d091e480095f7d786be"
+    },
+    {
+      "call_index": 140,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1624.8989999876358,
+      "status_code": 200,
+      "provider_request_id": "1e243a98-fce5-9166-bd52-4a6329ac4ddb",
+      "prompt_tokens": 545,
+      "completion_tokens": 29,
+      "total_tokens": 574,
+      "idempotency_key": "fso-4e920c0df26b306e86c656b791a18fae"
+    },
+    {
+      "call_index": 141,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1816.7024999856949,
+      "status_code": 200,
+      "provider_request_id": "af4190f5-3375-9e0e-b442-bb55bc2aaec9",
+      "prompt_tokens": 569,
+      "completion_tokens": 41,
+      "total_tokens": 610,
+      "idempotency_key": "fso-0f9f61ef86622cf2f6a52d7c38f8b2bc"
+    },
+    {
+      "call_index": 142,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1502.1704999962822,
+      "status_code": 200,
+      "provider_request_id": "7279beb2-bd33-9274-a622-be6b44e64c55",
+      "prompt_tokens": 520,
+      "completion_tokens": 29,
+      "total_tokens": 549,
+      "idempotency_key": "fso-fb86f5f5dfcfcbbd55ca9d5894bd94a8"
+    },
+    {
+      "call_index": 143,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1861.7614000104368,
+      "status_code": 200,
+      "provider_request_id": "c7f5aa15-7d8e-95ce-b2c9-2d646ab0497c",
+      "prompt_tokens": 562,
+      "completion_tokens": 56,
+      "total_tokens": 618,
+      "idempotency_key": "fso-52d62a81fa07ce4c5c014cd721209a31"
+    },
+    {
+      "call_index": 144,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1701.242999988608,
+      "status_code": 200,
+      "provider_request_id": "16820a51-8051-91e1-948e-bf0d8ef8b63d",
+      "prompt_tokens": 605,
+      "completion_tokens": 29,
+      "total_tokens": 634,
+      "idempotency_key": "fso-2479abc6d4a4e874c8c8484a5b56fab6"
+    },
+    {
+      "call_index": 145,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1800.264299963601,
+      "status_code": 200,
+      "provider_request_id": "970646f2-c5a9-937e-b5c4-01227d50ec48",
+      "prompt_tokens": 635,
+      "completion_tokens": 38,
+      "total_tokens": 673,
+      "idempotency_key": "fso-6b71cc660521b4f77f600fb0a629132b"
+    },
+    {
+      "call_index": 146,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1518.2351000257768,
+      "status_code": 200,
+      "provider_request_id": "c0cc0a6a-2d4f-9a73-94a8-daa1492589c2",
+      "prompt_tokens": 660,
+      "completion_tokens": 26,
+      "total_tokens": 686,
+      "idempotency_key": "fso-ae1028d6f5e8b68740a5a71d35432fab"
+    },
+    {
+      "call_index": 147,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2305.8491999981925,
+      "status_code": 200,
+      "provider_request_id": "b9f9b954-2ad8-9bbc-a45e-e4a950aa83da",
+      "prompt_tokens": 704,
+      "completion_tokens": 72,
+      "total_tokens": 776,
+      "idempotency_key": "fso-d0d97bc7eedc5d711f529d541073cd7a"
+    },
+    {
+      "call_index": 148,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1589.1613999847323,
+      "status_code": 200,
+      "provider_request_id": "bfe27fb1-158b-9743-9a61-84e6a0fe1e98",
+      "prompt_tokens": 766,
+      "completion_tokens": 48,
+      "total_tokens": 814,
+      "idempotency_key": "fso-8232834b4aed30b32806f5669039c474"
+    },
+    {
+      "call_index": 149,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1452.107299992349,
+      "status_code": 200,
+      "provider_request_id": "e29f7d58-f452-9369-947f-6229e0adcada",
+      "prompt_tokens": 521,
+      "completion_tokens": 29,
+      "total_tokens": 550,
+      "idempotency_key": "fso-f4243f99eb6736a08a0c4642500f6102"
+    },
+    {
+      "call_index": 150,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2087.5622000312433,
+      "status_code": 200,
+      "provider_request_id": "c488c80e-0dad-9b57-9dd2-a33e03f14543",
+      "prompt_tokens": 563,
+      "completion_tokens": 69,
+      "total_tokens": 632,
+      "idempotency_key": "fso-d5a49991dd53c041fa3d0af0700f3e77"
+    },
+    {
+      "call_index": 151,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1544.0296999877319,
+      "status_code": 200,
+      "provider_request_id": "223dc370-e0ed-96b7-a0f6-5d930c89a925",
+      "prompt_tokens": 615,
+      "completion_tokens": 29,
+      "total_tokens": 644,
+      "idempotency_key": "fso-caa741e683a5daed830d65d6f288dfd5"
+    },
+    {
+      "call_index": 152,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1604.7681999625638,
+      "status_code": 200,
+      "provider_request_id": "1c624af6-e59f-96e5-8dcb-e62e540f4c57",
+      "prompt_tokens": 645,
+      "completion_tokens": 38,
+      "total_tokens": 683,
+      "idempotency_key": "fso-b952ca2bb9e83dd60be907490f0ae0d2"
+    },
+    {
+      "call_index": 153,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1509.7100000130013,
+      "status_code": 200,
+      "provider_request_id": "bebd9fc8-52a7-930e-aefc-29628b3b20c1",
+      "prompt_tokens": 670,
+      "completion_tokens": 26,
+      "total_tokens": 696,
+      "idempotency_key": "fso-7f3d6ec5ecc8bba838fb61b57f8e8431"
+    },
+    {
+      "call_index": 154,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2566.095599962864,
+      "status_code": 200,
+      "provider_request_id": "d80b066e-1466-958d-84df-a57262fd6142",
+      "prompt_tokens": 714,
+      "completion_tokens": 73,
+      "total_tokens": 787,
+      "idempotency_key": "fso-ea1db82b81372e9a20324f5de10b24d7"
+    },
+    {
+      "call_index": 155,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1872.5223999936134,
+      "status_code": 200,
+      "provider_request_id": "4420565b-5c99-9f50-9831-6dbefcb867c1",
+      "prompt_tokens": 777,
+      "completion_tokens": 48,
+      "total_tokens": 825,
+      "idempotency_key": "fso-29314866ade8bbabf3ce97323477837b"
+    },
+    {
+      "call_index": 156,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1395.0300000142306,
+      "status_code": 200,
+      "provider_request_id": "568ac3e8-a89a-9e24-9610-14a28b64f4d5",
+      "prompt_tokens": 520,
+      "completion_tokens": 29,
+      "total_tokens": 549,
+      "idempotency_key": "fso-143011744a9ad2c5feef3e05f62b0593"
+    },
+    {
+      "call_index": 157,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2350.4298999905586,
+      "status_code": 200,
+      "provider_request_id": "cf5d6229-5f54-96b2-b1d1-f1b640e893af",
+      "prompt_tokens": 562,
+      "completion_tokens": 68,
+      "total_tokens": 630,
+      "idempotency_key": "fso-b8d3f84c9c739ecb29540a68d7c6b952"
+    },
+    {
+      "call_index": 158,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1492.6010000053793,
+      "status_code": 200,
+      "provider_request_id": "cbb140b0-9889-9e16-ba51-97ba98cb4080",
+      "prompt_tokens": 613,
+      "completion_tokens": 29,
+      "total_tokens": 642,
+      "idempotency_key": "fso-5fd9dfbd49b08875d95c5d3c1e2ae68a"
+    },
+    {
+      "call_index": 159,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1692.6055999938399,
+      "status_code": 200,
+      "provider_request_id": "70b2d113-1199-96d9-9ede-0fa28eec1ba4",
+      "prompt_tokens": 643,
+      "completion_tokens": 38,
+      "total_tokens": 681,
+      "idempotency_key": "fso-bdfac0ac926db8182f5663dba4cb239d"
+    },
+    {
+      "call_index": 160,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1497.7193999802694,
+      "status_code": 200,
+      "provider_request_id": "4a54ca1b-6d39-9730-b577-6a4ee8381799",
+      "prompt_tokens": 668,
+      "completion_tokens": 26,
+      "total_tokens": 694,
+      "idempotency_key": "fso-890fa3e5566e27bdffffceb283bd63f2"
+    },
+    {
+      "call_index": 161,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2267.2242999542505,
+      "status_code": 200,
+      "provider_request_id": "8e80c936-517d-9676-a3ab-8f0077f55c8f",
+      "prompt_tokens": 712,
+      "completion_tokens": 72,
+      "total_tokens": 784,
+      "idempotency_key": "fso-605a73852dd6ef44a85bb5fc51d38e5c"
+    },
+    {
+      "call_index": 162,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1865.6273999949917,
+      "status_code": 200,
+      "provider_request_id": "11e6e5bd-dcd9-9ae6-9251-e58b74a9bdee",
+      "prompt_tokens": 774,
+      "completion_tokens": 48,
+      "total_tokens": 822,
+      "idempotency_key": "fso-ee4b3bca470c92cf4051b095c1348198"
+    },
+    {
+      "call_index": 163,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1438.7690000003204,
+      "status_code": 200,
+      "provider_request_id": "03dc4689-6ba1-9d61-bf12-f7994e514a0a",
+      "prompt_tokens": 525,
+      "completion_tokens": 29,
+      "total_tokens": 554,
+      "idempotency_key": "fso-fdae0630fc9e4ffda8346a53f8b9377b"
+    },
+    {
+      "call_index": 164,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1995.7661000080407,
+      "status_code": 200,
+      "provider_request_id": "56d4b679-e48f-9e9a-89a9-724c22a26674",
+      "prompt_tokens": 567,
+      "completion_tokens": 57,
+      "total_tokens": 624,
+      "idempotency_key": "fso-1ab535e330d856b7c4fd2c9cb04263fa"
+    },
+    {
+      "call_index": 165,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1686.2612999975681,
+      "status_code": 200,
+      "provider_request_id": "1c9189ab-09e9-9305-a2c6-3bb8650f338c",
+      "prompt_tokens": 611,
+      "completion_tokens": 38,
+      "total_tokens": 649,
+      "idempotency_key": "fso-6b40fbf0beefb21a3a560b7c0e24fbb9"
+    },
+    {
+      "call_index": 166,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1594.992300029844,
+      "status_code": 200,
+      "provider_request_id": "af648182-ae54-947d-a80c-94419c27ab4a",
+      "prompt_tokens": 635,
+      "completion_tokens": 26,
+      "total_tokens": 661,
+      "idempotency_key": "fso-215409e3f859d4459a4b6d9dc21187ae"
+    },
+    {
+      "call_index": 167,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2577.214199991431,
+      "status_code": 200,
+      "provider_request_id": "c86aa4af-1762-9180-8312-727a194d91ca",
+      "prompt_tokens": 679,
+      "completion_tokens": 91,
+      "total_tokens": 770,
+      "idempotency_key": "fso-cf1a8e32a5a0fa892aa748d7d5ac943f"
+    },
+    {
+      "call_index": 168,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1157.370799977798,
+      "status_code": 200,
+      "provider_request_id": "a8c8039e-5e94-9aa4-a3cf-f6ad8e2b9878",
+      "prompt_tokens": 741,
+      "completion_tokens": 29,
+      "total_tokens": 770,
+      "idempotency_key": "fso-7a29276dda32216db00b644e419c4a23"
+    },
+    {
+      "call_index": 169,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2513.198399974499,
+      "status_code": 200,
+      "provider_request_id": "bc3693c6-1d44-9263-a9b3-1f780d869bb2",
+      "prompt_tokens": 771,
+      "completion_tokens": 91,
+      "total_tokens": 862,
+      "idempotency_key": "fso-d4ffae52d0bd39b4d415d088f4143248"
+    },
+    {
+      "call_index": 170,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2159.746399964206,
+      "status_code": 200,
+      "provider_request_id": "e6af8e66-46ea-98a2-99f3-e0e1cd9e1cab",
+      "prompt_tokens": 843,
+      "completion_tokens": 78,
+      "total_tokens": 921,
+      "idempotency_key": "fso-b2202499ab79236ebf091ee425a556c8"
+    },
+    {
+      "call_index": 171,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 1958.0591999692842,
+      "status_code": 200,
+      "provider_request_id": "c3b22515-fff1-9ae3-bbfa-4d0739205581",
+      "prompt_tokens": 908,
+      "completion_tokens": 62,
+      "total_tokens": 970,
+      "idempotency_key": "fso-8f6731f96e9400f01b2f176219279419"
+    },
+    {
+      "call_index": 172,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1702.4488000315614,
+      "status_code": 200,
+      "provider_request_id": "be9c36c5-3e35-96f5-9c3d-9384c55f8f46",
+      "prompt_tokens": 530,
+      "completion_tokens": 29,
+      "total_tokens": 559,
+      "idempotency_key": "fso-e55fe85e64f8ed5934e03c78197dfde7"
+    },
+    {
+      "call_index": 173,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2058.311600005254,
+      "status_code": 200,
+      "provider_request_id": "f77cb23c-3f21-93a7-bee6-c01cf3a3e615",
+      "prompt_tokens": 572,
+      "completion_tokens": 69,
+      "total_tokens": 641,
+      "idempotency_key": "fso-3f5625c9960bb64524faaa8ebf02e3a4"
+    },
+    {
+      "call_index": 174,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1334.6734999795444,
+      "status_code": 200,
+      "provider_request_id": "6c5c0ffc-c19f-9835-a5b7-0e0dbf8579eb",
+      "prompt_tokens": 624,
+      "completion_tokens": 29,
+      "total_tokens": 653,
+      "idempotency_key": "fso-5b63fe9e23a35925dd6b2d6536000aac"
+    },
+    {
+      "call_index": 175,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1576.538800029084,
+      "status_code": 200,
+      "provider_request_id": "fd404970-7e6d-9966-a5f8-38d16718aa61",
+      "prompt_tokens": 654,
+      "completion_tokens": 37,
+      "total_tokens": 691,
+      "idempotency_key": "fso-1a5e78fe6b3a4288fcae574cc2f15021"
+    },
+    {
+      "call_index": 176,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1400.9535000077449,
+      "status_code": 200,
+      "provider_request_id": "70f2c4c1-cd1f-9527-8fde-07095f071a92",
+      "prompt_tokens": 678,
+      "completion_tokens": 26,
+      "total_tokens": 704,
+      "idempotency_key": "fso-620411a0a724afe6d6fa881755e274a5"
+    },
+    {
+      "call_index": 177,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2315.6912000267766,
+      "status_code": 200,
+      "provider_request_id": "83b0b426-4360-9bfb-a4a7-d814d3403313",
+      "prompt_tokens": 722,
+      "completion_tokens": 86,
+      "total_tokens": 808,
+      "idempotency_key": "fso-491965edd6a9c33e4f3946aa01221ab5"
+    },
+    {
+      "call_index": 178,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2219.008699990809,
+      "status_code": 200,
+      "provider_request_id": "7f6cb64b-5024-9a56-b03f-7d1d79c8583e",
+      "prompt_tokens": 794,
+      "completion_tokens": 73,
+      "total_tokens": 867,
+      "idempotency_key": "fso-b28426607900a919da036857fb88c01b"
+    },
+    {
+      "call_index": 179,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2557.315699988976,
+      "status_code": 200,
+      "provider_request_id": "fe9fd6ce-3069-9e4b-a258-26afc9baaafa",
+      "prompt_tokens": 860,
+      "completion_tokens": 86,
+      "total_tokens": 946,
+      "idempotency_key": "fso-668836c073d4d08d8f3ca584cd430baf"
+    },
+    {
+      "call_index": 180,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 1691.5764000150375,
+      "status_code": 200,
+      "provider_request_id": "762f7c67-0a92-90b8-8fa6-db92398a0a33",
+      "prompt_tokens": 935,
+      "completion_tokens": 57,
+      "total_tokens": 992,
+      "idempotency_key": "fso-5d69fe9d7521603d98c43db3f0614cf3"
+    },
+    {
+      "call_index": 181,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1472.2344999900088,
+      "status_code": 200,
+      "provider_request_id": "c59836b5-eb5d-92d4-836d-bab776a51e47",
+      "prompt_tokens": 528,
+      "completion_tokens": 29,
+      "total_tokens": 557,
+      "idempotency_key": "fso-90e3d2a8fa6e3b165de09e18af526e1e"
+    },
+    {
+      "call_index": 182,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1497.8796999785118,
+      "status_code": 200,
+      "provider_request_id": "3b2d6235-9051-91ee-aca1-aa76d3c0201e",
+      "prompt_tokens": 552,
+      "completion_tokens": 29,
+      "total_tokens": 581,
+      "idempotency_key": "fso-dffa97101f9a828d91e6fbdacecce5f3"
+    },
+    {
+      "call_index": 183,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1901.9962000311352,
+      "status_code": 200,
+      "provider_request_id": "d118b40f-fa19-9b58-987c-8c3de17df825",
+      "prompt_tokens": 594,
+      "completion_tokens": 44,
+      "total_tokens": 638,
+      "idempotency_key": "fso-69ff8f12399d8fb7ab78cb4eb584ca7e"
+    },
+    {
+      "call_index": 184,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1420.0039000133984,
+      "status_code": 200,
+      "provider_request_id": "9b959da1-a70a-97f6-ac09-57ccf999935e",
+      "prompt_tokens": 628,
+      "completion_tokens": 29,
+      "total_tokens": 657,
+      "idempotency_key": "fso-eab2e17ea89434529ac526a6bdffe33c"
+    },
+    {
+      "call_index": 185,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1303.4001999767497,
+      "status_code": 200,
+      "provider_request_id": "5177c6fc-91c8-9877-a8ce-a26259d87aea",
+      "prompt_tokens": 658,
+      "completion_tokens": 26,
+      "total_tokens": 684,
+      "idempotency_key": "fso-8b361cbfc25e8c64438a3647c35db83c"
+    },
+    {
+      "call_index": 186,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2097.6054999628104,
+      "status_code": 200,
+      "provider_request_id": "061c4742-b092-9e41-a01e-52754f11c467",
+      "prompt_tokens": 703,
+      "completion_tokens": 72,
+      "total_tokens": 775,
+      "idempotency_key": "fso-c66b4319a8e5c4ef7fa0209983184bb0"
+    },
+    {
+      "call_index": 187,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 2183.3902000216767,
+      "status_code": 200,
+      "provider_request_id": "4651dde6-bf24-9039-b938-cbd64326a5df",
+      "prompt_tokens": 765,
+      "completion_tokens": 71,
+      "total_tokens": 836,
+      "idempotency_key": "fso-9c875e3b8ac34ce1d658d82a864ce705"
+    },
+    {
+      "call_index": 188,
+      "step": 7,
+      "attempts": 1,
+      "elapsed_ms": 2416.768299997784,
+      "status_code": 200,
+      "provider_request_id": "a9ef0b84-e28f-9389-b70b-47597cc469d2",
+      "prompt_tokens": 825,
+      "completion_tokens": 72,
+      "total_tokens": 897,
+      "idempotency_key": "fso-160bac2c92cf7000ca72d6a0f0fd1fc2"
+    },
+    {
+      "call_index": 189,
+      "step": 8,
+      "attempts": 1,
+      "elapsed_ms": 2264.8634999641217,
+      "status_code": 200,
+      "provider_request_id": "7209fb15-d600-9a31-b1d0-bb2f765cfc07",
+      "prompt_tokens": 887,
+      "completion_tokens": 60,
+      "total_tokens": 947,
+      "idempotency_key": "fso-9fe48ffde11ac6b24883b80f6750ebf9"
+    },
+    {
+      "call_index": 190,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1414.5003000157885,
+      "status_code": 200,
+      "provider_request_id": "71fcbae3-62dc-9a59-be8f-10fa2f1d8ffd",
+      "prompt_tokens": 511,
+      "completion_tokens": 29,
+      "total_tokens": 540,
+      "idempotency_key": "fso-a2f945bfc83ddf806746ceaf4e3261ff"
+    },
+    {
+      "call_index": 191,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1917.708799999673,
+      "status_code": 200,
+      "provider_request_id": "273f7087-08e9-98c5-9055-8fb82dc07787",
+      "prompt_tokens": 553,
+      "completion_tokens": 56,
+      "total_tokens": 609,
+      "idempotency_key": "fso-dbfdce950d72b2b44a078ebf57bad148"
+    },
+    {
+      "call_index": 192,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1240.9827000228688,
+      "status_code": 200,
+      "provider_request_id": "2bcfd26a-dec3-9e64-acea-51fe017711e0",
+      "prompt_tokens": 596,
+      "completion_tokens": 29,
+      "total_tokens": 625,
+      "idempotency_key": "fso-a11d1efa5966d767057cf106bc633eed"
+    },
+    {
+      "call_index": 193,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1433.059900009539,
+      "status_code": 200,
+      "provider_request_id": "fdd53fc0-fa28-91e6-ab8f-8300f66e710a",
+      "prompt_tokens": 626,
+      "completion_tokens": 38,
+      "total_tokens": 664,
+      "idempotency_key": "fso-4b0c3d3bf219714b243d5c96a8a11b3f"
+    },
+    {
+      "call_index": 194,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1511.374199995771,
+      "status_code": 200,
+      "provider_request_id": "f74410a9-ef13-90e2-b9ca-0002b67a3319",
+      "prompt_tokens": 651,
+      "completion_tokens": 26,
+      "total_tokens": 677,
+      "idempotency_key": "fso-bfc13349a35ec45b2d12b17bb4ba733d"
+    },
+    {
+      "call_index": 195,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2026.9530999939889,
+      "status_code": 200,
+      "provider_request_id": "02508db9-3688-9394-b946-262fd1e51129",
+      "prompt_tokens": 695,
+      "completion_tokens": 56,
+      "total_tokens": 751,
+      "idempotency_key": "fso-2b3aa28bbc8240a732f28e8b1a8a523e"
+    },
+    {
+      "call_index": 196,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1538.2697999593802,
+      "status_code": 200,
+      "provider_request_id": "21a5e559-0fdc-96df-b511-cc64279be99e",
+      "prompt_tokens": 745,
+      "completion_tokens": 38,
+      "total_tokens": 783,
+      "idempotency_key": "fso-cce2844c5bf01799672a1e8684059494"
+    },
+    {
+      "call_index": 197,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1316.9714999967255,
+      "status_code": 200,
+      "provider_request_id": "a3dc6801-2a2e-9431-bdf6-3e723bd80e7f",
+      "prompt_tokens": 510,
+      "completion_tokens": 29,
+      "total_tokens": 539,
+      "idempotency_key": "fso-fbf5051a9a6bb1ba78eb90bda6829cf2"
+    },
+    {
+      "call_index": 198,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1491.7545999633148,
+      "status_code": 200,
+      "provider_request_id": "253648c7-9202-92c8-be83-ac5522bd1e9b",
+      "prompt_tokens": 552,
+      "completion_tokens": 37,
+      "total_tokens": 589,
+      "idempotency_key": "fso-83c1700440363e245771ca81ef1c125d"
+    },
+    {
+      "call_index": 199,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1540.4052000376396,
+      "status_code": 200,
+      "provider_request_id": "5d9d9950-802a-937a-bc2a-09e9c30591b3",
+      "prompt_tokens": 575,
+      "completion_tokens": 26,
+      "total_tokens": 601,
+      "idempotency_key": "fso-c0695f58c1de5cbd73c4a143cc5d9084"
+    },
+    {
+      "call_index": 200,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1947.9738000081852,
+      "status_code": 200,
+      "provider_request_id": "80d74034-1de3-9ec8-b683-61f52b9f7b49",
+      "prompt_tokens": 619,
+      "completion_tokens": 66,
+      "total_tokens": 685,
+      "idempotency_key": "fso-e14a94a75e725b07d246d6c9e11f4b39"
+    },
+    {
+      "call_index": 201,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1472.510899999179,
+      "status_code": 200,
+      "provider_request_id": "5f64778c-0ca8-9a91-a665-df9ac51a9524",
+      "prompt_tokens": 524,
+      "completion_tokens": 29,
+      "total_tokens": 553,
+      "idempotency_key": "fso-fa21946f75bf8f532cc068176fca8cf7"
+    },
+    {
+      "call_index": 202,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1863.751000026241,
+      "status_code": 200,
+      "provider_request_id": "775f81c1-8bd0-934c-b56a-0f16ce3b1657",
+      "prompt_tokens": 566,
+      "completion_tokens": 56,
+      "total_tokens": 622,
+      "idempotency_key": "fso-3a303dc1bad34ccd6a61bab5cb6a96a4"
+    },
+    {
+      "call_index": 203,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1186.250899976585,
+      "status_code": 200,
+      "provider_request_id": "ab9e2cfc-d712-9c49-ad48-6440f46a4af3",
+      "prompt_tokens": 609,
+      "completion_tokens": 29,
+      "total_tokens": 638,
+      "idempotency_key": "fso-d19ca2dfcf83c04ca6498bde1fb8366f"
+    },
+    {
+      "call_index": 204,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1796.1144999717362,
+      "status_code": 200,
+      "provider_request_id": "194152aa-e44d-98ce-9178-9443d9f737d6",
+      "prompt_tokens": 639,
+      "completion_tokens": 38,
+      "total_tokens": 677,
+      "idempotency_key": "fso-bbe84a0558e6c3e94bef203d9a009beb"
+    },
+    {
+      "call_index": 205,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1485.8221000176854,
+      "status_code": 200,
+      "provider_request_id": "9018b46a-7a7c-9cb9-b2bd-9f1362ee19e4",
+      "prompt_tokens": 664,
+      "completion_tokens": 26,
+      "total_tokens": 690,
+      "idempotency_key": "fso-71dfb9d0c021f923221c83c06d5b83f6"
+    },
+    {
+      "call_index": 206,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2428.057000041008,
+      "status_code": 200,
+      "provider_request_id": "8065f857-fd35-9e8e-8e92-64c5e56ee822",
+      "prompt_tokens": 708,
+      "completion_tokens": 90,
+      "total_tokens": 798,
+      "idempotency_key": "fso-20b06498bc7c09336062178bff566e40"
+    },
+    {
+      "call_index": 207,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1918.8697000499815,
+      "status_code": 200,
+      "provider_request_id": "5dfdb76f-869a-9d0e-a836-e37f644315b4",
+      "prompt_tokens": 778,
+      "completion_tokens": 48,
+      "total_tokens": 826,
+      "idempotency_key": "fso-54a402362ee78b0ea90889300b48d981"
+    },
+    {
+      "call_index": 208,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1807.2851999895647,
+      "status_code": 200,
+      "provider_request_id": "2d4bec04-0e6a-9322-b371-d00cac990d3e",
+      "prompt_tokens": 525,
+      "completion_tokens": 29,
+      "total_tokens": 554,
+      "idempotency_key": "fso-bece556f0a55571de738d5462af8f9b2"
+    },
+    {
+      "call_index": 209,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1601.3513000216335,
+      "status_code": 200,
+      "provider_request_id": "93166ba1-1956-9044-b474-e27dc1756d7a",
+      "prompt_tokens": 549,
+      "completion_tokens": 40,
+      "total_tokens": 589,
+      "idempotency_key": "fso-12ce1ab583d7a16b2cc41d66e11b9f6d"
+    }
+  ],
+  "results": [
+    {
+      "task_id": "train-planning-01",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds"
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16571.18949998403,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "train-planning-02",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001
+          },
+          "status": "error",
+          "error": "select_robust_configuration() missing 2 required keyword-only arguments: 'turbulence' and 'max_ebn0_db'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16135.490399959963,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "train-planning-03",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed due to unexpected keyword argument 'rytov_variance'. The tool interface does not accept this parameter name."
+      },
+      "error": "select_robust_configuration failed due to unexpected keyword argument 'rytov_variance'. The tool interface does not accept this parameter name.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 27.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12749.191300012171,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "train-planning-04",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed due to unexpected keyword argument 'rytov_variance'. The tool interface does not accept this parameter name."
+      },
+      "error": "select_robust_configuration failed due to unexpected keyword argument 'rytov_variance'. The tool interface does not accept this parameter name.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.0,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 14847.605200018734,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "train-planning-05",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.0,
+            "max_buffer_kib": 2.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12924.54340000404,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "train-planning-06",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds"
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.0
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16716.108199965674,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "train-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "Missing required parameter: maximum Eb/N0. Please provide the maximum Eb/N0 to proceed with configuration selection."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 11888.269800052512,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "缺少必需的规划输入参数：Rytov方差（有效值为0.2、0.75或2.0）。请提供Rytov方差以继续规划。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds"
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configurations"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9937.907000014093,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-09",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 40.0,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 11682.313799974509,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "wrong_status"
+    },
+    {
+      "task_id": "train-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "目录持续不可用，无法加载湍流阈值目录或配置目录，无法继续规划。"
+      },
+      "error": "目录持续不可用，无法加载湍流阈值目录或配置目录，无法继续规划。",
+      "trace": [],
+      "passed": true,
+      "elapsed_ms": 1873.9095000200905,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-01",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "target_ber": 0.001,
+            "rytov_variance": 0.2
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 17457.182799989823,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "dev-planning-02",
+      "status": "tool_error",
+      "answer": {
+        "message": "The select_robust_configuration tool failed with an unexpected keyword argument error for 'rytov_variance'. Cannot proceed to select a configuration."
+      },
+      "error": "The select_robust_configuration tool failed with an unexpected keyword argument error for 'rytov_variance'. Cannot proceed to select a configuration.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001,
+            "rytov_variance": 0.75
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configurations"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12905.066500010435,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "dev-planning-03",
+      "status": "tool_error",
+      "answer": {
+        "message": "The select_robust_configuration tool failed with an unexpected keyword argument error for 'rytov_variance'. Cannot proceed to select a configuration."
+      },
+      "error": "The select_robust_configuration tool failed with an unexpected keyword argument error for 'rytov_variance'. Cannot proceed to select a configuration.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 27.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12808.566000021528,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "dev-planning-04",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "The tool 'select_robust_configuration' rejected all attempted argument combinations (including 'rytov_variance', 'max_eb_n0_db', and 'allowed_code_families'). Please provide the exact schema or valid argument names for 'select_robust_configuration' to proceed."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.1,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.1,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'allowed_code_families'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 15815.942399960477,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "dev-planning-05",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001,
+            "rytov_variance": 0.75
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configurations"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.1,
+            "max_buffer_kib": 2.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 13048.920500034,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "dev-planning-06",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds"
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.1
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16071.139800013043,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "dev-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "Missing required parameters: turbulence regime and maximum Eb/N0 (dB)."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "target_ber": 0.001,
+            "rytov_variance": 0.75
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001
+          },
+          "status": "error",
+          "error": "select_robust_configuration() missing 2 required keyword-only arguments: 'turbulence' and 'max_ebn0_db'"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 12359.72910001874,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "Missing required parameters: Rytov variance and maximum Eb/N0. Please provide these values to proceed with configuration selection."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 10306.755400029942,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-09",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "The tool 'select_robust_configuration' rejected all attempted argument combinations (including 'rytov_variance', 'max_eb_n0_db', and 'allowed_code_families'). Please provide the exact schema or valid arguments for 'select_robust_configuration' to proceed."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 40.1,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 40.1,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'allowed_code_families'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 17666.981799993664,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "wrong_status"
+    },
+    {
+      "task_id": "dev-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "The turbulence threshold catalog is unavailable after two attempts. Cannot proceed with planning."
+      },
+      "error": "The turbulence threshold catalog is unavailable after two attempts. Cannot proceed with planning.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 4983.814599981997,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-01",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configurations"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.2,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 20.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12288.971100002527,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "test-planning-02",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001,
+            "rytov_variance": 0.75
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12647.887300001457,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "test-planning-03",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001,
+            "rytov_variance": 2.0
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configurations"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 27.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12573.117599997204,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "premature_stop"
+    },
+    {
+      "task_id": "test-planning-04",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.2,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "validated threshold catalog is required before optimization"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.2,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 25.2,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 17094.696999993175,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "test-planning-05",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds",
+            "target_ber": 0.001,
+            "rytov_variance": 0.75
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 0.75,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2,
+            "max_buffer_kib": 2.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2,
+            "max_buffer_kib": 2.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2,
+            "max_buffer_kib": 2.2,
+            "rytov_variance": 0.75
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'max_eb_n0_db'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16868.04299999494,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "test-planning-06",
+      "status": "tool_error",
+      "answer": null,
+      "error": "tool-call budget exhausted",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "catalog": "turbulence_thresholds"
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov'"
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 30.2
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 16570.13960002223,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "tool_budget_exhausted"
+    },
+    {
+      "task_id": "test-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "请提供最大 Eb/N0 值。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "target_ber": 0.001,
+            "rytov_variance": 2.0
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 11093.84929999942,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "缺少必需的规划输入：Rytov 方差。请提供 Rytov 方差（有效值为 0.2、0.75 或 2.0）。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 6304.934400017373,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-09",
+      "status": "tool_error",
+      "answer": {
+        "message": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface."
+      },
+      "error": "select_robust_configuration failed with unexpected keyword argument 'rytov_variance'. Cannot proceed without correct tool interface.",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001
+          },
+          "status": "semantic_error",
+          "error": "validate_turbulence_catalog takes no arguments"
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {
+            "catalog_name": "configuration"
+          },
+          "status": "error",
+          "error": "load_catalog takes no arguments"
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "rytov_variance": 2.0,
+            "target_ber": 0.001,
+            "max_eb_n0_db": 40.2,
+            "allowed_code_families": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "select_robust_configuration() got an unexpected keyword argument 'rytov_variance'"
+        }
+      ],
+      "passed": false,
+      "elapsed_ms": 12162.358800007496,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "wrong_status"
+    },
+    {
+      "task_id": "test-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "无法加载湍流阈值目录：simulated threshold catalog unavailable"
+      },
+      "error": "无法加载湍流阈值目录：simulated threshold catalog unavailable",
+      "trace": [
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 3415.103300008923,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    }
+  ]
+}
