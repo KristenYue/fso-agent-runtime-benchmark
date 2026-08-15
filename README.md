@@ -46,7 +46,9 @@ LangGraph 离线图骨架已在 development 数据上验证。正式模型基线
 python scripts/bind_langgraph_model_contract.py `
   --provider <provider> `
   --base-url <openai-compatible-base-url> `
-  --snapshot-id <immutable-model-snapshot>
+  --snapshot-id <immutable-model-snapshot> `
+  --response-format-type <json_schema-or-json_object> `
+  --thinking-mode <enabled-or-disabled>
 ```
 
 提交绑定后的契约，再运行 development。运行器固定读取 `tasks_v2.json`，不会读取

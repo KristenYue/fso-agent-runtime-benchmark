@@ -56,6 +56,33 @@ def test_structured_planner_returns_validated_action_and_usage() -> None:
     assert instance.telemetry[0]["provider_request_id"] == "req-1"
 
 
+def test_json_object_mode_disables_thinking_and_keeps_local_validation() -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        payload = json.loads(request.content)
+        assert payload["response_format"] == {"type": "json_object"}
+        assert payload["enable_thinking"] is False
+        assert "json_schema" not in json.dumps(payload["response_format"])
+        return httpx.Response(
+            200,
+            json=response_body(
+                '{"kind":"tool","tool":"read_private_file","arguments":{}}'
+            ),
+        )
+
+    instance = OpenAICompatiblePlanner(
+        base_url="https://provider.invalid/v1",
+        api_key="test-secret-key",
+        model="fixed-model-snapshot",
+        prompt_path=PROMPT,
+        schema_path=SCHEMA,
+        response_format_type="json_object",
+        enable_thinking=False,
+        client=httpx.Client(transport=httpx.MockTransport(handler)),
+    )
+    with pytest.raises(ValueError, match="not allowed"):
+        instance.decide(request="unsafe", observations=(), step=0)
+
+
 def test_retry_uses_same_idempotency_key() -> None:
     keys = []
 

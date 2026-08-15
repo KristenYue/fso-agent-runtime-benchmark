@@ -74,6 +74,9 @@ def test_frozen_runner_rejects_contract_changed_after_development(
                     "provider": "test-provider",
                     "base_url": "https://provider.invalid/v1",
                     "snapshot_id": "fixed-model",
+                    "response_format_type": "json_schema",
+                    "enable_thinking": False,
+                    "local_action_schema_validation": True,
                 },
             }
         ),

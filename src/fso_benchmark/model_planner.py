@@ -6,7 +6,7 @@ import hashlib
 import json
 import time
 from pathlib import Path
-from typing import Any, Sequence
+from typing import Any, Literal, Sequence
 
 import httpx
 
@@ -28,6 +28,8 @@ class OpenAICompatiblePlanner:
         temperature: float = 0.0,
         timeout_seconds: float = 30.0,
         retry_budget: int = 1,
+        response_format_type: Literal["json_schema", "json_object"] = "json_schema",
+        enable_thinking: bool | None = None,
         client: httpx.Client | None = None,
     ) -> None:
         if not base_url.startswith(("https://", "http://")):
@@ -40,6 +42,8 @@ class OpenAICompatiblePlanner:
             raise ValueError("timeout_seconds must be positive")
         if retry_budget not in {0, 1}:
             raise ValueError("retry_budget must be 0 or 1")
+        if response_format_type not in {"json_schema", "json_object"}:
+            raise ValueError("unsupported response format type")
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
         self.model = model
@@ -48,6 +52,8 @@ class OpenAICompatiblePlanner:
         self.temperature = temperature
         self.timeout_seconds = timeout_seconds
         self.retry_budget = retry_budget
+        self.response_format_type = response_format_type
+        self.enable_thinking = enable_thinking
         self.client = client or httpx.Client(timeout=timeout_seconds)
         self.telemetry: list[dict[str, Any]] = []
 
@@ -67,7 +73,19 @@ class OpenAICompatiblePlanner:
             "step": step,
             "observations": list(observations),
         }
-        return {
+        response_format = (
+            {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "fso_planner_action_v1",
+                    "strict": True,
+                    "schema": self.action_schema,
+                },
+            }
+            if self.response_format_type == "json_schema"
+            else {"type": "json_object"}
+        )
+        payload = {
             "model": self.model,
             "temperature": self.temperature,
             "messages": [
@@ -77,15 +95,11 @@ class OpenAICompatiblePlanner:
                     "content": json.dumps(state_message, ensure_ascii=False, separators=(",", ":")),
                 },
             ],
-            "response_format": {
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "fso_planner_action_v1",
-                    "strict": True,
-                    "schema": self.action_schema,
-                },
-            },
+            "response_format": response_format,
         }
+        if self.enable_thinking is not None:
+            payload["enable_thinking"] = self.enable_thinking
+        return payload
 
     def decide(
         self,

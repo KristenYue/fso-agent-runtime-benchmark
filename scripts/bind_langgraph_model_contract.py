@@ -21,6 +21,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--provider", required=True)
     parser.add_argument("--base-url", required=True)
     parser.add_argument("--snapshot-id", required=True)
+    parser.add_argument(
+        "--response-format-type",
+        required=True,
+        choices=("json_schema", "json_object"),
+    )
+    parser.add_argument(
+        "--thinking-mode", required=True, choices=("enabled", "disabled")
+    )
     return parser.parse_args()
 
 
@@ -37,6 +45,8 @@ def main() -> None:
             provider=args.provider,
             base_url=args.base_url,
             snapshot_id=args.snapshot_id,
+            response_format_type=args.response_format_type,
+            enable_thinking=args.thinking_mode == "enabled",
         )
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc

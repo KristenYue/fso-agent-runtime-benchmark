@@ -52,6 +52,9 @@ def main() -> None:
             "provider": "unconfigured",
             "base_url": "unconfigured",
             "snapshot_id": "unconfigured",
+            "response_format_type": "unconfigured",
+            "enable_thinking": "unconfigured",
+            "local_action_schema_validation": True,
         },
         "status": "model_credentials_required",
     }

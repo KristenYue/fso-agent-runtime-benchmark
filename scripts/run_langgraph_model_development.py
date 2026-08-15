@@ -112,6 +112,8 @@ def main() -> None:
         temperature=0.0,
         timeout_seconds=30.0,
         retry_budget=1,
+        response_format_type=contract["model"]["response_format_type"],
+        enable_thinking=contract["model"]["enable_thinking"],
     )
     records = []
     latencies = []

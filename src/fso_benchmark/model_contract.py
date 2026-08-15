@@ -12,8 +12,13 @@ BOUND_STATUS = "model_bound_credentials_required"
 
 
 def normalize_model_identity(
-    provider: str, base_url: str, snapshot_id: str
-) -> dict[str, str]:
+    provider: str,
+    base_url: str,
+    snapshot_id: str,
+    *,
+    response_format_type: str | None = None,
+    enable_thinking: bool | None = None,
+) -> dict[str, Any]:
     provider = provider.strip()
     snapshot_id = snapshot_id.strip()
     parsed = urlsplit(base_url.strip())
@@ -26,17 +31,38 @@ def normalize_model_identity(
     normalized_url = urlunsplit(
         (parsed.scheme.lower(), parsed.netloc.lower(), parsed.path.rstrip("/"), "", "")
     )
-    return {
+    identity: dict[str, Any] = {
         "provider": provider,
         "base_url": normalized_url,
         "snapshot_id": snapshot_id,
     }
+    if response_format_type is not None:
+        if response_format_type not in {"json_schema", "json_object"}:
+            raise ValueError("unsupported response format type")
+        if not isinstance(enable_thinking, bool):
+            raise ValueError("thinking mode must be explicitly enabled or disabled")
+        identity["response_format_type"] = response_format_type
+        identity["enable_thinking"] = enable_thinking
+        identity["local_action_schema_validation"] = True
+    return identity
 
 
 def bind_model_identity(
-    contract: dict[str, Any], *, provider: str, base_url: str, snapshot_id: str
+    contract: dict[str, Any],
+    *,
+    provider: str,
+    base_url: str,
+    snapshot_id: str,
+    response_format_type: str,
+    enable_thinking: bool,
 ) -> dict[str, Any]:
-    identity = normalize_model_identity(provider, base_url, snapshot_id)
+    identity = normalize_model_identity(
+        provider,
+        base_url,
+        snapshot_id,
+        response_format_type=response_format_type,
+        enable_thinking=enable_thinking,
+    )
     existing = contract.get("model")
     if not isinstance(existing, dict):
         raise ValueError("model contract has no model section")
@@ -67,4 +93,10 @@ def require_bound_model_contract(
         actual.get(key) != value for key, value in expected.items()
     ):
         raise ValueError("model configuration differs from frozen model contract")
+    if actual.get("response_format_type") not in {"json_schema", "json_object"}:
+        raise ValueError("frozen model contract has no supported response format")
+    if not isinstance(actual.get("enable_thinking"), bool):
+        raise ValueError("frozen model contract has no explicit thinking mode")
+    if actual.get("local_action_schema_validation") is not True:
+        raise ValueError("frozen model contract must require local action validation")
     return contract
