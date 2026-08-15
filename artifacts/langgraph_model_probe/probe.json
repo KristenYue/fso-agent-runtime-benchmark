@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "probe": "langgraph_model_compatibility_v1",
+  "generated_at_utc": "2026-08-15T20:15:00.240636+00:00",
+  "provider": "AlibabaCloud-ModelStudio-Beijing",
+  "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "snapshot_id": "qwen3.7-plus-2026-05-26",
+  "response_format_type": "json_object",
+  "enable_thinking": false,
+  "contract_sha256": "06888137680bc9496638fe3a1ac8053ef683bab84f751cb74476035cd3c68f85",
+  "challenge_tasks_run": 0,
+  "credentials_recorded": false,
+  "expected": {
+    "kind": "finish",
+    "status": "needs_clarification"
+  },
+  "action": {
+    "kind": "finish",
+    "status": "needs_clarification",
+    "message": "Missing required parameters: Rytov variance, target BER, and maximum Eb/N0. Please provide these values to proceed."
+  },
+  "error": null,
+  "passed": true,
+  "model_telemetry": [
+    {
+      "call_index": 1,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 2288.0496999714524,
+      "status_code": 200,
+      "provider_request_id": "d4e440cf-0777-9f6e-a7c7-f17b73c5fb8d",
+      "prompt_tokens": 515,
+      "completion_tokens": 53,
+      "total_tokens": 568,
+      "idempotency_key": "fso-5d29c0679c67019563b11a4253ea3990"
+    }
+  ]
+}
