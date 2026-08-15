@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "artifact": "langgraph_source_slice_v1",
+  "inspected_on": "2026-08-16",
+  "source_kind": "installed_distribution",
+  "packages": {
+    "langgraph": "1.2.11",
+    "langchain-core": "1.5.4",
+    "langgraph-checkpoint": "4.2.0"
+  },
+  "requirements_lock_sha256": "be95385ea1d2f4c735ac4b49e6c60a9d1875216c59392233b47ff99fc188dd60",
+  "source_files": {
+    "graph/state.py": "d8c8021a93a8fc895d62335a9482e50d51353343bf885901e6487611dcd0d212",
+    "pregel/main.py": "02651dc9471b88f9299d12f6d836e67ad1114ad84498b9ae26df6cd75be8592c",
+    "pregel/_loop.py": "33150cf70fc08fd01affeae0345aa20569d2705704e3d209733d9c7b43dd5c0a",
+    "pregel/_runner.py": "316cf133c724163a18ef279322615588b3fa8b96e359289a7cadea90f0df7622",
+    "checkpoint/base/__init__.py": "d29511015e2801630f6580353c107104d4ecc86e4bd14e15cd54e2b861a48e26"
+  },
+  "upstream_git_sha": null,
+  "upstream_git_sha_note": "Installed distribution metadata does not contain an upstream Git commit; exact package version and local source hashes are recorded instead."
+}
