@@ -21,6 +21,7 @@ from fso_benchmark.model_planner import (  # noqa: E402
     calculate_token_cost,
 )
 from fso_benchmark.model_contract import require_bound_model_contract  # noqa: E402
+from fso_benchmark.planning_metrics import score_planning_report  # noqa: E402
 
 
 def percentile(values: list[float], fraction: float) -> float:
@@ -141,6 +142,7 @@ def main() -> None:
         )
 
     usage = planner.usage_summary()
+    scored = score_planning_report(cases, {"results": records})
     total = len(records)
     cost = None
     if pricing is not None and usage["usage_complete"]:
@@ -175,6 +177,8 @@ def main() -> None:
         json.dumps(
             {
                 "summary": summary,
+                "planning_metrics": scored["planning_metrics"],
+                "failure_analysis": scored["failure_analysis"],
                 "model_telemetry": planner.telemetry_records(),
                 "results": records,
             },

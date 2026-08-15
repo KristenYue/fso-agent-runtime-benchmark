@@ -18,6 +18,7 @@ from fso_benchmark.development_gate import assess_development_artifacts  # noqa:
 from fso_benchmark.langgraph_agent import run_agent  # noqa: E402
 from fso_benchmark.model_planner import OpenAICompatiblePlanner  # noqa: E402
 from fso_benchmark.model_contract import require_bound_model_contract  # noqa: E402
+from fso_benchmark.planning_metrics import score_planning_report  # noqa: E402
 
 
 FROZEN_CHALLENGE_SHA256 = "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
@@ -131,6 +132,7 @@ def main() -> None:
         )
     total = len(records)
     usage = planner.usage_summary()
+    scored = score_planning_report(cases, {"results": records})
     report = {
         "summary": {
             "total": total,
@@ -138,6 +140,8 @@ def main() -> None:
             "pass_rate": sum(row["passed"] for row in records) / total,
             **usage,
         },
+        "planning_metrics": scored["planning_metrics"],
+        "failure_analysis": scored["failure_analysis"],
         "model_telemetry": planner.telemetry_records(),
         "results": records,
     }

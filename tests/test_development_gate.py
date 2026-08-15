@@ -39,6 +39,11 @@ def build_valid_artifacts(root: Path) -> None:
         output / "results.json",
         {
             "summary": {"total": 1, "passed": 1, "pass_rate": 1.0, "model_calls": 2},
+            "planning_metrics": {"total": 1},
+            "failure_analysis": {
+                "failed_tasks": 0,
+                "category_counts": {"passed": 1},
+            },
             "model_telemetry": [{"call_index": 1}, {"call_index": 2}],
             "results": [{"task_id": "plan-1", "passed": True}],
         },
@@ -54,6 +59,7 @@ def test_accepts_complete_development_artifacts(tmp_path: Path) -> None:
         "passed": 1,
         "pass_rate": 1.0,
         "model_calls": 2,
+        "failed_tasks": 0,
         "challenge_tasks_run": 0,
         "ready_for_final_configuration_review": True,
     }
@@ -76,4 +82,14 @@ def test_rejects_credential_like_fields(tmp_path: Path) -> None:
     payload["api_key"] = "must-not-be-recorded"
     write_json(results_path, payload)
     with pytest.raises(ValueError, match="credential-like"):
+        assess_development_artifacts(tmp_path)
+
+
+def test_rejects_failure_categories_that_do_not_cover_tasks(tmp_path: Path) -> None:
+    build_valid_artifacts(tmp_path)
+    results_path = tmp_path / "artifacts" / "langgraph_model_development" / "results.json"
+    payload = json.loads(results_path.read_text(encoding="utf-8"))
+    payload["failure_analysis"]["category_counts"] = {}
+    write_json(results_path, payload)
+    with pytest.raises(ValueError, match="do not cover all tasks"):
         assess_development_artifacts(tmp_path)

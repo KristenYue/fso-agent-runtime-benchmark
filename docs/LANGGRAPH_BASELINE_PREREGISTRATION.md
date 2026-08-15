@@ -22,6 +22,9 @@ LangGraph 图执行骨架可以在无模型、无网络模式下验证 State 和
   和调用成本；
 - 推翻条件：未高于规则基线4/24，或通过率提升伴随任何危险约束违反。
 
+失败分类优先级与指标计算固定在 `docs/LANGGRAPH_RESULT_ANALYSIS.md`，development 和
+Challenge 运行器直接写入同构的 `planning_metrics` 与 `failure_analysis`。
+
 ## 当前阻塞
 
 截至2026-08-12，独立仓库环境没有配置 DASHSCOPE/OpenAI/Qwen API Key。没有真实模型调用

@@ -45,6 +45,10 @@ class Planner(Protocol):
     ) -> dict[str, Any]: ...
 
 
+class PlannerRequestError(ValueError):
+    """A transport or provider-protocol failure, not an action-schema failure."""
+
+
 @dataclass
 class ScriptedPlanner:
     """Deterministic test double; not a model baseline."""
@@ -126,6 +130,13 @@ def planner_node(state: AgentState) -> dict[str, Any]:
             step=tool_calls,
         )
         action = validate_planner_action(raw)
+    except PlannerRequestError as exc:
+        return {
+            "action": {"kind": "terminal"},
+            "result": _failure(
+                "tool_error", f"planner request failed: {exc}", observations
+            ),
+        }
     except (KeyError, TypeError, ValueError) as exc:
         return {
             "action": {"kind": "terminal"},

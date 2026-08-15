@@ -1,6 +1,17 @@
 import pytest
 
-from fso_benchmark.langgraph_agent import ScriptedPlanner, run_agent, validate_planner_action
+from fso_benchmark.langgraph_agent import (
+    PlannerRequestError,
+    ScriptedPlanner,
+    run_agent,
+    validate_planner_action,
+)
+
+
+class FailingRequestPlanner:
+    def decide(self, **kwargs):
+        del kwargs
+        raise PlannerRequestError("provider request failed with status 503")
 
 
 def successful_actions():
@@ -13,6 +24,15 @@ def successful_actions():
         {"kind":"tool","tool":"select_robust_configuration","arguments":{"turbulence":"Moderate","target_ber":0.001,"max_ebn0_db":25.0}},
         {"kind":"finish","status":"success","message":""},
     ]
+
+
+def test_provider_failure_is_not_mislabeled_as_invalid_action() -> None:
+    result = run_agent("development request", FailingRequestPlanner())
+    assert result["status"] == "tool_error"
+    assert result["error"] == (
+        "planner request failed: provider request failed with status 503"
+    )
+    assert "invalid planner action" not in result["error"]
 
 
 def test_scripted_planner_runs_real_tool_loop() -> None:

@@ -61,6 +61,8 @@ def assess_development_artifacts(root: Path) -> dict[str, Any]:
     records = payload.get("results")
     telemetry = payload.get("model_telemetry")
     summary = payload.get("summary")
+    planning_metrics = payload.get("planning_metrics")
+    failure_analysis = payload.get("failure_analysis")
     if not expected_ids or not isinstance(records, list) or not isinstance(summary, dict):
         raise ValueError("development artifact structure is invalid")
     actual_ids = [row.get("task_id") for row in records if isinstance(row, dict)]
@@ -78,6 +80,15 @@ def assess_development_artifacts(root: Path) -> dict[str, Any]:
         raise ValueError("development model telemetry is missing")
     if summary.get("model_calls") != len(telemetry):
         raise ValueError("development model-call count does not match telemetry")
+    if not isinstance(planning_metrics, dict) or planning_metrics.get("total") != len(records):
+        raise ValueError("development planning metrics are missing or incomplete")
+    if not isinstance(failure_analysis, dict):
+        raise ValueError("development failure analysis is missing")
+    categories = failure_analysis.get("category_counts")
+    if not isinstance(categories, dict) or sum(categories.values()) != len(records):
+        raise ValueError("development failure categories do not cover all tasks")
+    if failure_analysis.get("failed_tasks") != len(records) - passed:
+        raise ValueError("development failure count does not match task records")
     if _contains_credential_key({"manifest": manifest, "payload": payload}):
         raise ValueError("development artifacts contain a credential-like field")
 
@@ -87,6 +98,7 @@ def assess_development_artifacts(root: Path) -> dict[str, Any]:
         "passed": passed,
         "pass_rate": expected_rate,
         "model_calls": len(telemetry),
+        "failed_tasks": len(records) - passed,
         "challenge_tasks_run": 0,
         "ready_for_final_configuration_review": True,
     }

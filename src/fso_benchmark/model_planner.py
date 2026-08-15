@@ -10,7 +10,7 @@ from typing import Any, Sequence
 
 import httpx
 
-from .langgraph_agent import validate_planner_action
+from .langgraph_agent import PlannerRequestError, validate_planner_action
 
 
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
@@ -152,21 +152,25 @@ class OpenAICompatiblePlanner:
         )
 
         if response is None:
-            raise ValueError(last_error or "planner request failed")
+            raise PlannerRequestError(last_error or "request failed")
         if response.status_code >= 400:
-            raise ValueError(f"provider request failed with status {response.status_code}")
+            raise PlannerRequestError(
+                f"provider request failed with status {response.status_code}"
+            )
         if not isinstance(body, dict):
-            raise ValueError("provider returned non-JSON response")
+            raise PlannerRequestError("provider returned non-JSON response")
         try:
             content = body["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError) as exc:
-            raise ValueError("provider response missing message content") from exc
+            raise PlannerRequestError("provider response missing message content") from exc
         if not isinstance(content, str):
-            raise ValueError("provider message content must be a JSON string")
+            raise PlannerRequestError("provider message content must be a JSON string")
         try:
             action = json.loads(content)
         except json.JSONDecodeError as exc:
-            raise ValueError("provider message content is not valid JSON") from exc
+            raise PlannerRequestError(
+                "provider message content is not valid JSON"
+            ) from exc
         return validate_planner_action(action)
 
     def usage_summary(self) -> dict[str, Any]:
