@@ -34,8 +34,10 @@ development 规则基线覆盖受控生成模板；其100%结果只能证明模�
 当前已冻结24条 Challenge v1：Oracle 24/24，规则基线4/24。后续 LangGraph 和自研
 Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战集继续调参。
 
-LangGraph 离线图骨架已在 development 数据上验证。正式模型基线尚未运行，因为当前独立
-环境没有模型 API Key；离线图结果明确标记为 `not_an_agent_model_baseline`。
+LangGraph 离线图骨架已在 development 数据上验证。固定的北京百炼
+`qwen3.7-plus-2026-05-26` 模型第二次 development 已完成：30/30 通过，原始轨迹归档在
+`artifacts/langgraph_model_development_runs/iteration_02/`。该结果只用于配置选择，冻结
+Challenge v1 仍为0次，不能把 development 成绩写成正式 Agent 基线。
 
 正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
 `FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`

@@ -103,7 +103,10 @@ def score_planning_report(
             ):
                 recovered_semantic_cases += 1
 
-        if inputs.get("injected_fault") == "threshold_catalog_semantic_corruption_persistent":
+        if inputs.get("injected_fault") in {
+            "threshold_catalog_semantic_corruption_persistent",
+            "threshold_catalog_unavailable",
+        }:
             persistent_fault_cases += 1
             if record["passed"] and record["status"] == "tool_error":
                 correct_persistent_stops += 1

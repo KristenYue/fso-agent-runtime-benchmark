@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "experiment": "langgraph_model_development",
+  "generated_at_utc": "2026-09-06T13:59:44.783343+00:00",
+  "development_dataset_sha256": "cf9cfbfed67868ae891c89b67b97f486b7c5b109652aca93ba03d5d65d8c7e19",
+  "model_id": "qwen3.7-plus-2026-05-26",
+  "model_provider": "AlibabaCloud-ModelStudio-Beijing",
+  "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "contract_sha256": "c5d53d2732ddb8b36ac37c6a62d5bb702d1c959418fcb8ec8c600cde5d6f9fa0",
+  "challenge_tasks_run": 0,
+  "credentials_recorded": false,
+  "configuration_selection_only": true,
+  "pricing": null
+}

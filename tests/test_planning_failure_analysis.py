@@ -114,3 +114,31 @@ def test_provider_failure_has_a_separate_category() -> None:
         "trace": [],
     }
     assert classify_failure(example, record) == "provider_error"
+
+
+def test_scores_persistent_catalog_unavailability_as_a_correct_stop() -> None:
+    unavailable = case(
+        "unavailable",
+        "threshold_catalog_unavailable",
+        {"status": "tool_error"},
+    )
+    report = {
+        "results": [
+            {
+                "task_id": "unavailable",
+                "status": "tool_error",
+                "answer": None,
+                "error": "catalog unavailable after retry",
+                "passed": True,
+                "trace": [
+                    {"tool": "load_turbulence_catalog", "status": "error"},
+                    {"tool": "load_turbulence_catalog", "status": "error"},
+                ],
+            }
+        ]
+    }
+
+    metrics = score_planning_report([unavailable], report)["planning_metrics"]
+    assert metrics["persistent_fault_cases"] == 1
+    assert metrics["correct_persistent_stops"] == 1
+    assert metrics["persistent_fault_stop_accuracy"] == 1.0
