@@ -23,13 +23,14 @@ from fso_benchmark.planning_metrics import score_planning_report  # noqa: E402
 
 FROZEN_CHALLENGE_SHA256 = "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
 APPROVAL_VALUE = "challenge-v1-final-once"
+FINAL_DEVELOPMENT_ITERATION = "iteration_02"
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def require_final_configuration() -> tuple[str, str, str, str, dict]:
+def require_final_configuration() -> tuple[str, str, str, str, dict, dict]:
     provider = os.environ.get("FSO_MODEL_PROVIDER", "")
     base_url = os.environ.get("FSO_MODEL_BASE_URL", "")
     api_key = os.environ.get("FSO_MODEL_API_KEY", "")
@@ -48,7 +49,11 @@ def require_final_configuration() -> tuple[str, str, str, str, dict]:
     base_url = contract["model"]["base_url"]
     model = contract["model"]["snapshot_id"]
     development_manifest_path = (
-        ROOT / "artifacts" / "langgraph_model_development" / "manifest.json"
+        ROOT
+        / "artifacts"
+        / "langgraph_model_development_runs"
+        / FINAL_DEVELOPMENT_ITERATION
+        / "manifest.json"
     )
     if not development_manifest_path.exists():
         raise SystemExit("development model manifest is required before frozen challenge")
@@ -65,7 +70,9 @@ def require_final_configuration() -> tuple[str, str, str, str, dict]:
     if development.get("contract_sha256") != sha256(contract_path):
         raise SystemExit("frozen model contract differs from development manifest")
     try:
-        assess_development_artifacts(ROOT)
+        assess_development_artifacts(
+            ROOT, output_dir=development_manifest_path.parent
+        )
     except (ValueError, json.JSONDecodeError) as exc:
         raise SystemExit(f"development artifact validation failed: {exc}") from exc
     ledger_path = ROOT / "artifacts" / "langgraph_model_challenge" / "run_ledger.json"
@@ -74,11 +81,11 @@ def require_final_configuration() -> tuple[str, str, str, str, dict]:
     challenge_path = ROOT / "data" / "challenge_v1.json"
     if sha256(challenge_path) != FROZEN_CHALLENGE_SHA256:
         raise SystemExit("frozen challenge hash mismatch")
-    return provider, base_url, api_key, model, development
+    return provider, base_url, api_key, model, contract, development
 
 
 def main() -> None:
-    provider, base_url, api_key, model, development = require_final_configuration()
+    provider, base_url, api_key, model, contract, development = require_final_configuration()
     output_dir = ROOT / "artifacts" / "langgraph_model_challenge"
     output_dir.mkdir(parents=True, exist_ok=True)
     ledger_path = output_dir / "run_ledger.json"

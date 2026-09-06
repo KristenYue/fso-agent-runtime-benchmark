@@ -65,6 +65,23 @@ def test_accepts_complete_development_artifacts(tmp_path: Path) -> None:
     }
 
 
+def test_accepts_an_explicit_archived_development_directory(tmp_path: Path) -> None:
+    build_valid_artifacts(tmp_path)
+    current = tmp_path / "artifacts" / "langgraph_model_development"
+    archived = (
+        tmp_path
+        / "artifacts"
+        / "langgraph_model_development_runs"
+        / "iteration_02"
+    )
+    archived.parent.mkdir(parents=True)
+    current.rename(archived)
+
+    report = assess_development_artifacts(tmp_path, output_dir=archived)
+    assert report["status"] == "valid"
+    assert report["planning_tasks"] == 1
+
+
 def test_rejects_incomplete_task_coverage(tmp_path: Path) -> None:
     build_valid_artifacts(tmp_path)
     results_path = tmp_path / "artifacts" / "langgraph_model_development" / "results.json"

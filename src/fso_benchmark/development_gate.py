@@ -36,10 +36,13 @@ def _contains_credential_key(value: Any) -> bool:
     return False
 
 
-def assess_development_artifacts(root: Path) -> dict[str, Any]:
+def assess_development_artifacts(
+    root: Path, *, output_dir: Path | None = None
+) -> dict[str, Any]:
     dataset_path = root / "data" / "tasks_v2.json"
     contract_path = root / "artifacts" / "langgraph_model_contract_v1" / "contract.json"
-    output_dir = root / "artifacts" / "langgraph_model_development"
+    if output_dir is None:
+        output_dir = root / "artifacts" / "langgraph_model_development"
     manifest = _load_object(output_dir / "manifest.json")
     payload = _load_object(output_dir / "results.json")
     dataset = _load_object(dataset_path)

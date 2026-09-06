@@ -51,7 +51,12 @@ def test_frozen_runner_rejects_contract_changed_after_development(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     runner = load_runner_module()
-    development_dir = tmp_path / "artifacts" / "langgraph_model_development"
+    development_dir = (
+        tmp_path
+        / "artifacts"
+        / "langgraph_model_development_runs"
+        / runner.FINAL_DEVELOPMENT_ITERATION
+    )
     contract_dir = tmp_path / "artifacts" / "langgraph_model_contract_v1"
     development_dir.mkdir(parents=True)
     contract_dir.mkdir(parents=True)
