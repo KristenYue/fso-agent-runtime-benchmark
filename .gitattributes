@@ -6,6 +6,8 @@ artifacts/custom_runtime_contract_v1/contract.json -text
 artifacts/custom_runtime_development/manifest.json -text
 artifacts/langgraph_model_challenge/results.json -text
 artifacts/langgraph_model_contract_v1/contract.json -text
+artifacts/langgraph_model_development_runs/iteration_01/model_contract.json -text
+artifacts/langgraph_model_development_runs/iteration_02/model_contract.json -text
 data/challenge_v1.json -text
 data/configurations.json -text
 data/tasks_v2.json -text
