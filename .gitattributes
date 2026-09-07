@@ -1,0 +1,28 @@
+# Frozen experiment inputs and artifacts were hashed byte-for-byte on Windows.
+# Preserve only hash-bound files instead of rewriting unrelated history.
+artifacts/custom_runtime_challenge/results.json -text
+artifacts/custom_runtime_challenge/run_ledger.json -text
+artifacts/custom_runtime_contract_v1/contract.json -text
+artifacts/custom_runtime_development/manifest.json -text
+artifacts/langgraph_model_challenge/results.json -text
+artifacts/langgraph_model_contract_v1/contract.json -text
+data/challenge_v1.json -text
+data/configurations.json -text
+data/tasks_v2.json -text
+data/turbulence_thresholds.json -text
+prompts/planner_v1.md -text
+schemas/planner_action_v1.json -text
+requirements-agents.lock -text
+requirements-runtime.lock -text
+
+# These source files are named in preregistered SHA-256 contracts.
+src/fso_benchmark/agent_runtime.py -text
+src/fso_benchmark/baseline.py -text
+src/fso_benchmark/catalog.py -text
+src/fso_benchmark/contracts.py -text
+src/fso_benchmark/faults.py -text
+src/fso_benchmark/model_planner.py -text
+src/fso_benchmark/planner_contract.py -text
+src/fso_benchmark/planning_metrics.py -text
+src/fso_benchmark/tool_environment.py -text
+src/fso_benchmark/tools.py -text
