@@ -75,7 +75,9 @@ def test_scores_semantic_recovery_and_deterministic_failure_categories() -> None
                 "error": "catalog remained invalid",
                 "passed": True,
                 "trace": [
+                    {"tool": "load_turbulence_catalog", "status": "success"},
                     {"tool": "validate_turbulence_catalog", "status": "semantic_error"},
+                    {"tool": "load_turbulence_catalog", "status": "success"},
                     {"tool": "validate_turbulence_catalog", "status": "semantic_error"},
                 ],
             },

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "analysis": "challenge_v1_posthoc_metric_correction",
+  "generated_at_utc": "2026-09-07T06:15:00+00:00",
+  "source_result_sha256": "9122b382b83425091ccfac151ed3f62b21c827c1e0e4d1987bdcbd351fde848d",
+  "challenge_rerun": false,
+  "model_calls_added": 0,
+  "reason": "Necessary turbulence-catalog reloads after observed semantic faults were incorrectly counted as duplicate successful steps.",
+  "changed_metrics": {
+    "duplicate_successful_steps": {
+      "original": 4,
+      "corrected": 0
+    }
+  },
+  "planning_metrics": {
+    "total": 24,
+    "task_pass_rate": 1.0,
+    "successful_plans": 12,
+    "constraint_violations": 0,
+    "constraint_violation_rate": 0.0,
+    "mean_optimality_gap": 0.0,
+    "mean_tool_calls": 3.6666666666666665,
+    "retry_cases": 0,
+    "recovered_retry_cases": 0,
+    "retry_recovery_rate": null,
+    "semantic_recovery_cases": 4,
+    "recovered_semantic_cases": 4,
+    "semantic_recovery_rate": 1.0,
+    "persistent_fault_cases": 4,
+    "correct_persistent_stops": 4,
+    "persistent_fault_stop_accuracy": 1.0,
+    "expected_clarifications": 8,
+    "correct_clarifications": 8,
+    "clarification_accuracy": 1.0,
+    "premature_stops": 0,
+    "duplicate_successful_steps": 0
+  },
+  "failure_analysis": {
+    "failed_tasks": 0,
+    "category_counts": {
+      "passed": 24
+    }
+  }
+}

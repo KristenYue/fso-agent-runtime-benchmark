@@ -137,7 +137,13 @@ def score_planning_report(
             step["tool"] for step in record["trace"] if step["status"] == "success"
         ]
         duplicates = len(successful_tools) - len(set(successful_tools))
-        if any(step.get("recovery") for step in record["trace"]):
+        catalog_fault_observed = any(
+            step.get("tool")
+            in {"load_turbulence_catalog", "validate_turbulence_catalog"}
+            and step.get("status") in {"error", "semantic_error"}
+            for step in record["trace"]
+        )
+        if catalog_fault_observed:
             duplicates -= max(0, successful_tools.count("load_turbulence_catalog") - 1)
         duplicate_successful_steps += max(0, duplicates)
 

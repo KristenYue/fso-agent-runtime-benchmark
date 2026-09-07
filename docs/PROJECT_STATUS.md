@@ -29,7 +29,7 @@
 - 已实现 OpenAI-compatible 结构化 Planner 和仅限 development 的运行器；支持一次429/5xx/
   timeout重试、稳定幂等键、Token/延迟遥测和错误脱敏。缺模型配置时 fail-closed。
 - 已加入冻结 Challenge 一次性执行闸门：development manifest、模型一致性、显式批准、
-  数据哈希和空账本缺一不可；当前未执行。
+  数据哈希和空账本缺一不可。
 - Planner 上下文已裁剪目录明细，完整目录只留在运行时；逐调用脱敏遥测会保存。成本仅在
   usage完整且价格、币种、价格日期齐全时计算；本地动作校验拒绝Schema外字段。
 - 故障注入已接入 LangGraph 工具环境且不暴露给 Planner；一次性语义污染能在8次工具
@@ -61,15 +61,22 @@
   价格元数据，因此不报告成本。原始制品归档为 `iteration_02`，Challenge 仍为0次。
 - 修正持续故障次指标漏计：`threshold_catalog_unavailable` 现纳入持续故障停止准确率；只对
   已保存轨迹离线重算，没有重新调用模型，也没有改变30/30主结果。
+- 2026-09-07 已按最终配置唯一一次运行冻结 Challenge v1：严格通过24/24，成功规划12/12、
+  缺参澄清8/8、一次性语义污染恢复4/4、持续语义污染正确停止4/4，约束违反为0；112次
+  模型调用、163094 tokens，无 provider 重试。账本状态为 `complete`，原始结果哈希匹配且
+  不含凭据。
+- Challenge 原始汇总把持续语义故障后的4次必要目录重载误计为重复步骤；保留账本绑定的
+  原始结果不变，仅修正评分器并对保存轨迹生成事后分析，正确值为0。没有重跑 Challenge。
 
 ## 当前结论
 
-LangGraph development 配置选择门禁已经通过，但 FSO Agent 项目尚未完成。30/30 是
-development 成绩，不能写成冻结 Challenge 成绩；Oracle 的100%仍只是确定性上界。现有配置
-目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它外推成 `BER=1e-6`。
+LangGraph 正式冻结基线已经完成：Challenge v1 为24/24，相比规则基线4/24提升20条；
+该结论只适用于24条预注册任务，不外推为开放世界100%。FSO Agent 项目尚未完成，自研
+Runtime 公平对比仍未开始。现有配置目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它
+外推成 `BER=1e-6`。
 
 ## 后续顺序
 
-1. 人工复核第二次 development 制品与最终冻结配置；
-2. 只用该最终配置运行一次 Challenge v1，保存全部轨迹；
-3. LangGraph 冻结基线完成后才进入自研 Runtime。
+1. 冻结 LangGraph Challenge 原始制品与报告，不再针对该测试集调参或重跑；
+2. 预注册自研 Runtime 的架构、预算、停止条件与公平对比口径；
+3. 在同一24条 Challenge、工具 Schema 和评分器上完成自研 Runtime 的唯一正式对比。

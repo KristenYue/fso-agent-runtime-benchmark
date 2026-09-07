@@ -37,7 +37,9 @@ Runtime 必须遵守 `docs/FROZEN_EVALUATION_CONTRACT.md`，不得使用挑战�
 LangGraph 离线图骨架已在 development 数据上验证。固定的北京百炼
 `qwen3.7-plus-2026-05-26` 模型第二次 development 已完成：30/30 通过，原始轨迹归档在
 `artifacts/langgraph_model_development_runs/iteration_02/`。该结果只用于配置选择，冻结
-Challenge v1 仍为0次，不能把 development 成绩写成正式 Agent 基线。
+Challenge v1 已于2026-09-07按最终配置唯一运行一次并严格通过24/24，原始账本、轨迹和
+事后指标修正保存在 `artifacts/langgraph_model_challenge/`。该小型预注册结果不能外推为
+开放世界100%，也不得用于继续调整 LangGraph Prompt。
 
 正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
 `FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`
