@@ -69,6 +69,12 @@ Authorization header 在本地构造阶段失败；模型调用与 provider 尝�
 `docs/CUSTOM_RUNTIME_CHALLENGE_INCIDENT.md`。任何事故后补跑必须另立透明协议版本并再次明确
 批准。
 
+透明事故恢复 v1.1 随后增加了 ASCII/空白凭据校验，并在新账本前完成一次不加载 Challenge 的
+HTTP 200结构化输出探测。唯一有效恢复运行严格通过24/24：与 LangGraph 同为112次模型调用，
+24/24终止状态、成功配置和工具轨迹一致，约束违反为0。该结果支持“自研 Runtime 在本冻结集
+保持正确性且本地调度更轻”，不代表通用能力或端到端21倍加速。完整披露与比较见
+`docs/CUSTOM_RUNTIME_CHALLENGE_V1_1_REPORT.md`。
+
 正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
 `FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`
 必须是本次实验选择的固定快照 ID，不能在运行中换成其他模型。先用不含密钥的三个身份字段

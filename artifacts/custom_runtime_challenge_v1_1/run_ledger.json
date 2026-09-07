@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.1",
+  "challenge": "challenge-v1-custom-runtime-incident-recovery-v1-1",
+  "reserved_at_utc": "2026-09-07T07:17:44.499370+00:00",
+  "status": "complete",
+  "model_id": "qwen3.7-plus-2026-05-26",
+  "model_provider": "AlibabaCloud-ModelStudio-Beijing",
+  "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "recovery_contract_sha256": "72289117d16a8f4108580e62a662bc9297db8d8a09f306cf51231331581535b2",
+  "original_incident_preserved": true,
+  "credentials_recorded": false,
+  "completed_at_utc": "2026-09-07T07:20:20.141989+00:00",
+  "probe_sha256": "0e76a6165ef2c71f02ba165d4ca66423d1298a32bf33a7b24e8860dd10a2c969",
+  "development_manifest_sha256": "1d97ce9c1e1e09c12c7338ab9f0d8233d47aec9945490a7356b1f0f8b6fd8b0c",
+  "result_sha256": "5d887b333446bd7223080c71b55cbae08b3f89a531ddd837a584b06f268f3dc1"
+}

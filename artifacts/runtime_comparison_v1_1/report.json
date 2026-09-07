@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0",
+  "comparison": "langgraph_vs_custom_runtime_incident_recovery_v1_1",
+  "generated_at_utc": "2026-09-07T07:22:06.919497+00:00",
+  "disclosure": {
+    "original_custom_v1_was_infrastructure_incident": true,
+    "original_v1_model_calls": 0,
+    "original_v1_raw_passed": 0,
+    "recovery_uses_same_24_tasks": true,
+    "evidence_strength": "lower_than_an_uninterrupted_preregistered_single_run"
+  },
+  "frozen_challenge": {
+    "tasks": 24,
+    "sha256": "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
+  },
+  "langgraph": {
+    "result_sha256": "9122b382b83425091ccfac151ed3f62b21c827c1e0e4d1987bdcbd351fde848d",
+    "summary": {
+      "total": 24,
+      "passed": 24,
+      "pass_rate": 1.0,
+      "calls": 112,
+      "attempts": 112,
+      "prompt_tokens": 158535,
+      "completion_tokens": 4559,
+      "total_tokens": 163094,
+      "elapsed_ms": 173352.36900206655,
+      "usage_complete": true
+    },
+    "rescored_planning_metrics": {
+      "total": 24,
+      "task_pass_rate": 1.0,
+      "successful_plans": 12,
+      "constraint_violations": 0,
+      "constraint_violation_rate": 0.0,
+      "mean_optimality_gap": 0.0,
+      "mean_tool_calls": 3.6666666666666665,
+      "retry_cases": 0,
+      "recovered_retry_cases": 0,
+      "retry_recovery_rate": null,
+      "semantic_recovery_cases": 4,
+      "recovered_semantic_cases": 4,
+      "semantic_recovery_rate": 1.0,
+      "persistent_fault_cases": 4,
+      "correct_persistent_stops": 4,
+      "persistent_fault_stop_accuracy": 1.0,
+      "expected_clarifications": 8,
+      "correct_clarifications": 8,
+      "clarification_accuracy": 1.0,
+      "premature_stops": 0,
+      "duplicate_successful_steps": 0
+    },
+    "rescored_failure_analysis": {
+      "failed_tasks": 0,
+      "category_counts": {
+        "passed": 24
+      }
+    },
+    "p50_task_latency_ms": 8350.428649922833,
+    "p95_task_latency_ms": 12662.614999804646
+  },
+  "custom_runtime_recovery_v1_1": {
+    "result_sha256": "5d887b333446bd7223080c71b55cbae08b3f89a531ddd837a584b06f268f3dc1",
+    "ledger_sha256": "1f6ee26c7213ebf0711d6ca1cb83d52c56f74dcfcc1269575dd216cf6d6b67b2",
+    "summary": {
+      "total": 24,
+      "passed": 24,
+      "pass_rate": 1.0,
+      "calls": 112,
+      "attempts": 112,
+      "prompt_tokens": 158535,
+      "completion_tokens": 4579,
+      "total_tokens": 163114,
+      "elapsed_ms": 155492.60740168393,
+      "usage_complete": true
+    },
+    "rescored_planning_metrics": {
+      "total": 24,
+      "task_pass_rate": 1.0,
+      "successful_plans": 12,
+      "constraint_violations": 0,
+      "constraint_violation_rate": 0.0,
+      "mean_optimality_gap": 0.0,
+      "mean_tool_calls": 3.6666666666666665,
+      "retry_cases": 0,
+      "recovered_retry_cases": 0,
+      "retry_recovery_rate": null,
+      "semantic_recovery_cases": 4,
+      "recovered_semantic_cases": 4,
+      "semantic_recovery_rate": 1.0,
+      "persistent_fault_cases": 4,
+      "correct_persistent_stops": 4,
+      "persistent_fault_stop_accuracy": 1.0,
+      "expected_clarifications": 8,
+      "correct_clarifications": 8,
+      "clarification_accuracy": 1.0,
+      "premature_stops": 0,
+      "duplicate_successful_steps": 0
+    },
+    "rescored_failure_analysis": {
+      "failed_tasks": 0,
+      "category_counts": {
+        "passed": 24
+      }
+    },
+    "p50_task_latency_ms": 7801.938450196758,
+    "p95_task_latency_ms": 10526.216399855912
+  },
+  "paired": {
+    "strict_pass_difference_custom_minus_langgraph": 0,
+    "status_matches": 24,
+    "configuration_matches": 24,
+    "trace_exact_matches": 24,
+    "answer_exact_matches": 15,
+    "model_call_difference": 0,
+    "prompt_token_difference": 0,
+    "completion_token_difference": 20,
+    "total_elapsed_difference_ms": -17859.761600382626,
+    "tasks": [
+      {
+        "task_id": "challenge-01",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-02",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-03",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-04",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-05",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-06",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-07",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-08",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-09",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-10",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-11",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-12",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-13",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 7,
+        "custom_tool_calls": 7
+      },
+      {
+        "task_id": "challenge-14",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 7,
+        "custom_tool_calls": 7
+      },
+      {
+        "task_id": "challenge-15",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 7,
+        "custom_tool_calls": 7
+      },
+      {
+        "task_id": "challenge-16",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 7,
+        "custom_tool_calls": 7
+      },
+      {
+        "task_id": "challenge-17",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-18",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-19",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-20",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 5,
+        "custom_tool_calls": 5
+      },
+      {
+        "task_id": "challenge-21",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-22",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-23",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": true,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      },
+      {
+        "task_id": "challenge-24",
+        "langgraph_passed": true,
+        "custom_passed": true,
+        "status_match": true,
+        "configuration_match": true,
+        "trace_exact_match": true,
+        "answer_exact_match": false,
+        "langgraph_tool_calls": 0,
+        "custom_tool_calls": 0
+      }
+    ]
+  },
+  "offline_scheduler_evidence": {
+    "artifact_sha256": "93f1d5c9ad5ef910b9291165a75ef9ea535efc5521757baf176a9c2115a6df5e",
+    "pairs": 500,
+    "langgraph_median_us": 6209.75,
+    "custom_runtime_median_us": 294.8,
+    "median_speedup_ratio": 21.064280868385346,
+    "paired_median_difference_us": -5898.0,
+    "interpretation": "Local scheduler evidence only; model-network latency dominates end-to-end runs."
+  }
+}
