@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "challenge": "challenge-v1-custom-runtime",
+  "reserved_at_utc": "2026-09-07T07:04:21.378530+00:00",
+  "status": "complete",
+  "model_id": "qwen3.7-plus-2026-05-26",
+  "model_provider": "AlibabaCloud-ModelStudio-Beijing",
+  "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "credentials_recorded": false,
+  "completed_at_utc": "2026-09-07T07:04:21.500330+00:00",
+  "contract_sha256": "eeddc42185349e71f665a27a344f4870535f8685fbe8be04a75e0b2e241a2785",
+  "development_manifest_sha256": "1d97ce9c1e1e09c12c7338ab9f0d8233d47aec9945490a7356b1f0f8b6fd8b0c",
+  "result_sha256": "bed2bcae704dcb8bf7d7b26555a498e8ab5148eab2ff47e30ac30bade8499ac7"
+}

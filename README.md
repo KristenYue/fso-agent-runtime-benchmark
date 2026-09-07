@@ -63,6 +63,12 @@ python scripts/run_custom_runtime_development.py
 正式 Challenge 脚本为 `scripts/run_custom_runtime_challenge_once.py`，它要求 development
 制品验收、全部冻结哈希、Runtime 源码与 development 一致、精确批准值和空账本同时满足。
 
+2026-09-07 自研 Challenge v1 获批后建立了正式账本，但遮罩凭据输入包含非 ASCII 字符，
+Authorization header 在本地构造阶段失败；模型调用与 provider 尝试均为0。原始0/24和账本已
+原样保留，但这不是 Agent 能力结果，不能与 LangGraph 24/24比较，也没有自动重跑。详见
+`docs/CUSTOM_RUNTIME_CHALLENGE_INCIDENT.md`。任何事故后补跑必须另立透明协议版本并再次明确
+批准。
+
 正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
 `FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`
 必须是本次实验选择的固定快照 ID，不能在运行中换成其他模型。先用不含密钥的三个身份字段

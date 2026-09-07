@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "analysis_type": "posthoc_infrastructure_incident",
+  "generated_on": "2026-09-07",
+  "raw_results_modified": false,
+  "raw_ledger_modified": false,
+  "rerun_performed": false,
+  "raw_results_sha256": "bed2bcae704dcb8bf7d7b26555a498e8ab5148eab2ff47e30ac30bade8499ac7",
+  "raw_ledger_sha256": "2bee871154c84edb2aee3b6d16cbf9088bace7d69bf7e4c8177875fd038797bb",
+  "observed": {
+    "tasks_recorded": 24,
+    "raw_passed": 0,
+    "model_calls": 0,
+    "provider_attempts": 0,
+    "traces_with_tool_calls": 0,
+    "distinct_errors": 1,
+    "error": "invalid planner action: 'ascii' codec can't encode characters in position 7-10: ordinal not in range(128)"
+  },
+  "root_cause": {
+    "category": "local_auth_header_serialization_failure",
+    "description": "The masked credential input contained non-ASCII characters. httpx encodes HTTP header values as ASCII and raised UnicodeEncodeError while constructing the Authorization header, before transport execution.",
+    "local_reproduction": "httpx.Headers with an Authorization value containing four non-ASCII characters produces the same exception and position range; an ASCII test value is accepted.",
+    "credential_value_recorded": false
+  },
+  "interpretation": {
+    "agent_capability_result": false,
+    "runtime_task_quality_result": false,
+    "valid_langgraph_comparison": false,
+    "reason": "No request reached the provider and no planner action or tool trace was produced. The raw 0/24 is an infrastructure failure count, not an estimate of agent task success."
+  },
+  "protocol_status": {
+    "challenge_v1_consumed_under_original_ledger_rule": true,
+    "automatic_rerun_allowed": false,
+    "next_action_requires_new_explicit_protocol_decision": true
+  }
+}
