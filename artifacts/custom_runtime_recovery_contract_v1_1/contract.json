@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.1",
+  "contract": "custom_runtime_challenge_incident_recovery_v1_1",
+  "created_on": "2026-09-07",
+  "created_from_git_sha": "ace7ef7",
+  "status": "preregistered_before_recovery_probe_and_model_call",
+  "disclosure": "Challenge v1 created a ledger and raw 0/24 artifact but made zero provider attempts because masked credential input contained non-ASCII characters. v1.1 is a transparent post-incident recovery run and has lower evidentiary strength than an uninterrupted preregistered run.",
+  "original_incident": {
+    "ledger_path": "artifacts/custom_runtime_challenge/run_ledger.json",
+    "ledger_sha256": "2bee871154c84edb2aee3b6d16cbf9088bace7d69bf7e4c8177875fd038797bb",
+    "results_path": "artifacts/custom_runtime_challenge/results.json",
+    "results_sha256": "bed2bcae704dcb8bf7d7b26555a498e8ab5148eab2ff47e30ac30bade8499ac7",
+    "model_calls": 0,
+    "provider_attempts": 0
+  },
+  "frozen_inputs": {
+    "original_comparison_contract_path": "artifacts/custom_runtime_contract_v1/contract.json",
+    "original_comparison_contract_sha256": "eeddc42185349e71f665a27a344f4870535f8685fbe8be04a75e0b2e241a2785",
+    "development_manifest_path": "artifacts/custom_runtime_development/manifest.json",
+    "development_manifest_sha256": "d15f0c46718f00b3fa223565371ab39d8bfd1316b1ebee3df8491443cc845232",
+    "challenge_path": "data/challenge_v1.json",
+    "challenge_sha256": "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
+  },
+  "model": {
+    "provider": "AlibabaCloud-ModelStudio-Beijing",
+    "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "snapshot_id": "qwen3.7-plus-2026-05-26",
+    "response_format_type": "json_object",
+    "enable_thinking": false,
+    "temperature": 0.0
+  },
+  "recovery_preflight": {
+    "credential_nonempty": true,
+    "credential_ascii_only": true,
+    "credential_no_whitespace": true,
+    "probe_reads_challenge": false,
+    "probe_expected_kind": "finish",
+    "probe_expected_status": "needs_clarification",
+    "probe_provider_attempts_required": 1,
+    "probe_http_status_required": 200,
+    "on_any_failure": "stop_before_new_ledger_and_request_user_input"
+  },
+  "runtime_policy": {
+    "max_tool_calls": 8,
+    "request_timeout_seconds": 30.0,
+    "provider_retry_budget": 1,
+    "idempotency_namespace": "fso-custom-v1-1",
+    "challenge_runs_allowed": 1
+  },
+  "runtime_source_sha256": {
+    "src/fso_benchmark/agent_runtime.py": "cec9b3e120172571cc7a35a3fb9795c78b36f2da155943fc0a453216a248f34d",
+    "src/fso_benchmark/tool_environment.py": "76bf54866bef7faee4116ab88d1e20074c31a5abd3b5703f96df3ffda9c2dfb5",
+    "src/fso_benchmark/planner_contract.py": "3f564106abe37c2ea02b8e2ac578a68bf02a5bf84d5f50afb443a2e51d31ca44",
+    "src/fso_benchmark/model_planner.py": "3fd3bb6cc622468dbe14181fb0716195848a4dade7ebc00bed38b512a08d1d86"
+  },
+  "new_artifacts": {
+    "probe_path": "artifacts/custom_runtime_recovery_probe_v1_1/probe.json",
+    "challenge_directory": "artifacts/custom_runtime_challenge_v1_1"
+  },
+  "credentials_recorded": false
+}
