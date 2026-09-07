@@ -2,7 +2,10 @@
 
 [![tests](https://github.com/KristenYue/fso-agent-runtime-benchmark/actions/workflows/tests.yml/badge.svg)](https://github.com/KristenYue/fso-agent-runtime-benchmark/actions/workflows/tests.yml)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](https://www.python.org/)
+[![Release](https://img.shields.io/github/v/release/KristenYue/fso-agent-runtime-benchmark?color=blue)](https://github.com/KristenYue/fso-agent-runtime-benchmark/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+![FSO Agent Runtime Benchmark overview](docs/assets/github-social-preview-1280x640.jpg)
 
 > 在冻结模型、Prompt、工具、预算和评分器的前提下，比较 LangGraph 与纯 Python 自研 Agent Runtime 的正确性、轨迹和本地调度开销。
 
@@ -47,7 +50,7 @@ flowchart LR
     B -->|finish| I[最终答案与完整轨迹]
 ```
 
-自研实现位于 `src/fso_benchmark/agent_runtime.py` 与 `custom_runtime_contract.py`，不导入 LangGraph 或 langchain-core。它覆盖规划循环、工具路由、参数校验、预算、失败恢复、停止条件和轨迹记录，但不宣称具备 LangGraph 的 checkpoint、并发、人工中断或生态能力。
+自研实现位于 `src/fso_benchmark/agent_runtime.py` 与 `custom_runtime_contract.py`，不导入 LangGraph 或 `langchain-core`。它覆盖规划循环、工具路由、参数校验、预算、失败恢复、停止条件和轨迹记录，但不宣称具备 LangGraph 的 checkpoint、并发、人工中断或生态能力。
 
 ## 无 API Key 快速复现
 
@@ -60,25 +63,34 @@ python scripts/benchmark_runtime_overhead.py
 
 正式模型结果无需重跑即可审阅：
 
-- `docs/CUSTOM_RUNTIME_CHALLENGE_V1_1_REPORT.md`：最终成对比较与边界；
-- `artifacts/runtime_comparison_v1_1/report.json`：机器可读配对报告；
-- `artifacts/langgraph_model_challenge/` 与 `artifacts/custom_runtime_challenge_v1_1/`：原始轨迹与账本；
-- `docs/CUSTOM_RUNTIME_CHALLENGE_INCIDENT.md`：失败运行与透明恢复依据。
+- `docs/CUSTOM_RUNTIME_CHALLENGE_V1_1_REPORT.md`：最终成对比较与结论边界
+- `artifacts/runtime_comparison_v1_1/report.json`：机器可读配对报告
+- `artifacts/langgraph_model_challenge/`：LangGraph 原始轨迹与账本
+- `artifacts/custom_runtime_challenge_v1_1/`：自研 Runtime 原始轨迹与账本
+- `docs/CUSTOM_RUNTIME_CHALLENGE_INCIDENT.md`：失败运行与透明恢复依据
 
 ## 项目定位
 
-这是一个小型、预注册的受控实验，不是通用 Agent benchmark。24 条 Challenge 足以验证当前冻结任务上的行为保持，但不能外推到开放世界或其他领域。项目复用 FSO 论文仿真的物理公式和已验证汇总结果，不把“调用 Agent”包装成简单计算所必需。
+这是一个小型、预注册的受控实验，不是通用 Agent benchmark。24 条 Challenge 足以验证当前冻结任务上的行为保持，但不能外推到开放世界或其他领域。
+
+项目复用 FSO 论文仿真的物理公式和已验证汇总结果，不把“调用 Agent”包装成完成简单计算所必需的步骤。
 
 ## 实验资料导航
 
-- `docs/CHALLENGE_V1_PREREGISTRATION.md`：LangGraph 正式基线预注册；
-- `docs/CUSTOM_RUNTIME_PREREGISTRATION.md`：自研 Runtime 预注册；
-- `docs/FROZEN_EVALUATION_CONTRACT.md`：冻结评分与运行约束；
-- `docs/CUSTOM_RUNTIME_CHALLENGE_V1_1_REPORT.md`：最终比较、事故披露与结论边界；
-- `docs/PROJECT_STATUS.md`：从数据集、规则基线到正式运行的完整进度。
+- `docs/CHALLENGE_V1_PREREGISTRATION.md`：LangGraph 正式基线预注册
+- `docs/CUSTOM_RUNTIME_PREREGISTRATION.md`：自研 Runtime 预注册
+- `docs/FROZEN_EVALUATION_CONTRACT.md`：冻结评分与运行约束
+- `docs/CUSTOM_RUNTIME_CHALLENGE_V1_1_REPORT.md`：最终比较、事故披露与结论边界
+- `docs/PROJECT_STATUS.md`：从数据集、规则基线到正式运行的完整进度
 
 ## 确定性工具环境
 
-核心工具覆盖湍流参数计算、OOK BER、湍流档位解析、资源目录读取和约束配置选择。五步规划任务把参数计算、档位解析、目录读取和配置优化串联为可评分轨迹；确定性 Oracle 用于验证任务契约，不代表 LLM 应代替数值优化器。
+核心工具覆盖湍流参数计算、OOK BER、湍流档位解析、资源目录读取和约束配置选择。
+
+五步规划任务把参数计算、档位解析、目录读取和配置优化串联为可评分轨迹；确定性 Oracle 用于验证任务契约，不代表 LLM 应代替数值优化器。
 
 公式来自本地 FSO 论文仿真的已验证脚本；仓库只保存构建任务所需的冻结子集和来源哈希，不复制大型中间结果或随机仿真流程。详见 `docs/SOURCE_PROVENANCE.md`。
+
+## License
+
+This project is released under the [MIT License](LICENSE).
