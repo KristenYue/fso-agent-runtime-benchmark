@@ -1,6 +1,14 @@
 # FSO Agent Runtime Benchmark
 
+[![tests](https://github.com/KristenYue/fso-agent-runtime-benchmark/actions/workflows/tests.yml/badge.svg)](https://github.com/KristenYue/fso-agent-runtime-benchmark/actions/workflows/tests.yml)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 > 在冻结模型、Prompt、工具、预算和评分器的前提下，比较 LangGraph 与纯 Python 自研 Agent Runtime 的正确性、轨迹和本地调度开销。
+
+**English snapshot.** A preregistered, trace-level comparison between LangGraph and a dependency-light Python Agent Runtime. Both runtimes passed all 24 frozen tool-calling tasks with identical terminal states, selected configurations, and tool trajectories. The repository includes frozen contracts, one-shot ledgers, failure-injection cases, machine-readable artifacts, and cross-platform CI. The 21.06x figure below applies only to local scheduling overhead, not end-to-end agent latency.
+
+**作品集证据链：** [舆情 Agent 应用](https://github.com/KristenYue/public-opinion-agent-eval) → [Agent 可靠性评测](https://github.com/KristenYue/agent-reliability-eval) → **本仓库：Runtime 与受控对比**
 
 ## 结果一览
 
