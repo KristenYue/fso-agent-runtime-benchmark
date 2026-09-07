@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "contract": "custom_runtime_comparison_v1",
+  "preregistered_on": "2026-09-07",
+  "status": "preregistered_before_development_and_challenge",
+  "langgraph_baseline": {
+    "git_sha": "0412f7ca19fa642b9b99f73e1789a24938de51c6",
+    "challenge_passed": 24,
+    "challenge_total": 24,
+    "result_sha256": "9122b382b83425091ccfac151ed3f62b21c827c1e0e4d1987bdcbd351fde848d"
+  },
+  "datasets": {
+    "development_path": "data/tasks_v2.json",
+    "development_sha256": "cf9cfbfed67868ae891c89b67b97f486b7c5b109652aca93ba03d5d65d8c7e19",
+    "challenge_path": "data/challenge_v1.json",
+    "challenge_sha256": "4d905a08b1b52a3be271daa53f1a9596fca16cfc5091fcfa9d2fe1a30b5f9086"
+  },
+  "frozen_components": {
+    "prompt_path": "prompts/planner_v1.md",
+    "prompt_sha256": "61cbaa15baf4462684115ec9eb18acec46ea94fcc0e9eb43d1ef4ddcf1317d25",
+    "action_schema_path": "schemas/planner_action_v1.json",
+    "action_schema_sha256": "6584d26cfc50aa7780db2a2dd1f6b7037b03c808cd04722e94f274574dcd701f",
+    "tools_path": "src/fso_benchmark/tools.py",
+    "tools_sha256": "45be4421661cb36d08d0132ab76dbddbf3df204ef3313b1fa1b603b4cb2b0d14",
+    "catalog_loader_path": "src/fso_benchmark/catalog.py",
+    "catalog_loader_sha256": "936f5be7d8cca6e94773bf285ab9ad6aa6482b092eb8cc5b8388ddbace95e4e7",
+    "faults_path": "src/fso_benchmark/faults.py",
+    "faults_sha256": "72b88d1c28d242ace210c21fcb9ed4bd8718d8cc9c2aad31c9bd2daca9113041",
+    "answer_scorer_path": "src/fso_benchmark/baseline.py",
+    "answer_scorer_sha256": "9795d43689d71aeb2d80533003312430b02e77671cc41fab4390b30f59eb6c99",
+    "contracts_path": "src/fso_benchmark/contracts.py",
+    "contracts_sha256": "5e1defbbb9faeaf39d06af6a59d9c5d157ae40badabd06a8e8c8cbaf0e113a23",
+    "scorer_path": "src/fso_benchmark/planning_metrics.py",
+    "scorer_sha256": "4e279c88986047552c0757f8178ebcaa509daae1b00421f186c6b15902a0ac9e",
+    "threshold_catalog_sha256": "95d225a9ba29a2488ad0a9cb962a5251d1d67527569bd32c44375b471810fb8e",
+    "configuration_catalog_sha256": "1baae8197a348e9fb2afe775281f74968703dd4b2ef583d67d7655785725d55f"
+  },
+  "model": {
+    "provider": "AlibabaCloud-ModelStudio-Beijing",
+    "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "snapshot_id": "qwen3.7-plus-2026-05-26",
+    "response_format_type": "json_object",
+    "enable_thinking": false,
+    "temperature": 0.0
+  },
+  "runtime_policy": {
+    "implementation": "fso_benchmark.agent_runtime.run_agent",
+    "scheduler": "single_threaded_synchronous_explicit_state_machine",
+    "forbidden_runtime_imports": ["langgraph", "langchain_core"],
+    "max_tool_calls": 8,
+    "request_timeout_seconds": 30.0,
+    "provider_retry_budget": 1,
+    "challenge_runs_allowed": 1,
+    "idempotency_namespace": "fso-custom-v1",
+    "fault_profile_visible_to_planner": false,
+    "catalog_observation_mode": "summary",
+    "success_requires_optimizer_output": true,
+    "threshold_validation_required": true
+  },
+  "dependencies": {
+    "lock_path": "requirements-runtime.lock",
+    "lock_sha256": "38a3fb8a31e3fa71023432f40d1e313cea07f1c5e7ba0bc3cb6c1147ce2e6f17",
+    "langgraph_required": false,
+    "langchain_core_required": false
+  },
+  "primary_acceptance": {
+    "strict_passed": 24,
+    "strict_total": 24,
+    "constraint_violations": 0
+  },
+  "credentials_recorded": false
+}

@@ -41,6 +41,22 @@ Challenge v1 已于2026-09-07按最终配置唯一运行一次并严格通过24/
 事后指标修正保存在 `artifacts/langgraph_model_challenge/`。该小型预注册结果不能外推为
 开放世界100%，也不得用于继续调整 LangGraph Prompt。
 
+下一阶段的自研 Agent Runtime 已完成 v1 预注册和纯 Python 显式状态机骨架。它不导入
+LangGraph/langchain-core，复用相同模型快照、Prompt、动作 Schema、六个工具、8次工具预算、
+故障环境和评分器；机器契约见 `artifacts/custom_runtime_contract_v1/contract.json`。当前只完成
+离线行为等价与门禁测试；独立依赖见 `requirements-runtime.lock`。尚未运行自研 development，
+更未运行自研 Challenge，因此没有可与
+24/24 LangGraph 基线比较的新模型成绩。
+
+配置好同一组模型环境变量后，只能先运行 development：
+
+```powershell
+python scripts/run_custom_runtime_development.py
+```
+
+正式 Challenge 脚本为 `scripts/run_custom_runtime_challenge_once.py`，它还要求 development
+制品验收、全部冻结哈希、精确批准值和空账本同时满足；不要在 development 完成前设置批准值。
+
 正式 development 模型运行器要求 `FSO_MODEL_PROVIDER`、`FSO_MODEL_BASE_URL`、
 `FSO_MODEL_API_KEY` 和 `FSO_MODEL_ID` 四个环境变量，缺少任一项即退出。`FSO_MODEL_ID`
 必须是本次实验选择的固定快照 ID，不能在运行中换成其他模型。先用不含密钥的三个身份字段

@@ -10,7 +10,7 @@ from typing import Any, Literal, Sequence
 
 import httpx
 
-from .langgraph_agent import PlannerRequestError, validate_planner_action
+from .planner_contract import PlannerRequestError, validate_planner_action
 
 
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
@@ -30,6 +30,7 @@ class OpenAICompatiblePlanner:
         retry_budget: int = 1,
         response_format_type: Literal["json_schema", "json_object"] = "json_schema",
         enable_thinking: bool | None = None,
+        idempotency_namespace: str = "fso",
         client: httpx.Client | None = None,
     ) -> None:
         if not base_url.startswith(("https://", "http://")):
@@ -44,6 +45,8 @@ class OpenAICompatiblePlanner:
             raise ValueError("retry_budget must be 0 or 1")
         if response_format_type not in {"json_schema", "json_object"}:
             raise ValueError("unsupported response format type")
+        if not idempotency_namespace or not idempotency_namespace.replace("-", "").isalnum():
+            raise ValueError("idempotency_namespace must contain letters, digits, or hyphens")
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
         self.model = model
@@ -54,6 +57,7 @@ class OpenAICompatiblePlanner:
         self.retry_budget = retry_budget
         self.response_format_type = response_format_type
         self.enable_thinking = enable_thinking
+        self.idempotency_namespace = idempotency_namespace
         self.client = client or httpx.Client(timeout=timeout_seconds)
         self.telemetry: list[dict[str, Any]] = []
 
@@ -72,7 +76,7 @@ class OpenAICompatiblePlanner:
 
     def _idempotency_key(self, request: str, step: int) -> str:
         material = f"{self.model}\0{step}\0{request}".encode("utf-8")
-        return "fso-" + hashlib.sha256(material).hexdigest()[:32]
+        return self.idempotency_namespace + "-" + hashlib.sha256(material).hexdigest()[:32]
 
     def _payload(
         self,

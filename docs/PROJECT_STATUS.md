@@ -1,4 +1,4 @@
-# 项目状态（2026-09-06）
+# 项目状态（2026-09-07）
 
 ## 已完成
 
@@ -67,16 +67,23 @@
   不含凭据。
 - Challenge 原始汇总把持续语义故障后的4次必要目录重载误计为重复步骤；保留账本绑定的
   原始结果不变，仅修正评分器并对保存轨迹生成事后分析，正确值为0。没有重跑 Challenge。
+- 已冻结自研 Runtime 公平对比预注册 v1：同一模型、Prompt、Schema、工具、8次工具预算、
+  故障和评分器，唯一架构自变量为 LangGraph Pregel 与显式 Python 状态机；接受条件预先锁定
+  为 Challenge 24/24 且约束违反为0。
+- 已实现不导入 LangGraph/langchain-core 的同步自研 Planner→Tool Runtime、独立幂等键命名
+  空间、development 运行器和一次性 Challenge 闸门；离线结果与冻结 LangGraph 在正常、澄清、
+  非法成功、首次超时和预算耗尽场景保持等价。
+- 当前完整回归为118项通过；自研模型 development 和自研 Challenge 均尚未运行。
 
 ## 当前结论
 
 LangGraph 正式冻结基线已经完成：Challenge v1 为24/24，相比规则基线4/24提升20条；
-该结论只适用于24条预注册任务，不外推为开放世界100%。FSO Agent 项目尚未完成，自研
-Runtime 公平对比仍未开始。现有配置目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它
-外推成 `BER=1e-6`。
+该结论只适用于24条预注册任务，不外推为开放世界100%。自研 Runtime 已完成预注册、实现和
+离线门禁，下一步是使用同一模型配置运行30条 development 并验收制品；自研 Challenge 仍为
+0次。现有配置目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它外推成 `BER=1e-6`。
 
 ## 后续顺序
 
-1. 冻结 LangGraph Challenge 原始制品与报告，不再针对该测试集调参或重跑；
-2. 预注册自研 Runtime 的架构、预算、停止条件与公平对比口径；
-3. 在同一24条 Challenge、工具 Schema 和评分器上完成自研 Runtime 的唯一正式对比。
+1. 使用相同固定模型配置运行自研 Runtime 的30条 development，验证并留档制品；
+2. development 门禁通过后人工确认最终配置，不修改 Prompt、工具、预算或评分器；
+3. 在同一24条 Challenge 上执行自研 Runtime 唯一正式运行并生成配对比较报告。

@@ -10,6 +10,7 @@ from langgraph.graph import END, START, StateGraph
 
 from .catalog import load_catalog, load_turbulence_catalog
 from .faults import corrupt_threshold_ordering, validate_fault_profile
+from .planner_contract import PlannerRequestError
 from .tools import (
     characterize_turbulence,
     resolve_turbulence_regime,
@@ -54,10 +55,6 @@ class Planner(Protocol):
         observations: Sequence[dict[str, Any]],
         step: int,
     ) -> dict[str, Any]: ...
-
-
-class PlannerRequestError(ValueError):
-    """A transport or provider-protocol failure, not an action-schema failure."""
 
 
 @dataclass

@@ -108,6 +108,31 @@ def test_retry_uses_same_idempotency_key() -> None:
     assert instance.telemetry[0]["attempts"] == 2
 
 
+def test_custom_runtime_can_use_a_distinct_idempotency_namespace() -> None:
+    keys = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        keys.append(request.headers["idempotency-key"])
+        return httpx.Response(
+            200,
+            json=response_body(
+                '{"kind":"finish","status":"needs_clarification","message":"x"}'
+            ),
+        )
+
+    instance = OpenAICompatiblePlanner(
+        base_url="https://provider.invalid/v1",
+        api_key="test-secret-key",
+        model="fixed-model-snapshot",
+        prompt_path=PROMPT,
+        schema_path=SCHEMA,
+        idempotency_namespace="fso-custom-v1",
+        client=httpx.Client(transport=httpx.MockTransport(handler)),
+    )
+    instance.decide(request="plan", observations=(), step=0)
+    assert keys[0].startswith("fso-custom-v1-")
+
+
 def test_bad_json_is_rejected_without_leaking_key() -> None:
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(200, json=response_body("not-json"))
