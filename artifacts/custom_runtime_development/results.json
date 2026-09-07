@@ -1,0 +1,4577 @@
+{
+  "summary": {
+    "total": 30,
+    "passed": 30,
+    "pass_rate": 1.0,
+    "p50_task_latency_ms": 9199.358300073072,
+    "p95_task_latency_ms": 11369.289500173181,
+    "model_calls": 162,
+    "provider_attempts": 162,
+    "prompt_tokens": 228848,
+    "completion_tokens": 6847,
+    "total_tokens": 235695,
+    "usage_complete": true,
+    "cost": null,
+    "cost_note": "Cost omitted until complete provider usage and dated price metadata are supplied."
+  },
+  "planning_metrics": {
+    "total": 30,
+    "task_pass_rate": 1.0,
+    "successful_plans": 18,
+    "constraint_violations": 0,
+    "constraint_violation_rate": 0.0,
+    "mean_optimality_gap": 0.0,
+    "mean_tool_calls": 4.4,
+    "retry_cases": 3,
+    "recovered_retry_cases": 3,
+    "retry_recovery_rate": 1.0,
+    "semantic_recovery_cases": 0,
+    "recovered_semantic_cases": 0,
+    "semantic_recovery_rate": null,
+    "persistent_fault_cases": 3,
+    "correct_persistent_stops": 3,
+    "persistent_fault_stop_accuracy": 1.0,
+    "expected_clarifications": 6,
+    "correct_clarifications": 6,
+    "clarification_accuracy": 1.0,
+    "premature_stops": 0,
+    "duplicate_successful_steps": 0
+  },
+  "failure_analysis": {
+    "failed_tasks": 0,
+    "category_counts": {
+      "passed": 30
+    }
+  },
+  "model_telemetry": [
+    {
+      "call_index": 1,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1834.5776996575296,
+      "status_code": 200,
+      "provider_request_id": "372f7e37-f249-921c-a0ad-f32bc8b6d254",
+      "prompt_tokens": 1302,
+      "completion_tokens": 44,
+      "total_tokens": 1346,
+      "idempotency_key": "fso-custom-v1-bf25f74964b77cf2a9f38858c55adf3f"
+    },
+    {
+      "call_index": 2,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1866.2026999518275,
+      "status_code": 200,
+      "provider_request_id": "cbeba742-16db-9291-b6ea-3b40680d99f2",
+      "prompt_tokens": 1341,
+      "completion_tokens": 29,
+      "total_tokens": 1370,
+      "idempotency_key": "fso-custom-v1-65d47792916bc5e6dbd469d4912490c5"
+    },
+    {
+      "call_index": 3,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1278.0542997643352,
+      "status_code": 200,
+      "provider_request_id": "b9016960-d844-9aae-9b45-2e104e6f4d07",
+      "prompt_tokens": 1384,
+      "completion_tokens": 29,
+      "total_tokens": 1413,
+      "idempotency_key": "fso-custom-v1-cc32dc3c344846285fbd2262d24cf90d"
+    },
+    {
+      "call_index": 4,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1240.1320999488235,
+      "status_code": 200,
+      "provider_request_id": "a4532bf5-e760-997a-98b8-71181b25a088",
+      "prompt_tokens": 1414,
+      "completion_tokens": 26,
+      "total_tokens": 1440,
+      "idempotency_key": "fso-custom-v1-a9872b438570ab3d6944bdd0a9ad71fd"
+    },
+    {
+      "call_index": 5,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1863.5841999202967,
+      "status_code": 200,
+      "provider_request_id": "f0d3cec1-b410-9e5a-91c2-661057f81b63",
+      "prompt_tokens": 1459,
+      "completion_tokens": 69,
+      "total_tokens": 1528,
+      "idempotency_key": "fso-custom-v1-fa1b30b104c80b43a974e4ac69f2897f"
+    },
+    {
+      "call_index": 6,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1894.5148000493646,
+      "status_code": 200,
+      "provider_request_id": "d3de1798-cfb0-93dc-a1e9-6a923c6686bb",
+      "prompt_tokens": 1672,
+      "completion_tokens": 62,
+      "total_tokens": 1734,
+      "idempotency_key": "fso-custom-v1-2275ba571a69c758c8dc549171415ca9"
+    },
+    {
+      "call_index": 7,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1648.7651001662016,
+      "status_code": 200,
+      "provider_request_id": "d225ac25-9980-92b2-84ee-201d5e6419dc",
+      "prompt_tokens": 1303,
+      "completion_tokens": 45,
+      "total_tokens": 1348,
+      "idempotency_key": "fso-custom-v1-2a88d969c80967d55c3dbfc03d580307"
+    },
+    {
+      "call_index": 8,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1795.8027999848127,
+      "status_code": 200,
+      "provider_request_id": "b35eafe0-f1f4-9f64-910a-3a566524e003",
+      "prompt_tokens": 1345,
+      "completion_tokens": 29,
+      "total_tokens": 1374,
+      "idempotency_key": "fso-custom-v1-f7fc54b3c92480245a3bad5fdff756ba"
+    },
+    {
+      "call_index": 9,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1424.5611997321248,
+      "status_code": 200,
+      "provider_request_id": "d58848ac-a4b1-9e87-888e-ae8f0a9f40e9",
+      "prompt_tokens": 1388,
+      "completion_tokens": 29,
+      "total_tokens": 1417,
+      "idempotency_key": "fso-custom-v1-b0b9e8dc8a803ed6672a0953450f34fe"
+    },
+    {
+      "call_index": 10,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1818.610199727118,
+      "status_code": 200,
+      "provider_request_id": "e4379312-df0c-9aa0-907e-dd02f63840b0",
+      "prompt_tokens": 1418,
+      "completion_tokens": 26,
+      "total_tokens": 1444,
+      "idempotency_key": "fso-custom-v1-2beda94b22fb514776a9f962eaea0b82"
+    },
+    {
+      "call_index": 11,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2249.7915998101234,
+      "status_code": 200,
+      "provider_request_id": "644244c5-294b-94df-93d1-f6cc2a7337b9",
+      "prompt_tokens": 1463,
+      "completion_tokens": 70,
+      "total_tokens": 1533,
+      "idempotency_key": "fso-custom-v1-f781f00d807cdc9e9d80b58f8acb7f8d"
+    },
+    {
+      "call_index": 12,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2430.2230002358556,
+      "status_code": 200,
+      "provider_request_id": "bcf1d641-b7de-96bb-833a-c2a1500fe998",
+      "prompt_tokens": 1678,
+      "completion_tokens": 61,
+      "total_tokens": 1739,
+      "idempotency_key": "fso-custom-v1-f5865b8ccf92037ac169e3f668fe399d"
+    },
+    {
+      "call_index": 13,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 2339.594000019133,
+      "status_code": 200,
+      "provider_request_id": "661dafc6-ac08-9f72-aec0-a23e8dddd468",
+      "prompt_tokens": 1302,
+      "completion_tokens": 44,
+      "total_tokens": 1346,
+      "idempotency_key": "fso-custom-v1-92ad81929d0851fba0cf58bc74d9dc42"
+    },
+    {
+      "call_index": 14,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1752.9486999846995,
+      "status_code": 200,
+      "provider_request_id": "1ef1d8cb-8734-93b4-972c-e4d9be87a8de",
+      "prompt_tokens": 1341,
+      "completion_tokens": 29,
+      "total_tokens": 1370,
+      "idempotency_key": "fso-custom-v1-678745c0321b584bf4d2a5b4186aedd5"
+    },
+    {
+      "call_index": 15,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 2005.363800097257,
+      "status_code": 200,
+      "provider_request_id": "69712737-5880-9b69-b926-a6e7d6d3eecd",
+      "prompt_tokens": 1384,
+      "completion_tokens": 29,
+      "total_tokens": 1413,
+      "idempotency_key": "fso-custom-v1-3304d524f6f0369016ff6dc9d372f411"
+    },
+    {
+      "call_index": 16,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1952.536199707538,
+      "status_code": 200,
+      "provider_request_id": "03521723-ba49-9b2f-833d-f7b29e8ae2a3",
+      "prompt_tokens": 1414,
+      "completion_tokens": 26,
+      "total_tokens": 1440,
+      "idempotency_key": "fso-custom-v1-98766cf32fce39504138999892ca1dd6"
+    },
+    {
+      "call_index": 17,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2032.7519997954369,
+      "status_code": 200,
+      "provider_request_id": "aac7cc94-400b-9c41-9224-794e3b6b04af",
+      "prompt_tokens": 1459,
+      "completion_tokens": 69,
+      "total_tokens": 1528,
+      "idempotency_key": "fso-custom-v1-a8148181402a99c3e3375532c7699125"
+    },
+    {
+      "call_index": 18,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1835.7918001711369,
+      "status_code": 200,
+      "provider_request_id": "0fdae209-004e-9c98-b74a-498001302c47",
+      "prompt_tokens": 1672,
+      "completion_tokens": 61,
+      "total_tokens": 1733,
+      "idempotency_key": "fso-custom-v1-98ce844402ea4f8174b74312479e0455"
+    },
+    {
+      "call_index": 19,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1642.0042999088764,
+      "status_code": 200,
+      "provider_request_id": "d80a2328-e1a4-98e0-abd4-3ae0eb178fed",
+      "prompt_tokens": 1308,
+      "completion_tokens": 45,
+      "total_tokens": 1353,
+      "idempotency_key": "fso-custom-v1-c560bdd3c67c1ec817aee6b19155a437"
+    },
+    {
+      "call_index": 20,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1360.60700006783,
+      "status_code": 200,
+      "provider_request_id": "2e379993-1ab1-9253-9ddc-b2b3e37bf82b",
+      "prompt_tokens": 1350,
+      "completion_tokens": 29,
+      "total_tokens": 1379,
+      "idempotency_key": "fso-custom-v1-16394e93d5bb2cea31d7bd8504138125"
+    },
+    {
+      "call_index": 21,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1220.9307001903653,
+      "status_code": 200,
+      "provider_request_id": "c2720d56-a5b9-9d1c-a5de-743a87e5dc18",
+      "prompt_tokens": 1393,
+      "completion_tokens": 29,
+      "total_tokens": 1422,
+      "idempotency_key": "fso-custom-v1-fcadcaf2af407ca50ded5bf112346c0f"
+    },
+    {
+      "call_index": 22,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1680.6038999930024,
+      "status_code": 200,
+      "provider_request_id": "7a56bfd4-8ea0-978b-b923-8991301cc446",
+      "prompt_tokens": 1423,
+      "completion_tokens": 26,
+      "total_tokens": 1449,
+      "idempotency_key": "fso-custom-v1-2fa168aaa94917b0dc811fb441e55c5a"
+    },
+    {
+      "call_index": 23,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2150.961700361222,
+      "status_code": 200,
+      "provider_request_id": "34795bbe-27f4-9de2-b6bf-d61334617441",
+      "prompt_tokens": 1468,
+      "completion_tokens": 86,
+      "total_tokens": 1554,
+      "idempotency_key": "fso-custom-v1-72d36369b0659213ad0e4d98f38c4290"
+    },
+    {
+      "call_index": 24,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1754.8468001186848,
+      "status_code": 200,
+      "provider_request_id": "e74a7c4c-1391-9f35-9391-90a397294f10",
+      "prompt_tokens": 1694,
+      "completion_tokens": 62,
+      "total_tokens": 1756,
+      "idempotency_key": "fso-custom-v1-74c01f61c1bc97163f3408d66330985c"
+    },
+    {
+      "call_index": 25,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 2425.0177000649273,
+      "status_code": 200,
+      "provider_request_id": "36d81c5f-3ff9-9c14-971e-b5523b9da827",
+      "prompt_tokens": 1313,
+      "completion_tokens": 45,
+      "total_tokens": 1358,
+      "idempotency_key": "fso-custom-v1-5b18ebfbddb28657c8fe55a1946d359d"
+    },
+    {
+      "call_index": 26,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1404.183499980718,
+      "status_code": 200,
+      "provider_request_id": "77013941-167b-9921-ae48-20c38ae9c1e6",
+      "prompt_tokens": 1355,
+      "completion_tokens": 29,
+      "total_tokens": 1384,
+      "idempotency_key": "fso-custom-v1-6b2fe4c73578235d9770c2da356eab98"
+    },
+    {
+      "call_index": 27,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1475.178699940443,
+      "status_code": 200,
+      "provider_request_id": "f3d43026-bdf1-91ce-a12d-3f1ab02fea72",
+      "prompt_tokens": 1398,
+      "completion_tokens": 29,
+      "total_tokens": 1427,
+      "idempotency_key": "fso-custom-v1-d4c769529b19808c35bbce689cd843a8"
+    },
+    {
+      "call_index": 28,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1407.6148997992277,
+      "status_code": 200,
+      "provider_request_id": "b24ecc59-1679-995a-a32f-e70bd2348b4a",
+      "prompt_tokens": 1428,
+      "completion_tokens": 26,
+      "total_tokens": 1454,
+      "idempotency_key": "fso-custom-v1-d876a1e69d47c2c0cc953e8b267ae6a1"
+    },
+    {
+      "call_index": 29,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2353.2039001584053,
+      "status_code": 200,
+      "provider_request_id": "395dc4fc-1e6e-9070-b8f7-3b49e71fa40a",
+      "prompt_tokens": 1473,
+      "completion_tokens": 83,
+      "total_tokens": 1556,
+      "idempotency_key": "fso-custom-v1-a4ffa05eba4d66d4cc8f54f8a6bdb882"
+    },
+    {
+      "call_index": 30,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1732.7539999969304,
+      "status_code": 200,
+      "provider_request_id": "a7b40084-5634-9bea-a573-724736cfc4c6",
+      "prompt_tokens": 1702,
+      "completion_tokens": 48,
+      "total_tokens": 1750,
+      "idempotency_key": "fso-custom-v1-4d73de6d29e08a08aa2847d5340ddded"
+    },
+    {
+      "call_index": 31,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1864.2849000170827,
+      "status_code": 200,
+      "provider_request_id": "a7b6111d-f538-98c5-b7cb-263b5c8c7b4b",
+      "prompt_tokens": 1310,
+      "completion_tokens": 44,
+      "total_tokens": 1354,
+      "idempotency_key": "fso-custom-v1-2fd538399b27ba6797563087c045cf84"
+    },
+    {
+      "call_index": 32,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1432.196700014174,
+      "status_code": 200,
+      "provider_request_id": "6ee4f5fd-1928-9254-a7d6-b3b11f5e1439",
+      "prompt_tokens": 1349,
+      "completion_tokens": 29,
+      "total_tokens": 1378,
+      "idempotency_key": "fso-custom-v1-3bea6a45ad5c10f77c31316d76117c67"
+    },
+    {
+      "call_index": 33,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1294.5507001131773,
+      "status_code": 200,
+      "provider_request_id": "a1e57a50-c7ca-9d0a-9691-a11f04b4e69b",
+      "prompt_tokens": 1374,
+      "completion_tokens": 29,
+      "total_tokens": 1403,
+      "idempotency_key": "fso-custom-v1-0f4d746883616776e8ea9b2f17cf7173"
+    },
+    {
+      "call_index": 34,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1442.9009999148548,
+      "status_code": 200,
+      "provider_request_id": "cd5aae06-9033-90f1-8180-199c88aa7ff4",
+      "prompt_tokens": 1416,
+      "completion_tokens": 29,
+      "total_tokens": 1445,
+      "idempotency_key": "fso-custom-v1-63c8257d30b1766ec62d8b2f043f86d9"
+    },
+    {
+      "call_index": 35,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1681.142299901694,
+      "status_code": 200,
+      "provider_request_id": "5fdca0e1-b742-9db6-bf8b-d9260a918cc7",
+      "prompt_tokens": 1446,
+      "completion_tokens": 26,
+      "total_tokens": 1472,
+      "idempotency_key": "fso-custom-v1-0956ad5729e9a3c7372bd45963a1a2d3"
+    },
+    {
+      "call_index": 36,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1861.185799818486,
+      "status_code": 200,
+      "provider_request_id": "e240204a-c0a0-9880-b046-4e332828af38",
+      "prompt_tokens": 1491,
+      "completion_tokens": 69,
+      "total_tokens": 1560,
+      "idempotency_key": "fso-custom-v1-045c23473066623abf239fc05f967caa"
+    },
+    {
+      "call_index": 37,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1558.223799802363,
+      "status_code": 200,
+      "provider_request_id": "808622fb-4849-9a29-a8fd-7f550c41d414",
+      "prompt_tokens": 1704,
+      "completion_tokens": 40,
+      "total_tokens": 1744,
+      "idempotency_key": "fso-custom-v1-5cc0ccaee144eed09c5e3b9e79178868"
+    },
+    {
+      "call_index": 38,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1594.4131999276578,
+      "status_code": 200,
+      "provider_request_id": "d6339ab9-a4d6-9ec6-b51f-b1bdd349ef4b",
+      "prompt_tokens": 1289,
+      "completion_tokens": 44,
+      "total_tokens": 1333,
+      "idempotency_key": "fso-custom-v1-86ee9d3b93a08f973c1059f205df0581"
+    },
+    {
+      "call_index": 39,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1319.270099978894,
+      "status_code": 200,
+      "provider_request_id": "a98b1100-e855-931c-a425-6371e1a70d0b",
+      "prompt_tokens": 1328,
+      "completion_tokens": 29,
+      "total_tokens": 1357,
+      "idempotency_key": "fso-custom-v1-a72c568b1f3175a90f645902e2d5fc00"
+    },
+    {
+      "call_index": 40,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1276.4987000264227,
+      "status_code": 200,
+      "provider_request_id": "6926f21e-26a7-92f9-97c6-48565d9d8d4e",
+      "prompt_tokens": 1371,
+      "completion_tokens": 29,
+      "total_tokens": 1400,
+      "idempotency_key": "fso-custom-v1-6038828d994c691c937e8822c849f9d0"
+    },
+    {
+      "call_index": 41,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1429.4144003652036,
+      "status_code": 200,
+      "provider_request_id": "20c54e60-e5f5-9641-b943-2f6d6410d620",
+      "prompt_tokens": 1401,
+      "completion_tokens": 26,
+      "total_tokens": 1427,
+      "idempotency_key": "fso-custom-v1-78d76bdeeb7b6925d8a22ad3e6b48590"
+    },
+    {
+      "call_index": 42,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2438.482899684459,
+      "status_code": 200,
+      "provider_request_id": "40895e02-e99c-97ab-b27f-897c32ff6a05",
+      "prompt_tokens": 1446,
+      "completion_tokens": 65,
+      "total_tokens": 1511,
+      "idempotency_key": "fso-custom-v1-5959b485ce071bdd0646869e0bc7bc37"
+    },
+    {
+      "call_index": 43,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1873.174900189042,
+      "status_code": 200,
+      "provider_request_id": "acba23e8-78f8-9e87-83de-ce92adbb2080",
+      "prompt_tokens": 1496,
+      "completion_tokens": 52,
+      "total_tokens": 1548,
+      "idempotency_key": "fso-custom-v1-4936e8949966968c5c9e292d8e568c82"
+    },
+    {
+      "call_index": 44,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 3004.521199967712,
+      "status_code": 200,
+      "provider_request_id": "71b86384-f8b4-9509-9332-a9634fc86536",
+      "prompt_tokens": 1292,
+      "completion_tokens": 67,
+      "total_tokens": 1359,
+      "idempotency_key": "fso-custom-v1-3456e475450c805b3e92d8ac8ceadd5d"
+    },
+    {
+      "call_index": 45,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1945.2291000634432,
+      "status_code": 200,
+      "provider_request_id": "6481ec30-487a-9982-ac3a-33719c322937",
+      "prompt_tokens": 1307,
+      "completion_tokens": 44,
+      "total_tokens": 1351,
+      "idempotency_key": "fso-custom-v1-805a9a04a0e411bbae850b8d00a6a610"
+    },
+    {
+      "call_index": 46,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1151.1156000196934,
+      "status_code": 200,
+      "provider_request_id": "dc166ec1-8841-9958-a266-2bd2bfbfa362",
+      "prompt_tokens": 1346,
+      "completion_tokens": 29,
+      "total_tokens": 1375,
+      "idempotency_key": "fso-custom-v1-f2d5e6fe78c69eda4592bda52883e4bb"
+    },
+    {
+      "call_index": 47,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1299.6892002411187,
+      "status_code": 200,
+      "provider_request_id": "691ae60f-2478-9c63-a2fa-101cd8d212a7",
+      "prompt_tokens": 1389,
+      "completion_tokens": 29,
+      "total_tokens": 1418,
+      "idempotency_key": "fso-custom-v1-42142329f35071733b552ecbd943da0c"
+    },
+    {
+      "call_index": 48,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1099.936000071466,
+      "status_code": 200,
+      "provider_request_id": "a0750017-fda4-93ed-8f15-f2433e7ffa03",
+      "prompt_tokens": 1419,
+      "completion_tokens": 26,
+      "total_tokens": 1445,
+      "idempotency_key": "fso-custom-v1-8361514f60c0541d2d2128dd1277b287"
+    },
+    {
+      "call_index": 49,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2309.3482996337116,
+      "status_code": 200,
+      "provider_request_id": "c83d8481-cb14-904b-9abb-c8e5fb7d37e8",
+      "prompt_tokens": 1464,
+      "completion_tokens": 85,
+      "total_tokens": 1549,
+      "idempotency_key": "fso-custom-v1-83e4eb84f222d427b5ec1de28e1cb850"
+    },
+    {
+      "call_index": 50,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1783.1484000198543,
+      "status_code": 200,
+      "provider_request_id": "84b3f68c-9db1-99b1-b069-a7487afe222c",
+      "prompt_tokens": 1525,
+      "completion_tokens": 64,
+      "total_tokens": 1589,
+      "idempotency_key": "fso-custom-v1-1f30efecb0c91496d666729b030c87da"
+    },
+    {
+      "call_index": 51,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 2194.019999820739,
+      "status_code": 200,
+      "provider_request_id": "e4afdfc2-ccfb-987a-a282-5f2c10ccf1b2",
+      "prompt_tokens": 1307,
+      "completion_tokens": 44,
+      "total_tokens": 1351,
+      "idempotency_key": "fso-custom-v1-5b6247a9d680f3d74004e8d24296a912"
+    },
+    {
+      "call_index": 52,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1316.9658998958766,
+      "status_code": 200,
+      "provider_request_id": "5ae45445-15ef-94a3-8934-e63ffa0853fa",
+      "prompt_tokens": 1346,
+      "completion_tokens": 29,
+      "total_tokens": 1375,
+      "idempotency_key": "fso-custom-v1-ae55d5de65eb1f266816e08b21566197"
+    },
+    {
+      "call_index": 53,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1244.9070997536182,
+      "status_code": 200,
+      "provider_request_id": "b81f6e39-4361-90e3-aac6-9710ed638ac2",
+      "prompt_tokens": 1371,
+      "completion_tokens": 29,
+      "total_tokens": 1400,
+      "idempotency_key": "fso-custom-v1-aeb2c350fcc7c2fc2342c05d3c623db0"
+    },
+    {
+      "call_index": 54,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1218.7602003104985,
+      "status_code": 200,
+      "provider_request_id": "def44a1a-84d0-9f7f-97f4-a2c5dd181041",
+      "prompt_tokens": 1395,
+      "completion_tokens": 35,
+      "total_tokens": 1430,
+      "idempotency_key": "fso-custom-v1-0b929827271de9871b06aec3c739d202"
+    },
+    {
+      "call_index": 55,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1423.6745000816882,
+      "status_code": 200,
+      "provider_request_id": "6a68097b-d420-92a0-8d8c-d69b253177bb",
+      "prompt_tokens": 1289,
+      "completion_tokens": 44,
+      "total_tokens": 1333,
+      "idempotency_key": "fso-custom-v1-d71d9896cc41d16b67f55593fda90d5d"
+    },
+    {
+      "call_index": 56,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1317.289000377059,
+      "status_code": 200,
+      "provider_request_id": "7808096f-4e77-9bb5-ae3e-4f0dd3eb189f",
+      "prompt_tokens": 1328,
+      "completion_tokens": 29,
+      "total_tokens": 1357,
+      "idempotency_key": "fso-custom-v1-1425ac3490442ee59b576fe2cbf32c6a"
+    },
+    {
+      "call_index": 57,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1291.787600144744,
+      "status_code": 200,
+      "provider_request_id": "81105c77-8c8f-9a20-bd07-07802b6ff5a5",
+      "prompt_tokens": 1371,
+      "completion_tokens": 29,
+      "total_tokens": 1400,
+      "idempotency_key": "fso-custom-v1-af16aaa5040ce6fab223d8a77c34e3f9"
+    },
+    {
+      "call_index": 58,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1429.5755000784993,
+      "status_code": 200,
+      "provider_request_id": "c016a044-87d7-9986-b309-66d4a4274006",
+      "prompt_tokens": 1401,
+      "completion_tokens": 26,
+      "total_tokens": 1427,
+      "idempotency_key": "fso-custom-v1-3858dd57fa87f1530ed0b0caddd84890"
+    },
+    {
+      "call_index": 59,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2250.1324000768363,
+      "status_code": 200,
+      "provider_request_id": "dd7a82af-d14d-9991-9509-c9249043c2b9",
+      "prompt_tokens": 1446,
+      "completion_tokens": 69,
+      "total_tokens": 1515,
+      "idempotency_key": "fso-custom-v1-80b0ac9fb8493fad04ccb856a5dfdb29"
+    },
+    {
+      "call_index": 60,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1609.6705999225378,
+      "status_code": 200,
+      "provider_request_id": "f61bd05d-ab2c-9e1c-bb51-1d0c5c082acb",
+      "prompt_tokens": 1659,
+      "completion_tokens": 49,
+      "total_tokens": 1708,
+      "idempotency_key": "fso-custom-v1-c60d7ba8997d68c923c51a09e0bbe53a"
+    },
+    {
+      "call_index": 61,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1412.1911004185677,
+      "status_code": 200,
+      "provider_request_id": "9e21de7a-0aae-965f-b0bd-e428d84994d9",
+      "prompt_tokens": 1290,
+      "completion_tokens": 45,
+      "total_tokens": 1335,
+      "idempotency_key": "fso-custom-v1-b2eaf8e809cf1565d7f246c7f6e8f342"
+    },
+    {
+      "call_index": 62,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1458.068700041622,
+      "status_code": 200,
+      "provider_request_id": "e133d487-6a67-9033-b6d7-4e16b43e3109",
+      "prompt_tokens": 1332,
+      "completion_tokens": 29,
+      "total_tokens": 1361,
+      "idempotency_key": "fso-custom-v1-394b04f6d88153cd6c66217767e1693e"
+    },
+    {
+      "call_index": 63,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1173.6886999569833,
+      "status_code": 200,
+      "provider_request_id": "714df9b5-e7e3-97b4-be7f-81a3c24d8509",
+      "prompt_tokens": 1375,
+      "completion_tokens": 29,
+      "total_tokens": 1404,
+      "idempotency_key": "fso-custom-v1-03023c7e9b42d529b61f681358076d7e"
+    },
+    {
+      "call_index": 64,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1398.9359997212887,
+      "status_code": 200,
+      "provider_request_id": "cb10b6b4-ad80-9c9e-be91-c73a53fbeff2",
+      "prompt_tokens": 1405,
+      "completion_tokens": 26,
+      "total_tokens": 1431,
+      "idempotency_key": "fso-custom-v1-0f7daedc95c1e6239b61f688c9fcd31e"
+    },
+    {
+      "call_index": 65,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1974.6671998873353,
+      "status_code": 200,
+      "provider_request_id": "63ea1225-927c-95c5-bdbb-c16ba2478297",
+      "prompt_tokens": 1450,
+      "completion_tokens": 70,
+      "total_tokens": 1520,
+      "idempotency_key": "fso-custom-v1-90f8a637dd002b9c043e94e10d95e6b0"
+    },
+    {
+      "call_index": 66,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1637.2326998971403,
+      "status_code": 200,
+      "provider_request_id": "9c17f649-c820-99aa-ad72-c4983661e1ee",
+      "prompt_tokens": 1665,
+      "completion_tokens": 49,
+      "total_tokens": 1714,
+      "idempotency_key": "fso-custom-v1-5497cb79b0aa85a1d481d5b394b5d6e0"
+    },
+    {
+      "call_index": 67,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1519.6416000835598,
+      "status_code": 200,
+      "provider_request_id": "8017134d-f883-97e9-aa62-66707648de37",
+      "prompt_tokens": 1289,
+      "completion_tokens": 44,
+      "total_tokens": 1333,
+      "idempotency_key": "fso-custom-v1-509805c7df1832b0fc0c8d23bfdc7919"
+    },
+    {
+      "call_index": 68,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1203.4286996349692,
+      "status_code": 200,
+      "provider_request_id": "3e40998b-f846-9439-842a-5e92f25a274c",
+      "prompt_tokens": 1328,
+      "completion_tokens": 29,
+      "total_tokens": 1357,
+      "idempotency_key": "fso-custom-v1-8ad8258d2ff22bd800b21f43f3a47c27"
+    },
+    {
+      "call_index": 69,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1413.5259999893606,
+      "status_code": 200,
+      "provider_request_id": "f4fb3116-bc3d-948f-8422-5f52f7330014",
+      "prompt_tokens": 1371,
+      "completion_tokens": 29,
+      "total_tokens": 1400,
+      "idempotency_key": "fso-custom-v1-c8b1bac36f3b61cd27c93e6a6fb7e213"
+    },
+    {
+      "call_index": 70,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 988.1663997657597,
+      "status_code": 200,
+      "provider_request_id": "4121f0bd-080b-99c3-a413-8e0405942b58",
+      "prompt_tokens": 1401,
+      "completion_tokens": 26,
+      "total_tokens": 1427,
+      "idempotency_key": "fso-custom-v1-df225490acf1c1fc2d73060141e43bf2"
+    },
+    {
+      "call_index": 71,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1811.5715999156237,
+      "status_code": 200,
+      "provider_request_id": "31198440-1ff6-9915-9715-36f7c4120735",
+      "prompt_tokens": 1446,
+      "completion_tokens": 69,
+      "total_tokens": 1515,
+      "idempotency_key": "fso-custom-v1-de1f59b152af44d48ad32b1e48113423"
+    },
+    {
+      "call_index": 72,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1673.8840998150408,
+      "status_code": 200,
+      "provider_request_id": "ebf0daca-00e0-9015-bd8e-a78c7ff08887",
+      "prompt_tokens": 1659,
+      "completion_tokens": 60,
+      "total_tokens": 1719,
+      "idempotency_key": "fso-custom-v1-e4d68f9fdad654d05cc3f9ef7214aa7a"
+    },
+    {
+      "call_index": 73,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1483.0215997062624,
+      "status_code": 200,
+      "provider_request_id": "045da801-55fd-9f65-be92-a68879742640",
+      "prompt_tokens": 1295,
+      "completion_tokens": 45,
+      "total_tokens": 1340,
+      "idempotency_key": "fso-custom-v1-c3cde9983e80c813f36406b4bdf6b1fe"
+    },
+    {
+      "call_index": 74,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1306.6968000493944,
+      "status_code": 200,
+      "provider_request_id": "3bc1df72-6b2a-9a88-9697-11d098eeee49",
+      "prompt_tokens": 1337,
+      "completion_tokens": 29,
+      "total_tokens": 1366,
+      "idempotency_key": "fso-custom-v1-a1aff1814a66a7e1637aff2fe50f6c7e"
+    },
+    {
+      "call_index": 75,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1526.627500075847,
+      "status_code": 200,
+      "provider_request_id": "7347d2ce-cd07-9d9b-b640-9a594d137d9b",
+      "prompt_tokens": 1380,
+      "completion_tokens": 29,
+      "total_tokens": 1409,
+      "idempotency_key": "fso-custom-v1-e19cabcae0fc995e7f44f3b085f300bd"
+    },
+    {
+      "call_index": 76,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1354.5818999409676,
+      "status_code": 200,
+      "provider_request_id": "a850f8fc-ce56-9527-b4d1-07b3f4a945c7",
+      "prompt_tokens": 1410,
+      "completion_tokens": 26,
+      "total_tokens": 1436,
+      "idempotency_key": "fso-custom-v1-cf15ef3258981261bdd4203ece1b4ce7"
+    },
+    {
+      "call_index": 77,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2417.1945000998676,
+      "status_code": 200,
+      "provider_request_id": "8207cfc2-21b3-97ca-a1aa-d41b00992218",
+      "prompt_tokens": 1455,
+      "completion_tokens": 86,
+      "total_tokens": 1541,
+      "idempotency_key": "fso-custom-v1-d953d8568e234f99d1812ea1fc13a56b"
+    },
+    {
+      "call_index": 78,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1711.7649000138044,
+      "status_code": 200,
+      "provider_request_id": "5c8fbffc-57d3-936e-bd66-96229139d5d9",
+      "prompt_tokens": 1681,
+      "completion_tokens": 46,
+      "total_tokens": 1727,
+      "idempotency_key": "fso-custom-v1-f98b2810f3f048327d3966598b1f8dac"
+    },
+    {
+      "call_index": 79,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1402.496799826622,
+      "status_code": 200,
+      "provider_request_id": "26ff937a-b8da-9fab-ad4d-7bcf7d280a54",
+      "prompt_tokens": 1299,
+      "completion_tokens": 45,
+      "total_tokens": 1344,
+      "idempotency_key": "fso-custom-v1-e3795512654a06e7fae70e88bd0963bd"
+    },
+    {
+      "call_index": 80,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1192.2927000559866,
+      "status_code": 200,
+      "provider_request_id": "cbfea239-dc62-999d-948b-2629ffcda409",
+      "prompt_tokens": 1341,
+      "completion_tokens": 29,
+      "total_tokens": 1370,
+      "idempotency_key": "fso-custom-v1-2b75c15a8ec20589610b42a246e36137"
+    },
+    {
+      "call_index": 81,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 2214.174199849367,
+      "status_code": 200,
+      "provider_request_id": "3bb9c3f6-6281-94a0-852e-661e13c1ff65",
+      "prompt_tokens": 1384,
+      "completion_tokens": 29,
+      "total_tokens": 1413,
+      "idempotency_key": "fso-custom-v1-37582d6a9c9eed1b6ae6643640c1851d"
+    },
+    {
+      "call_index": 82,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1121.0489999502897,
+      "status_code": 200,
+      "provider_request_id": "27eec7c9-f8cd-97eb-904e-798a07ae8874",
+      "prompt_tokens": 1414,
+      "completion_tokens": 26,
+      "total_tokens": 1440,
+      "idempotency_key": "fso-custom-v1-358783f390827d1b78b4330df35add60"
+    },
+    {
+      "call_index": 83,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2515.192700084299,
+      "status_code": 200,
+      "provider_request_id": "6ec7baf1-6b84-9bcb-af51-bb83468e2d82",
+      "prompt_tokens": 1459,
+      "completion_tokens": 83,
+      "total_tokens": 1542,
+      "idempotency_key": "fso-custom-v1-471d99dc70e7011e874e3aefd2ffc79e"
+    },
+    {
+      "call_index": 84,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1888.7983998283744,
+      "status_code": 200,
+      "provider_request_id": "bfdf8ce1-c9f7-94b6-9550-f15af0b93427",
+      "prompt_tokens": 1688,
+      "completion_tokens": 66,
+      "total_tokens": 1754,
+      "idempotency_key": "fso-custom-v1-7613b0dfa294fd159c9c5f7dafc15c98"
+    },
+    {
+      "call_index": 85,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1524.7281999327242,
+      "status_code": 200,
+      "provider_request_id": "73898dad-7712-9c4d-91a8-9d5e35fef1d1",
+      "prompt_tokens": 1295,
+      "completion_tokens": 44,
+      "total_tokens": 1339,
+      "idempotency_key": "fso-custom-v1-f220a862a5498ace28b8cd708cdd4e8f"
+    },
+    {
+      "call_index": 86,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1388.8718001544476,
+      "status_code": 200,
+      "provider_request_id": "9947014d-baf9-969e-8e75-7c65737c122b",
+      "prompt_tokens": 1334,
+      "completion_tokens": 29,
+      "total_tokens": 1363,
+      "idempotency_key": "fso-custom-v1-e6ab417afdeaddd6f7a9a3dea8e76645"
+    },
+    {
+      "call_index": 87,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1278.551199939102,
+      "status_code": 200,
+      "provider_request_id": "c407333b-7e61-97e2-ab2e-868555ea9f90",
+      "prompt_tokens": 1359,
+      "completion_tokens": 29,
+      "total_tokens": 1388,
+      "idempotency_key": "fso-custom-v1-17424ff2e1a619905d46e7820193d25f"
+    },
+    {
+      "call_index": 88,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1454.2889003641903,
+      "status_code": 200,
+      "provider_request_id": "b4cf2a4f-6a40-9142-b62e-3df84b434738",
+      "prompt_tokens": 1401,
+      "completion_tokens": 29,
+      "total_tokens": 1430,
+      "idempotency_key": "fso-custom-v1-0812d1ac51d8cf4804b4d1d282004907"
+    },
+    {
+      "call_index": 89,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1747.6788996718824,
+      "status_code": 200,
+      "provider_request_id": "0af971de-d0a0-9658-98bb-b473dcec5d00",
+      "prompt_tokens": 1431,
+      "completion_tokens": 26,
+      "total_tokens": 1457,
+      "idempotency_key": "fso-custom-v1-87dac9e69be6578be72c84e1e63e2cda"
+    },
+    {
+      "call_index": 90,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1762.6987001858652,
+      "status_code": 200,
+      "provider_request_id": "6f0b7a9f-1f12-93c0-9661-4a760b069f74",
+      "prompt_tokens": 1476,
+      "completion_tokens": 69,
+      "total_tokens": 1545,
+      "idempotency_key": "fso-custom-v1-fd32f7b3eb470c4e92d673578a736414"
+    },
+    {
+      "call_index": 91,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1743.371400050819,
+      "status_code": 200,
+      "provider_request_id": "060d776e-0d5f-9a17-9b63-8461f7c1bb9d",
+      "prompt_tokens": 1689,
+      "completion_tokens": 61,
+      "total_tokens": 1750,
+      "idempotency_key": "fso-custom-v1-35b9b65b5419a6653a0529df40570e82"
+    },
+    {
+      "call_index": 92,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1513.4208002127707,
+      "status_code": 200,
+      "provider_request_id": "793734db-3ee2-9040-9030-7e20826efddf",
+      "prompt_tokens": 1281,
+      "completion_tokens": 45,
+      "total_tokens": 1326,
+      "idempotency_key": "fso-custom-v1-b6e7436ae4a497954b5b688aa88d25d6"
+    },
+    {
+      "call_index": 93,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 2024.9494002200663,
+      "status_code": 200,
+      "provider_request_id": "d79a00b6-8f74-95f9-9887-3049e59f7810",
+      "prompt_tokens": 1323,
+      "completion_tokens": 29,
+      "total_tokens": 1352,
+      "idempotency_key": "fso-custom-v1-b7c9e1a72895aeb7bad41342b264fb6c"
+    },
+    {
+      "call_index": 94,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1400.9265000931919,
+      "status_code": 200,
+      "provider_request_id": "4bd0d1ca-6cfc-99a3-82c0-59d207db5cf3",
+      "prompt_tokens": 1366,
+      "completion_tokens": 29,
+      "total_tokens": 1395,
+      "idempotency_key": "fso-custom-v1-a385c680e3a4686ce5328c91a8b95cf1"
+    },
+    {
+      "call_index": 95,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1336.0883998684585,
+      "status_code": 200,
+      "provider_request_id": "c63e7165-74a2-99a8-bd96-63e0d5147300",
+      "prompt_tokens": 1396,
+      "completion_tokens": 26,
+      "total_tokens": 1422,
+      "idempotency_key": "fso-custom-v1-be43da9fbcf0e1ee3f4efc6b5d77c04c"
+    },
+    {
+      "call_index": 96,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1814.5026001147926,
+      "status_code": 200,
+      "provider_request_id": "3ec027e3-6b45-9dbb-a94c-838f96485cbe",
+      "prompt_tokens": 1441,
+      "completion_tokens": 66,
+      "total_tokens": 1507,
+      "idempotency_key": "fso-custom-v1-6a6b4805efbf07e4d243e8059f095a8b"
+    },
+    {
+      "call_index": 97,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1680.3875998593867,
+      "status_code": 200,
+      "provider_request_id": "fb092e33-2cce-98e5-9b9c-e6b1e702189d",
+      "prompt_tokens": 1492,
+      "completion_tokens": 56,
+      "total_tokens": 1548,
+      "idempotency_key": "fso-custom-v1-2d18d0c69f34bade8744c6b41678ea07"
+    },
+    {
+      "call_index": 98,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1409.1633004136384,
+      "status_code": 200,
+      "provider_request_id": "4ed4c166-e884-91e6-a1ae-9a5635377c50",
+      "prompt_tokens": 1280,
+      "completion_tokens": 46,
+      "total_tokens": 1326,
+      "idempotency_key": "fso-custom-v1-cda8c7e4e077fc0f533ef9876d7d0320"
+    },
+    {
+      "call_index": 99,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1293.8528000377119,
+      "status_code": 200,
+      "provider_request_id": "c175ff9d-fd18-9ad4-a52a-191ffafc6b93",
+      "prompt_tokens": 1294,
+      "completion_tokens": 44,
+      "total_tokens": 1338,
+      "idempotency_key": "fso-custom-v1-70627ef56a30421cffcb08f1635ceeb6"
+    },
+    {
+      "call_index": 100,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1324.9999997206032,
+      "status_code": 200,
+      "provider_request_id": "5f9f200c-96e8-9e97-9a1a-39694e9d67c5",
+      "prompt_tokens": 1333,
+      "completion_tokens": 29,
+      "total_tokens": 1362,
+      "idempotency_key": "fso-custom-v1-449564df953a92ad9e05f5e571158468"
+    },
+    {
+      "call_index": 101,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1353.9146999828517,
+      "status_code": 200,
+      "provider_request_id": "b5cfc089-b66d-9055-931e-2b19ef1f391b",
+      "prompt_tokens": 1376,
+      "completion_tokens": 29,
+      "total_tokens": 1405,
+      "idempotency_key": "fso-custom-v1-8afc3f1f4f5f9e952df4b91f7f712c9a"
+    },
+    {
+      "call_index": 102,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1269.028500188142,
+      "status_code": 200,
+      "provider_request_id": "0df3116e-b55d-911c-83fe-b2a669951de8",
+      "prompt_tokens": 1406,
+      "completion_tokens": 26,
+      "total_tokens": 1432,
+      "idempotency_key": "fso-custom-v1-b7bda14f6fed6e802650bbef76c4921e"
+    },
+    {
+      "call_index": 103,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1871.849600225687,
+      "status_code": 200,
+      "provider_request_id": "de61ea8a-4662-91fb-8d1b-2f2db13c3eee",
+      "prompt_tokens": 1451,
+      "completion_tokens": 85,
+      "total_tokens": 1536,
+      "idempotency_key": "fso-custom-v1-4c94956f19676592784ccbc1f2f8848e"
+    },
+    {
+      "call_index": 104,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1767.2600001096725,
+      "status_code": 200,
+      "provider_request_id": "b34f494f-5de0-9594-a0ce-596654504cb0",
+      "prompt_tokens": 1512,
+      "completion_tokens": 63,
+      "total_tokens": 1575,
+      "idempotency_key": "fso-custom-v1-98ae0fe383d02eb204c20c56caf56614"
+    },
+    {
+      "call_index": 105,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1713.8795997016132,
+      "status_code": 200,
+      "provider_request_id": "921328fb-0613-9a08-8bc0-e35d962ef9ad",
+      "prompt_tokens": 1296,
+      "completion_tokens": 45,
+      "total_tokens": 1341,
+      "idempotency_key": "fso-custom-v1-4f98f6b5caf95d091e480095f7d786be"
+    },
+    {
+      "call_index": 106,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1439.6083001047373,
+      "status_code": 200,
+      "provider_request_id": "78a0247e-c507-9fbf-812f-de2286f71b01",
+      "prompt_tokens": 1338,
+      "completion_tokens": 29,
+      "total_tokens": 1367,
+      "idempotency_key": "fso-custom-v1-4e920c0df26b306e86c656b791a18fae"
+    },
+    {
+      "call_index": 107,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1393.2226998731494,
+      "status_code": 200,
+      "provider_request_id": "acf528da-6227-9749-b1fa-b988e55ad8ca",
+      "prompt_tokens": 1363,
+      "completion_tokens": 29,
+      "total_tokens": 1392,
+      "idempotency_key": "fso-custom-v1-0f9f61ef86622cf2f6a52d7c38f8b2bc"
+    },
+    {
+      "call_index": 108,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1663.5316996835172,
+      "status_code": 200,
+      "provider_request_id": "a130a51b-3deb-92fa-b5c7-878f87134ee8",
+      "prompt_tokens": 1387,
+      "completion_tokens": 36,
+      "total_tokens": 1423,
+      "idempotency_key": "fso-custom-v1-c5d25bfac35c17a346fcd6559316bc4a"
+    },
+    {
+      "call_index": 109,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1858.9474000036716,
+      "status_code": 200,
+      "provider_request_id": "56cf23de-f683-98c3-acf6-b9cf82a57523",
+      "prompt_tokens": 1295,
+      "completion_tokens": 44,
+      "total_tokens": 1339,
+      "idempotency_key": "fso-custom-v1-fb86f5f5dfcfcbbd55ca9d5894bd94a8"
+    },
+    {
+      "call_index": 110,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1231.7722998559475,
+      "status_code": 200,
+      "provider_request_id": "c41905c1-e3b7-933b-b699-81999c314a52",
+      "prompt_tokens": 1334,
+      "completion_tokens": 29,
+      "total_tokens": 1363,
+      "idempotency_key": "fso-custom-v1-52d62a81fa07ce4c5c014cd721209a31"
+    },
+    {
+      "call_index": 111,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1327.9916001483798,
+      "status_code": 200,
+      "provider_request_id": "134bbbc3-e3c1-9845-a0d5-dd2014ddb0b7",
+      "prompt_tokens": 1377,
+      "completion_tokens": 29,
+      "total_tokens": 1406,
+      "idempotency_key": "fso-custom-v1-2479abc6d4a4e874c8c8484a5b56fab6"
+    },
+    {
+      "call_index": 112,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1212.1251001954079,
+      "status_code": 200,
+      "provider_request_id": "008f59c3-bbe7-99ec-bf8f-9dea7b2f1f38",
+      "prompt_tokens": 1407,
+      "completion_tokens": 26,
+      "total_tokens": 1433,
+      "idempotency_key": "fso-custom-v1-6b71cc660521b4f77f600fb0a629132b"
+    },
+    {
+      "call_index": 113,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1763.191900216043,
+      "status_code": 200,
+      "provider_request_id": "5c3e0ef4-0d10-9ed2-b350-8e5d00fbb8ed",
+      "prompt_tokens": 1452,
+      "completion_tokens": 69,
+      "total_tokens": 1521,
+      "idempotency_key": "fso-custom-v1-ae1028d6f5e8b68740a5a71d35432fab"
+    },
+    {
+      "call_index": 114,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1548.216899856925,
+      "status_code": 200,
+      "provider_request_id": "58d691da-40d5-9644-b338-7e4766f355d1",
+      "prompt_tokens": 1665,
+      "completion_tokens": 49,
+      "total_tokens": 1714,
+      "idempotency_key": "fso-custom-v1-d0d97bc7eedc5d711f529d541073cd7a"
+    },
+    {
+      "call_index": 115,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1329.8152997158468,
+      "status_code": 200,
+      "provider_request_id": "8d82cad4-d758-9402-8102-8edb1073a992",
+      "prompt_tokens": 1296,
+      "completion_tokens": 45,
+      "total_tokens": 1341,
+      "idempotency_key": "fso-custom-v1-f4243f99eb6736a08a0c4642500f6102"
+    },
+    {
+      "call_index": 116,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1316.651000175625,
+      "status_code": 200,
+      "provider_request_id": "bf657d4f-f096-9486-b9eb-0e735f91eac6",
+      "prompt_tokens": 1338,
+      "completion_tokens": 29,
+      "total_tokens": 1367,
+      "idempotency_key": "fso-custom-v1-d5a49991dd53c041fa3d0af0700f3e77"
+    },
+    {
+      "call_index": 117,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1409.7795998677611,
+      "status_code": 200,
+      "provider_request_id": "f2082c34-f2a3-9286-8ee5-e3b306dc4565",
+      "prompt_tokens": 1381,
+      "completion_tokens": 29,
+      "total_tokens": 1410,
+      "idempotency_key": "fso-custom-v1-caa741e683a5daed830d65d6f288dfd5"
+    },
+    {
+      "call_index": 118,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1302.5953997857869,
+      "status_code": 200,
+      "provider_request_id": "168609c3-6a5f-92e7-8a21-976c6c12d12a",
+      "prompt_tokens": 1411,
+      "completion_tokens": 26,
+      "total_tokens": 1437,
+      "idempotency_key": "fso-custom-v1-b952ca2bb9e83dd60be907490f0ae0d2"
+    },
+    {
+      "call_index": 119,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1984.6887001767755,
+      "status_code": 200,
+      "provider_request_id": "e9a5e116-8a1d-9c7c-a363-0cdf771fc940",
+      "prompt_tokens": 1456,
+      "completion_tokens": 70,
+      "total_tokens": 1526,
+      "idempotency_key": "fso-custom-v1-7f3d6ec5ecc8bba838fb61b57f8e8431"
+    },
+    {
+      "call_index": 120,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1649.6163997799158,
+      "status_code": 200,
+      "provider_request_id": "ad256b7a-73e1-92c8-88ae-1dd8f9e8f9a0",
+      "prompt_tokens": 1671,
+      "completion_tokens": 50,
+      "total_tokens": 1721,
+      "idempotency_key": "fso-custom-v1-ea1db82b81372e9a20324f5de10b24d7"
+    },
+    {
+      "call_index": 121,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1399.8561003245413,
+      "status_code": 200,
+      "provider_request_id": "8a3043f3-8250-9cd2-a362-db4ed60cbb79",
+      "prompt_tokens": 1295,
+      "completion_tokens": 44,
+      "total_tokens": 1339,
+      "idempotency_key": "fso-custom-v1-143011744a9ad2c5feef3e05f62b0593"
+    },
+    {
+      "call_index": 122,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1325.6335002370179,
+      "status_code": 200,
+      "provider_request_id": "a1fd147d-d58d-9d5e-985b-ac6e5a1c3449",
+      "prompt_tokens": 1334,
+      "completion_tokens": 29,
+      "total_tokens": 1363,
+      "idempotency_key": "fso-custom-v1-b8d3f84c9c739ecb29540a68d7c6b952"
+    },
+    {
+      "call_index": 123,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1258.0745001323521,
+      "status_code": 200,
+      "provider_request_id": "979b33ea-066c-97cb-a7a4-5802f1ef1f57",
+      "prompt_tokens": 1377,
+      "completion_tokens": 29,
+      "total_tokens": 1406,
+      "idempotency_key": "fso-custom-v1-5fd9dfbd49b08875d95c5d3c1e2ae68a"
+    },
+    {
+      "call_index": 124,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1251.844400074333,
+      "status_code": 200,
+      "provider_request_id": "97bce9b5-f5fa-93ce-a491-476b0328d97b",
+      "prompt_tokens": 1407,
+      "completion_tokens": 26,
+      "total_tokens": 1433,
+      "idempotency_key": "fso-custom-v1-bdfac0ac926db8182f5663dba4cb239d"
+    },
+    {
+      "call_index": 125,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2011.8311997503042,
+      "status_code": 200,
+      "provider_request_id": "cb690bee-d24b-9ced-b512-506b8b612f83",
+      "prompt_tokens": 1452,
+      "completion_tokens": 69,
+      "total_tokens": 1521,
+      "idempotency_key": "fso-custom-v1-890fa3e5566e27bdffffceb283bd63f2"
+    },
+    {
+      "call_index": 126,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1282.5988000258803,
+      "status_code": 200,
+      "provider_request_id": "1f1bb94a-fb1e-9d0a-9733-d06588adad78",
+      "prompt_tokens": 1665,
+      "completion_tokens": 49,
+      "total_tokens": 1714,
+      "idempotency_key": "fso-custom-v1-605a73852dd6ef44a85bb5fc51d38e5c"
+    },
+    {
+      "call_index": 127,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1629.478100221604,
+      "status_code": 200,
+      "provider_request_id": "fb7f8252-a5ab-9f13-8534-dc650c251a21",
+      "prompt_tokens": 1300,
+      "completion_tokens": 45,
+      "total_tokens": 1345,
+      "idempotency_key": "fso-custom-v1-fdae0630fc9e4ffda8346a53f8b9377b"
+    },
+    {
+      "call_index": 128,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1328.6637999117374,
+      "status_code": 200,
+      "provider_request_id": "78b21a5c-51fe-9061-a209-ef4e750ab3f9",
+      "prompt_tokens": 1342,
+      "completion_tokens": 29,
+      "total_tokens": 1371,
+      "idempotency_key": "fso-custom-v1-1ab535e330d856b7c4fd2c9cb04263fa"
+    },
+    {
+      "call_index": 129,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1031.0034002177417,
+      "status_code": 200,
+      "provider_request_id": "b19899e7-4c81-9931-b44f-92f2dfeb5c28",
+      "prompt_tokens": 1385,
+      "completion_tokens": 29,
+      "total_tokens": 1414,
+      "idempotency_key": "fso-custom-v1-6b40fbf0beefb21a3a560b7c0e24fbb9"
+    },
+    {
+      "call_index": 130,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1250.0969995744526,
+      "status_code": 200,
+      "provider_request_id": "3c449e21-6984-9c9d-a2a8-c0fb6682e470",
+      "prompt_tokens": 1415,
+      "completion_tokens": 26,
+      "total_tokens": 1441,
+      "idempotency_key": "fso-custom-v1-215409e3f859d4459a4b6d9dc21187ae"
+    },
+    {
+      "call_index": 131,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2283.7478001601994,
+      "status_code": 200,
+      "provider_request_id": "2b64b9dc-41f1-9435-ae42-ef657ceb686c",
+      "prompt_tokens": 1460,
+      "completion_tokens": 86,
+      "total_tokens": 1546,
+      "idempotency_key": "fso-custom-v1-cf1a8e32a5a0fa892aa748d7d5ac943f"
+    },
+    {
+      "call_index": 132,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1198.4407999552786,
+      "status_code": 200,
+      "provider_request_id": "94e86e6a-f3b3-9d4b-bb5b-6fee0ebe14f3",
+      "prompt_tokens": 1686,
+      "completion_tokens": 46,
+      "total_tokens": 1732,
+      "idempotency_key": "fso-custom-v1-7a29276dda32216db00b644e419c4a23"
+    },
+    {
+      "call_index": 133,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1553.8743999786675,
+      "status_code": 200,
+      "provider_request_id": "0ff0aabd-bd59-907a-8237-2678490347e7",
+      "prompt_tokens": 1305,
+      "completion_tokens": 45,
+      "total_tokens": 1350,
+      "idempotency_key": "fso-custom-v1-e55fe85e64f8ed5934e03c78197dfde7"
+    },
+    {
+      "call_index": 134,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1048.4873997047544,
+      "status_code": 200,
+      "provider_request_id": "8f8e0f42-1844-9093-ab52-bb76901e4ac9",
+      "prompt_tokens": 1347,
+      "completion_tokens": 29,
+      "total_tokens": 1376,
+      "idempotency_key": "fso-custom-v1-3f5625c9960bb64524faaa8ebf02e3a4"
+    },
+    {
+      "call_index": 135,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1372.7037999778986,
+      "status_code": 200,
+      "provider_request_id": "093ded62-f51c-9c99-ba89-d76fefe66f50",
+      "prompt_tokens": 1390,
+      "completion_tokens": 29,
+      "total_tokens": 1419,
+      "idempotency_key": "fso-custom-v1-5b63fe9e23a35925dd6b2d6536000aac"
+    },
+    {
+      "call_index": 136,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1152.858099900186,
+      "status_code": 200,
+      "provider_request_id": "d899bb06-1da4-9925-9a45-cc57cde17010",
+      "prompt_tokens": 1420,
+      "completion_tokens": 26,
+      "total_tokens": 1446,
+      "idempotency_key": "fso-custom-v1-1a5e78fe6b3a4288fcae574cc2f15021"
+    },
+    {
+      "call_index": 137,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2209.0457999147475,
+      "status_code": 200,
+      "provider_request_id": "54d6e2e3-93d2-9646-b20d-eca0663d5ae3",
+      "prompt_tokens": 1465,
+      "completion_tokens": 83,
+      "total_tokens": 1548,
+      "idempotency_key": "fso-custom-v1-620411a0a724afe6d6fa881755e274a5"
+    },
+    {
+      "call_index": 138,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 2110.1652001962066,
+      "status_code": 200,
+      "provider_request_id": "0120196d-ecaf-9379-8d61-3a97fa377d1d",
+      "prompt_tokens": 1694,
+      "completion_tokens": 66,
+      "total_tokens": 1760,
+      "idempotency_key": "fso-custom-v1-491965edd6a9c33e4f3946aa01221ab5"
+    },
+    {
+      "call_index": 139,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1492.4616999924183,
+      "status_code": 200,
+      "provider_request_id": "a37c58b1-ca92-9883-b926-5239143db1f2",
+      "prompt_tokens": 1303,
+      "completion_tokens": 44,
+      "total_tokens": 1347,
+      "idempotency_key": "fso-custom-v1-90e3d2a8fa6e3b165de09e18af526e1e"
+    },
+    {
+      "call_index": 140,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1033.0936997197568,
+      "status_code": 200,
+      "provider_request_id": "1e08d7be-9843-9248-81a8-f3d91df442ed",
+      "prompt_tokens": 1342,
+      "completion_tokens": 29,
+      "total_tokens": 1371,
+      "idempotency_key": "fso-custom-v1-dffa97101f9a828d91e6fbdacecce5f3"
+    },
+    {
+      "call_index": 141,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1135.456900112331,
+      "status_code": 200,
+      "provider_request_id": "47f71bc0-3597-9df6-9305-0f89b852bbc3",
+      "prompt_tokens": 1367,
+      "completion_tokens": 29,
+      "total_tokens": 1396,
+      "idempotency_key": "fso-custom-v1-69ff8f12399d8fb7ab78cb4eb584ca7e"
+    },
+    {
+      "call_index": 142,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1154.8576997593045,
+      "status_code": 200,
+      "provider_request_id": "ea5b4740-ecb1-91c1-aeb5-599570dd5e06",
+      "prompt_tokens": 1409,
+      "completion_tokens": 29,
+      "total_tokens": 1438,
+      "idempotency_key": "fso-custom-v1-eab2e17ea89434529ac526a6bdffe33c"
+    },
+    {
+      "call_index": 143,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 992.2998999245465,
+      "status_code": 200,
+      "provider_request_id": "4d9d9c6a-9bed-9f6b-9b34-a75448243cc3",
+      "prompt_tokens": 1439,
+      "completion_tokens": 26,
+      "total_tokens": 1465,
+      "idempotency_key": "fso-custom-v1-8b361cbfc25e8c64438a3647c35db83c"
+    },
+    {
+      "call_index": 144,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1745.4103999771178,
+      "status_code": 200,
+      "provider_request_id": "2277af2f-308e-9bb2-aa9d-ef70b1bce97d",
+      "prompt_tokens": 1484,
+      "completion_tokens": 69,
+      "total_tokens": 1553,
+      "idempotency_key": "fso-custom-v1-c66b4319a8e5c4ef7fa0209983184bb0"
+    },
+    {
+      "call_index": 145,
+      "step": 6,
+      "attempts": 1,
+      "elapsed_ms": 1572.5667998194695,
+      "status_code": 200,
+      "provider_request_id": "423c18d0-c1c7-96d8-bba5-f6ef665c28ef",
+      "prompt_tokens": 1697,
+      "completion_tokens": 49,
+      "total_tokens": 1746,
+      "idempotency_key": "fso-custom-v1-9c875e3b8ac34ce1d658d82a864ce705"
+    },
+    {
+      "call_index": 146,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1426.2139000929892,
+      "status_code": 200,
+      "provider_request_id": "309d5a06-4237-9602-8373-31d3d838ebb0",
+      "prompt_tokens": 1286,
+      "completion_tokens": 44,
+      "total_tokens": 1330,
+      "idempotency_key": "fso-custom-v1-a2f945bfc83ddf806746ceaf4e3261ff"
+    },
+    {
+      "call_index": 147,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1181.4598003402352,
+      "status_code": 200,
+      "provider_request_id": "18e2e0e7-d160-92d9-b226-e565e2e3dd9f",
+      "prompt_tokens": 1325,
+      "completion_tokens": 29,
+      "total_tokens": 1354,
+      "idempotency_key": "fso-custom-v1-dbfdce950d72b2b44a078ebf57bad148"
+    },
+    {
+      "call_index": 148,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1360.7695000246167,
+      "status_code": 200,
+      "provider_request_id": "150a80e5-d2aa-9504-bd42-329717a941ff",
+      "prompt_tokens": 1368,
+      "completion_tokens": 29,
+      "total_tokens": 1397,
+      "idempotency_key": "fso-custom-v1-a11d1efa5966d767057cf106bc633eed"
+    },
+    {
+      "call_index": 149,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1197.0675997436047,
+      "status_code": 200,
+      "provider_request_id": "080b3ef5-ccfa-92d6-8aed-2851fbe0d769",
+      "prompt_tokens": 1398,
+      "completion_tokens": 26,
+      "total_tokens": 1424,
+      "idempotency_key": "fso-custom-v1-4b0c3d3bf219714b243d5c96a8a11b3f"
+    },
+    {
+      "call_index": 150,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 1454.878999851644,
+      "status_code": 200,
+      "provider_request_id": "1e10daae-e5bd-9559-a4b5-c1169db16f85",
+      "prompt_tokens": 1443,
+      "completion_tokens": 65,
+      "total_tokens": 1508,
+      "idempotency_key": "fso-custom-v1-bfc13349a35ec45b2d12b17bb4ba733d"
+    },
+    {
+      "call_index": 151,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1317.9374001920223,
+      "status_code": 200,
+      "provider_request_id": "c971c584-1ee9-9cae-9549-5483991b7a4c",
+      "prompt_tokens": 1493,
+      "completion_tokens": 41,
+      "total_tokens": 1534,
+      "idempotency_key": "fso-custom-v1-2b3aa28bbc8240a732f28e8b1a8a523e"
+    },
+    {
+      "call_index": 152,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1482.2836997918785,
+      "status_code": 200,
+      "provider_request_id": "ccee151f-ca30-91d4-bb48-a0859763d3cc",
+      "prompt_tokens": 1285,
+      "completion_tokens": 49,
+      "total_tokens": 1334,
+      "idempotency_key": "fso-custom-v1-fbf5051a9a6bb1ba78eb90bda6829cf2"
+    },
+    {
+      "call_index": 153,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1386.4901000633836,
+      "status_code": 200,
+      "provider_request_id": "18e95407-8771-9d64-926d-29d82d0d8d5b",
+      "prompt_tokens": 1299,
+      "completion_tokens": 44,
+      "total_tokens": 1343,
+      "idempotency_key": "fso-custom-v1-fa21946f75bf8f532cc068176fca8cf7"
+    },
+    {
+      "call_index": 154,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1148.1530000455678,
+      "status_code": 200,
+      "provider_request_id": "40b8aeb0-6bb3-9398-9cd8-c304216fd9ac",
+      "prompt_tokens": 1338,
+      "completion_tokens": 29,
+      "total_tokens": 1367,
+      "idempotency_key": "fso-custom-v1-3a303dc1bad34ccd6a61bab5cb6a96a4"
+    },
+    {
+      "call_index": 155,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1346.479400061071,
+      "status_code": 200,
+      "provider_request_id": "601793b9-51ae-998d-b8d2-b0660ed8df85",
+      "prompt_tokens": 1381,
+      "completion_tokens": 29,
+      "total_tokens": 1410,
+      "idempotency_key": "fso-custom-v1-d19ca2dfcf83c04ca6498bde1fb8366f"
+    },
+    {
+      "call_index": 156,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1547.972199972719,
+      "status_code": 200,
+      "provider_request_id": "1e01cfe7-0553-92ac-9be8-e1ac08227435",
+      "prompt_tokens": 1411,
+      "completion_tokens": 26,
+      "total_tokens": 1437,
+      "idempotency_key": "fso-custom-v1-bbe84a0558e6c3e94bef203d9a009beb"
+    },
+    {
+      "call_index": 157,
+      "step": 4,
+      "attempts": 1,
+      "elapsed_ms": 2229.013899806887,
+      "status_code": 200,
+      "provider_request_id": "29ea0fae-7f0c-9de4-8a62-955b481a09e1",
+      "prompt_tokens": 1456,
+      "completion_tokens": 85,
+      "total_tokens": 1541,
+      "idempotency_key": "fso-custom-v1-71dfb9d0c021f923221c83c06d5b83f6"
+    },
+    {
+      "call_index": 158,
+      "step": 5,
+      "attempts": 1,
+      "elapsed_ms": 1610.2706999517977,
+      "status_code": 200,
+      "provider_request_id": "132f2d5d-56c7-92a2-9298-cb415c4886f9",
+      "prompt_tokens": 1517,
+      "completion_tokens": 64,
+      "total_tokens": 1581,
+      "idempotency_key": "fso-custom-v1-20b06498bc7c09336062178bff566e40"
+    },
+    {
+      "call_index": 159,
+      "step": 0,
+      "attempts": 1,
+      "elapsed_ms": 1339.602000080049,
+      "status_code": 200,
+      "provider_request_id": "b45128e3-0b48-9c9f-a486-778b24109d20",
+      "prompt_tokens": 1300,
+      "completion_tokens": 44,
+      "total_tokens": 1344,
+      "idempotency_key": "fso-custom-v1-bece556f0a55571de738d5462af8f9b2"
+    },
+    {
+      "call_index": 160,
+      "step": 1,
+      "attempts": 1,
+      "elapsed_ms": 1005.0817001610994,
+      "status_code": 200,
+      "provider_request_id": "47b78b5c-7608-90c4-807a-3990dd3ed055",
+      "prompt_tokens": 1339,
+      "completion_tokens": 29,
+      "total_tokens": 1368,
+      "idempotency_key": "fso-custom-v1-12ce1ab583d7a16b2cc41d66e11b9f6d"
+    },
+    {
+      "call_index": 161,
+      "step": 2,
+      "attempts": 1,
+      "elapsed_ms": 1327.5411003269255,
+      "status_code": 200,
+      "provider_request_id": "81264fbd-98c2-9396-9a53-3aebfa9f80d1",
+      "prompt_tokens": 1364,
+      "completion_tokens": 29,
+      "total_tokens": 1393,
+      "idempotency_key": "fso-custom-v1-70f4d0e1789c18d20dcfba26ce668720"
+    },
+    {
+      "call_index": 162,
+      "step": 3,
+      "attempts": 1,
+      "elapsed_ms": 1348.9814000204206,
+      "status_code": 200,
+      "provider_request_id": "2d731b5c-b9ab-9d2a-8c23-357b28db54a8",
+      "prompt_tokens": 1388,
+      "completion_tokens": 35,
+      "total_tokens": 1423,
+      "idempotency_key": "fso-custom-v1-1645df9f1c5accfba93db261b5e4ddbf"
+    }
+  ],
+  "results": [
+    {
+      "task_id": "train-planning-01",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.2
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Weak",
+            "target_ber": 0.001,
+            "max_ebn0_db": 20.0
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9978.79849979654,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-02",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.0
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 11369.289500173181,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-03",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 27.0
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 11920.659500174224,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-04",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.0,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9811.595399864018,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-05",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0,
+            "max_buffer_kib": 2.0
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 10799.684999976307,
+      "split": "train",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-06",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.0
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 11136.438800022006,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "缺少必需参数：最大 Eb/N0 (max_ebn0_db)。请提供该数值以继续规划。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.2
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Weak",
+            "target_ber": 0.001,
+            "max_ebn0_db": null
+          },
+          "status": "error",
+          "error": "max_ebn0_db must be a finite number"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9932.819100096822,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "缺少必需的 Rytov 方差参数。请提供 Rytov 方差值（有效值为 0.2, 0.75, 或 2.0）。"
+      },
+      "error": null,
+      "trace": [],
+      "passed": true,
+      "elapsed_ms": 3004.6413000673056,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-09",
+      "status": "no_feasible_solution",
+      "answer": {
+        "message": "No verified configuration satisfies the constraints for Strong turbulence with target BER 0.001, max Eb/N0 40.0 dB, and RS code only."
+      },
+      "error": "No verified configuration satisfies the constraints for Strong turbulence with target BER 0.001, max Eb/N0 40.0 dB, and RS code only.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 40.0,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9590.073300059885,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "train-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "Failed to load turbulence threshold catalog after retry."
+      },
+      "error": "Failed to load turbulence threshold catalog after retry.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.2
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 5975.314799696207,
+      "split": "train",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-01",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.2
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Weak",
+            "target_ber": 0.001,
+            "max_ebn0_db": 20.1
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9323.66479979828,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-02",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.1
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9056.403900031,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-03",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 27.1
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8611.757799983025,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-04",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.1,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9801.477999892086,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-05",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.1,
+            "max_buffer_kib": 2.1
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 10335.809800308198,
+      "split": "dev",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-06",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.1
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 10902.036000043154,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "Missing required parameter: maximum Eb/N0 (max_ebn0_db). Please provide a finite numeric value for max_ebn0_db."
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": null
+          },
+          "status": "error",
+          "error": "max_ebn0_db must be a finite number"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9772.603299934417,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "Missing required parameter: Rytov variance. Please provide the Rytov variance value."
+      },
+      "error": null,
+      "trace": [],
+      "passed": true,
+      "elapsed_ms": 1409.3297002837062,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-09",
+      "status": "no_feasible_solution",
+      "answer": {
+        "message": "No verified configuration satisfies the constraints for Strong turbulence, target BER 0.001, max Eb/N0 40.1 dB with RS codes only."
+      },
+      "error": "No verified configuration satisfies the constraints for Strong turbulence, target BER 0.001, max Eb/N0 40.1 dB with RS codes only.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 40.1,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8882.58930016309,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "dev-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "Failed to load turbulence threshold catalog after two attempts."
+      },
+      "error": "Failed to load turbulence threshold catalog after two attempts.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 6210.81340033561,
+      "split": "dev",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-01",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 16.649640172468015,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Weak",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.2
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.2,
+            "turbulence": "Weak"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Weak",
+            "target_ber": 0.001,
+            "max_ebn0_db": 20.2
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 16.649640172468015,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Weak",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8944.043199997395,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-02",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 21.624292913748626,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 4,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.2
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 21.624292913748626,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 4,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8994.692999869585,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-03",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 27.2
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8531.382400076836,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-04",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 25.2,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 8723.066799808294,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-05",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "RS-L64-D8",
+          "code": "RS",
+          "coherence_bits": 64,
+          "interleaver_depth": 8,
+          "target_ber": 0.001,
+          "required_ebn0_db": 24.048063564266393,
+          "code_rate": 0.8745098039215686,
+          "buffer_kib": 1.9921875,
+          "additional_latency_us": 14.28,
+          "turbulence": "Moderate",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.1434977578475336,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 1,
+          "unavailable_threshold_count": 0
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 0.75
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 0.75,
+            "turbulence": "Moderate"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Moderate",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.2,
+            "max_buffer_kib": 2.2
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "RS-L64-D8",
+            "code": "RS",
+            "coherence_bits": 64,
+            "interleaver_depth": 8,
+            "target_ber": 0.001,
+            "required_ebn0_db": 24.048063564266393,
+            "code_rate": 0.8745098039215686,
+            "buffer_kib": 1.9921875,
+            "additional_latency_us": 14.28,
+            "turbulence": "Moderate",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.1434977578475336,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 1,
+            "unavailable_threshold_count": 0
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9448.70760012418,
+      "split": "test",
+      "level": "L2",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-06",
+      "status": "success",
+      "answer": {
+        "selection": {
+          "configuration_id": "LDPC-L64-D128",
+          "code": "LDPC",
+          "coherence_bits": 64,
+          "interleaver_depth": 128,
+          "target_ber": 0.001,
+          "required_ebn0_db": 26.632942488563554,
+          "code_rate": 0.876953125,
+          "buffer_kib": 8.0,
+          "additional_latency_us": 65.024,
+          "turbulence": "Strong",
+          "target_bracketed": true,
+          "bandwidth_overhead": 0.14031180400890864,
+          "objective": "min_bandwidth_overhead",
+          "optimality_gap": 0.0,
+          "verified_feasible_count": 2,
+          "unavailable_threshold_count": 2
+        }
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog timeout"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 30.2
+          },
+          "status": "success",
+          "output": {
+            "configuration_id": "LDPC-L64-D128",
+            "code": "LDPC",
+            "coherence_bits": 64,
+            "interleaver_depth": 128,
+            "target_ber": 0.001,
+            "required_ebn0_db": 26.632942488563554,
+            "code_rate": 0.876953125,
+            "buffer_kib": 8.0,
+            "additional_latency_us": 65.024,
+            "turbulence": "Strong",
+            "target_bracketed": true,
+            "bandwidth_overhead": 0.14031180400890864,
+            "objective": "min_bandwidth_overhead",
+            "optimality_gap": 0.0,
+            "verified_feasible_count": 2,
+            "unavailable_threshold_count": 2
+          }
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9128.198700025678,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-07",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "请提供最大 Eb/N0 (dB) 值。"
+      },
+      "error": null,
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": null
+          },
+          "status": "error",
+          "error": "max_ebn0_db must be a finite number"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 7939.991000108421,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-08",
+      "status": "needs_clarification",
+      "answer": {
+        "message": "请提供 Rytov 方差（Rytov variance）以评估湍流强度。"
+      },
+      "error": null,
+      "trace": [],
+      "passed": true,
+      "elapsed_ms": 1482.4214996770024,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-09",
+      "status": "no_feasible_solution",
+      "answer": {
+        "message": "No verified configuration satisfies the constraints for Strong turbulence with target BER 0.001, max Eb/N0 40.2 dB, and RS code family."
+      },
+      "error": "No verified configuration satisfies the constraints for Strong turbulence with target BER 0.001, max Eb/N0 40.2 dB, and RS code family.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "turbulence_thresholds",
+            "rows": 12,
+            "target_ber_values": [
+              0.001
+            ]
+          }
+        },
+        {
+          "tool": "validate_turbulence_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "validated_rows": 12,
+            "checked_orderings": 2
+          }
+        },
+        {
+          "tool": "load_catalog",
+          "arguments": {},
+          "status": "success",
+          "output": {
+            "catalog": "configurations",
+            "rows": 16,
+            "codes": [
+              "LDPC",
+              "RS"
+            ],
+            "coherence_bits": [
+              64,
+              256
+            ]
+          }
+        },
+        {
+          "tool": "select_robust_configuration",
+          "arguments": {
+            "turbulence": "Strong",
+            "target_ber": 0.001,
+            "max_ebn0_db": 40.2,
+            "allowed_codes": [
+              "RS"
+            ]
+          },
+          "status": "error",
+          "error": "no verified configuration satisfies all constraints; unavailable_thresholds=2"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 9270.517900120467,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    },
+    {
+      "task_id": "test-planning-10",
+      "status": "tool_error",
+      "answer": {
+        "message": "Failed to load turbulence threshold catalog after retry."
+      },
+      "error": "Failed to load turbulence threshold catalog after retry.",
+      "trace": [
+        {
+          "tool": "resolve_turbulence_regime",
+          "arguments": {
+            "rytov_variance": 2.0
+          },
+          "status": "success",
+          "output": {
+            "rytov_variance": 2.0,
+            "turbulence": "Strong"
+          }
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        },
+        {
+          "tool": "load_turbulence_catalog",
+          "arguments": {},
+          "status": "error",
+          "error": "simulated threshold catalog unavailable"
+        }
+      ],
+      "passed": true,
+      "elapsed_ms": 5021.885300055146,
+      "split": "test",
+      "level": "L3",
+      "failure_category": "passed"
+    }
+  ]
+}

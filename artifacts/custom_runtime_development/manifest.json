@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "experiment": "custom_runtime_development",
+  "generated_at_utc": "2026-09-07T06:51:07.282346+00:00",
+  "development_dataset_sha256": "cf9cfbfed67868ae891c89b67b97f486b7c5b109652aca93ba03d5d65d8c7e19",
+  "model_id": "qwen3.7-plus-2026-05-26",
+  "model_provider": "AlibabaCloud-ModelStudio-Beijing",
+  "base_url": "https://ws-jiq52ldhidcs83sm.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "contract_sha256": "eeddc42185349e71f665a27a344f4870535f8685fbe8be04a75e0b2e241a2785",
+  "runtime_source_sha256": {
+    "src/fso_benchmark/agent_runtime.py": "cec9b3e120172571cc7a35a3fb9795c78b36f2da155943fc0a453216a248f34d",
+    "src/fso_benchmark/tool_environment.py": "76bf54866bef7faee4116ab88d1e20074c31a5abd3b5703f96df3ffda9c2dfb5",
+    "src/fso_benchmark/planner_contract.py": "3f564106abe37c2ea02b8e2ac578a68bf02a5bf84d5f50afb443a2e51d31ca44",
+    "src/fso_benchmark/model_planner.py": "3fd3bb6cc622468dbe14181fb0716195848a4dade7ebc00bed38b512a08d1d86"
+  },
+  "challenge_tasks_run": 0,
+  "credentials_recorded": false,
+  "configuration_selection_only": true,
+  "pricing": null
+}

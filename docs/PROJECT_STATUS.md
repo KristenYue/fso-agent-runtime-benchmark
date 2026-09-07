@@ -73,17 +73,22 @@
 - 已实现不导入 LangGraph/langchain-core 的同步自研 Planner→Tool Runtime、独立幂等键命名
   空间、development 运行器和一次性 Challenge 闸门；离线结果与冻结 LangGraph 在正常、澄清、
   非法成功、首次超时和预算耗尽场景保持等价。
-- 当前完整回归为118项通过；自研模型 development 和自研 Challenge 均尚未运行。
+- 当前完整回归为118项通过；自研 Challenge 尚未运行。
+- 自研 Runtime development 已按预注册配置完成并通过制品验收：30/30，成功规划18/18、
+  缺参澄清6/6、首次 timeout 恢复3/3、持续故障正确停止3/3，约束违反、过早停止和重复成功
+  步骤均为0；162次模型调用、235695 tokens，无 provider 重试。自研 Challenge 仍为0次。
 
 ## 当前结论
 
 LangGraph 正式冻结基线已经完成：Challenge v1 为24/24，相比规则基线4/24提升20条；
-该结论只适用于24条预注册任务，不外推为开放世界100%。自研 Runtime 已完成预注册、实现和
-离线门禁，下一步是使用同一模型配置运行30条 development 并验收制品；自研 Challenge 仍为
-0次。现有配置目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它外推成 `BER=1e-6`。
+该结论只适用于24条预注册任务，不外推为开放世界100%。自研 Runtime 已完成预注册、实现、
+离线门禁和30条 development 验收，下一步是人工确认最终配置后执行唯一一次自研 Challenge；
+当前仍为0次。现有配置目录只支持 `BER=1e-3`，在没有新仿真证据前不得把它外推成
+`BER=1e-6`。
 
 ## 后续顺序
 
-1. 使用相同固定模型配置运行自研 Runtime 的30条 development，验证并留档制品；
-2. development 门禁通过后人工确认最终配置，不修改 Prompt、工具、预算或评分器；
-3. 在同一24条 Challenge 上执行自研 Runtime 唯一正式运行并生成配对比较报告。
+1. 人工确认 development 所用配置为最终配置，不再修改 Runtime/Planner、Prompt、工具、预算
+   或评分器；
+2. 在同一24条 Challenge 上执行自研 Runtime 唯一正式运行；
+3. 保留全部原始轨迹并生成与 LangGraph 的配对比较报告。
