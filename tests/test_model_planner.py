@@ -133,6 +133,57 @@ def test_custom_runtime_can_use_a_distinct_idempotency_namespace() -> None:
     assert keys[0].startswith("fso-custom-v1-")
 
 
+def test_runtime_comparison_payloads_are_identical_except_idempotency_key() -> None:
+    captured = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        captured.append(
+            {
+                "payload": json.loads(request.content),
+                "idempotency_key": request.headers["idempotency-key"],
+            }
+        )
+        return httpx.Response(
+            200,
+            json=response_body(
+                '{"kind":"finish","status":"needs_clarification","message":"x"}'
+            ),
+        )
+
+    common = {
+        "base_url": "https://provider.invalid/v1",
+        "api_key": "test-secret-key",
+        "model": "fixed-model-snapshot",
+        "prompt_path": PROMPT,
+        "schema_path": SCHEMA,
+        "temperature": 0.0,
+        "timeout_seconds": 30.0,
+        "retry_budget": 1,
+        "response_format_type": "json_object",
+        "enable_thinking": False,
+    }
+    baseline = OpenAICompatiblePlanner(
+        **common,
+        idempotency_namespace="fso",
+        client=httpx.Client(transport=httpx.MockTransport(handler)),
+    )
+    custom = OpenAICompatiblePlanner(
+        **common,
+        idempotency_namespace="fso-custom-v1",
+        client=httpx.Client(transport=httpx.MockTransport(handler)),
+    )
+    observations = (
+        {"tool": "load_catalog", "arguments": {}, "status": "success", "output": {"rows": 16}},
+    )
+    baseline.decide(request="same frozen request", observations=observations, step=1)
+    custom.decide(request="same frozen request", observations=observations, step=1)
+
+    assert captured[0]["payload"] == captured[1]["payload"]
+    assert captured[0]["idempotency_key"].startswith("fso-")
+    assert captured[1]["idempotency_key"].startswith("fso-custom-v1-")
+    assert captured[0]["idempotency_key"] != captured[1]["idempotency_key"]
+
+
 def test_bad_json_is_rejected_without_leaking_key() -> None:
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(200, json=response_body("not-json"))

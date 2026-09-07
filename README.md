@@ -49,6 +49,11 @@ LangGraph/langchain-core，复用相同模型快照、Prompt、动作 Schema、�
 `docs/CUSTOM_RUNTIME_DEVELOPMENT_REPORT.md`。自研 Challenge 尚未运行，因此还没有可与24/24
 LangGraph 冻结基线比较的正式成绩。
 
+最终配置预检也已完成：模型 HTTP JSON payload 完全等价，仅幂等键命名空间不同；500组同机
+离线配对中，自研 Runtime 本地调度中位数为0.295 ms，LangGraph 为6.210 ms。约21.1倍只描述
+无模型网络的本地路径，绝对差约5.9 ms，不能表述为真实 Agent 端到端加速。详见
+`docs/CUSTOM_RUNTIME_FINAL_PREFLIGHT.md`。
+
 配置好同一组模型环境变量后，development 运行命令为：
 
 ```powershell
