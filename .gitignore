@@ -2,7 +2,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+.env
+.env.*
+!.env.example
+*.log
 dist/
 build/
 *.egg-info/
-
