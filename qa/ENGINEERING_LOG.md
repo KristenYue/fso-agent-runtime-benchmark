@@ -1,0 +1,42 @@
+# QA Evidence Engineering Log
+
+## 2026-10-19 — Additive QA evidence package
+
+**Scope decision.** The repository already contained 125 tests, 24 frozen
+Challenge tasks, fault injection and a preserved credential incident. This work
+adds recruiter-readable requirement/test/defect/stability evidence; it does not
+rewrite the Runtime or manipulate frozen results.
+
+**Issue 1 — initial QA assumptions did not match the existing contract.** The
+first new boundary test expected every invalid numeric input to fail before a
+trace was created. Actual behaviour is more precise: action-schema-invalid input
+is rejected before execution, while schema-valid values outside a deterministic
+tool's numeric domain create one structured `error` observation. The test was
+changed to assert that distinction rather than changing product code.
+
+**Issue 2 — fail-closed retains an explanation.** The first gray-box test
+expected `answer=None` for persistent semantic contamination. The Runtime's
+existing contract returns terminal `tool_error` with a clear message, which is
+not a fabricated success. The QA expectation now checks explicit non-success and
+the error message.
+
+**Issue 3 — recovery and normal success have different valid traces.** A
+stability-smoke signature keyed only by terminal status incorrectly compared
+normal success with recovered success. Signatures are now keyed by scenario and
+expected state, preserving deterministic checks without collapsing different
+valid workflows.
+
+**Issue 4 — first soak script polluted its own memory observation.** Retaining
+all Python float duration objects produced avoidable test-harness allocation.
+The script now uses a bounded 512-sample latency buffer, performs collection at
+checkpoints, labels latency as sampled, and records raw memory checkpoints.
+
+**Verification.** QA tests passed 25/25; the separate 5,000-run offline soak
+reported zero unexpected outcomes, inconsistent results and missing traces.
+
+**Issue 5 — sandbox system temp directory is not writable.** A first full
+`pytest` run reported 14 setup errors because pytest could not create numbered
+directories below the sandbox-controlled system Temp location; no test assertion
+failed. Rerunning unchanged tests with `--basetemp=.qa-pytest-tmp` placed only
+ephemeral fixtures under the repository and produced **150 passed**. The
+temporary directory was removed after verification and is not part of delivery.

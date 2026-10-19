@@ -1,0 +1,78 @@
+{
+  "scope": "offline deterministic Runtime scheduling only; excludes LLM/network and is not an end-to-end latency or SLA result",
+  "runs": 5000,
+  "duration_seconds": 3.147602,
+  "outcomes": {
+    "success": 2500,
+    "needs_clarification": 1250,
+    "tool_error": 1250
+  },
+  "expected_fail_closed": 1250,
+  "unexpected_exceptions_or_results": 0,
+  "inconsistent_results": 0,
+  "trace_missing_count": 0,
+  "latency_ms_sampled_last_512": {
+    "p50": 0.63085,
+    "p95": 1.0589,
+    "max": 1.6726
+  },
+  "memory_bytes": {
+    "before": 0,
+    "after": 55197,
+    "peak": 135989,
+    "delta": 55197
+  },
+  "checkpoints": [
+    {
+      "completed_runs": 500,
+      "current_bytes": 49068,
+      "peak_bytes": 126772
+    },
+    {
+      "completed_runs": 1000,
+      "current_bytes": 50795,
+      "peak_bytes": 131851
+    },
+    {
+      "completed_runs": 1500,
+      "current_bytes": 52166,
+      "peak_bytes": 133222
+    },
+    {
+      "completed_runs": 2000,
+      "current_bytes": 52733,
+      "peak_bytes": 133789
+    },
+    {
+      "completed_runs": 2500,
+      "current_bytes": 53182,
+      "peak_bytes": 134238
+    },
+    {
+      "completed_runs": 3000,
+      "current_bytes": 53663,
+      "peak_bytes": 134719
+    },
+    {
+      "completed_runs": 3500,
+      "current_bytes": 53994,
+      "peak_bytes": 135050
+    },
+    {
+      "completed_runs": 4000,
+      "current_bytes": 54384,
+      "peak_bytes": 135440
+    },
+    {
+      "completed_runs": 4500,
+      "current_bytes": 54597,
+      "peak_bytes": 135653
+    },
+    {
+      "completed_runs": 5000,
+      "current_bytes": 54933,
+      "peak_bytes": 135989
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,49 @@
+case_id,requirement_id,type,title,precondition,input,steps,expected_result,priority,automated,status,evidence
+SMK-01,REQ-01,Smoke,Project imports,Editable install,import package,Import Runtime modules,Imports succeed,P0,Yes,Passed,tests/qa/test_smoke.py::test_runtime_can_start
+SMK-02,REQ-01,Smoke,Rule planner starts,Editable install,clarification action,Run custom Runtime,Terminal clarification,P0,Yes,Passed,tests/qa/test_smoke.py::test_runtime_can_start
+SMK-03,REQ-01,Smoke,LangGraph Runtime starts,Agents lock installed,clarification action,Run LangGraph Runtime,Terminal clarification,P0,Yes,Passed,tests/qa/test_smoke.py::test_langgraph_runtime_can_start
+SMK-04,REQ-01,Smoke,Custom Runtime starts,Editable install,clarification action,Run custom Runtime,Terminal clarification,P0,Yes,Passed,tests/qa/test_smoke.py::test_runtime_can_start
+SMK-05,REQ-01,Smoke,Registered deterministic tools available,Editable install,tool registry,Read allow-list,Exactly six allowed tools,P0,Yes,Passed,tests/qa/test_smoke.py::test_registered_tools_are_available
+SMK-06,REQ-08,Smoke,Normal task has full trace,Editable install,happy action script,Run Runtime,Success with six observations,P0,Yes,Passed,tests/qa/test_smoke.py::test_happy_path_produces_trace
+BB-01,REQ-01,Black-box,Valid single tool action,Editable install,characterize action,Run Runtime,Tool executes successfully,P1,Yes,Passed,tests/test_agent_runtime.py
+BB-02,REQ-01,Black-box,Valid multi-tool task,Editable install,happy action script,Run Runtime,Success,P0,Yes,Passed,tests/qa/test_black_box.py::test_valid_task_completes
+BB-03,REQ-02,Black-box,One missing input,Editable install,clarification finish,Run Runtime,Needs clarification no tools,P0,Yes,Passed,tests/qa/test_black_box.py::test_missing_parameter_requests_clarification
+BB-04,REQ-02,Black-box,Multiple missing inputs,Editable install,clarification finish,Run Runtime,Needs clarification no tools,P1,Yes,Passed,tests/qa/test_black_box.py::test_missing_parameter_requests_clarification
+BB-05,REQ-02,Black-box,User supplies follow-up,Editable install,happy action script,Run new deterministic request,Success after complete input,P1,Yes,Passed,tests/qa/test_black_box.py::test_valid_task_completes
+BB-06,REQ-02,Black-box,Proactive clarification,Editable install,clarification action,Run Runtime,Needs clarification,P1,Yes,Passed,tests/qa/test_smoke.py::test_runtime_can_start
+BB-07,REQ-07,Black-box,Safe planned stop,Editable install,tool_error finish,Run Runtime,Explicit tool_error,P1,Yes,Passed,tests/test_agent_runtime.py
+BB-08,REQ-01,Black-box,Legal tool result,Editable install,valid turbulence action,Run Runtime,Structured output in trace,P1,Yes,Passed,tests/test_agent_runtime.py
+BB-09,REQ-04,Black-box,Exact budget success,Editable install,six tool happy path,Run with budget six,Success at exact limit,P1,Yes,Passed,tests/test_agent_runtime.py::test_custom_runtime_exact_budget_allows_finish
+BB-10,REQ-04,Black-box,Budget exhaustion,Editable install,nine repeated actions,Run with budget eight,Explicit safe stop,P0,Yes,Passed,tests/qa/test_black_box.py::test_budget_exhaustion_stops_safely
+BB-11,REQ-01,Black-box,Normal answer formation,Editable install,happy action script,Run Runtime,Selection answer returned,P1,Yes,Passed,tests/qa/test_black_box.py::test_valid_task_completes
+BB-12,REQ-09,Black-box,Repeated terminal state,Editable install,same happy script twice,Run twice,Same state and trace,P0,Yes,Passed,tests/qa/test_black_box.py::test_repeated_deterministic_input_has_same_terminal_state
+NEG-01,REQ-05,Boundary,Empty action,Editable install,{},Submit action,Rejected before execution,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-02,REQ-03,Boundary,Empty tool name,Editable install,tool empty,Submit action,Rejected before execution,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-03,REQ-03,Negative,Unknown tool,Editable install,tool unknown,Submit action,No tool execution,P0,Yes,Passed,tests/qa/test_black_box.py::test_unknown_tool_is_rejected
+NEG-04,REQ-05,Boundary,Arguments null,Editable install,arguments null,Submit action,Rejected before execution,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-05,REQ-05,Boundary,Required argument absent,Editable install,empty arguments,Submit action,Rejected before execution,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-06,REQ-05,Boundary,Wrong numeric type,Editable install,string Rytov value,Submit action,Structured tool error trace,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-07,REQ-05,Boundary,Value above maximum,Editable install,Rytov 11,Submit action,Structured tool error trace,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-08,REQ-05,Boundary,Unknown argument field,Editable install,extra field,Submit action,Rejected before execution,P1,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-09,REQ-05,Boundary,Invalid finish status,Editable install,unknown status,Submit action,Rejected before execution,P1,Yes,Passed,tests/qa/test_boundary_and_negative.py
+NEG-10,REQ-04,Boundary,Ninth tool call,Editable install,nine actions,Run budget eight,Safe stop after eight,P0,Yes,Passed,tests/qa/test_black_box.py::test_budget_exhaustion_stops_safely
+GRAY-01,REQ-02,Gray-box,Clarification skips tools,Editable install,clarification action,Inspect trace,Trace length zero,P0,Yes,Passed,tests/qa/test_black_box.py::test_missing_parameter_requests_clarification
+GRAY-02,REQ-03,Gray-box,Rejected tool never reaches executor,Editable install,unknown tool,Spy executor,Call count zero,P0,Yes,Passed,tests/qa/test_gray_box.py::test_rejected_tool_is_never_executed
+GRAY-03,REQ-06,Gray-box,One semantic pollution recovers,Editable install,recovery fault profile,Run Runtime,Clean recovery recorded,P0,Yes,Passed,tests/qa/test_gray_box.py::test_semantic_contamination_recovers_once
+GRAY-04,REQ-07,Gray-box,Persistent pollution fail-closed,Editable install,persistent fault profile,Run Runtime,Tool error not success,P0,Yes,Passed,tests/qa/test_gray_box.py::test_persistent_semantic_contamination_fails_closed
+GRAY-05,REQ-08,Gray-box,Trace field contract,Editable install,happy script,Inspect events,Required fields present,P0,Yes,Passed,tests/qa/test_gray_box.py::test_trace_contains_required_fields
+GRAY-06,REQ-04,Gray-box,Budget trace length,Editable install,nine actions,Inspect events,Exactly eight events,P0,Yes,Passed,tests/qa/test_black_box.py::test_budget_exhaustion_stops_safely
+GRAY-07,REQ-09,Gray-box,Runtime trajectory comparison,Agents lock installed,happy script,Run both runtimes,Identical traces,P1,Yes,Passed,tests/qa/test_gray_box.py::test_runtime_trajectories_match
+GRAY-08,REQ-10,Gray-box,Credential error classification,Recovery contract loaded,non-ASCII key,Preflight validation,ValueError before provider,P0,Yes,Passed,tests/test_recovery_contract.py
+REC-01,REQ-07,Recovery,Tool timeout once,Editable install,timeout-once profile,Run scripted recovery,Explicit error trace then safe terminal,P1,Yes,Passed,tests/test_agent_runtime.py
+REC-02,REQ-07,Recovery,Tool unavailable,Editable install,unavailable profile,Run Runtime,Error recorded and no fabricated success,P1,Yes,Passed,tests/test_agent_runtime.py
+REC-03,REQ-06,Recovery,Semantic error then recovery,Editable install,corruption-once profile,Run Runtime,Recovery observation and success,P0,Yes,Passed,tests/qa/test_gray_box.py::test_semantic_contamination_recovers_once
+REC-04,REQ-05,Recovery,Malformed planner response,Editable install,string action,Run Runtime,Invalid action error,P0,Yes,Passed,tests/qa/test_boundary_and_negative.py
+REC-05,REQ-03,Recovery,Unknown model action,Editable install,unknown tool action,Run Runtime,Rejected without execution,P0,Yes,Passed,tests/qa/test_gray_box.py::test_rejected_tool_is_never_executed
+REC-06,REQ-10,Recovery,Non-ASCII credential,Recovery contract loaded,Chinese credential,Validate key,Rejected before provider,P0,Yes,Passed,tests/test_recovery_contract.py::test_credential_preflight_rejects_unsafe_input
+REC-07,REQ-07,Recovery,Persistent corruption,Editable install,persistent corruption profile,Run Runtime,Fail closed,P0,Yes,Passed,tests/qa/test_gray_box.py::test_persistent_semantic_contamination_fails_closed
+REC-08,REQ-07,Recovery,Execution interrupted by budget,Editable install,nine actions,Run budget eight,Explicit stop,P1,Yes,Passed,tests/qa/test_black_box.py::test_budget_exhaustion_stops_safely
+STAB-01,REQ-09,Stability,5000 normal/repeated scheduling,Offline deterministic path,5000 mixed runs,Run soak script,No inconsistent results,P0,Yes,Passed,artifacts/qa/stability_5000.json
+STAB-02,REQ-06,Stability,Four outcome classes cycle,Offline deterministic path,normal clarification recovery fail-closed,Run soak script,Expected outcomes only,P0,Yes,Passed,artifacts/qa/stability_5000.json
+STAB-03,REQ-09,Stability,Repeated result consistency,Offline deterministic path,5000 mixed runs,Run soak script,Inconsistency zero,P0,Yes,Passed,artifacts/qa/stability_5000.json
+STAB-04,REQ-08,Stability,No unstructured trace,Offline deterministic path,5000 mixed runs,Run soak script,Trace missing zero,P0,Yes,Passed,artifacts/qa/stability_5000.json

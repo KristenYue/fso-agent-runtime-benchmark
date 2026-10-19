@@ -26,4 +26,11 @@ jobs:
           python -m pip install -r requirements-runtime.lock
           python -m pip install -e . --no-deps
       - name: Test
-        run: python -m pytest -q --tb=short
+        run: python -m pytest -q --tb=short --junitxml=artifacts/qa/pytest.xml
+      - name: Upload pytest evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-${{ matrix.python-version }}
+          path: artifacts/qa/pytest.xml
+          if-no-files-found: error
