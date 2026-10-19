@@ -64,3 +64,10 @@ The QA artifact validation was rerun as a separate single-quoted Python command:
 48 cases, 2,783,807 soak runs and 5,567 checkpoint lines all matched. A harmless
 subsequent cleanup attempted to remove a pytest base directory that collection
 had not created; the directory was absent, so no project file was removed.
+
+**Issue 8 — CI test uses an external absolute output path.** The duration-harness
+unit test writes to pytest's external temporary directory on GitHub Actions. The
+first path normalization fix assumed all outputs were under the repository and
+therefore failed only in Linux CI. The report now emits a repository-relative
+progress reference when possible and an absolute reference otherwise. The same
+existing unit test covers both the CI path case and report generation.

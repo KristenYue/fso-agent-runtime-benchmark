@@ -129,6 +129,12 @@ def main() -> int:
 
     memory_after, memory_peak = tracemalloc.get_traced_memory()
     tracemalloc.stop()
+    try:
+        progress_reference = str(progress_path.relative_to(ROOT))
+    except ValueError:
+        # Tests and callers may intentionally write reports outside the repo.
+        # Preserve a usable absolute reference instead of failing report creation.
+        progress_reference = str(progress_path)
     report = {
         "scope": "offline deterministic Runtime scheduling only; excludes LLM/network and is not an end-to-end latency or SLA result",
         "requested_minimum_runs": args.runs,
@@ -142,7 +148,7 @@ def main() -> int:
         "trace_missing_count": missing_trace,
         "latency_ms_sampled_last_512": {"p50": round(statistics.median(durations), 6), "p95": round(percentile(list(durations), 0.95), 6), "max": round(max(durations), 6)},
         "memory_bytes": {"before": memory_before, "after": memory_after, "peak": memory_peak, "delta": memory_after - memory_before},
-        "checkpoint_progress_file": str(progress_path.relative_to(ROOT)),
+        "checkpoint_progress_file": progress_reference,
         "checkpoint_count": checkpoint_count,
         "last_checkpoint": last_checkpoint,
         "passed": unexpected == 0 and inconsistent == 0 and missing_trace == 0,
