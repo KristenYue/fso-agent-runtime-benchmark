@@ -43,7 +43,7 @@ REC-05,REQ-03,Recovery,Unknown model action,Editable install,unknown tool action
 REC-06,REQ-10,Recovery,Non-ASCII credential,Recovery contract loaded,Chinese credential,Validate key,Rejected before provider,P0,Yes,Passed,tests/test_recovery_contract.py::test_credential_preflight_rejects_unsafe_input
 REC-07,REQ-07,Recovery,Persistent corruption,Editable install,persistent corruption profile,Run Runtime,Fail closed,P0,Yes,Passed,tests/qa/test_gray_box.py::test_persistent_semantic_contamination_fails_closed
 REC-08,REQ-07,Recovery,Execution interrupted by budget,Editable install,nine actions,Run budget eight,Explicit stop,P1,Yes,Passed,tests/qa/test_black_box.py::test_budget_exhaustion_stops_safely
-STAB-01,REQ-09,Stability,5000 normal/repeated scheduling,Offline deterministic path,5000 mixed runs,Run soak script,No inconsistent results,P0,Yes,Passed,artifacts/qa/stability_5000.json
-STAB-02,REQ-06,Stability,Four outcome classes cycle,Offline deterministic path,normal clarification recovery fail-closed,Run soak script,Expected outcomes only,P0,Yes,Passed,artifacts/qa/stability_5000.json
-STAB-03,REQ-09,Stability,Repeated result consistency,Offline deterministic path,5000 mixed runs,Run soak script,Inconsistency zero,P0,Yes,Passed,artifacts/qa/stability_5000.json
-STAB-04,REQ-08,Stability,No unstructured trace,Offline deterministic path,5000 mixed runs,Run soak script,Trace missing zero,P0,Yes,Passed,artifacts/qa/stability_5000.json
+STAB-01,REQ-09,Stability,5000 plus 30-minute normal/repeated scheduling,Offline deterministic path,2783807 mixed runs,Run soak script,No inconsistent results,P0,Yes,Passed,artifacts/qa/stability_30min.json
+STAB-02,REQ-06,Stability,Four outcome classes cycle,Offline deterministic path,normal clarification recovery fail-closed,Run soak script,Expected outcomes only,P0,Yes,Passed,artifacts/qa/stability_30min.json
+STAB-03,REQ-09,Stability,Repeated result consistency,Offline deterministic path,2783807 mixed runs,Run soak script,Inconsistency zero,P0,Yes,Passed,artifacts/qa/stability_30min.json
+STAB-04,REQ-08,Stability,No unstructured trace,Offline deterministic path,2783807 mixed runs,Run soak script,Trace missing zero,P0,Yes,Passed,artifacts/qa/stability_30min.json

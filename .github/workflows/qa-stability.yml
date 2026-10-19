@@ -19,11 +19,13 @@ jobs:
       - name: Install deterministic Runtime
         run: python -m pip install -e ".[dev]"
       - name: Run 5,000 offline deterministic scenarios
-        run: python scripts/run_stability_test.py --runs 5000 --report-every 500
+        run: >-
+          python scripts/run_stability_test.py --runs 5000 --min-duration-seconds 1800
+          --report-every 500
       - name: Upload stability evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: qa-stability-report
-          path: artifacts/qa/stability_latest.json
+          path: artifacts/qa/stability_latest.*
           if-no-files-found: error

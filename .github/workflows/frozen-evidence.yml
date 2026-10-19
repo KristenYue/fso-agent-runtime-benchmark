@@ -1,0 +1,47 @@
+name: frozen-evidence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install locked Runtime dependencies
+        run: |
+          python -m pip install -r requirements-agents.lock
+          python -m pip install -r requirements-runtime.lock
+          python -m pip install -e . --no-deps
+      - name: Verify frozen contracts and preserved evidence without model calls
+        run: >-
+          python -m pytest -q --tb=short --junitxml=artifacts/qa/frozen_evidence.xml
+          tests/test_challenge_dataset.py tests/test_challenge_model_artifact.py
+          tests/test_custom_runtime_contract.py tests/test_frozen_challenge_runner.py
+      - name: Benchmark offline local scheduler overhead
+        run: >-
+          python scripts/benchmark_runtime_overhead.py --pairs 500
+          --output artifacts/qa/runtime_overhead_ci.json
+      - name: Upload frozen-evidence reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frozen-evidence-and-benchmark
+          path: artifacts/qa/frozen_evidence.xml
+          if-no-files-found: error
+      - name: Upload benchmark report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-runtime-benchmark
+          path: artifacts/qa/runtime_overhead_ci.json
+          if-no-files-found: error

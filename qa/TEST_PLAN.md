@@ -38,7 +38,7 @@ zero inconsistent results, and zero missing traces. A release is reported as
 
 ```powershell
 python -m pytest -q tests/qa
-python scripts/run_stability_test.py --runs 5000 --report-every 500
+python scripts/run_stability_test.py --runs 5000 --min-duration-seconds 1800 --report-every 500
 ```
 
 The latter measures only offline deterministic Runtime scheduling. It excludes

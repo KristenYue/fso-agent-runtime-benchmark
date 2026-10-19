@@ -29,13 +29,15 @@ increase a count.
 
 ## Executed evidence
 
-- `python -m pytest -q tests/qa`: **25 passed**.
-- Full regression with a repository-local pytest temporary directory: **150
+- `python -m pytest -q tests/qa`: **26 passed** after adding the duration/progress
+  harness regression check.
+- Full regression with a repository-local pytest temporary directory: **151
   passed**. The local default system temporary directory is sandbox-restricted,
   so the command used `--basetemp=.qa-pytest-tmp`; this changes only where test
   fixtures are written, not test selection or assertions.
-- `python scripts/run_stability_test.py --runs 5000 --report-every 500`:
-  **passed=true**, zero unexpected outcomes, zero inconsistent results and zero
+- `python scripts/run_stability_test.py --runs 5000 --min-duration-seconds 1800
+  --report-every 500`: **2,783,807 runs over 1,800.000642 seconds**,
+  `passed=true`, zero unexpected outcomes, zero inconsistent results and zero
   missing traces. See `qa/STABILITY_TEST_REPORT.md`.
 - Existing recovery preflight tests are mapped in the traceability matrix and
   passed in the full regression suite.

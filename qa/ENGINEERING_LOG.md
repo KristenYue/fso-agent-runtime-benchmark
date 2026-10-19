@@ -40,3 +40,27 @@ directories below the sandbox-controlled system Temp location; no test assertion
 failed. Rerunning unchanged tests with `--basetemp=.qa-pytest-tmp` placed only
 ephemeral fixtures under the repository and produced **150 passed**. The
 temporary directory was removed after verification and is not part of delivery.
+
+**Issue 6 — 5,000 iterations alone did not satisfy the stated soak duration.**
+The first stability report reached 5,000 runs in seconds, whereas the plan says
+to use the later of 5,000 runs and 30 minutes. The harness now supports
+`--min-duration-seconds` and continues until both thresholds are met. Progress
+is written every 500 runs to JSONL instead of retained in memory. An initial
+relative-path self-check exposed a final-report path normalization bug; output is
+now resolved against the repository root and covered by
+`test_stability_script_honours_duration_and_writes_progress`.
+
+**Strict soak verification.** The final offline run requested at least 5,000
+iterations and 1,800 seconds, and completed 2,783,807 iterations in
+1,800.000642 seconds. It recorded 5,567 JSONL checkpoints; unexpected outcomes,
+inconsistent results and missing traces were all zero. The report deliberately
+states that P50/P95 are sampled local scheduler timings, not model/network or
+production-SLA performance.
+
+**Issue 7 — final verification command quoting.** A combined PowerShell command
+used an escaped Python f-string inside `-c`; PowerShell rejected that fragment as
+an invalid ScriptBlock after the full regression and benchmark had already run.
+The QA artifact validation was rerun as a separate single-quoted Python command:
+48 cases, 2,783,807 soak runs and 5,567 checkpoint lines all matched. A harmless
+subsequent cleanup attempted to remove a pytest base directory that collection
+had not created; the directory was absent, so no project file was removed.

@@ -66,13 +66,23 @@ def percentile(values: list[float], fraction: float) -> float:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--runs", type=int, default=5000)
+    parser.add_argument(
+        "--min-duration-seconds",
+        type=float,
+        default=0,
+        help="Continue after --runs until this wall-clock duration is also reached.",
+    )
     parser.add_argument("--report-every", type=int, default=500)
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts" / "qa" / "stability_latest.json")
     args = parser.parse_args()
-    if args.runs < 1 or args.report_every < 1:
-        raise SystemExit("--runs and --report-every must be positive")
+    if args.runs < 1 or args.report_every < 1 or args.min_duration_seconds < 0:
+        raise SystemExit("--runs/report-every must be positive; minimum duration cannot be negative")
 
+    output_path = args.output if args.output.is_absolute() else ROOT / args.output
     started = time.perf_counter()
+    progress_path = output_path.with_suffix(".progress.jsonl")
+    progress_path.parent.mkdir(parents=True, exist_ok=True)
+    progress_path.write_text("", encoding="utf-8")
     tracemalloc.start()
     memory_before, _ = tracemalloc.get_traced_memory()
     # Keep a bounded sample for latency percentiles. Retaining every duration
@@ -85,9 +95,12 @@ def main() -> int:
     inconsistent = 0
     missing_trace = 0
     signatures: dict[str, tuple[Any, ...]] = {}
-    checkpoints: list[dict[str, Any]] = []
+    checkpoint_count = 0
+    last_checkpoint: dict[str, Any] | None = None
 
-    for run_number in range(1, args.runs + 1):
+    run_number = 0
+    while run_number < args.runs or (time.perf_counter() - started) < args.min_duration_seconds:
+        run_number += 1
         name, factory, profile, expected = SCENARIOS[(run_number - 1) % len(SCENARIOS)]
         began = time.perf_counter()
         try:
@@ -109,13 +122,18 @@ def main() -> int:
         if run_number % args.report_every == 0 or run_number == args.runs:
             gc.collect()
             current, peak = tracemalloc.get_traced_memory()
-            checkpoints.append({"completed_runs": run_number, "current_bytes": current, "peak_bytes": peak})
+            last_checkpoint = {"completed_runs": run_number, "current_bytes": current, "peak_bytes": peak}
+            with progress_path.open("a", encoding="utf-8") as progress_file:
+                progress_file.write(json.dumps(last_checkpoint) + "\n")
+            checkpoint_count += 1
 
     memory_after, memory_peak = tracemalloc.get_traced_memory()
     tracemalloc.stop()
     report = {
         "scope": "offline deterministic Runtime scheduling only; excludes LLM/network and is not an end-to-end latency or SLA result",
-        "runs": args.runs,
+        "requested_minimum_runs": args.runs,
+        "requested_minimum_duration_seconds": args.min_duration_seconds,
+        "runs": run_number,
         "duration_seconds": round(time.perf_counter() - started, 6),
         "outcomes": outcomes,
         "expected_fail_closed": expected_failures,
@@ -124,11 +142,13 @@ def main() -> int:
         "trace_missing_count": missing_trace,
         "latency_ms_sampled_last_512": {"p50": round(statistics.median(durations), 6), "p95": round(percentile(list(durations), 0.95), 6), "max": round(max(durations), 6)},
         "memory_bytes": {"before": memory_before, "after": memory_after, "peak": memory_peak, "delta": memory_after - memory_before},
-        "checkpoints": checkpoints,
+        "checkpoint_progress_file": str(progress_path.relative_to(ROOT)),
+        "checkpoint_count": checkpoint_count,
+        "last_checkpoint": last_checkpoint,
         "passed": unexpected == 0 and inconsistent == 0 and missing_trace == 0,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False))
     return 0 if report["passed"] else 1
 

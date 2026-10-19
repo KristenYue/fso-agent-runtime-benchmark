@@ -1,0 +1,35 @@
+{
+  "scope": "offline deterministic Runtime scheduling only; excludes LLM/network and is not an end-to-end latency or SLA result",
+  "requested_minimum_runs": 5000,
+  "requested_minimum_duration_seconds": 1800.0,
+  "runs": 2783807,
+  "duration_seconds": 1800.000642,
+  "outcomes": {
+    "success": 1391904,
+    "needs_clarification": 695952,
+    "tool_error": 695951
+  },
+  "expected_fail_closed": 695951,
+  "unexpected_exceptions_or_results": 0,
+  "inconsistent_results": 0,
+  "trace_missing_count": 0,
+  "latency_ms_sampled_last_512": {
+    "p50": 0.65755,
+    "p95": 1.0898,
+    "max": 1.9037
+  },
+  "memory_bytes": {
+    "before": 0,
+    "after": 99281,
+    "peak": 134768,
+    "delta": 99281
+  },
+  "checkpoint_progress_file": "artifacts\\qa\\stability_30min.progress.jsonl",
+  "checkpoint_count": 5567,
+  "last_checkpoint": {
+    "completed_runs": 2783500,
+    "current_bytes": 53389,
+    "peak_bytes": 134768
+  },
+  "passed": true
+}
