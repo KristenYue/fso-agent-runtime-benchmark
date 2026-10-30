@@ -11,7 +11,7 @@
 
 **English snapshot.** A preregistered, trace-level comparison between LangGraph and a dependency-light Python Agent Runtime. Both runtimes passed all 24 frozen tool-calling tasks with identical terminal states, selected configurations, and tool trajectories. The repository includes frozen contracts, one-shot ledgers, failure-injection cases, machine-readable artifacts, and cross-platform CI. The 21.06x figure below applies only to local scheduling overhead, not end-to-end agent latency.
 
-**作品集证据链：** [舆情 Agent 应用](https://github.com/KristenYue/public-opinion-agent-eval) → [Agent 可靠性评测](https://github.com/KristenYue/agent-reliability-eval) → **本仓库：Runtime 与受控对比**
+**相关项目：** [舆情 Agent 应用](https://github.com/KristenYue/public-opinion-agent-eval) → [Agent 可靠性评测](https://github.com/KristenYue/agent-reliability-eval) → **本仓库：Runtime 与受控对比**
 
 ## 结果一览
 

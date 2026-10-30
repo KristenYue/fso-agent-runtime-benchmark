@@ -30,5 +30,5 @@
 
 ## Adversarial review
 
-面试官可能质疑“pessimistic bound 已经足够保守，为什么不用”。回答是 bound 只描述当前
+常见质疑是“pessimistic bound 已经足够保守，为什么不用”。原因是 bound 只描述当前
 采样区间的不确定性，不证明目标 crossing 已发生；把它当阈值会混淆上界和估计值。

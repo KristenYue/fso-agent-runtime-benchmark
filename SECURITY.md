@@ -18,6 +18,6 @@ working exploit, credential, or personally identifying data.
 
 ## Scope
 
-This is a research benchmark and portfolio project, not a production service.
+This is a research benchmark, not a production service.
 Its failure-handling and security checks are engineering evidence, not a
 production security certification.
